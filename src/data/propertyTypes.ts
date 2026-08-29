@@ -1,0 +1,67 @@
+import type { PropertyType } from '../types/domain'
+
+export const propertyTypes: PropertyType[] = [
+  {
+    id: 'apartamento',
+    label: 'Apartamento',
+    description: 'Unidade em prédio residencial',
+    icon: 'Building2',
+    baseRiskPoints: 5,
+    suggestedAreas: ['cozinha', 'sala', 'quarto', 'quadro_eletrico'],
+  },
+  {
+    id: 'casa_urbana',
+    label: 'Casa urbana',
+    description: 'Casa em área urbana, sem quintal grande',
+    icon: 'Home',
+    baseRiskPoints: 8,
+    suggestedAreas: ['cozinha', 'sala', 'quarto', 'garagem', 'area_servico', 'quadro_eletrico'],
+  },
+  {
+    id: 'casa_quintal',
+    label: 'Casa com quintal',
+    description: 'Casa com área externa e vegetação',
+    icon: 'TreePine',
+    baseRiskPoints: 12,
+    suggestedAreas: [
+      'cozinha',
+      'sala',
+      'quarto',
+      'garagem',
+      'area_servico',
+      'area_externa_vegetacao',
+      'quadro_eletrico',
+    ],
+  },
+  {
+    id: 'sitio_rural',
+    label: 'Sítio / Chácara / Rural',
+    description: 'Propriedade rural próxima a vegetação e mata',
+    icon: 'Mountain',
+    baseRiskPoints: 20,
+    suggestedAreas: [
+      'cozinha',
+      'garagem',
+      'deposito',
+      'area_externa_vegetacao',
+      'quadro_eletrico',
+      'sala_baterias',
+    ],
+  },
+  {
+    id: 'comercio',
+    label: 'Comércio',
+    description: 'Loja, escritório ou estabelecimento comercial',
+    icon: 'Store',
+    baseRiskPoints: 10,
+    suggestedAreas: ['deposito', 'quadro_eletrico', 'sala_baterias', 'area_servico'],
+  },
+  {
+    id: 'industria',
+    label: 'Indústria',
+    description: 'Galpão industrial ou linha de produção',
+    icon: 'Factory',
+    baseRiskPoints: 18,
+    suggestedAreas: ['deposito', 'quadro_eletrico', 'sala_baterias', 'garagem'],
+  },
+]
