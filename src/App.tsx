@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Welcome } from './pages/Welcome'
 import { PropertyType } from './pages/PropertyType'
@@ -11,7 +11,7 @@ import { ProductDetail } from './pages/ProductDetail'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Welcome />} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/produtos/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
