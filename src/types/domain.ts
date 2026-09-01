@@ -19,7 +19,16 @@ export type AreaId =
 
 export type FireClass = 'A' | 'B' | 'C' | 'D' | 'K' | 'LITIO'
 
-export type ProductId = 'detector_fumaca' | 'extintor_classe_l' | 'kit_incendio_florestal'
+export type ProductId =
+  | 'detector_fumaca'
+  | 'extintor_classe_l'
+  | 'kit_incendio_florestal'
+  | 'extintor_abc'
+  | 'manta_incendio'
+  | 'iluminacao_emergencia'
+  | 'detector_gas'
+  | 'kit_incendio_florestal_manual'
+  | 'mangueira_incendio'
 
 export type RiskLevel = 'baixo' | 'medio' | 'alto' | 'critico'
 
@@ -74,6 +83,8 @@ export interface Product {
   fireClasses: FireClass[]
   standardsNote: string
   idealFor: string[]
+  /** 'per-area': sugere 1 unidade por cômodo/área que gerou a recomendação. 'fixed': item único para a propriedade toda. */
+  quantityModel: 'per-area' | 'fixed'
 }
 
 export type AnswersMap = Record<string, string[]>

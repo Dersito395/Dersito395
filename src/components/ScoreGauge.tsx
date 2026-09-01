@@ -26,7 +26,7 @@ export function ScoreGauge({ score, level, size = 140 }: { score: number; level:
         />
       </svg>
       <div className="absolute flex flex-col items-center">
-        <span className="text-3xl font-extrabold">{score}</span>
+        <span className={`text-3xl font-extrabold ${level === 'critico' ? 'text-red-500' : ''}`}>{score}</span>
         <span className="text-[10px] text-slate-500 uppercase tracking-wide">de 100</span>
       </div>
     </div>

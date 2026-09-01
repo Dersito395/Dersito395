@@ -1,5 +1,7 @@
 import type { Product } from '../types/domain'
 
+const SOB_CONSULTA = 'Sob consulta'
+
 export const products: Product[] = [
   {
     id: 'detector_fumaca',
@@ -8,7 +10,7 @@ export const products: Product[] = [
     description:
       'Sensor com tecnologia Tuya que identifica fumaça, calor excessivo e umidade anormal, enviando alertas instantâneos para o app. Ideal para o primeiro sinal de um princípio de incêndio, quando ainda dá tempo de agir.',
     image: '🔥📡',
-    price: 'A partir de R$ 249',
+    price: SOB_CONSULTA,
     specs: [
       'Conectividade Wi-Fi via app Tuya / Smart Life',
       'Sensor de fumaça óptico + temperatura + umidade',
@@ -20,6 +22,7 @@ export const products: Product[] = [
     fireClasses: ['A', 'C'],
     standardsNote: 'Referência: detecção precoce recomendada pelas Instruções Técnicas do CB-PMESP para ocupações residenciais e comerciais.',
     idealFor: ['Instalação elétrica antiga ou sobrecarregada', 'Cozinhas com gás', 'Ambientes sem monitoramento atual'],
+    quantityModel: 'per-area',
   },
   {
     id: 'extintor_classe_l',
@@ -28,7 +31,7 @@ export const products: Product[] = [
     description:
       'Extintor desenvolvido especificamente para incêndios envolvendo baterias de lítio, que reagem de forma diferente do fogo comum e não são controladas por extintores convencionais. Essencial onde há veículos elétricos, bikes/patinetes ou muitos dispositivos eletrônicos.',
     image: '🧯⚡',
-    price: 'A partir de R$ 690',
+    price: SOB_CONSULTA,
     specs: [
       'Agente extintor específico para incêndio Classe L (lítio)',
       'Resfria e isola células em thermal runaway',
@@ -39,6 +42,7 @@ export const products: Product[] = [
     fireClasses: ['LITIO'],
     standardsNote: 'Classe de incêndio específica para lítio, complementar às classes A, B, C, D e K das Instruções Técnicas do CB-PMESP.',
     idealFor: ['Veículo elétrico ou moto elétrica em casa', 'Muitos power banks/eletrônicos', 'Baterias carregando sem supervisão'],
+    quantityModel: 'per-area',
   },
   {
     id: 'kit_incendio_florestal',
@@ -47,7 +51,7 @@ export const products: Product[] = [
     description:
       'Sistema completo adaptado para pickup, com reservatório de 300L, motor a diesel e mangueira de 50m a 40 bar de pressão — autonomia e alcance para conter focos de incêndio em vegetação antes que se espalhem.',
     image: '🚙🌲',
-    price: 'Sob consulta',
+    price: SOB_CONSULTA,
     specs: [
       'Reservatório de 300 litros',
       'Motor a diesel de alta pressão',
@@ -57,7 +61,127 @@ export const products: Product[] = [
     ],
     appliesTo: ['Sítios e chácaras', 'Áreas rurais', 'Propriedades próximas a mata/vegetação'],
     fireClasses: ['A'],
-    standardsNote: 'Apoio complementar ao combate a incêndio florestal; não substitui o acionamento do Corpo de Bombeiros.',
+    standardsNote: 'Apoio complementar ao combate a incêndio florestal; não substitui o acionamento do Corpo de Bombeiros de São Paulo.',
     idealFor: ['Vegetação seca próxima', 'Histórico de queimadas na região', 'Ausência de reservatório de água acessível'],
+    quantityModel: 'fixed',
+  },
+  {
+    id: 'extintor_abc',
+    name: 'Extintor ABC 08 kg',
+    tagline: 'Proteção multiuso para os riscos mais comuns',
+    description:
+      'Extintor de pó químico ABC de 8kg, indicado para incêndios em materiais sólidos (papel, madeira, tecido), líquidos inflamáveis (combustíveis, solventes) e equipamentos elétricos energizados — o equipamento básico que não pode faltar em nenhum ambiente.',
+    image: '🧯',
+    price: SOB_CONSULTA,
+    specs: [
+      'Capacidade de 8 kg de pó químico ABC',
+      'Atua nas classes de incêndio A, B e C',
+      'Indicado como equipamento de primeira resposta',
+      'Recarga e manutenção anual recomendadas',
+    ],
+    appliesTo: ['Cozinhas', 'Salas', 'Garagens', 'Áreas de serviço', 'Depósitos', 'Quadros elétricos'],
+    fireClasses: ['A', 'B', 'C'],
+    standardsNote: 'Agente extintor de uso geral conforme as Instruções Técnicas do CB-PMESP para as classes A, B e C.',
+    idealFor: ['Materiais inflamáveis presentes', 'Instalação elétrica de risco', 'Ambiente ainda sem nenhum extintor'],
+    quantityModel: 'per-area',
+  },
+  {
+    id: 'manta_incendio',
+    name: 'Manta para Incêndio (Pequeno Porte)',
+    tagline: 'Resposta rápida para princípios de incêndio na cozinha',
+    description:
+      'Manta de fibra de vidro para abafar princípios de incêndio em panelas com óleo/gordura ou pequenas chamas em roupas e objetos — uma barreira simples e imediata antes que o fogo se espalhe.',
+    image: '🔥🧻',
+    price: SOB_CONSULTA,
+    specs: [
+      'Fibra de vidro resistente a altas temperaturas',
+      'Abafa o fogo cortando o contato com o oxigênio',
+      'Uso simples, sem necessidade de treinamento',
+      'Fácil fixação na parede da cozinha',
+    ],
+    appliesTo: ['Cozinhas', 'Áreas de preparo de alimentos'],
+    fireClasses: ['K', 'A'],
+    standardsNote: 'Equipamento complementar recomendado para incêndios de origem em óleos e gorduras de cozinha.',
+    idealFor: ['Cozinha com fogão a gás', 'Histórico de superaquecimento na cozinha'],
+    quantityModel: 'per-area',
+  },
+  {
+    id: 'iluminacao_emergencia',
+    name: 'Iluminação de Emergência',
+    tagline: 'Visibilidade para evacuar em segurança durante uma falta de energia',
+    description:
+      'Luminária autônoma que acende automaticamente em caso de queda de energia — situação comum durante incêndios elétricos — garantindo visibilidade para rotas de saída e evitando acidentes na evacuação.',
+    image: '🔦',
+    price: SOB_CONSULTA,
+    specs: [
+      'Acionamento automático na falta de energia',
+      'Bateria recarregável de longa duração',
+      'Indicada para corredores, escadas e saídas',
+      'Instalação simples na rede elétrica existente',
+    ],
+    appliesTo: ['Corredores', 'Escadas', 'Saídas de emergência', 'Comércios e indústrias'],
+    fireClasses: ['C'],
+    standardsNote: 'Sinalização e iluminação de emergência recomendadas pelas Instruções Técnicas do CB-PMESP para rotas de fuga.',
+    idealFor: ['Instalação elétrica antiga ou sobrecarregada', 'Comércio ou indústria', 'Ambientes com pouca luz natural'],
+    quantityModel: 'per-area',
+  },
+  {
+    id: 'detector_gas',
+    name: 'Detector de Gás',
+    tagline: 'Alerta antes do vazamento virar princípio de incêndio',
+    description:
+      'Sensor dedicado a detectar vazamentos de gás GLP/GN no ambiente, disparando alarme sonoro antes que a concentração atinja um nível de risco de explosão ou incêndio.',
+    image: '🧪',
+    price: SOB_CONSULTA,
+    specs: [
+      'Detecção de gás GLP e gás natural',
+      'Alarme sonoro local de alta intensidade',
+      'Instalação próxima ao piso ou ao fogão/botijão',
+      'Indicador visual de status de funcionamento',
+    ],
+    appliesTo: ['Cozinhas', 'Áreas com botijão de gás'],
+    fireClasses: ['B'],
+    standardsNote: 'Equipamento de detecção preventiva complementar ao uso seguro de instalações de gás.',
+    idealFor: ['Cozinha com botijão ou instalação de gás'],
+    quantityModel: 'per-area',
+  },
+  {
+    id: 'kit_incendio_florestal_manual',
+    name: 'Kit Manual para Incêndios Florestais',
+    tagline: 'Combate manual para conter um foco antes que ele cresça',
+    description:
+      'Kit portátil com abafador, enxada de fogo e demais ferramentas manuais para conter princípios de incêndio em vegetação — uma opção mais acessível que o sistema montado em pickup, para complementar a proteção rural.',
+    image: '🪓🔥',
+    price: SOB_CONSULTA,
+    specs: [
+      'Abafador de fogo',
+      'Enxada de fogo (rastelo/enxada combinado)',
+      'Bolsa de transporte resistente',
+      'Ferramentas leves para uso manual imediato',
+    ],
+    appliesTo: ['Sítios e chácaras', 'Áreas rurais', 'Propriedades próximas a mata/vegetação'],
+    fireClasses: ['A'],
+    standardsNote: 'Apoio complementar ao combate a incêndio florestal; não substitui o acionamento do Corpo de Bombeiros de São Paulo.',
+    idealFor: ['Vegetação seca próxima', 'Propriedade sem acesso viável para o kit montado em pickup'],
+    quantityModel: 'fixed',
+  },
+  {
+    id: 'mangueira_incendio',
+    name: 'Mangueira de Incêndio (50 metros)',
+    tagline: 'Alcance extra para usar o reservatório de água que você já tem',
+    description:
+      'Mangueira de incêndio de 50 metros, compatível com hidrantes e reservatórios de água, para ampliar o alcance do combate a um princípio de incêndio em propriedades maiores.',
+    image: '🚒',
+    price: SOB_CONSULTA,
+    specs: [
+      '50 metros de comprimento',
+      'Conexões padrão para hidrante/reservatório',
+      'Material resistente a abrasão e alta pressão',
+    ],
+    appliesTo: ['Sítios e chácaras', 'Comércios e indústrias', 'Propriedades com hidrante ou reservatório de água'],
+    fireClasses: ['A'],
+    standardsNote: 'Equipamento complementar para uso junto a hidrantes e reservatórios de água conforme as Instruções Técnicas do CB-PMESP.',
+    idealFor: ['Reservatório de água distante da área de risco', 'Comércio ou indústria de maior porte'],
+    quantityModel: 'fixed',
   },
 ]
