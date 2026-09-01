@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { ArrowLeft } from 'lucide-react'
 import { globalQuestions, questionsByArea } from '../data/questions'
 import { areas } from '../data/areas'
 import { QuestionCard } from '../components/QuestionCard'
@@ -12,6 +13,7 @@ export function Questions() {
   const navigate = useNavigate()
   const propertyTypeId = useSimulatorStore((s) => s.propertyTypeId)
   const selectedAreas = useSimulatorStore((s) => s.selectedAreas)
+  const answers = useSimulatorStore((s) => s.answers)
   const answerQuestion = useSimulatorStore((s) => s.answerQuestion)
 
   useEffect(() => {
@@ -51,15 +53,31 @@ export function Questions() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div>
-        <span className="text-xs font-semibold uppercase tracking-wide text-orange-400">{areaLabel}</span>
-        <p className="text-xs text-slate-500 mt-0.5">
-          Pergunta {index + 1} de {flatQuestions.length}
-        </p>
+      <div className="flex items-center gap-3">
+        {index > 0 && (
+          <button
+            onClick={() => setIndex(index - 1)}
+            aria-label="Voltar para a pergunta anterior"
+            className="flex items-center gap-1 text-xs font-medium text-slate-400 hover:text-slate-200 -ml-1 py-1 pr-2"
+          >
+            <ArrowLeft size={14} /> Voltar
+          </button>
+        )}
+        <div>
+          <span className="text-xs font-semibold uppercase tracking-wide text-orange-400">{areaLabel}</span>
+          <p className="text-xs text-slate-500 mt-0.5">
+            Pergunta {index + 1} de {flatQuestions.length}
+          </p>
+        </div>
       </div>
 
       <AnimatePresence mode="wait">
-        <QuestionCard key={question.id} question={question} onAnswer={commitAndAdvance} />
+        <QuestionCard
+          key={question.id}
+          question={question}
+          initialSelected={answers[question.id]}
+          onAnswer={commitAndAdvance}
+        />
       </AnimatePresence>
     </div>
   )

@@ -26,6 +26,8 @@ export interface RecommendedProduct {
   product: Product
   relevance: number
   reasons: string[]
+  suggestedQuantity: number
+  quantityNote: string
 }
 
 export interface SimulationResult {
@@ -46,22 +48,39 @@ function questionMaxPoints(question: Question): number {
   return Math.max(...question.options.map((o) => Math.max(o.riskPoints, 0)), 0)
 }
 
+function emptyProductMap<T>(factory: () => T): Record<ProductId, T> {
+  return products.reduce(
+    (acc, p) => {
+      acc[p.id] = factory()
+      return acc
+    },
+    {} as Record<ProductId, T>,
+  )
+}
+
+function quantityNoteFor(product: Product, areaLabels: Set<string>): { quantity: number; note: string } {
+  if (product.quantityModel === 'fixed') {
+    return { quantity: 1, note: '1 unidade recomendada para a propriedade' }
+  }
+  const quantity = Math.max(1, areaLabels.size)
+  const note =
+    areaLabels.size > 0
+      ? `${quantity} unidade${quantity > 1 ? 's' : ''} sugerida${quantity > 1 ? 's' : ''} — ${Array.from(areaLabels)
+          .map((label) => `1 para ${label}`)
+          .join(', ')}`
+      : '1 unidade sugerida'
+  return { quantity, note }
+}
+
 export function calculateSimulation(
   propertyTypeId: PropertyTypeId,
   selectedAreas: AreaId[],
   answers: AnswersMap,
 ): SimulationResult {
   const propertyType = propertyTypes.find((p) => p.id === propertyTypeId)
-  const productScores: Record<ProductId, number> = {
-    detector_fumaca: 0,
-    extintor_classe_l: 0,
-    kit_incendio_florestal: 0,
-  }
-  const productReasons: Record<ProductId, Set<string>> = {
-    detector_fumaca: new Set(),
-    extintor_classe_l: new Set(),
-    kit_incendio_florestal: new Set(),
-  }
+  const productScores = emptyProductMap<number>(() => 0)
+  const productReasons = emptyProductMap<Set<string>>(() => new Set<string>())
+  const productAreas = emptyProductMap<Set<string>>(() => new Set<string>())
 
   let globalRaw = 0
   let globalMax = 0
@@ -103,6 +122,7 @@ export function calculateSimulation(
           for (const [pid, weight] of Object.entries(opt.productBoost)) {
             productScores[pid as ProductId] += weight ?? 0
             productReasons[pid as ProductId].add(`${areaMeta.label}: ${q.text}`)
+            productAreas[pid as ProductId].add(areaMeta.label)
           }
         }
       }
@@ -134,11 +154,16 @@ export function calculateSimulation(
   const overallLevel = levelFromSafetyScore(overallSafetyScore)
 
   const recommendedProducts: RecommendedProduct[] = products
-    .map((product) => ({
-      product,
-      relevance: productScores[product.id],
-      reasons: Array.from(productReasons[product.id]),
-    }))
+    .map((product) => {
+      const { quantity, note } = quantityNoteFor(product, productAreas[product.id])
+      return {
+        product,
+        relevance: productScores[product.id],
+        reasons: Array.from(productReasons[product.id]),
+        suggestedQuantity: quantity,
+        quantityNote: note,
+      }
+    })
     .sort((a, b) => b.relevance - a.relevance)
     .filter((r, idx) => r.relevance > 0 || idx === 0)
 

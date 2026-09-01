@@ -5,11 +5,12 @@ import type { Question } from '../types/domain'
 
 interface QuestionCardProps {
   question: Question
+  initialSelected?: string[]
   onAnswer: (optionIds: string[]) => void
 }
 
-export function QuestionCard({ question, onAnswer }: QuestionCardProps) {
-  const [selected, setSelected] = useState<string[]>([])
+export function QuestionCard({ question, initialSelected, onAnswer }: QuestionCardProps) {
+  const [selected, setSelected] = useState<string[]>(initialSelected ?? [])
 
   function toggleMulti(optionId: string) {
     setSelected((prev) => (prev.includes(optionId) ? prev.filter((o) => o !== optionId) : [...prev, optionId]))

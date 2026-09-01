@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AlertTriangle, CheckCircle2, Download, Mail } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, Download, Mail, MessageCircle, Package } from 'lucide-react'
 import { ScoreGauge } from '../components/ScoreGauge'
 import { levelMeta } from '../lib/riskLevel'
 import { Button } from '../components/Button'
 import { track } from '../lib/analytics'
 import { useSimulatorStore } from '../store/simulatorStore'
 import { areas } from '../data/areas'
+import { propertyTypes } from '../data/propertyTypes'
+import { whatsappLink } from '../lib/contact'
+import { generateResultPdf } from '../lib/pdf'
+import { buildResultSummaryText } from '../lib/resultSummary'
 
 export function Results() {
   const navigate = useNavigate()
   const result = useSimulatorStore((s) => s.result)
-  const [saved, setSaved] = useState<'email' | null>(null)
+  const propertyTypeId = useSimulatorStore((s) => s.propertyTypeId)
+  const [saved, setSaved] = useState<'email' | 'pdf' | null>(null)
 
   useEffect(() => {
     if (!result) navigate('/tipo-imovel', { replace: true })
@@ -28,14 +33,28 @@ export function Results() {
   if (!result) return null
 
   const overallMeta = levelMeta(result.overallLevel)
+  const propertyTypeLabel = propertyTypes.find((p) => p.id === propertyTypeId)?.label ?? 'Imóvel'
 
   function goToStorefront() {
     navigate('/produtos')
   }
 
-  function saveResult() {
+  function sendByEmail() {
+    const email = window.prompt('Digite seu e-mail para receber o resultado:')
+    if (!email) return
+    const body = buildResultSummaryText(propertyTypeLabel, result!)
+    const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(
+      'Meu resultado do simulador Check - Incêndios',
+    )}&body=${encodeURIComponent(body)}`
+    window.location.href = mailto
     track({ name: 'resultado_salvo', method: 'email' })
     setSaved('email')
+  }
+
+  async function downloadPdf() {
+    await generateResultPdf(propertyTypeLabel, result!)
+    track({ name: 'resultado_salvo', method: 'pdf' })
+    setSaved('pdf')
   }
 
   return (
@@ -92,13 +111,28 @@ export function Results() {
       <section className="flex flex-col gap-3">
         <h2 className="font-bold text-base">Equipamentos recomendados para você</h2>
         <div className="flex flex-col gap-3">
-          {result.recommendedProducts.slice(0, 3).map(({ product, reasons }) => (
+          {result.recommendedProducts.slice(0, 3).map(({ product, reasons, quantityNote }) => (
             <div key={product.id} className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex gap-3">
               <div className="text-3xl leading-none">{product.image}</div>
               <div className="flex-1">
                 <p className="font-semibold text-sm">{product.name}</p>
                 <p className="text-xs text-slate-500 mt-0.5">{product.tagline}</p>
                 {reasons[0] && <p className="text-xs text-orange-400 mt-1.5">Por quê: {reasons[0]}</p>}
+                <p className="flex items-start gap-1.5 text-[11px] text-slate-500 mt-1.5 leading-snug">
+                  <Package size={12} className="shrink-0 mt-0.5" /> {quantityNote}
+                </p>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-sm font-bold text-orange-400">{product.price}</span>
+                  <a
+                    href={whatsappLink(`Olá! Tenho interesse no produto: ${product.name}`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => track({ name: 'cta_contato_clicado', productId: product.id, channel: 'whatsapp' })}
+                    className="flex items-center gap-1 text-xs font-semibold text-green-400 bg-green-600/15 px-2.5 py-1 rounded-full hover:bg-green-600/25"
+                  >
+                    <MessageCircle size={12} /> WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -111,16 +145,16 @@ export function Results() {
           <Button onClick={goToStorefront}>Ver equipamentos recomendados</Button>
           <div className="flex gap-2">
             <button
-              onClick={saveResult}
+              onClick={sendByEmail}
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300"
             >
-              <Mail size={14} /> {saved === 'email' ? 'Enviado!' : 'Receber por e-mail'}
+              <Mail size={14} /> {saved === 'email' ? 'Aberto no e-mail!' : 'Receber por e-mail'}
             </button>
             <button
-              onClick={() => track({ name: 'resultado_salvo', method: 'pdf' })}
+              onClick={downloadPdf}
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300"
             >
-              <Download size={14} /> Baixar PDF
+              <Download size={14} /> {saved === 'pdf' ? 'Baixado!' : 'Baixar PDF'}
             </button>
           </div>
         </div>
@@ -128,7 +162,7 @@ export function Results() {
 
       <p className="text-[11px] text-slate-600 text-center leading-relaxed">
         Este resultado é uma ferramenta educativa e orientativa, com base nas classes de incêndio e
-        diretrizes gerais do Corpo de Bombeiros. Não substitui vistoria técnica nem laudo (AVCB).
+        diretrizes gerais do Corpo de Bombeiros de São Paulo. Não substitui vistoria técnica nem laudo (AVCB).
       </p>
     </div>
   )

@@ -42,7 +42,7 @@ export function Welcome() {
         </div>
         <div className="bg-slate-900 rounded-xl p-3 flex flex-col gap-1 border border-slate-800">
           <ShieldCheck size={18} className="text-orange-400" />
-          <span className="text-xs text-slate-400">Baseado nas normas do Corpo de Bombeiros</span>
+          <span className="text-xs text-slate-400">Baseado nas normas do Corpo de Bombeiros de São Paulo</span>
         </div>
       </div>
 

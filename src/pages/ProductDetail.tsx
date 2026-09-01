@@ -1,8 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import { CheckCircle2, MessageCircle, ShieldCheck, FileText } from 'lucide-react'
+import { CheckCircle2, MessageCircle, ShieldCheck, FileText, Package } from 'lucide-react'
 import { products } from '../data/products'
 import { Button } from '../components/Button'
 import { track } from '../lib/analytics'
+import { whatsappLink } from '../lib/contact'
 
 export function ProductDetail() {
   const { id } = useParams()
@@ -51,6 +52,15 @@ export function ProductDetail() {
         </ul>
       </section>
 
+      <section className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex items-start gap-2.5">
+        <Package size={16} className="text-orange-400 shrink-0 mt-0.5" />
+        <p className="text-sm text-slate-300">
+          {product.quantityModel === 'fixed'
+            ? 'Recomendação: 1 unidade para toda a propriedade.'
+            : 'Recomendação: 1 unidade para cada cômodo/área onde o risco foi identificado.'}
+        </p>
+      </section>
+
       <section>
         <h2 className="font-bold text-sm mb-2">Ideal quando você identificou</h2>
         <ul className="flex flex-col gap-2">
@@ -80,7 +90,7 @@ export function ProductDetail() {
       <div className="fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur border-t border-slate-800 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
         <div className="max-w-md mx-auto flex flex-col gap-2.5">
           <a
-            href={`https://wa.me/5500000000000?text=${encodeURIComponent(`Olá! Tenho interesse no produto: ${product.name}`)}`}
+            href={whatsappLink(`Olá! Tenho interesse no produto: ${product.name}`)}
             target="_blank"
             rel="noreferrer"
             onClick={() => contact('whatsapp')}
@@ -89,12 +99,15 @@ export function ProductDetail() {
               <MessageCircle size={18} /> Falar no WhatsApp
             </Button>
           </a>
-          <button
+          <a
+            href={whatsappLink(`Olá! Gostaria de um orçamento para: ${product.name}`)}
+            target="_blank"
+            rel="noreferrer"
             onClick={() => contact('orcamento')}
             className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-slate-900 border border-slate-800 text-sm font-semibold text-slate-200"
           >
             <FileText size={16} /> Solicitar orçamento
-          </button>
+          </a>
         </div>
       </div>
     </div>
