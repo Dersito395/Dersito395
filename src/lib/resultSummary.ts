@@ -2,6 +2,18 @@ import type { SimulationResult } from '../engine/riskEngine'
 import { levelMeta } from './riskLevel'
 import { COMPANY } from './contact'
 
+export function buildWhatsAppProductListMessage(result: SimulationResult): string {
+  const lines: string[] = []
+  lines.push('Olá! Meu resultado do simulador Check - Incêndios indicou os seguintes equipamentos recomendados:')
+  lines.push('')
+  for (const { product, quantityNote } of result.recommendedProducts) {
+    lines.push(`• ${product.name} — ${quantityNote}`)
+  }
+  lines.push('')
+  lines.push('Gostaria de solicitar um orçamento para essa lista completa.')
+  return lines.join('\n')
+}
+
 export function buildResultSummaryText(propertyTypeLabel: string, result: SimulationResult): string {
   const lines: string[] = []
   lines.push('Check - Incêndios (Fire Command) — Resultado do simulador de risco de incêndio')

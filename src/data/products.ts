@@ -91,7 +91,7 @@ export const products: Product[] = [
     tagline: 'Resposta rápida para princípios de incêndio na cozinha',
     description:
       'Manta de fibra de vidro para abafar princípios de incêndio em panelas com óleo/gordura ou pequenas chamas em roupas e objetos — uma barreira simples e imediata antes que o fogo se espalhe.',
-    image: '🔥🧻',
+    image: '🔥⬜',
     price: SOB_CONSULTA,
     specs: [
       'Fibra de vidro resistente a altas temperaturas',
@@ -131,7 +131,7 @@ export const products: Product[] = [
     tagline: 'Alerta antes do vazamento virar princípio de incêndio',
     description:
       'Sensor dedicado a detectar vazamentos de gás GLP/GN no ambiente, disparando alarme sonoro antes que a concentração atinja um nível de risco de explosão ou incêndio.',
-    image: '🧪',
+    image: '🌡️💨',
     price: SOB_CONSULTA,
     specs: [
       'Detecção de gás GLP e gás natural',
@@ -171,7 +171,7 @@ export const products: Product[] = [
     tagline: 'Alcance extra para usar o reservatório de água que você já tem',
     description:
       'Mangueira de incêndio de 50 metros, compatível com hidrantes e reservatórios de água, para ampliar o alcance do combate a um princípio de incêndio em propriedades maiores.',
-    image: '🚒',
+    image: '🚿💦',
     price: SOB_CONSULTA,
     specs: [
       '50 metros de comprimento',
