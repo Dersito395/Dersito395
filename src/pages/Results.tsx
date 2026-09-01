@@ -10,7 +10,7 @@ import { areas } from '../data/areas'
 import { propertyTypes } from '../data/propertyTypes'
 import { whatsappLink } from '../lib/contact'
 import { generateResultPdf } from '../lib/pdf'
-import { buildResultSummaryText } from '../lib/resultSummary'
+import { buildResultSummaryText, buildWhatsAppProductListMessage } from '../lib/resultSummary'
 
 export function Results() {
   const navigate = useNavigate()
@@ -137,6 +137,15 @@ export function Results() {
             </div>
           ))}
         </div>
+        <a
+          href={whatsappLink(buildWhatsAppProductListMessage(result))}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => track({ name: 'cta_contato_clicado', productId: 'lista_completa', channel: 'whatsapp' })}
+          className="flex items-center justify-center gap-2 py-3 rounded-2xl bg-green-600/15 border border-green-600/30 text-sm font-semibold text-green-400 hover:bg-green-600/25"
+        >
+          <MessageCircle size={16} /> Enviar essa lista completa por WhatsApp
+        </a>
       </section>
 
       <div className="h-28" aria-hidden />
