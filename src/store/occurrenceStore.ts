@@ -130,10 +130,28 @@ interface OccurrenceState {
   resetConfig: () => void
 }
 
+/** Extrai uma mensagem legível de qualquer erro lançado (Error, PostgrestError, ou objeto genérico). */
+function describeError(err: unknown): string {
+  if (err instanceof Error && err.message) return err.message
+  if (err && typeof err === 'object') {
+    const { message, details, hint, code } = err as { message?: string; details?: string; hint?: string; code?: string }
+    if (message) return [message, details, hint, code && `(código ${code})`].filter(Boolean).join(' — ')
+  }
+  try {
+    return JSON.stringify(err)
+  } catch {
+    return 'Falha ao conectar ao backend (erro sem detalhes — veja o console do navegador).'
+  }
+}
+
 /** Aplica uma escrita em segundo plano: a UI já foi atualizada de forma otimista, isto só reporta falha de sincronização. */
-function syncInBackground(promise: PromiseLike<{ error: { message: string } | null }>) {
+function syncInBackground(promise: PromiseLike<{ error: unknown | null }>) {
   Promise.resolve(promise).then(({ error }) => {
-    useOccurrenceStore.setState({ syncError: error ? error.message : null })
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error('Falha ao sincronizar com o Supabase:', error)
+    }
+    useOccurrenceStore.setState({ syncError: error ? describeError(error) : null })
   })
 }
 
@@ -184,7 +202,9 @@ export const useOccurrenceStore = create<OccurrenceState>((set, get) => ({
 
       set({ occurrences, config, connectionStatus: 'ready', connectionError: null })
     } catch (err) {
-      set({ connectionStatus: 'error', connectionError: err instanceof Error ? err.message : 'Falha ao conectar ao backend.' })
+      // eslint-disable-next-line no-console
+      console.error('Falha ao inicializar conexão com o Supabase:', err)
+      set({ connectionStatus: 'error', connectionError: describeError(err) })
     }
   },
 
