@@ -1,12 +1,14 @@
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { ArrowLeft, BarChart3, Flame, Settings } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, BarChart3, Flame, Settings } from 'lucide-react'
 import { OCCURRENCE_STEPS, stepProgress } from '../lib/steps'
+import { useOccurrenceStore } from '../store/occurrenceStore'
 
 export function Layout() {
   const location = useLocation()
   const navigate = useNavigate()
   const progress = stepProgress(location.pathname)
   const isHome = location.pathname === '/'
+  const syncError = useOccurrenceStore((s) => s.syncError)
 
   return (
     <div className="min-h-dvh bg-slate-950 text-slate-100 flex flex-col">
@@ -54,6 +56,14 @@ export function Layout() {
           </div>
         )}
       </header>
+      {syncError && (
+        <div className="max-w-2xl mx-auto w-full px-4 pt-3">
+          <div className="flex items-center gap-2 rounded-xl bg-red-950/40 border border-red-900/50 px-3 py-2 text-xs text-red-300">
+            <AlertTriangle size={14} className="shrink-0" />
+            <span>Falha ao sincronizar com o servidor — dados podem não ter sido salvos. {syncError}</span>
+          </div>
+        </div>
+      )}
       <main className="flex-1 max-w-2xl mx-auto w-full px-4 py-6">
         <Outlet />
       </main>
