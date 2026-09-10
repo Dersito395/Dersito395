@@ -1,153 +1,75 @@
-import { areas } from '../data/areas'
-import { propertyTypes } from '../data/propertyTypes'
-import { products } from '../data/products'
-import { globalQuestions, questionsByArea } from '../data/questions'
-import type {
-  AnswersMap,
-  AreaId,
-  FireClass,
-  Product,
-  ProductId,
-  PropertyTypeId,
-  Question,
-  RiskLevel,
-} from '../types/domain'
+import type { RiskMatrixConfig } from '../data/riskMatrixConfig'
+import type { OperatorConfirmation, RiskCalculation, RiskLevel, VegetationType } from '../types/domain'
 
-export interface AreaResult {
-  areaId: AreaId
-  label: string
-  safetyScore: number
-  level: RiskLevel
-  identifiedRisks: string[]
-  fireClasses: FireClass[]
+const SPEED_LABEL: Record<VegetationType['propagationSpeedClass'], string> = {
+  lenta: 'lenta',
+  moderada: 'moderada',
+  rapida: 'rápida',
+  muito_rapida: 'muito rápida',
 }
 
-export interface RecommendedProduct {
-  product: Product
-  relevance: number
-  reasons: string[]
-}
+/**
+ * Lógica de cálculo de risco (Etapa 4). Cruza vegetação confirmada,
+ * velocidade de propagação, distância/tempo estimado até a área de risco e
+ * se o foco já está dentro dela. Todos os limiares usados vêm de
+ * `RiskMatrixConfig`, configurável pela empresa — a função em si nunca tem
+ * números "mágicos" embutidos, para que a régua de decisão fique auditável.
+ */
+export function calculateRisk(
+  confirmation: OperatorConfirmation,
+  vegetation: VegetationType,
+  config: RiskMatrixConfig,
+): RiskCalculation {
+  const minutesPerKm = confirmation.propagationOverrideMinutesPerKm ?? vegetation.avgMinutesPerKm
+  const estimatedMinutesToReach = confirmation.insideRiskArea ? null : confirmation.distanceKm * minutesPerKm
 
-export interface SimulationResult {
-  overallSafetyScore: number
-  overallLevel: RiskLevel
-  areaResults: AreaResult[]
-  recommendedProducts: RecommendedProduct[]
-}
+  const rationale: string[] = [
+    `Vegetação confirmada: ${vegetation.label} (propagação ${SPEED_LABEL[vegetation.propagationSpeedClass]}, ~${minutesPerKm} min/km).`,
+  ]
 
-function levelFromSafetyScore(score: number): RiskLevel {
-  if (score >= 75) return 'baixo'
-  if (score >= 50) return 'medio'
-  if (score >= 25) return 'alto'
-  return 'critico'
-}
+  let level: RiskLevel
 
-function questionMaxPoints(question: Question): number {
-  return Math.max(...question.options.map((o) => Math.max(o.riskPoints, 0)), 0)
-}
+  if (confirmation.insideRiskArea) {
+    rationale.push(`Foco já está dentro da área de risco${confirmation.riskAreaId ? ` (${confirmation.riskAreaId})` : ''}.`)
+    rationale.push(`Extensão estimada: ${confirmation.extentHectares} ha${confirmation.multipleFoci ? ', múltiplos focos ativos' : ''}.`)
 
-export function calculateSimulation(
-  propertyTypeId: PropertyTypeId,
-  selectedAreas: AreaId[],
-  answers: AnswersMap,
-): SimulationResult {
-  const propertyType = propertyTypes.find((p) => p.id === propertyTypeId)
-  const productScores: Record<ProductId, number> = {
-    detector_fumaca: 0,
-    extintor_classe_l: 0,
-    kit_incendio_florestal: 0,
-  }
-  const productReasons: Record<ProductId, Set<string>> = {
-    detector_fumaca: new Set(),
-    extintor_classe_l: new Set(),
-    kit_incendio_florestal: new Set(),
-  }
+    if (
+      confirmation.multipleFoci ||
+      vegetation.propagationSpeedClass === 'muito_rapida' ||
+      confirmation.extentHectares >= config.altissimoExtentHectares
+    ) {
+      level = 'altissimo'
+      rationale.push(
+        confirmation.multipleFoci
+          ? 'Múltiplos focos ativos → escalado para Altíssimo.'
+          : vegetation.propagationSpeedClass === 'muito_rapida'
+            ? 'Propagação muito rápida → escalado para Altíssimo.'
+            : `Extensão ≥ ${config.altissimoExtentHectares} ha → escalado para Altíssimo.`,
+      )
+    } else if (vegetation.propagationSpeedClass === 'rapida' || confirmation.extentHectares >= config.alto2ExtentHectares) {
+      level = 'alto_2'
+      rationale.push(
+        vegetation.propagationSpeedClass === 'rapida'
+          ? 'Propagação rápida dentro da área de risco → Alto II.'
+          : `Extensão ≥ ${config.alto2ExtentHectares} ha → Alto II.`,
+      )
+    } else {
+      level = 'alto_1'
+      rationale.push('Foco dentro da área de risco com propagação moderada/lenta e sem outros fatores de escalada → Alto I (mínimo de resposta para foco já dentro da área).')
+    }
+  } else {
+    rationale.push(
+      `Foco fora da área de risco. Distância: ${confirmation.distanceKm} km → tempo estimado até atingir a área: ${Math.round(estimatedMinutesToReach ?? 0)} min.`,
+    )
 
-  let globalRaw = 0
-  let globalMax = 0
-  for (const q of globalQuestions) {
-    globalMax += questionMaxPoints(q)
-    const selectedIds = answers[q.id] ?? []
-    for (const optId of selectedIds) {
-      const opt = q.options.find((o) => o.id === optId)
-      if (!opt) continue
-      globalRaw += opt.riskPoints
-      if (opt.productBoost) {
-        for (const [pid, weight] of Object.entries(opt.productBoost)) {
-          productScores[pid as ProductId] += weight ?? 0
-        }
-      }
+    if ((estimatedMinutesToReach ?? Infinity) <= config.approachWindowMinutes) {
+      level = 'medio_1'
+      rationale.push(`Tempo estimado ≤ ${config.approachWindowMinutes} min → foco classificado como "se aproximando" (Médio I).`)
+    } else {
+      level = 'baixo'
+      rationale.push(`Tempo estimado > ${config.approachWindowMinutes} min e sem tendência imediata de avanço → Baixo.`)
     }
   }
 
-  const areaResults: AreaResult[] = selectedAreas.map((areaId) => {
-    const areaMeta = areas.find((a) => a.id === areaId)!
-    const areaQuestions = questionsByArea[areaId] ?? []
-    let raw = 0
-    let max = 0
-    const identifiedRisks: string[] = []
-    const fireClasses = new Set<FireClass>()
-
-    for (const q of areaQuestions) {
-      max += questionMaxPoints(q)
-      const selectedIds = answers[q.id] ?? []
-      for (const optId of selectedIds) {
-        const opt = q.options.find((o) => o.id === optId)
-        if (!opt) continue
-        raw += opt.riskPoints
-        if (opt.riskPoints > 0) {
-          identifiedRisks.push(q.text)
-          opt.fireClasses?.forEach((fc) => fireClasses.add(fc))
-        }
-        if (opt.productBoost) {
-          for (const [pid, weight] of Object.entries(opt.productBoost)) {
-            productScores[pid as ProductId] += weight ?? 0
-            productReasons[pid as ProductId].add(`${areaMeta.label}: ${q.text}`)
-          }
-        }
-      }
-    }
-
-    const normalizedRaw = max > 0 ? Math.max(0, Math.min(1, raw / max)) : 0
-    const safetyScore = Math.round(100 - normalizedRaw * 100)
-
-    return {
-      areaId,
-      label: areaMeta.label,
-      safetyScore,
-      level: levelFromSafetyScore(safetyScore),
-      identifiedRisks,
-      fireClasses: Array.from(fireClasses),
-    }
-  })
-
-  const areaAvgSafety =
-    areaResults.length > 0
-      ? areaResults.reduce((sum, a) => sum + a.safetyScore, 0) / areaResults.length
-      : 100
-
-  const globalNormalized = globalMax > 0 ? Math.max(-1, Math.min(1, globalRaw / globalMax)) : 0
-  const basePenalty = propertyType ? propertyType.baseRiskPoints : 0
-
-  const overallRaw = areaAvgSafety - globalNormalized * 15 - basePenalty
-  const overallSafetyScore = Math.round(Math.max(0, Math.min(100, overallRaw)))
-  const overallLevel = levelFromSafetyScore(overallSafetyScore)
-
-  const recommendedProducts: RecommendedProduct[] = products
-    .map((product) => ({
-      product,
-      relevance: productScores[product.id],
-      reasons: Array.from(productReasons[product.id]),
-    }))
-    .sort((a, b) => b.relevance - a.relevance)
-    .filter((r, idx) => r.relevance > 0 || idx === 0)
-
-  if (recommendedProducts.every((r) => r.relevance === 0)) {
-    const detector = recommendedProducts.find((r) => r.product.id === 'detector_fumaca')
-    if (detector) {
-      detector.reasons.push('Monitoramento preventivo recomendado mesmo em ambientes de baixo risco.')
-    }
-  }
-
-  return { overallSafetyScore, overallLevel, areaResults, recommendedProducts }
+  return { level, rationale, estimatedMinutesToReach, calculatedAt: new Date().toISOString() }
 }
