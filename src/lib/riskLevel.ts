@@ -1,12 +1,9 @@
 import type { RiskLevel } from '../types/domain'
 
-export const levelColors: Record<RiskLevel, { ring: string; text: string; bg: string; label: string }> = {
-  baixo: { ring: '#22c55e', text: 'text-green-400', bg: 'bg-green-500/10', label: 'Risco baixo' },
-  medio: { ring: '#eab308', text: 'text-yellow-400', bg: 'bg-yellow-500/10', label: 'Risco médio' },
-  alto: { ring: '#f97316', text: 'text-orange-400', bg: 'bg-orange-500/10', label: 'Risco alto' },
-  critico: { ring: '#ef4444', text: 'text-red-400', bg: 'bg-red-500/10', label: 'Risco crítico' },
-}
-
-export function levelMeta(level: RiskLevel) {
-  return levelColors[level]
+export const RISK_LEVEL_STYLES: Record<RiskLevel, { bg: string; text: string; ring: string }> = {
+  baixo: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', ring: '#34d399' },
+  medio_1: { bg: 'bg-yellow-500/15', text: 'text-yellow-400', ring: '#facc15' },
+  alto_1: { bg: 'bg-orange-500/15', text: 'text-orange-400', ring: '#fb923c' },
+  alto_2: { bg: 'bg-red-500/15', text: 'text-red-400', ring: '#f87171' },
+  altissimo: { bg: 'bg-fuchsia-600/20', text: 'text-fuchsia-400', ring: '#e879f9' },
 }

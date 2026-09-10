@@ -1,79 +1,149 @@
-export type PropertyTypeId =
-  | 'apartamento'
-  | 'casa_urbana'
-  | 'casa_quintal'
-  | 'sitio_rural'
-  | 'comercio'
-  | 'industria'
+// Modelo de dados — entidades do copiloto de decisão para combate a incêndios florestais.
+// Ocorrência, Foco, Vegetação, Área de Risco, Recurso, Recomendação, Feedback.
 
-export type AreaId =
-  | 'cozinha'
-  | 'sala'
-  | 'quarto'
-  | 'garagem'
-  | 'area_servico'
-  | 'deposito'
-  | 'area_externa_vegetacao'
-  | 'sala_baterias'
-  | 'quadro_eletrico'
+export type VegetationId =
+  | 'cana_de_acucar'
+  | 'eucalipto_seco'
+  | 'eucalipto_umido'
+  | 'nativa_pastagem'
+  | 'material_industrial'
 
-export type FireClass = 'A' | 'B' | 'C' | 'D' | 'K' | 'LITIO'
+export type PropagationSpeedClass = 'lenta' | 'moderada' | 'rapida' | 'muito_rapida'
 
-export type ProductId = 'detector_fumaca' | 'extintor_classe_l' | 'kit_incendio_florestal'
-
-export type RiskLevel = 'baixo' | 'medio' | 'alto' | 'critico'
-
-export interface PropertyType {
-  id: PropertyTypeId
+/** Vegetação/material em combustão — parametrizável pela empresa. */
+export interface VegetationType {
+  id: VegetationId
   label: string
   description: string
-  icon: string
-  /** Pontos de risco base já embutidos nesse tipo de imóvel (0-100 parcial) */
-  baseRiskPoints: number
-  /** Áreas sugeridas/pré-marcadas para esse tipo de imóvel */
-  suggestedAreas: AreaId[]
+  propagationSpeedClass: PropagationSpeedClass
+  /** Tempo médio de propagação, em minutos por km, até atingir uma área de risco. Parametrizável. */
+  avgMinutesPerKm: number
+  /** Afinidade da assinatura de fumaça (0-1) usada pelo classificador heurístico. */
+  smokeSignature: {
+    color: Record<SmokeColor, number>
+    density: Record<SmokeDensity, number>
+    /** Direção do efeito da umidade do solo: 'alta_favorece' = mais úmido aumenta a chance; 'baixa_favorece' = mais seco aumenta a chance. */
+    humidityEffect: 'alta_favorece' | 'baixa_favorece' | 'neutro'
+  }
 }
 
-export interface Area {
-  id: AreaId
-  label: string
-  description: string
-  icon: string
-}
+export type SmokeColor = 'branca_clara' | 'cinza_clara' | 'cinza_escura' | 'preta'
+export type SmokeDensity = 'baixa' | 'media' | 'alta'
 
-export interface AnswerOption {
+export type FocusSource = 'api_monitoramento' | 'manual'
+
+/** Foco — o alerta bruto de fumaça, vindo da API de monitoramento ou inserido manualmente. */
+export interface Focus {
   id: string
-  label: string
-  /** pontos de risco somados ao score da área (0-10 típico) */
-  riskPoints: number
-  fireClasses?: FireClass[]
-  /** produtos do catálogo que essa resposta reforça, com peso de relevância */
-  productBoost?: Partial<Record<ProductId, number>>
-  /** marca se essa resposta indica que o usuário já tem proteção (reduz risco) */
-  isProtective?: boolean
+  source: FocusSource
+  detectedAt: string
+  coordinates?: { lat: number; lng: number }
+  soilHumidityPercent: number
+  mediaNote?: string
 }
 
-export interface Question {
+export type RiskAreaKind = 'eucalipto' | 'nativa' | 'outra'
+
+/** Área de risco — plantios/áreas nativas georreferenciadas da empresa. */
+export interface RiskArea {
   id: string
-  areaId: AreaId | 'global'
-  text: string
-  helpText?: string
-  multiple?: boolean
-  options: AnswerOption[]
-}
-
-export interface Product {
-  id: ProductId
   name: string
-  tagline: string
-  description: string
-  image: string
-  price: string
-  specs: string[]
-  appliesTo: string[]
-  fireClasses: FireClass[]
-  standardsNote: string
-  idealFor: string[]
+  kind: RiskAreaKind
+  notes?: string
 }
 
-export type AnswersMap = Record<string, string[]>
+/** Uma das 2-3 hipóteses geradas pelo módulo de classificação de imagem/fumaça. */
+export interface SmokeHypothesis {
+  vegetationId: VegetationId
+  probabilityPercent: number
+}
+
+export interface SmokeClassificationInput {
+  color: SmokeColor
+  density: SmokeDensity
+  soilHumidityPercent: number
+}
+
+export interface SmokeClassificationResult {
+  input: SmokeClassificationInput
+  hypotheses: SmokeHypothesis[] // ordenado desc, sempre 2-3 hipóteses
+  generatedAt: string
+}
+
+/** Confirmação/complementação manual do operador (Etapa 3). */
+export interface OperatorConfirmation {
+  confirmedVegetationId: VegetationId
+  matchedTopHypothesis: boolean
+  distanceKm: number
+  insideRiskArea: boolean
+  riskAreaId?: string
+  multipleFoci: boolean
+  extentHectares: number
+  /** Override manual do tempo de propagação padrão da vegetação, se o operador tiver informação melhor. */
+  propagationOverrideMinutesPerKm?: number
+  confirmedAt: string
+}
+
+export type RiskLevel = 'baixo' | 'medio_1' | 'alto_1' | 'alto_2' | 'altissimo'
+
+export interface RiskCalculation {
+  level: RiskLevel
+  rationale: string[]
+  estimatedMinutesToReach: number | null
+  calculatedAt: string
+}
+
+export type ResourceUnit = 'equipe' | 'caminhao_pipa' | 'aeronave' | 'maquina_aceiro'
+
+/** Recurso — item do catálogo de recursos de combate. */
+export interface ResourceType {
+  id: ResourceUnit
+  label: string
+  icon: string
+}
+
+export interface ResourceItem {
+  resourceId: ResourceUnit
+  quantity: number
+}
+
+export type OperatorAction = 'aceito' | 'ajustado' | 'substituido'
+
+/** Recomendação — pacote de recursos sugerido e a decisão final do operador. */
+export interface Recommendation {
+  riskLevel: RiskLevel
+  suggestedResources: ResourceItem[]
+  operatorAction: OperatorAction
+  finalResources: ResourceItem[]
+  justification?: string
+  decidedAt: string
+}
+
+export type ResourceAdequacy = 'insuficiente' | 'adequado' | 'excessivo'
+
+/** Feedback pós-ocorrência — retroalimenta o loop de aprendizado. */
+export interface Feedback {
+  confirmedVegetationId: VegetationId
+  realMinutesPerKm?: number
+  areaBurnedHectares: number
+  resourcesActuallyUsed: ResourceItem[]
+  adequacy: ResourceAdequacy
+  controlTimeMinutes: number
+  notes?: string
+  registeredAt: string
+}
+
+export type OccurrenceStatus = 'rascunho' | 'em_andamento' | 'concluida'
+
+/** Ocorrência — agregado raiz que amarra todo o histórico auditável do foco. */
+export interface Occurrence {
+  id: string
+  status: OccurrenceStatus
+  createdAt: string
+  focus: Focus
+  classification?: SmokeClassificationResult
+  confirmation?: OperatorConfirmation
+  riskCalculation?: RiskCalculation
+  recommendation?: Recommendation
+  feedback?: Feedback
+}
