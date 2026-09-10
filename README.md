@@ -10,20 +10,47 @@ decisão final nas mãos do operador.
 - React 19 + TypeScript + Vite
 - Tailwind CSS v4
 - React Router (fluxo das 6 etapas por ocorrência)
-- Zustand + `localStorage` (estado e persistência — standalone, sem backend)
+- Zustand + **Supabase** (Postgres gerenciado) para persistência real, compartilhada entre operadores
 - Framer Motion + Lucide
 
-## Rodando localmente
+## Backend (Supabase) — necessário para rodar
 
-```bash
-npm install
-npm run dev       # ambiente de desenvolvimento
-npm run build     # build de produção
-```
+O app já não usa mais `localStorage` como fonte de verdade: ocorrências e
+configurações vivem no Postgres do Supabase, compartilhadas por todos os
+operadores. Para rodar (local ou em produção):
 
-Todo o estado (ocorrências e configurações) fica em `localStorage`, então o
-app funciona 100% **standalone**, sem nenhuma integração — como pede o
-requisito não funcional de modo standalone.
+1. Crie um projeto gratuito em [supabase.com](https://supabase.com).
+2. No **SQL Editor** do projeto, cole e rode todo o conteúdo de
+   [`supabase/schema.sql`](./supabase/schema.sql) — cria as tabelas
+   `occurrences` e `app_config` com Row Level Security habilitado.
+3. Copie `.env.example` para `.env` e preencha com a URL e a chave `anon`
+   públicas do seu projeto (Project Settings → API):
+   ```bash
+   cp .env.example .env
+   ```
+4. Rode normalmente:
+   ```bash
+   npm install
+   npm run dev       # ambiente de desenvolvimento
+   npm run build     # build de produção
+   ```
+
+Sem essas variáveis definidas, o app mostra uma tela de "Backend não
+configurado" em vez de quebrar (`src/components/ConnectionGate.tsx`).
+
+**Sobre autenticação**: por decisão de produto, esta primeira versão do
+backend roda **sem login por operador** — um workspace único compartilhado
+por toda a equipe (mais rápido para começar a operar). Isso significa que a
+chave `anon` do Supabase, sozinha, dá acesso total de leitura/escrita às
+tabelas para quem tiver a URL do projeto (ver comentário em
+`supabase/schema.sql`). Ao crescer o uso real, o próximo passo de segurança
+é adicionar Supabase Auth e trocar as policies por regras que checam
+`auth.uid()`/papel do operador.
+
+Escritas (`createFocus`, `setConfirmation` etc.) atualizam o estado local
+imediatamente — para manter a baixa latência exigida no uso em campo — e
+sincronizam com o Supabase em segundo plano; se a sincronização falhar, um
+aviso aparece no topo da tela (`syncError` em `occurrenceStore`).
 
 ---
 
@@ -137,7 +164,7 @@ automática a partir do histórico é o próximo passo fora do escopo deste MVP.
 | Umidade do solo (sensores próprios / API meteorológica-agro) | Inserção manual em `/novo` | mesmo formulário — campo já isolado em `Focus.soilHumidityPercent` |
 | Mapas de áreas de risco georreferenciadas (eucalipto/nativa) | Lista estática em `src/data/riskAreasConfig.ts`, seleção manual em `/ocorrencias/:id/confirmacao` | trocar a lista estática por consulta a um serviço de geolocalização/GIS |
 | Classificação de imagem por visão computacional | Heurística por cor/densidade informadas manualmente | `src/engine/smokeClassifier.ts` — trocar o cálculo por chamada a um modelo de CV mantendo a mesma assinatura de saída (`SmokeClassificationResult`) |
-| Backend/persistência multiusuário | `localStorage` por dispositivo | trocar `src/lib/storage.ts` por chamadas de API sem tocar nas páginas |
+| Backend/persistência multiusuário | ✅ Implementado — Postgres via Supabase, compartilhado entre operadores (`src/store/occurrenceStore.ts`) | Próximo passo: autenticação por operador (Supabase Auth) para saber quem tomou cada decisão |
 
 ## Princípio do produto
 

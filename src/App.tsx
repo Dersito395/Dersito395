@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ConnectionGate } from './components/ConnectionGate'
 import { Layout } from './components/Layout'
 import { Classification } from './pages/Classification'
 import { Confirmation } from './pages/Confirmation'
@@ -13,22 +14,24 @@ import { Settings } from './pages/Settings'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/novo" element={<NewFocus />} />
-          <Route path="/ocorrencias/:id" element={<OccurrenceDetail />} />
-          <Route path="/ocorrencias/:id/classificacao" element={<Classification />} />
-          <Route path="/ocorrencias/:id/confirmacao" element={<Confirmation />} />
-          <Route path="/ocorrencias/:id/risco" element={<RiskResult />} />
-          <Route path="/ocorrencias/:id/recomendacao" element={<Recommendation />} />
-          <Route path="/ocorrencias/:id/feedback" element={<FeedbackForm />} />
-          <Route path="/modelo" element={<ModelDashboard />} />
-          <Route path="/configuracoes" element={<Settings />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ConnectionGate>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/novo" element={<NewFocus />} />
+            <Route path="/ocorrencias/:id" element={<OccurrenceDetail />} />
+            <Route path="/ocorrencias/:id/classificacao" element={<Classification />} />
+            <Route path="/ocorrencias/:id/confirmacao" element={<Confirmation />} />
+            <Route path="/ocorrencias/:id/risco" element={<RiskResult />} />
+            <Route path="/ocorrencias/:id/recomendacao" element={<Recommendation />} />
+            <Route path="/ocorrencias/:id/feedback" element={<FeedbackForm />} />
+            <Route path="/modelo" element={<ModelDashboard />} />
+            <Route path="/configuracoes" element={<Settings />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ConnectionGate>
   )
 }
 
