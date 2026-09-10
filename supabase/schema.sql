@@ -36,8 +36,12 @@ alter table app_config enable row level security;
 -- de confiança, mas ao crescer o uso real, o próximo passo de segurança é
 -- adicionar autenticação (Supabase Auth) e trocar estas policies por
 -- policies que checam auth.uid() / papéis de operador.
+--
+-- O script inteiro pode ser rodado mais de uma vez sem erro (drop + create).
+drop policy if exists "anon full access to occurrences" on occurrences;
 create policy "anon full access to occurrences" on occurrences
   for all using (true) with check (true);
 
+drop policy if exists "anon full access to app_config" on app_config;
 create policy "anon full access to app_config" on app_config
   for all using (true) with check (true);
