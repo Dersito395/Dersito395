@@ -1,0 +1,93 @@
+{
+  "id": "ps-hemorragia-grave",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Sangramento grave: como controlar uma hemorragia",
+  "summary": "Pressão direta, curativo compressivo e, em membros, torniquete: passos para conter sangramentos que ameaçam a vida.",
+  "category": "primeiros-socorros",
+  "subcategory": "hemorragias",
+  "difficulty": "intermediaria",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Ação imediata; manter pressão até a chegada do socorro",
+  "materials": [
+    "Luvas descartáveis ou saco plástico limpo",
+    "Gaze, pano limpo ou roupa",
+    "Atadura ou faixa",
+    "Torniquete comercial (se disponível e se houver treinamento)"
+  ],
+  "objective": "Interromper a perda de sangue que pode levar à morte em poucos minutos.",
+  "steps": [
+    {
+      "text": "Garanta sua segurança e, se possível, proteja as mãos com luvas ou plástico."
+    },
+    {
+      "text": "Ligue 192 (ou peça a alguém que ligue) logo no início."
+    },
+    {
+      "text": "Encontre o ponto exato do sangramento (pode ser preciso afastar ou cortar a roupa)."
+    },
+    {
+      "text": "Cubra a ferida com gaze ou pano limpo e aperte firme com as duas mãos, de forma contínua. Não alivie a pressão para olhar.",
+      "image": "hemorragia.svg"
+    },
+    {
+      "text": "Se o pano encharcar, não retire: coloque outro por cima e continue pressionando."
+    },
+    {
+      "text": "Em feridas profundas de coxa, axila, virilha ou pescoço, preencha a cavidade com gaze ou pano limpo e mantenha pressão firme por cima."
+    },
+    {
+      "text": "Sangramento grave em braço ou perna que não para com pressão: aplique torniquete 5 a 7 cm acima da ferida (nunca sobre uma articulação), aperte até o sangramento parar e anote o horário. Não afrouxe."
+    },
+    {
+      "text": "Deite a pessoa, cubra-a para mantê-la aquecida e acompanhe a respiração até a chegada do socorro."
+    }
+  ],
+  "cautions": [
+    "Torniquetes improvisados (cintos, panos) frequentemente falham; a pressão direta firme é a primeira escolha quando não há torniquete adequado.",
+    "Não remova objetos cravados no corpo: estabilize-os com panos ao redor e pressione ao lado.",
+    "Não use torniquete no pescoço, tórax ou abdome.",
+    "Faça um curso prático (como o programa Stop the Bleed ou cursos de primeiros socorros) para aprender a aplicar torniquete."
+  ],
+  "alternatives": [
+    "Curativo compressivo: após controlar com pressão, envolva firmemente com atadura sobre a gaze."
+  ],
+  "tags": [
+    "hemorragia",
+    "sangramento",
+    "torniquete",
+    "corte",
+    "ferimento"
+  ],
+  "keywords": [
+    "sangramento grave",
+    "corte profundo",
+    "como parar sangramento",
+    "muito sangue"
+  ],
+  "images": [
+    {
+      "file": "hemorragia.svg",
+      "caption": "Pressão direta e firme sobre a ferida; torniquete 5–7 cm acima em sangramentos graves de membros.",
+      "alt": "Mãos pressionando um pano sobre ferimento e torniquete acima da ferida"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "stop-the-bleed",
+      "note": "Pressão direta, preenchimento de feridas e uso de torniquete."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Pressão direta como primeira medida; torniquete em hemorragias graves de membros."
+    }
+  ],
+  "related": [
+    "ps-fraturas-entorses",
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

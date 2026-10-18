@@ -1,0 +1,90 @@
+{
+  "id": "alimentacao-estoque-emergencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como montar um estoque de alimentos para emergências",
+  "summary": "Que alimentos escolher, como organizar a rotação e quais necessidades especiais considerar.",
+  "category": "alimentacao",
+  "subcategory": "planejamento-estoque",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "1 a 2 horas para planejar; revisão a cada 6 meses",
+  "materials": [
+    "Lista das pessoas da casa e de suas necessidades",
+    "Alimentos não perecíveis",
+    "Abridor de latas manual",
+    "Recipientes herméticos",
+    "Etiquetas e caneta"
+  ],
+  "objective": "Ter alimentos que não dependem de refrigeração nem de cozimento prolongado para pelo menos alguns dias de crise.",
+  "steps": [
+    {
+      "text": "Defina o período de autonomia desejado. Agências de emergência recomendam começar com pelo menos 3 dias e, se possível, ampliar gradualmente."
+    },
+    {
+      "text": "Escolha alimentos que a família já consome, que não precisem de refrigeração e exijam pouca água e pouco preparo: enlatados, conservas, frutas secas, castanhas, pasta de amendoim, biscoitos, cereais, leite em pó ou UHT."
+    },
+    {
+      "text": "Considere necessidades especiais: bebês (fórmula e água própria), dietas médicas, alergias, idosos e animais de estimação."
+    },
+    {
+      "text": "Inclua um abridor de latas manual, talheres e pratos descartáveis ou fáceis de limpar."
+    },
+    {
+      "text": "Guarde em local fresco, seco e escuro, em recipientes fechados contra umidade, insetos e roedores."
+    },
+    {
+      "text": "Adote o sistema 'primeiro que vence, primeiro que sai': consuma os itens mais antigos no dia a dia e reponha com novos."
+    },
+    {
+      "text": "Revise validade a cada 6 meses e registre no checklist do aplicativo."
+    }
+  ],
+  "cautions": [
+    "Descarte latas estufadas, enferrujadas, amassadas nas emendas ou vazando.",
+    "Alimentos salgados aumentam a sede; equilibre o estoque com a reserva de água.",
+    "Não há quantidade universal: ajuste ao número de pessoas, idades, clima e atividade."
+  ],
+  "alternatives": [
+    "Kits de refeição prontos para consumo.",
+    "Alimentos desidratados, desde que haja água suficiente para reidratá-los."
+  ],
+  "tags": [
+    "estoque",
+    "despensa",
+    "não perecíveis",
+    "enlatados",
+    "planejamento"
+  ],
+  "keywords": [
+    "comida para emergência",
+    "o que estocar",
+    "alimentos de longa duração"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-alimentos",
+      "note": "Estoque de pelo menos 3 dias, escolha de alimentos e necessidades especiais."
+    },
+    {
+      "ref": "ready-kit",
+      "note": "Abridor de latas manual e manutenção do kit."
+    },
+    {
+      "ref": "usda-alimentos-emergencia",
+      "note": "Descarte de latas danificadas."
+    }
+  ],
+  "related": [
+    "agua-armazenamento-emergencia",
+    "alimentacao-geladeira-sem-energia",
+    "equip-kit-72h"
+  ],
+  "updated_at": "2026-10-18"
+}

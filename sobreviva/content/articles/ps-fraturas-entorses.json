@@ -1,0 +1,89 @@
+{
+  "id": "ps-fraturas-entorses",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Fraturas e entorses: como imobilizar",
+  "summary": "Reconhecer possíveis fraturas, imobilizar na posição encontrada e decidir quando não mover a vítima.",
+  "category": "primeiros-socorros",
+  "subcategory": "fraturas",
+  "difficulty": "intermediaria",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "10 a 20 minutos",
+  "materials": [
+    "Talas rígidas (papelão dobrado, revistas, galhos retos)",
+    "Ataduras, faixas ou tiras de pano",
+    "Acolchoamento (roupas, toalhas)",
+    "Compressa fria envolta em pano"
+  ],
+  "objective": "Reduzir dor, sangramento e o risco de agravar a lesão até o atendimento profissional.",
+  "steps": [
+    {
+      "text": "Avalie a cena e a vítima. Se houver suspeita de lesão na cabeça, pescoço ou coluna (queda de altura, acidente, dor nas costas, formigamento), não mova a pessoa, a menos que haja perigo imediato. Ligue 192 ou 193."
+    },
+    {
+      "text": "Controle sangramentos antes de imobilizar. Em fratura exposta, cubra o ferimento com pano limpo, sem empurrar o osso para dentro."
+    },
+    {
+      "text": "Imobilize na posição em que encontrou o membro. Não tente alinhar ou 'colocar no lugar'."
+    },
+    {
+      "text": "A tala deve imobilizar a articulação acima e a articulação abaixo da lesão. Acolchoe entre a tala e a pele.",
+      "image": "tala.svg"
+    },
+    {
+      "text": "Amarre firme, mas sem apertar demais. Depois, verifique dedos: cor, temperatura, sensibilidade e movimento. Se ficarem frios, pálidos, arroxeados ou dormentes, afrouxe."
+    },
+    {
+      "text": "Em entorses, aplique frio envolto em pano por até 20 minutos e mantenha o membro em repouso e elevado, se não causar dor."
+    },
+    {
+      "text": "Procure atendimento médico para avaliação e exame de imagem."
+    }
+  ],
+  "cautions": [
+    "Não dê alimentos ou bebidas a quem pode precisar de cirurgia.",
+    "Deformidade, osso exposto, dor intensa ou incapacidade de mover indicam necessidade de socorro profissional.",
+    "Em ambiente remoto, decidir entre aguardar resgate ou deslocar-se depende da gravidade, do clima e dos recursos: priorize acionar socorro."
+  ],
+  "alternatives": [
+    "Imobilizar o braço com tipoia improvisada (camiseta, lenço).",
+    "Imobilizar uma perna amarrando-a à outra, com acolchoamento entre elas."
+  ],
+  "tags": [
+    "fratura",
+    "entorse",
+    "tala",
+    "imobilização",
+    "osso quebrado"
+  ],
+  "keywords": [
+    "quebrou a perna",
+    "torceu o pé",
+    "como fazer uma tala"
+  ],
+  "images": [
+    {
+      "file": "tala.svg",
+      "caption": "A tala imobiliza a articulação acima e abaixo da lesão, com acolchoamento.",
+      "alt": "Antebraço imobilizado com tala e faixas"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ifrc-2020",
+      "note": "Imobilização de suspeita de fratura, conduta em lesão de coluna e controle de sangramento."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Improvisação de talas em ambiente remoto."
+    }
+  ],
+  "related": [
+    "ps-hemorragia-grave",
+    "nat-sinalizacao-resgate"
+  ],
+  "updated_at": "2026-10-18"
+}

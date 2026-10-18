@@ -1,0 +1,107 @@
+{
+  "id": "ps-animais-peconhentos",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Picadas de cobras, escorpiões e aranhas",
+  "summary": "O que fazer e o que não fazer após acidentes com animais peçonhentos, e por que o tratamento é sempre no serviço de saúde.",
+  "category": "primeiros-socorros",
+  "subcategory": "picadas-mordidas",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "rural",
+    "urbano",
+    "domestico"
+  ],
+  "time_estimate": "Ação imediata; buscar atendimento o mais rápido possível",
+  "materials": [
+    "Água e sabão",
+    "Telefone",
+    "Câmera do celular (foto do animal, se seguro)"
+  ],
+  "objective": "Reduzir complicações e levar a vítima rapidamente ao local onde pode receber soro antiveneno, se necessário.",
+  "steps": [
+    {
+      "text": "Afaste-se do animal e afaste outras pessoas. Não tente capturá-lo; se for seguro, fotografe-o de longe."
+    },
+    {
+      "text": "Mantenha a vítima calma, deitada e em repouso, evitando que ela caminhe ou movimente o membro atingido."
+    },
+    {
+      "text": "Lave o local da picada apenas com água e sabão."
+    },
+    {
+      "text": "Retire anéis, pulseiras, relógios e calçados apertados do membro atingido: ele pode inchar."
+    },
+    {
+      "text": "Leve a vítima imediatamente ao serviço de saúde mais próximo ou ligue 192. O soro antiveneno só é aplicado em unidades de saúde."
+    },
+    {
+      "text": "Dúvidas sobre o animal ou sintomas: Disque-Intoxicação 0800 722 6001 (Centros de Informação e Assistência Toxicológica)."
+    },
+    {
+      "text": "Escorpião: em crianças menores de 10 anos, o risco de gravidade é maior; procure atendimento imediato mesmo com sintomas leves. Compressa morna pode aliviar a dor no caminho."
+    },
+    {
+      "text": "Abelhas: retire os ferrões raspando com uma lâmina ou cartão, sem pinçar. Muitas picadas ou sinais de alergia (falta de ar, inchaço no rosto) = 192."
+    }
+  ],
+  "cautions": [
+    "Não faça torniquete ou garrote.",
+    "Não corte, fure, queime, esprema nem chupe o local da picada.",
+    "Não aplique folhas, pó de café, terra, fumo ou outras substâncias.",
+    "Não dê bebidas alcoólicas, querosene ou outros produtos à vítima.",
+    "Mesmo sem sintomas iniciais, a vítima precisa de avaliação: alguns venenos agem horas depois.",
+    "Contato com taturanas (lagartas do gênero Lonomia) pode causar sangramentos graves: procure atendimento."
+  ],
+  "alternatives": [
+    "Prevenção: use botas e luvas em mata e quintais, olhe antes de pôr a mão em buracos, sacuda roupas e calçados, mantenha quintais limpos."
+  ],
+  "tags": [
+    "picada de cobra",
+    "serpente",
+    "escorpião",
+    "aranha",
+    "soro antiveneno",
+    "animais peçonhentos",
+    "abelha"
+  ],
+  "keywords": [
+    "o que fazer após uma picada de cobra",
+    "cobra mordeu",
+    "picada de escorpião",
+    "jararaca",
+    "cascavel"
+  ],
+  "images": [
+    {
+      "file": "peconhentos.svg",
+      "caption": "Faça: lavar, repouso, retirar anéis e ir ao hospital. Não faça: torniquete, cortar, chupar ou aplicar substâncias.",
+      "alt": "Quadro com o que fazer e o que não fazer após picada"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ms-peconhentos",
+      "note": "Primeiros socorros em acidentes por animais peçonhentos; soro apenas em unidades de saúde."
+    },
+    {
+      "ref": "bvs-ofidicos",
+      "note": "Lavar com água e sabão; não fazer torniquete; não cortar, furar, sugar; não aplicar substâncias."
+    },
+    {
+      "ref": "butantan",
+      "note": "Atendimento de referência e encaminhamento imediato."
+    },
+    {
+      "ref": "abracit",
+      "note": "Disque-Intoxicação 0800 722 6001."
+    }
+  ],
+  "related": [
+    "nat-planejamento-trilha",
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

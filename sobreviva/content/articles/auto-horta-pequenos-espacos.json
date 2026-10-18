@@ -1,0 +1,76 @@
+{
+  "id": "auto-horta-pequenos-espacos",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Horta em pequenos espaços",
+  "summary": "Princípios para cultivar hortaliças e temperos em vasos, jardineiras e quintais pequenos.",
+  "category": "autossuficiencia",
+  "subcategory": "hortas",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "2 a 4 horas para montar; cuidados diários de 10 minutos",
+  "materials": [
+    "Vasos ou jardineiras com furos de drenagem",
+    "Substrato ou terra misturada com composto orgânico",
+    "Sementes ou mudas",
+    "Regador"
+  ],
+  "objective": "Produzir parte dos alimentos frescos da família e ganhar autonomia.",
+  "essential": false,
+  "steps": [
+    {
+      "text": "Escolha o local com mais luz: a maioria das hortaliças precisa de várias horas de sol direto por dia."
+    },
+    {
+      "text": "Use recipientes com furos no fundo e uma camada de drenagem (brita ou argila expandida) antes do substrato."
+    },
+    {
+      "text": "Comece por espécies fáceis: cebolinha, salsa, coentro, manjericão, alface e rúcula."
+    },
+    {
+      "text": "Regue de preferência no início da manhã ou no fim da tarde, mantendo o substrato úmido, mas não encharcado."
+    },
+    {
+      "text": "Adube periodicamente com composto orgânico e faça rotação de culturas nas jardineiras."
+    },
+    {
+      "text": "Faça semeaduras escalonadas (pequenas quantidades a cada 2 a 3 semanas) para ter colheita contínua."
+    }
+  ],
+  "cautions": [
+    "Lave bem as hortaliças antes de consumir.",
+    "Não use agrotóxicos sem orientação técnica e receituário agronômico."
+  ],
+  "alternatives": [
+    "Hortas comunitárias e programas municipais de agricultura urbana."
+  ],
+  "tags": [
+    "horta",
+    "hortaliças",
+    "vasos",
+    "agricultura urbana",
+    "autossuficiência"
+  ],
+  "keywords": [
+    "plantar em apartamento",
+    "horta caseira",
+    "cultivar temperos"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "embrapa-horta",
+      "note": "Interação entre água, solo, luz e planta; cultivo de temperos e folhosas em pequenos espaços."
+    }
+  ],
+  "related": [
+    "alimentacao-estoque-emergencia",
+    "agua-captacao-chuva"
+  ],
+  "updated_at": "2026-10-18"
+}

@@ -1,0 +1,108 @@
+{
+  "id": "equip-kit-72h",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Kit de emergência para 24 e 72 horas",
+  "summary": "Itens básicos de um kit de emergência doméstico e de uma mochila de evacuação, com adaptação para cada família.",
+  "category": "equipamentos",
+  "subcategory": "kits-24-72h",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural",
+    "qualquer"
+  ],
+  "time_estimate": "2 a 4 horas para montar; revisão a cada 6 meses",
+  "materials": [
+    "Mochila resistente ou caixa plástica com tampa",
+    "Sacos plásticos herméticos",
+    "Lista impressa e lápis"
+  ],
+  "objective": "Ter à mão o necessário para os primeiros dias de uma emergência ou para sair de casa rapidamente.",
+  "steps": [
+    {
+      "text": "Defina dois kits: (1) mochila de evacuação leve, para 24 horas, pronta para sair em minutos; (2) kit doméstico para permanecer em casa por pelo menos 72 horas.",
+      "image": "kit-72h.svg"
+    },
+    {
+      "text": "Água e alimentos não perecíveis para cada pessoa e animal (veja os artigos sobre água e estoque de alimentos)."
+    },
+    {
+      "text": "Rádio a pilha ou à manivela, lanterna e pilhas ou baterias extras."
+    },
+    {
+      "text": "Kit de primeiros socorros, medicamentos de uso contínuo com receitas, óculos de reserva."
+    },
+    {
+      "text": "Apito para pedir socorro, máscaras, lona plástica e fita adesiva larga."
+    },
+    {
+      "text": "Lenços umedecidos, sacos de lixo e itens de higiene pessoal e íntima."
+    },
+    {
+      "text": "Ferramenta para fechar registro de gás e água, abridor de latas manual, canivete ou multiferramenta."
+    },
+    {
+      "text": "Celular com carregador e bateria externa; lista de contatos impressa; mapas da região."
+    },
+    {
+      "text": "Cópias de documentos em saco impermeável, dinheiro em espécie, roupas e calçados de troca, manta ou saco de dormir."
+    },
+    {
+      "text": "Itens específicos: fraldas e fórmula para bebês, itens para idosos e pessoas com deficiência, ração e documentos de animais."
+    },
+    {
+      "text": "Revise o kit a cada 6 meses: validade de alimentos, água, remédios e baterias. Use o planejador de mochila do aplicativo para gerar sua lista."
+    }
+  ],
+  "cautions": [
+    "O peso da mochila de evacuação precisa ser compatível com quem vai carregá-la e com o deslocamento a pé.",
+    "Não guarde o kit em local que possa alagar ou ficar inacessível.",
+    "Não há lista universal: adapte à sua região (enchentes, deslizamentos, frio, calor) e às pessoas da casa."
+  ],
+  "alternatives": [
+    "Kit para o carro e kit para o trabalho, menores e complementares."
+  ],
+  "tags": [
+    "kit de emergência",
+    "mochila de emergência",
+    "72 horas",
+    "24 horas",
+    "preparação"
+  ],
+  "keywords": [
+    "mochila de fuga",
+    "o que levar em uma emergência",
+    "kit de sobrevivência"
+  ],
+  "images": [
+    {
+      "file": "kit-72h.svg",
+      "caption": "Itens básicos de um kit de emergência.",
+      "alt": "Ilustração de mochila com água, lanterna, rádio, kit de primeiros socorros e documentos"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ready-kit",
+      "note": "Lista de itens básicos e adicionais; manutenção do kit."
+    },
+    {
+      "ref": "redcross-kit",
+      "note": "Itens para kit de evacuação e kit doméstico."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Preparação para desastres no Brasil."
+    }
+  ],
+  "related": [
+    "agua-armazenamento-emergencia",
+    "alimentacao-estoque-emergencia",
+    "plan-plano-familiar-emergencia",
+    "com-radio-emergencia"
+  ],
+  "updated_at": "2026-10-18"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "fogo-quando-nao-acender",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Quando não acender fogo",
+  "summary": "Situações em que acender fogo coloca vidas em risco: espaços fechados, seca, vento, proibições e risco de incêndio florestal.",
+  "category": "fogo",
+  "subcategory": "quando-nao-acender",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Leitura de 3 minutos",
+  "materials": [],
+  "objective": "Reconhecer situações em que o fogo deve ser evitado e escolher alternativas mais seguras.",
+  "steps": [
+    {
+      "text": "Nunca acenda fogo, braseiro, churrasqueira ou fogareiro dentro de casa, apartamento, garagem, barraca, carro ou abrigo fechado: o monóxido de carbono pode matar sem aviso."
+    },
+    {
+      "text": "Não acenda fogo em períodos de seca, com vegetação seca ao redor, com vento forte ou quando houver alerta de risco de incêndio."
+    },
+    {
+      "text": "Respeite proibições de fogo em parques, unidades de conservação e áreas rurais. Queimadas podem ser crime ambiental."
+    },
+    {
+      "text": "Não acenda fogo sob árvores, perto de capim alto, lonas ou barracas, ou sobre solo com muita matéria orgânica (turfa)."
+    },
+    {
+      "text": "Se não puder ficar o tempo todo cuidando do fogo e não tiver água para apagá-lo, não acenda."
+    },
+    {
+      "text": "Em casa, geradores devem ficar ao ar livre, a pelo menos cerca de 6 metros de portas e janelas."
+    }
+  ],
+  "cautions": [
+    "Sintomas de intoxicação por monóxido de carbono: dor de cabeça, tontura, náusea, sonolência e confusão. Saia para o ar livre e ligue 192 ou 193.",
+    "Instale detector de monóxido de carbono se usar aparelhos a combustão em casa."
+  ],
+  "alternatives": [
+    "Roupas em camadas, mantas térmicas e saco de dormir para aquecimento.",
+    "Alimentos que não exigem cozimento.",
+    "Lanternas e luminárias a pilha em vez de velas."
+  ],
+  "tags": [
+    "monóxido de carbono",
+    "proibição de fogo",
+    "seca",
+    "segurança"
+  ],
+  "keywords": [
+    "posso fazer fogueira",
+    "braseiro dentro de casa",
+    "fogo dentro da barraca"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "cdc-co",
+      "note": "Fontes de monóxido de carbono e sintomas."
+    },
+    {
+      "ref": "ready-apagao",
+      "note": "Geradores ao ar livre a pelo menos 20 pés (≈6 m) de janelas e portas."
+    },
+    {
+      "ref": "usfs-fogueira",
+      "note": "Restrições de fogo e condições de risco."
+    }
+  ],
+  "related": [
+    "fogo-seguranca-fogueira",
+    "alimentacao-preparo-sem-energia",
+    "urb-apagao"
+  ],
+  "updated_at": "2026-10-18"
+}

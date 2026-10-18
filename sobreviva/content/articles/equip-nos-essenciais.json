@@ -1,0 +1,85 @@
+{
+  "id": "equip-nos-essenciais",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Nós essenciais: lais de guia, volta do fiel e nó ajustável",
+  "summary": "Três nós úteis para abrigos, amarrações e cargas, com os principais cuidados de uso.",
+  "category": "equipamentos",
+  "subcategory": "cordas-nos",
+  "difficulty": "intermediaria",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "30 minutos de prática",
+  "materials": [
+    "Corda ou cordelete de 4 a 8 mm, com 2 a 3 metros para treino"
+  ],
+  "objective": "Fazer amarrações confiáveis e fáceis de desfazer para montar abrigos, prender lonas e transportar materiais.",
+  "steps": [
+    {
+      "text": "Lais de guia (alça fixa que não corre): faça uma pequena volta na parte fixa da corda, com a ponta por cima.",
+      "image": "no-lais-de-guia.svg"
+    },
+    {
+      "text": "Passe a ponta por dentro da volta de baixo para cima, contorne a parte fixa por trás e retorne pela mesma volta. Aperte puxando a alça e a parte fixa. Deixe uma sobra de ponta generosa."
+    },
+    {
+      "text": "Volta do fiel (prender a corda a um poste ou árvore): dê uma volta ao redor do suporte, cruze por cima da primeira volta, dê a segunda volta e passe a ponta por baixo do cruzamento. Aperte.",
+      "image": "no-volta-fiel.svg"
+    },
+    {
+      "text": "Nó ajustável (para esticar cordas de lonas e barracas): passe a corda ao redor da estaca, volte em direção à parte fixa, dê duas voltas para dentro da alça e uma volta por fora. Aperte; o nó desliza para ajustar a tensão e trava sob carga."
+    },
+    {
+      "text": "Treine cada nó até conseguir fazê-lo sem olhar e com as mãos frias ou molhadas."
+    }
+  ],
+  "cautions": [
+    "Estes nós não substituem técnicas e equipamentos certificados para escalada, rapel ou resgate em altura. Atividades verticais exigem treinamento específico.",
+    "O lais de guia pode afrouxar quando não está sob carga; em uso crítico, finalize com um nó de segurança na ponta.",
+    "Cordas danificadas, queimadas ou expostas a produtos químicos perdem resistência."
+  ],
+  "alternatives": [
+    "Nó oito com alça, mais fácil de verificar visualmente, como alternativa ao lais de guia."
+  ],
+  "tags": [
+    "nós",
+    "corda",
+    "lais de guia",
+    "volta do fiel",
+    "amarração"
+  ],
+  "keywords": [
+    "como fazer nó",
+    "nó para barraca",
+    "amarrar lona"
+  ],
+  "images": [
+    {
+      "file": "no-lais-de-guia.svg",
+      "caption": "Lais de guia: a ponta sai pela volta, contorna a parte fixa e retorna.",
+      "alt": "Etapas do nó lais de guia"
+    },
+    {
+      "file": "no-volta-fiel.svg",
+      "caption": "Volta do fiel: duas voltas cruzadas ao redor do suporte.",
+      "alt": "Etapas da volta do fiel em um poste"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "army-tc-3-97-61",
+      "note": "Nós básicos (lais de guia, volta do fiel) e uso de nós de segurança."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Uso de cordas e amarrações em abrigos improvisados."
+    }
+  ],
+  "related": [
+    "abrigo-lona-improvisado",
+    "equip-kit-72h"
+  ],
+  "updated_at": "2026-10-18"
+}

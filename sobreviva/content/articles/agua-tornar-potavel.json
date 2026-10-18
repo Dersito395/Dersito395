@@ -1,0 +1,128 @@
+{
+  "id": "agua-tornar-potavel",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como tornar a água segura para beber",
+  "summary": "Fervura, cloro (hipoclorito) e desinfecção solar: quando usar cada método e quais são os limites de cada um.",
+  "category": "agua",
+  "subcategory": "desinfeccao",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "mata",
+    "rural"
+  ],
+  "time_estimate": "5 a 40 minutos (fervura ou cloro); 6 horas a 2 dias (desinfecção solar)",
+  "materials": [
+    "Recipiente limpo com tampa",
+    "Panela e fonte de calor (para fervura)",
+    "Hipoclorito de sódio 2,5% ou água sanitária sem perfume indicada para água (para cloração)",
+    "Pano limpo, filtro de café ou filtro de barro (para pré-filtrar)",
+    "Garrafas PET transparentes de até 2 litros (para desinfecção solar)"
+  ],
+  "objective": "Eliminar ou reduzir microrganismos que causam doenças (bactérias, vírus e parasitas) em água de origem duvidosa quando não há água engarrafada ou tratada disponível.",
+  "steps": [
+    {
+      "text": "Prefira água engarrafada ou da rede tratada, se houver. Os métodos abaixo são para quando não houver alternativa."
+    },
+    {
+      "text": "Escolha a água mais limpa disponível. Se estiver turva, deixe decantar por algumas horas e passe por um pano limpo, filtro de café ou filtro doméstico. A turbidez reduz a eficácia do cloro e do sol."
+    },
+    {
+      "text": "Fervura (método mais seguro contra germes): leve a água à fervura vigorosa, com bolhas grandes e contínuas, por 1 minuto. Acima de cerca de 2.000 metros de altitude, ferva por 3 minutos.",
+      "image": "agua-fervura.svg"
+    },
+    {
+      "text": "Deixe esfriar com a panela tampada e guarde em recipiente limpo e tampado."
+    },
+    {
+      "text": "Cloração (quando não puder ferver): use hipoclorito de sódio 2,5%. Coloque 2 gotas por litro de água filtrada (20 gotas para 10 litros), misture e aguarde 30 minutos antes de beber.",
+      "image": "agua-cloro.svg"
+    },
+    {
+      "text": "Se usar água sanitária comum, confirme no rótulo que ela é sem perfume, sem aditivos e indicada para tratamento de água, e siga a dosagem do rótulo. Produtos com perfume ou alvejantes de roupa não servem."
+    },
+    {
+      "text": "Desinfecção solar (SODIS), quando não houver combustível nem cloro: encha garrafas PET transparentes e sem riscos, de até 2 litros, com água limpa (não turva). Deixe deitadas sob sol direto por pelo menos 6 horas; com céu muito nublado, por 2 dias seguidos.",
+      "image": "agua-sodis.svg"
+    },
+    {
+      "text": "Consuma a água tratada em até 24 horas e mantenha os recipientes tampados. Trate novamente se houver dúvida."
+    }
+  ],
+  "cautions": [
+    "Nenhum destes métodos remove contaminantes químicos (combustível, agrotóxicos, metais, produtos de limpeza) ou radioativos. Se houver suspeita, procure outra fonte.",
+    "O cloro é menos eficaz contra alguns parasitas, como Cryptosporidium e Giardia. Quando possível, prefira a fervura.",
+    "A maioria dos filtros portáteis não remove vírus nem todas as bactérias. Combine filtragem com fervura ou cloro, salvo se o fabricante indicar o contrário.",
+    "Água de enchente tem alto risco de contaminação química e biológica. Evite usá-la para beber, mesmo tratada.",
+    "Siga sempre os avisos das autoridades locais de saúde e da companhia de saneamento."
+  ],
+  "alternatives": [
+    "Pastilhas de dióxido de cloro ou de cloro para água, usadas exatamente conforme o rótulo.",
+    "Filtros certificados para remoção de bactérias e protozoários, seguidos de cloração.",
+    "Água armazenada previamente para emergências (veja o artigo sobre armazenamento)."
+  ],
+  "tags": [
+    "água potável",
+    "fervura",
+    "hipoclorito",
+    "cloro",
+    "SODIS",
+    "desinfecção",
+    "tratamento de água"
+  ],
+  "keywords": [
+    "purificar água",
+    "tratar água",
+    "água contaminada",
+    "beber água do rio",
+    "não tenho água potável"
+  ],
+  "images": [
+    {
+      "file": "agua-fervura.svg",
+      "caption": "Fervura vigorosa: 1 minuto (3 minutos acima de cerca de 2.000 m).",
+      "alt": "Panela com água em fervura vigorosa e relógio indicando 1 minuto"
+    },
+    {
+      "file": "agua-cloro.svg",
+      "caption": "Hipoclorito de sódio 2,5%: 2 gotas por litro e 30 minutos de espera.",
+      "alt": "Conta-gotas pingando duas gotas em uma garrafa de um litro"
+    },
+    {
+      "file": "agua-sodis.svg",
+      "caption": "Desinfecção solar: garrafas PET transparentes sob sol direto por 6 horas.",
+      "alt": "Garrafas PET deitadas sobre um telhado sob o sol"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Fervura por 1 minuto (3 minutos em altitude elevada); limites do cloro e dos filtros; contaminantes químicos."
+    },
+    {
+      "ref": "ses-mg-nt39",
+      "note": "Recomendação do Ministério da Saúde: 2 gotas de hipoclorito 2,5% por litro e 30 minutos de espera."
+    },
+    {
+      "ref": "ses-sp-hipoclorito",
+      "note": "Dosagem por volume e consumo em até 24 horas."
+    },
+    {
+      "ref": "eawag-sodis",
+      "note": "Método SODIS: garrafas PET, 6 horas de sol ou 2 dias nublados."
+    },
+    {
+      "ref": "oms-qualidade-agua",
+      "note": "Referência geral sobre tratamento doméstico da água."
+    }
+  ],
+  "related": [
+    "agua-armazenamento-emergencia",
+    "agua-encontrar-captar",
+    "agua-captacao-chuva"
+  ],
+  "updated_at": "2026-10-18"
+}

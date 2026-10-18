@@ -1,0 +1,10 @@
+[
+  {"number":"192","name":"SAMU","purpose":"Urgências médicas: parada cardíaca, engasgo grave, sangramento intenso, falta de ar, desmaio, intoxicação, convulsão.","priority":1},
+  {"number":"193","name":"Corpo de Bombeiros","purpose":"Incêndios, resgates, salvamentos, pessoas presas ou desaparecidas em mata, afogamentos, acidentes com vítimas presas.","priority":1},
+  {"number":"190","name":"Polícia Militar","purpose":"Crimes em andamento, violência, ameaças à segurança pessoal.","priority":1},
+  {"number":"199","name":"Defesa Civil","purpose":"Riscos de deslizamento, enchentes, desabamentos, vendavais e outros desastres.","priority":2},
+  {"number":"40199","name":"Alertas da Defesa Civil (SMS)","purpose":"Envie o CEP por SMS para receber alertas de desastres gratuitamente.","priority":2,"sms":true},
+  {"number":"191","name":"Polícia Rodoviária Federal","purpose":"Acidentes e emergências em rodovias federais.","priority":3},
+  {"number":"0800 722 6001","name":"Disque-Intoxicação (Anvisa/CIATox)","purpose":"Orientação em intoxicações e acidentes com animais peçonhentos.","priority":3},
+  {"number":"188","name":"CVV – Centro de Valorização da Vida","purpose":"Apoio emocional e prevenção do suicídio, 24 horas, gratuito.","priority":3}
+]

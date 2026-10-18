@@ -1,0 +1,97 @@
+{
+  "id": "ps-hipotermia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Hipotermia: reconhecer e aquecer com segurança",
+  "summary": "Sinais de hipotermia leve e grave e como proteger, isolar e reaquecer a vítima sem causar danos.",
+  "category": "primeiros-socorros",
+  "subcategory": "hipotermia",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "montanha",
+    "litoral",
+    "qualquer"
+  ],
+  "time_estimate": "Ação imediata; reaquecimento ao longo de horas",
+  "materials": [
+    "Roupas secas",
+    "Isolante para o chão",
+    "Saco de dormir ou cobertores",
+    "Plástico ou manta térmica (barreira contra vento e umidade)",
+    "Bolsas de água morna ou aquecedores químicos"
+  ],
+  "objective": "Interromper a perda de calor e iniciar o reaquecimento de forma segura enquanto o socorro é acionado.",
+  "steps": [
+    {
+      "text": "Reconheça os sinais. Leve: tremores, mãos desajeitadas, fala arrastada, irritação. Grave: tremores diminuem ou param, confusão, sonolência, inconsciência."
+    },
+    {
+      "text": "Acione o socorro (192 ou 193) em qualquer suspeita de hipotermia moderada ou grave."
+    },
+    {
+      "text": "Leve a pessoa para um local abrigado do vento e da chuva. Manipule com delicadeza, especialmente nos casos graves."
+    },
+    {
+      "text": "Isole do chão e retire roupas molhadas (corte, se necessário, para reduzir movimentos). Substitua por roupas secas."
+    },
+    {
+      "text": "Envolva em camadas: isolante embaixo, saco de dormir ou cobertores, e uma camada externa de plástico ou manta térmica contra vento e umidade. Cubra cabeça e pescoço.",
+      "image": "hipotermia-envoltorio.svg"
+    },
+    {
+      "text": "Aplique fontes de calor (bolsas mornas, aquecedores químicos) no tórax, axilas e costas, sempre com um pano entre a fonte e a pele."
+    },
+    {
+      "text": "Se a pessoa estiver alerta e conseguir engolir, ofereça bebidas mornas e doces e alimentos calóricos."
+    },
+    {
+      "text": "Em hipotermia grave, mantenha a vítima deitada. Se ela não respirar, inicie a RCP e mantenha até a chegada do socorro."
+    }
+  ],
+  "cautions": [
+    "Não esfregue nem massageie braços e pernas.",
+    "Não ofereça álcool nem cigarro.",
+    "Não coloque a vítima com hipotermia moderada ou grave em banho quente nem a faça caminhar.",
+    "Hipotermia pode ocorrer acima de 10 °C, com vento, chuva, imersão em água ou exaustão."
+  ],
+  "alternatives": [
+    "Contato corpo a corpo dentro de um saco de dormir, se não houver outra fonte de calor, em casos leves."
+  ],
+  "tags": [
+    "hipotermia",
+    "frio",
+    "reaquecimento",
+    "manta térmica"
+  ],
+  "keywords": [
+    "pessoa com muito frio",
+    "tremendo de frio",
+    "congelando",
+    "caiu na água fria"
+  ],
+  "images": [
+    {
+      "file": "hipotermia-envoltorio.svg",
+      "caption": "Envoltório em camadas: isolante, cobertores e barreira externa contra vento e umidade.",
+      "alt": "Pessoa envolta em camadas com calor no tórax"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "wms-hipotermia",
+      "note": "Classificação clínica, manipulação delicada, envoltório com barreira de vapor, calor no tronco, RCP em hipotermia."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Primeiros socorros na hipotermia para leigos."
+    }
+  ],
+  "related": [
+    "abrigo-terreno-isolamento",
+    "abrigo-lona-improvisado",
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

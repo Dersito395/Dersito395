@@ -1,0 +1,85 @@
+{
+  "id": "agua-encontrar-captar",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como encontrar e captar água na natureza",
+  "summary": "Onde procurar água em ambiente natural, como coletá-la com menor risco e por que ela sempre precisa ser tratada.",
+  "category": "agua",
+  "subcategory": "captacao",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural"
+  ],
+  "time_estimate": "Variável: de minutos a horas, conforme o terreno",
+  "materials": [
+    "Garrafa ou cantil",
+    "Recipiente para coleta",
+    "Pano limpo para pré-filtrar",
+    "Meio de tratamento (fogo e panela, cloro ou pastilhas)",
+    "Lona ou saco plástico limpo (para coletar chuva ou orvalho)"
+  ],
+  "objective": "Obter água em ambientes remotos reduzindo riscos de contaminação, quedas e afogamento.",
+  "steps": [
+    {
+      "text": "Antes de procurar, avalie: você tem água suficiente para chegar a um ponto conhecido? Deslocamentos sem rumo gastam água e energia."
+    },
+    {
+      "text": "Procure sinais de água: vales e partes baixas do terreno, vegetação mais verde e densa, trilhas de animais que convergem, voo de aves ao amanhecer e entardecer, e insetos."
+    },
+    {
+      "text": "Prefira água corrente e clara, coletada acima de qualquer ponto de travessia de animais ou de presença humana."
+    },
+    {
+      "text": "Colete chuva sempre que puder: estenda uma lona ou plástico limpo em declive, direcionando a água para um recipiente. A chuva coletada diretamente costuma ter menos contaminação que água parada."
+    },
+    {
+      "text": "Pela manhã, o orvalho pode ser recolhido passando um pano limpo na vegetação e torcendo-o no recipiente. Evite plantas que você não conhece."
+    },
+    {
+      "text": "Pré-filtre a água por um pano para retirar sedimentos e depois trate por fervura, cloro ou pastilhas antes de beber."
+    }
+  ],
+  "cautions": [
+    "Não beba água do mar nem urina: elas aumentam a desidratação.",
+    "Evite água parada com cheiro forte, espuma, manchas oleosas, animais mortos por perto ou próxima a lavouras, garimpos e indústrias: pode ter contaminantes químicos que o tratamento não remove.",
+    "Margens de rios e cachoeiras são escorregadias. Não entre em água com correnteza para coletar.",
+    "Em áreas de cabeça d'água, saia do leito do rio ao primeiro sinal de aumento do volume, água barrenta ou galhos descendo."
+  ],
+  "alternatives": [
+    "Retornar à última fonte de água conhecida no seu trajeto.",
+    "Reduzir a perda de água: descansar à sombra nas horas mais quentes, cobrir a cabeça e não fumar."
+  ],
+  "tags": [
+    "fonte de água",
+    "captação",
+    "rio",
+    "nascente",
+    "orvalho",
+    "chuva"
+  ],
+  "keywords": [
+    "achar água no mato",
+    "procurar água",
+    "sem água na trilha"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Capítulo sobre água: indícios de presença de água, coleta de chuva e orvalho, riscos de água do mar e urina."
+    },
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Tratamento obrigatório e limite em contaminantes químicos."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "orient-perdido-na-mata",
+    "nat-planejamento-trilha"
+  ],
+  "updated_at": "2026-10-18"
+}

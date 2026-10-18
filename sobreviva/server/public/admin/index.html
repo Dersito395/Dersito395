@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOBREVIVA — Painel editorial</title>
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">◈</span> SOBREVIVA <small>Painel editorial</small></div>
+    <nav id="nav" hidden>
+      <a href="#/artigos">Artigos</a>
+      <a href="#/fontes">Fontes</a>
+      <a href="#/emergencias">Emergências</a>
+      <a href="#/midia">Mídia</a>
+      <a href="#/publicacao">Publicação</a>
+      <a href="#/usuarios" data-perm="user:manage">Usuários</a>
+    </nav>
+    <div id="who"></div>
+  </header>
+  <main id="app"><p class="muted">Carregando…</p></main>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

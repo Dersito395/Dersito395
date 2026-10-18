@@ -1,0 +1,88 @@
+{
+  "id": "plan-plano-familiar-emergencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Plano familiar de emergência e rotas de fuga",
+  "summary": "Como identificar os riscos da sua região, definir rotas de fuga, papéis de cada pessoa e treinar o plano.",
+  "category": "planejamento",
+  "subcategory": "plano-familiar",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "2 horas para elaborar; treino anual",
+  "materials": [
+    "Planta simples da casa (desenho)",
+    "Mapa do bairro",
+    "Checklist do aplicativo"
+  ],
+  "objective": "Fazer com que todos saibam o que fazer, para onde ir e com quem falar em uma emergência.",
+  "steps": [
+    {
+      "text": "Identifique os riscos da sua região: enchentes, deslizamentos, vendavais, incêndios, falta de água ou energia. Consulte a Defesa Civil do município."
+    },
+    {
+      "text": "Desenhe a planta da casa com duas saídas de cada cômodo, quando possível, e marque onde ficam o quadro de energia, o registro de gás e o de água."
+    },
+    {
+      "text": "Defina rotas de fuga do bairro para áreas seguras (mais altas em caso de enchente, longe de encostas em deslizamentos) e rotas alternativas."
+    },
+    {
+      "text": "Distribua papéis: quem ajuda crianças, idosos e pessoas com deficiência; quem leva a mochila; quem cuida dos animais."
+    },
+    {
+      "text": "Combine os pontos de encontro e o contato fora da cidade (veja o plano de comunicação)."
+    },
+    {
+      "text": "Considere necessidades específicas: medicamentos, equipamentos médicos, mobilidade, comunicação acessível."
+    },
+    {
+      "text": "Treine o plano pelo menos uma vez por ano, inclusive uma saída noturna simulada, e atualize-o quando algo mudar."
+    }
+  ],
+  "cautions": [
+    "Um plano que só uma pessoa conhece não funciona se ela não estiver presente.",
+    "Evite rotas que passem por áreas alagáveis, pontes baixas ou encostas."
+  ],
+  "alternatives": [
+    "Participar de núcleos comunitários de proteção e defesa civil (NUPDEC) do seu município."
+  ],
+  "tags": [
+    "plano familiar",
+    "rota de fuga",
+    "análise de riscos",
+    "evacuação",
+    "preparação"
+  ],
+  "keywords": [
+    "como fazer um plano de emergência",
+    "rota de fuga de casa",
+    "preparar a família"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-plano",
+      "note": "Elaboração de plano familiar e necessidades específicas."
+    },
+    {
+      "ref": "ready-evacuacao",
+      "note": "Rotas de evacuação e preparação para sair."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Áreas de risco e núcleos comunitários de defesa civil."
+    }
+  ],
+  "related": [
+    "com-plano-comunicacao-familiar",
+    "equip-kit-72h",
+    "urb-enchente",
+    "urb-deslizamento",
+    "urb-incendio-residencial"
+  ],
+  "updated_at": "2026-10-18"
+}

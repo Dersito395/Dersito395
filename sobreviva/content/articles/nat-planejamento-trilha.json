@@ -1,0 +1,95 @@
+{
+  "id": "nat-planejamento-trilha",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Planejamento de trilhas e expedições",
+  "summary": "Os 10 itens essenciais, plano de rota deixado com alguém de confiança e decisões de retorno.",
+  "category": "natureza",
+  "subcategory": "planejamento-expedicoes",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural",
+    "litoral"
+  ],
+  "time_estimate": "1 a 2 horas antes de cada saída",
+  "materials": [
+    "Mapa e bússola",
+    "Lanterna de cabeça e pilhas",
+    "Proteção solar (chapéu, óculos, protetor)",
+    "Kit de primeiros socorros",
+    "Faca ou multiferramenta",
+    "Meio de fazer fogo",
+    "Abrigo de emergência (manta térmica, lona)",
+    "Comida extra",
+    "Água extra e meio de tratar",
+    "Roupas extras"
+  ],
+  "objective": "Reduzir a chance de acidentes e garantir que, se algo der errado, você será procurado no lugar certo e terá recursos para esperar.",
+  "steps": [
+    {
+      "text": "Pesquise a trilha: distância, desnível, fontes de água, pontos de saída, exigência de guia ou autorização e regras do parque."
+    },
+    {
+      "text": "Verifique a previsão do tempo e alertas. Em áreas de serra, considere risco de cabeça d'água após chuvas nas cabeceiras."
+    },
+    {
+      "text": "Leve os 10 itens essenciais, mesmo em trilhas curtas (lista de materiais acima)."
+    },
+    {
+      "text": "Deixe com alguém de confiança um plano de rota: trajeto, participantes, veículo, horário previsto de retorno e a partir de que horário acionar o socorro (193)."
+    },
+    {
+      "text": "Defina um horário-limite de retorno e respeite-o, mesmo sem chegar ao destino."
+    },
+    {
+      "text": "Caminhe em grupo e no ritmo do mais lento. Não deixe ninguém para trás."
+    },
+    {
+      "text": "Ao voltar, avise imediatamente a pessoa que tem seu plano de rota."
+    }
+  ],
+  "cautions": [
+    "Mudanças de clima, cansaço, atraso e escurecimento são os gatilhos mais comuns de acidentes: decidir voltar cedo é uma habilidade de segurança.",
+    "Celular não é garantia de comunicação: muitas áreas não têm sinal."
+  ],
+  "alternatives": [
+    "Contratar condutores locais credenciados em trilhas desconhecidas ou técnicas."
+  ],
+  "tags": [
+    "trilha",
+    "10 essenciais",
+    "plano de rota",
+    "expedição",
+    "caminhada"
+  ],
+  "keywords": [
+    "o que levar na trilha",
+    "planejar trilha",
+    "itens essenciais trilha"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "nps-10-essenciais",
+      "note": "Lista dos dez itens essenciais."
+    },
+    {
+      "ref": "nps-seguranca-trilha",
+      "note": "Planejamento, plano deixado com alguém e horário de retorno."
+    },
+    {
+      "ref": "usfs-antes-de-ir",
+      "note": "Preparação antes da saída."
+    }
+  ],
+  "related": [
+    "orient-perdido-na-mata",
+    "nat-sinalizacao-resgate",
+    "equip-kit-72h",
+    "orient-gps-coordenadas-offline"
+  ],
+  "updated_at": "2026-10-18"
+}

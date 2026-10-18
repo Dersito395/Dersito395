@@ -1,0 +1,89 @@
+{
+  "id": "ps-queimaduras",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Queimaduras: primeiros cuidados",
+  "summary": "Como interromper a queimadura, resfriar com água corrente, proteger a lesão e quando procurar atendimento.",
+  "category": "primeiros-socorros",
+  "subcategory": "queimaduras",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "20 minutos de resfriamento",
+  "materials": [
+    "Água corrente limpa em temperatura ambiente",
+    "Filme plástico de cozinha ou pano limpo que não solte fiapos",
+    "Cobertor para manter o corpo aquecido"
+  ],
+  "objective": "Limitar o aprofundamento da queimadura, aliviar a dor e reduzir o risco de infecção.",
+  "steps": [
+    {
+      "text": "Interrompa a fonte de calor. Se a roupa pegar fogo: pare, deite e role, ou abafe com um cobertor."
+    },
+    {
+      "text": "Em queimaduras elétricas, desligue a energia antes de tocar na vítima."
+    },
+    {
+      "text": "Resfrie a área queimada com água corrente limpa em temperatura ambiente, por cerca de 20 minutos, o quanto antes.",
+      "image": "queimadura.svg"
+    },
+    {
+      "text": "Retire anéis, relógios, pulseiras e roupas da área antes do inchaço, exceto o que estiver grudado na pele."
+    },
+    {
+      "text": "Cubra com filme plástico de cozinha (sem enrolar apertado) ou pano limpo e úmido."
+    },
+    {
+      "text": "Mantenha o restante do corpo aquecido, principalmente em crianças e queimaduras extensas."
+    },
+    {
+      "text": "Ligue 192 se a queimadura for extensa, profunda, em rosto, mãos, pés, genitais ou articulações, causada por eletricidade ou produto químico, se houver inalação de fumaça, ou se a vítima for criança ou idosa."
+    }
+  ],
+  "cautions": [
+    "Não use gelo, pasta de dente, manteiga, óleo, pó de café, clara de ovo ou outras substâncias caseiras.",
+    "Não estoure bolhas e não retire pele ou roupas grudadas.",
+    "Queimaduras químicas: retire roupas contaminadas e lave com bastante água corrente por tempo prolongado; ligue 192 ou para o Disque-Intoxicação (0800 722 6001).",
+    "Rouquidão, tosse, fuligem no nariz ou na boca após incêndio indicam lesão das vias aéreas: emergência."
+  ],
+  "alternatives": [
+    "Sem água corrente: use compressas de água limpa e fria (não gelada), trocando com frequência."
+  ],
+  "tags": [
+    "queimadura",
+    "água corrente",
+    "bolha",
+    "queimadura química",
+    "queimadura elétrica"
+  ],
+  "keywords": [
+    "me queimei",
+    "o que passar na queimadura",
+    "queimadura com óleo",
+    "criança queimada"
+  ],
+  "images": [
+    {
+      "file": "queimadura.svg",
+      "caption": "Água corrente em temperatura ambiente por cerca de 20 minutos. Nada de gelo ou receitas caseiras.",
+      "alt": "Braço sob torneira com água corrente e relógio de 20 minutos"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ms-queimaduras",
+      "note": "Atendimento imediato às queimaduras; não aplicar substâncias caseiras; critérios de gravidade."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Resfriamento com água corrente fria/temperatura ambiente; cobertura com filme plástico."
+    }
+  ],
+  "related": [
+    "urb-incendio-residencial",
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

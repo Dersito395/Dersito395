@@ -1,0 +1,94 @@
+{
+  "id": "ps-calor-desidratacao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Calor extremo e desidratação",
+  "summary": "Diferenças entre exaustão pelo calor e intermação (golpe de calor), como resfriar rapidamente e como reidratar.",
+  "category": "primeiros-socorros",
+  "subcategory": "hipertermia",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Ação imediata; resfriamento em minutos",
+  "materials": [
+    "Água fria ou gelo",
+    "Toalhas ou panos",
+    "Ventilador ou abano",
+    "Sais de reidratação oral (SRO)"
+  ],
+  "objective": "Evitar que o aquecimento excessivo do corpo cause danos graves e corrigir a perda de líquidos.",
+  "steps": [
+    {
+      "text": "Exaustão pelo calor: fraqueza, tontura, dor de cabeça, náusea, suor intenso, câimbras, mas a pessoa está lúcida. Leve para a sombra, afrouxe roupas, deite e ofereça líquidos."
+    },
+    {
+      "text": "Intermação (golpe de calor): confusão, comportamento estranho, convulsão, desmaio, pele quente (com ou sem suor). É emergência: ligue 192."
+    },
+    {
+      "text": "No golpe de calor, resfrie imediatamente, sem esperar o socorro: o melhor é imergir o corpo (do pescoço para baixo) em água fria. Sem isso, molhe todo o corpo com água e abane continuamente, e coloque gelo ou panos frios no pescoço, axilas e virilha.",
+      "image": "calor-resfriamento.svg"
+    },
+    {
+      "text": "Não dê líquidos a quem está confuso ou inconsciente (risco de aspiração)."
+    },
+    {
+      "text": "Desidratação: sede, boca seca, urina escura e escassa, tontura. Em crianças: choro sem lágrimas, olhos fundos, sonolência, fraldas secas."
+    },
+    {
+      "text": "Reidrate com pequenos goles frequentes. Use sais de reidratação oral (distribuídos no SUS) preparados exatamente como indicado na embalagem."
+    },
+    {
+      "text": "Procure atendimento se houver vômitos persistentes, confusão, ausência de urina, ou se for bebê, idoso ou pessoa com doença crônica."
+    }
+  ],
+  "cautions": [
+    "Bebidas alcoólicas e muito açucaradas não reidratam adequadamente.",
+    "Não prepare soro caseiro 'de cabeça': medidas erradas de sal e açúcar podem fazer mal. Use SRO ou siga orientação de profissional de saúde.",
+    "Evite esforço físico intenso nas horas mais quentes (aprox. 10h às 16h) e nunca deixe crianças ou animais em veículos fechados."
+  ],
+  "alternatives": [
+    "Em locais sem água suficiente para imersão, combine molhar a pele, abanar e compressas frias nas áreas de grandes vasos."
+  ],
+  "tags": [
+    "calor",
+    "insolação",
+    "intermação",
+    "desidratação",
+    "soro de reidratação",
+    "hipertermia"
+  ],
+  "keywords": [
+    "passando mal no calor",
+    "golpe de calor",
+    "pessoa desidratada",
+    "soro caseiro"
+  ],
+  "images": [
+    {
+      "file": "calor-resfriamento.svg",
+      "caption": "Golpe de calor: resfriar já. Água fria no corpo, abanar e frio no pescoço, axilas e virilha.",
+      "alt": "Pessoa sendo resfriada com água e ventilação"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "wms-calor",
+      "note": "Diferenciação entre exaustão e intermação; imersão em água fria como método preferencial de resfriamento."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Primeiros socorros para doenças relacionadas ao calor e desidratação."
+    },
+    {
+      "ref": "ms-samu",
+      "note": "Acionamento do SAMU 192."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "nat-planejamento-trilha"
+  ],
+  "updated_at": "2026-10-18"
+}

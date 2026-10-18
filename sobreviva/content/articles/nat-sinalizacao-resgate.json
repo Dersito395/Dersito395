@@ -1,0 +1,93 @@
+{
+  "id": "nat-sinalizacao-resgate",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Sinalização para resgate",
+  "summary": "Sinais de socorro com apito, luz, espelho, fumaça e marcas no solo para ser encontrado por equipes de busca.",
+  "category": "natureza",
+  "subcategory": "sinalizacao-resgate",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "montanha",
+    "litoral",
+    "rural"
+  ],
+  "time_estimate": "Preparar em 15 a 30 minutos",
+  "materials": [
+    "Apito",
+    "Espelho de sinalização ou superfície refletora (CD, celular)",
+    "Lanterna",
+    "Roupas, lona ou objetos coloridos",
+    "Pedras ou galhos"
+  ],
+  "objective": "Tornar sua localização visível e audível para equipes de busca em terra e no ar.",
+  "steps": [
+    {
+      "text": "O padrão internacional de socorro é o 'três': três apitos, três flashes de luz, três fogueiras em triângulo ou três montes. Repita em intervalos.",
+      "image": "sinais-resgate.svg"
+    },
+    {
+      "text": "Apito alcança mais longe que a voz e gasta menos energia. Guarde-o preso à roupa."
+    },
+    {
+      "text": "Espelho: estenda o braço, faça um 'V' com os dedos apontando para a aeronave ou equipe e mova o reflexo do sol em direção ao alvo. Use também na direção de estradas e casas distantes."
+    },
+    {
+      "text": "À noite, use lanterna em série de três sinais (ou SOS: três curtos, três longos, três curtos)."
+    },
+    {
+      "text": "Marque o solo em área aberta com sinais grandes e contrastantes (pelo menos alguns metros), como 'SOS' ou 'X' (preciso de ajuda médica), usando pedras, galhos ou roupas."
+    },
+    {
+      "text": "Fumaça clara de dia em locais abertos pode ajudar, desde que o fogo seja controlado e não haja risco de incêndio."
+    },
+    {
+      "text": "Quando uma aeronave estiver próxima, fique em área aberta, agite roupa colorida e não corra em direção ao rotor."
+    }
+  ],
+  "cautions": [
+    "Nunca acenda fogo de sinalização em vegetação seca ou com vento: um incêndio coloca você e as equipes em risco.",
+    "Não aponte reflexo ou laser diretamente para os olhos de pilotos por muito tempo; varra a área em direção à aeronave."
+  ],
+  "alternatives": [
+    "Comunicadores satelitais e localizadores pessoais de emergência (PLB) acionam busca sem sinal de celular."
+  ],
+  "tags": [
+    "sinalização",
+    "SOS",
+    "apito",
+    "espelho",
+    "resgate",
+    "busca e salvamento"
+  ],
+  "keywords": [
+    "como pedir socorro na mata",
+    "sinal de socorro",
+    "ser encontrado"
+  ],
+  "images": [
+    {
+      "file": "sinais-resgate.svg",
+      "caption": "Sinais de socorro: série de três, SOS e sinais no solo.",
+      "alt": "Apito com três sinais, espelho refletindo o sol e letras SOS no chão"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Sinalização visual e sonora, espelho, sinais no solo e padrão de três."
+    },
+    {
+      "ref": "nps-seguranca-trilha",
+      "note": "Uso de apito e permanência em área visível."
+    }
+  ],
+  "related": [
+    "orient-perdido-na-mata",
+    "nat-planejamento-trilha",
+    "fogo-seguranca-fogueira"
+  ],
+  "updated_at": "2026-10-18"
+}

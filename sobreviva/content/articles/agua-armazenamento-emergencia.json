@@ -1,0 +1,85 @@
+{
+  "id": "agua-armazenamento-emergencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como armazenar água para emergências",
+  "summary": "Recipientes, quantidades de referência, rotação e higiene para manter uma reserva de água em casa.",
+  "category": "agua",
+  "subcategory": "armazenamento",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "30 a 60 minutos para montar; revisão a cada 6 meses",
+  "materials": [
+    "Recipientes próprios para alimentos, com tampa (ou água mineral lacrada)",
+    "Detergente e água limpa",
+    "Hipoclorito de sódio 2,5% para higienizar recipientes",
+    "Etiquetas e caneta"
+  ],
+  "objective": "Garantir água para beber, preparar alimentos e higiene durante interrupções de abastecimento, enchentes ou outros desastres.",
+  "steps": [
+    {
+      "text": "Calcule a necessidade. Uma referência usada pela agência de emergências dos EUA é de cerca de 3,8 litros (1 galão) por pessoa por dia, por no mínimo 3 dias, para beber e higiene básica. Aumente para crianças, gestantes, lactantes, doentes, clima quente e esforço físico, e inclua animais de estimação."
+    },
+    {
+      "text": "Prefira água mineral lacrada e respeite o prazo de validade da embalagem."
+    },
+    {
+      "text": "Se for encher recipientes em casa, use apenas embalagens próprias para alimentos e com tampa. Não reaproveite recipientes de produtos químicos, leite ou suco (difíceis de limpar)."
+    },
+    {
+      "text": "Lave o recipiente com detergente e enxágue. Higienize com solução de água e hipoclorito, tampe, agite, descarte a solução e deixe secar."
+    },
+    {
+      "text": "Encha com água da rede tratada. Se a água não for tratada, trate antes (veja o artigo sobre tornar a água segura)."
+    },
+    {
+      "text": "Feche bem, etiquete com a data e guarde em local fresco, escuro e longe de produtos químicos, combustíveis e do chão úmido."
+    },
+    {
+      "text": "Troque a água armazenada em casa a cada 6 meses, aproveitando-a em usos não potáveis."
+    }
+  ],
+  "cautions": [
+    "Não racione a água de beber de forma extrema: beba o necessário hoje e procure mais água amanhã. Reduza o esforço físico para diminuir a perda de líquidos.",
+    "Recipientes transparentes expostos à luz favorecem o crescimento de algas.",
+    "Caixas d'água e cisternas precisam de tampa e limpeza periódica; a água delas pode não estar potável após enchentes."
+  ],
+  "alternatives": [
+    "Em um aviso de falta de água, encha banheira e baldes limpos para usos não potáveis (descarga, limpeza).",
+    "A água do reservatório do aquecedor e o gelo do freezer podem ser fontes de reserva se estiverem limpos."
+  ],
+  "tags": [
+    "reserva de água",
+    "armazenamento",
+    "falta de água",
+    "estoque"
+  ],
+  "keywords": [
+    "quanto de água guardar",
+    "estocar água",
+    "galão de água",
+    "interrupção de água"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-agua",
+      "note": "Referência de 1 galão (≈3,8 L) por pessoa por dia por pelo menos 3 dias; recipientes e troca a cada 6 meses."
+    },
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Higienização de recipientes e armazenamento seguro."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "equip-kit-72h",
+    "alimentacao-estoque-emergencia"
+  ],
+  "updated_at": "2026-10-18"
+}

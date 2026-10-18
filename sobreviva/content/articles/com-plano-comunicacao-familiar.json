@@ -1,0 +1,83 @@
+{
+  "id": "com-plano-comunicacao-familiar",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Plano de comunicação familiar para emergências",
+  "summary": "Contatos, pontos de encontro, contato de fora da cidade, mensagens de texto e alertas oficiais.",
+  "category": "comunicacao",
+  "subcategory": "contatos",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "qualquer"
+  ],
+  "time_estimate": "1 hora em família",
+  "materials": [
+    "Papel e caneta (ou modelo impresso)",
+    "Saco plástico impermeável",
+    "Celulares de todos os membros"
+  ],
+  "objective": "Garantir que a família consiga se localizar e se comunicar quando as redes estiverem congestionadas ou fora do ar.",
+  "steps": [
+    {
+      "text": "Liste os contatos importantes de cada pessoa: familiares, escola, trabalho, médicos e vizinhos de confiança. Imprima e guarde na carteira e na mochila de emergência."
+    },
+    {
+      "text": "Escolha um contato fora da sua cidade: em desastres locais, ligações de longa distância às vezes completam melhor, e ele pode centralizar notícias."
+    },
+    {
+      "text": "Defina dois pontos de encontro: um perto de casa (para incêndios) e outro fora do bairro (caso não seja possível voltar)."
+    },
+    {
+      "text": "Combine usar mensagens de texto (SMS ou aplicativos) em vez de ligações: elas ocupam menos a rede e passam com sinal fraco."
+    },
+    {
+      "text": "Cadastre todos os celulares para alertas da Defesa Civil (SMS 40199 com o CEP) e ative alertas de emergência nas configurações do celular."
+    },
+    {
+      "text": "Ensine às crianças os números 190, 192 e 193 e o telefone de um responsável de memória."
+    },
+    {
+      "text": "Pratique o plano uma vez por ano e atualize os contatos."
+    }
+  ],
+  "cautions": [
+    "Não dependa apenas da agenda do celular: bateria e aparelho podem falhar.",
+    "Mantenha as ligações curtas em emergências para liberar a rede."
+  ],
+  "alternatives": [
+    "Grupos de vizinhança organizados previamente.",
+    "Rádios comunicadores homologados para uso familiar de curto alcance."
+  ],
+  "tags": [
+    "comunicação",
+    "plano familiar",
+    "ponto de encontro",
+    "contatos de emergência",
+    "SMS"
+  ],
+  "keywords": [
+    "como avisar a família",
+    "celular sem sinal em emergência",
+    "ponto de encontro"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-plano",
+      "note": "Plano de comunicação familiar, contato fora da área, mensagens de texto."
+    },
+    {
+      "ref": "defesa-civil-sms",
+      "note": "Cadastro de alertas por SMS 40199."
+    }
+  ],
+  "related": [
+    "plan-plano-familiar-emergencia",
+    "com-radio-emergencia",
+    "equip-kit-72h"
+  ],
+  "updated_at": "2026-10-18"
+}

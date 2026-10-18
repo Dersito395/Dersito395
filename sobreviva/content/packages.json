@@ -1,0 +1,9 @@
+[
+  {"id":"essencial","title":"Biblioteca essencial","description":"Conteúdo instalado junto com o aplicativo: todos os artigos essenciais, guias de emergência e ilustrações básicas. Funciona em modo avião desde o primeiro acesso.","bundled":true,"select":{"essential":true}},
+  {"id":"primeiros-socorros","title":"Manual de primeiros socorros","description":"Condutas iniciais em RCP, engasgo, hemorragias, queimaduras, fraturas, temperatura corporal e animais peçonhentos.","bundled":false,"select":{"categories":["primeiros-socorros"]}},
+  {"id":"sobrevivencia-mata","title":"Sobrevivência em mata","description":"Planejamento de trilhas, abrigos, água, fogo, sinalização e permanência segura em ambientes remotos.","bundled":false,"select":{"categories":["natureza","abrigos","fogo"],"environments":["mata"]}},
+  {"id":"emergencias-urbanas","title":"Emergências urbanas","description":"Apagões, enchentes, deslizamentos, vendavais, incêndios residenciais e evacuação.","bundled":false,"select":{"categories":["emergencias-urbanas","planejamento","comunicacao"]}},
+  {"id":"navegacao","title":"Navegação e mapas","description":"Bússola, cartas topográficas, curvas de nível, coordenadas e GPS offline.","bundled":false,"select":{"categories":["orientacao"]}},
+  {"id":"guias-ilustrados","title":"Guias ilustrados","description":"Artigos com diagramas passo a passo (nós, abrigos, bússola, sinais de resgate).","bundled":false,"select":{"hasImages":true}},
+  {"id":"biblioteca-completa","title":"Biblioteca completa","description":"Todos os artigos publicados, incluindo conteúdos complementares não instalados por padrão.","bundled":false,"select":{"all":true}}
+]

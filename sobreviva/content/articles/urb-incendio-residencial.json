@@ -1,0 +1,86 @@
+{
+  "id": "urb-incendio-residencial",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Incêndio em casa: como sair com segurança",
+  "summary": "Rotas de fuga, como sair sob fumaça, testar portas, o que fazer se a roupa pegar fogo e prevenção.",
+  "category": "emergencias-urbanas",
+  "subcategory": "incendios-residenciais",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico"
+  ],
+  "time_estimate": "Saída em menos de 2 minutos",
+  "materials": [
+    "Detector de fumaça",
+    "Extintor adequado",
+    "Plano de fuga combinado com a família"
+  ],
+  "objective": "Sair rapidamente e sem ferimentos de uma residência em chamas e chamar os Bombeiros.",
+  "steps": [
+    {
+      "text": "Ao perceber fogo ou fumaça, avise todos em voz alta e saia. Não pare para pegar objetos."
+    },
+    {
+      "text": "Sob fumaça, saia abaixado ou engatinhando: o ar mais limpo fica perto do chão. Cubra nariz e boca com um pano, se possível."
+    },
+    {
+      "text": "Antes de abrir uma porta fechada, toque-a e a maçaneta com o dorso da mão. Se estiver quente, use outra saída."
+    },
+    {
+      "text": "Feche as portas atrás de você para retardar o fogo."
+    },
+    {
+      "text": "Em prédios, use as escadas; nunca o elevador."
+    },
+    {
+      "text": "Se ficar preso: feche a porta, vede frestas com panos, vá para perto de uma janela, sinalize e ligue 193."
+    },
+    {
+      "text": "Se a roupa pegar fogo: pare, deite e role, cobrindo o rosto com as mãos."
+    },
+    {
+      "text": "Já do lado de fora, ligue 193 e não volte para dentro. Informe aos Bombeiros se alguém ficou lá dentro."
+    }
+  ],
+  "cautions": [
+    "Só tente usar extintor em princípio de incêndio pequeno, com rota de saída às costas e se souber usar. Na dúvida, saia.",
+    "Não jogue água em fogo de óleo de cozinha nem em equipamentos elétricos energizados. Em panela, desligue o fogo e abafe com a tampa.",
+    "Inalação de fumaça pode causar sintomas tardios: procure avaliação médica."
+  ],
+  "alternatives": [
+    "Prevenção: detectores de fumaça, não sobrecarregar tomadas, manter fósforos e isqueiros longe de crianças, desligar o fogão ao sair da cozinha."
+  ],
+  "tags": [
+    "incêndio",
+    "fumaça",
+    "rota de fuga",
+    "Bombeiros",
+    "extintor"
+  ],
+  "keywords": [
+    "casa pegando fogo",
+    "fogo na cozinha",
+    "incêndio no prédio",
+    "panela pegou fogo"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-incendio-casa",
+      "note": "Sair abaixado, testar portas com o dorso da mão, pare-deite-role, não voltar ao imóvel."
+    },
+    {
+      "ref": "ms-queimaduras",
+      "note": "Cuidados imediatos em queimaduras."
+    }
+  ],
+  "related": [
+    "ps-queimaduras",
+    "plan-plano-familiar-emergencia",
+    "nat-incendio-florestal-proximo"
+  ],
+  "updated_at": "2026-10-18"
+}

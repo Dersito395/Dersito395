@@ -1,0 +1,100 @@
+{
+  "id": "urb-deslizamento",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Deslizamentos de terra: sinais de alerta e evacuação",
+  "summary": "Como reconhecer sinais de que uma encosta pode deslizar e quando sair de casa durante chuvas intensas.",
+  "category": "emergencias-urbanas",
+  "subcategory": "deslizamentos",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural",
+    "montanha"
+  ],
+  "time_estimate": "Ação imediata ao perceber sinais",
+  "materials": [
+    "Mochila de emergência",
+    "Lanterna",
+    "Celular cadastrado para alertas"
+  ],
+  "objective": "Sair de áreas de risco antes que o deslizamento aconteça.",
+  "steps": [
+    {
+      "text": "Saiba se você mora em área de risco: consulte a Defesa Civil do município e cadastre-se para alertas (SMS 40199 com o CEP)."
+    },
+    {
+      "text": "Durante chuvas fortes ou prolongadas, observe sinais de alerta:",
+      "image": "deslizamento-sinais.svg"
+    },
+    {
+      "text": "Rachaduras novas em paredes, pisos ou no terreno; portas e janelas que passam a emperrar."
+    },
+    {
+      "text": "Árvores, postes ou muros inclinando; degraus no terreno; muros 'embarrigando'."
+    },
+    {
+      "text": "Água barrenta minando do chão ou de nascentes que antes eram limpas; estalos e ruídos vindos da encosta."
+    },
+    {
+      "text": "Ao notar qualquer sinal, saia imediatamente com sua família para local seguro, longe da encosta e do caminho por onde a terra desceria. Avise vizinhos e ligue 199 (Defesa Civil) ou 193."
+    },
+    {
+      "text": "Só retorne quando a Defesa Civil liberar a área."
+    }
+  ],
+  "cautions": [
+    "Não espere ver a terra se mover para sair: em deslizamentos, os minutos contam.",
+    "À noite, durante chuva forte, mantenha alguém atento aos sinais e às mensagens de alerta.",
+    "Lixo, entulho e cortes no barranco aumentam o risco; não faça obras em encostas sem orientação técnica."
+  ],
+  "alternatives": [
+    "Combinar previamente com familiares ou vizinhos em área segura um local para passar as noites de chuva intensa."
+  ],
+  "tags": [
+    "deslizamento",
+    "encosta",
+    "Defesa Civil",
+    "chuva forte",
+    "evacuação"
+  ],
+  "keywords": [
+    "barranco caindo",
+    "rachadura na parede",
+    "risco de deslizamento",
+    "queda de barreira"
+  ],
+  "images": [
+    {
+      "file": "deslizamento-sinais.svg",
+      "caption": "Sinais de alerta: rachaduras, árvores e postes inclinados, água barrenta, portas emperrando.",
+      "alt": "Encosta com casa e sinais de alerta destacados"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ready-deslizamentos",
+      "note": "Sinais de alerta de deslizamentos e evacuação."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Áreas de risco e telefone 199."
+    },
+    {
+      "ref": "defesa-civil-sms",
+      "note": "Alertas por SMS 40199."
+    },
+    {
+      "ref": "cemaden",
+      "note": "Monitoramento e alertas de risco geo-hidrológico."
+    }
+  ],
+  "related": [
+    "urb-enchente",
+    "plan-plano-familiar-emergencia",
+    "equip-kit-72h"
+  ],
+  "updated_at": "2026-10-18"
+}

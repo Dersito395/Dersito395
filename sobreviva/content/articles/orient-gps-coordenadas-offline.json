@@ -1,0 +1,83 @@
+{
+  "id": "orient-gps-coordenadas-offline",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "GPS offline e coordenadas geográficas",
+  "summary": "Como o GPS do celular funciona sem internet, como preparar mapas offline e informar coordenadas ao socorro.",
+  "category": "orientacao",
+  "subcategory": "gps-offline",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "30 minutos de preparação antes da saída",
+  "materials": [
+    "Celular com GPS",
+    "Aplicativo de mapas com download offline",
+    "Bateria externa e cabo",
+    "Mapa em papel e bússola (reserva)"
+  ],
+  "objective": "Saber sua posição e comunicá-la com precisão, mesmo sem cobertura de dados.",
+  "steps": [
+    {
+      "text": "Entenda: o receptor de GPS do celular recebe sinais de satélite e não depende de internet. O que depende de internet é baixar o mapa de fundo."
+    },
+    {
+      "text": "Antes da saída, baixe no aplicativo os mapas offline da região e, se possível, a trilha planejada. Teste em modo avião em casa."
+    },
+    {
+      "text": "Em modo avião, mantenha a localização ativada: na maioria dos aparelhos o GPS continua funcionando."
+    },
+    {
+      "text": "Aprenda a ler suas coordenadas. Formato decimal, por exemplo: -22.95190, -43.21050 (latitude negativa = sul; longitude negativa = oeste do meridiano de Greenwich)."
+    },
+    {
+      "text": "Ao pedir socorro, informe latitude e longitude completas, com o sinal ou as letras S e O, e diga o formato usado (graus decimais ou graus, minutos e segundos)."
+    },
+    {
+      "text": "Marque pontos (waypoints) importantes: estacionamento, bifurcações, fontes de água e acampamento."
+    },
+    {
+      "text": "Economize bateria: brilho baixo, modo avião, desligue Bluetooth e Wi-Fi e abra o mapa só quando necessário."
+    }
+  ],
+  "cautions": [
+    "Sob mata densa, em vales profundos ou cânions, a precisão do GPS cai. Espere alguns minutos em área mais aberta.",
+    "Bateria é o ponto fraco: sempre leve mapa em papel e bússola como reserva.",
+    "Mapas brasileiros oficiais usam o referencial SIRGAS 2000; para uso prático com GPS, é compatível com o WGS 84."
+  ],
+  "alternatives": [
+    "Aparelho GPS dedicado ou comunicador satelital, que funcionam onde não há rede de celular."
+  ],
+  "tags": [
+    "GPS",
+    "coordenadas",
+    "latitude",
+    "longitude",
+    "mapas offline",
+    "localização"
+  ],
+  "keywords": [
+    "gps sem internet",
+    "como passar minha localização",
+    "coordenadas para o resgate"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ibge-cartografia",
+      "note": "Sistema de coordenadas geográficas, latitude, longitude e referenciais geodésicos."
+    },
+    {
+      "ref": "nps-10-essenciais",
+      "note": "Navegação: mapa, bússola e GPS como itens essenciais."
+    }
+  ],
+  "related": [
+    "orient-bussola-mapa",
+    "orient-perdido-na-mata",
+    "com-plano-comunicacao-familiar"
+  ],
+  "updated_at": "2026-10-18"
+}
