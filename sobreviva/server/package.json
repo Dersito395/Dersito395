@@ -1,0 +1,15 @@
+{
+  "name": "sobreviva-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SOBREVIVA | Biblioteca de Campo — painel administrativo, construtor de pacotes e serviço de atualização (sem dependências externas).",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/server.js",
+    "build:content": "node src/build-cli.js",
+    "build:release": "node src/build-cli.js --strict",
+    "create-user": "node scripts/create-user.js",
+    "test": "node --test"
+  }
+}

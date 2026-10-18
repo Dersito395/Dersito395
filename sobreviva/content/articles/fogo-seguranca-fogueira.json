@@ -1,0 +1,97 @@
+{
+  "id": "fogo-seguranca-fogueira",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Princípios do fogo e fogueira segura",
+  "summary": "O triângulo do fogo, como preparar o local, manter uma fogueira pequena e apagá-la completamente.",
+  "category": "fogo",
+  "subcategory": "combustao",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "rural",
+    "montanha"
+  ],
+  "time_estimate": "15 a 30 minutos para preparar; 10 a 20 minutos para apagar",
+  "materials": [
+    "Fósforos à prova d'água ou isqueiro",
+    "Iniciador (algodão, papel)",
+    "Gravetos secos e lenha caída e seca",
+    "Água em quantidade (balde) e pá ou ferramenta para mexer as brasas"
+  ],
+  "objective": "Usar o fogo para aquecimento, sinalização ou cocção sem provocar incêndios e ferimentos.",
+  "steps": [
+    {
+      "text": "Entenda o triângulo do fogo: calor, combustível e oxigênio. Retirar qualquer um deles apaga o fogo – esse é o princípio de todo combate a incêndio.",
+      "image": "fogo-triangulo.svg"
+    },
+    {
+      "text": "Confirme se o fogo é permitido no local e na época (unidades de conservação e períodos de seca costumam proibir). Veja também quando não acender fogo."
+    },
+    {
+      "text": "Use estruturas existentes (churrasqueiras, anéis de pedra) quando houver. Caso contrário, escolha local a pelo menos alguns metros de barracas, lonas e árvores, sem galhos acima."
+    },
+    {
+      "text": "Limpe uma área de cerca de 3 metros de diâmetro até o solo mineral, retirando folhas e galhos secos."
+    },
+    {
+      "text": "Tenha água e uma ferramenta à mão antes de acender."
+    },
+    {
+      "text": "Mantenha o fogo pequeno, use lenha caída do chão e nunca o deixe sem supervisão, nem por pouco tempo."
+    },
+    {
+      "text": "Para apagar: jogue bastante água, mexa as cinzas e brasas com a ferramenta, jogue mais água e toque perto (sem encostar) para sentir calor. Se ainda estiver quente, não está apagado."
+    }
+  ],
+  "cautions": [
+    "Não use gasolina, álcool ou outros líquidos inflamáveis para acender ou reavivar o fogo.",
+    "Vento forte espalha fagulhas: não acenda fogo nessas condições.",
+    "Cobrir com terra pode manter brasas acesas por horas sob a superfície; use água e mexa.",
+    "Raízes e solo orgânico (turfa) podem queimar por baixo da terra e reacender longe da fogueira."
+  ],
+  "alternatives": [
+    "Fogareiro de acampamento, mais seguro e de menor impacto.",
+    "Roupas em camadas e saco de dormir adequado para dispensar fogo para aquecimento."
+  ],
+  "tags": [
+    "fogueira",
+    "triângulo do fogo",
+    "combustão",
+    "acampamento",
+    "prevenção de incêndios"
+  ],
+  "keywords": [
+    "como acender fogueira",
+    "apagar fogueira",
+    "fazer fogo no mato"
+  ],
+  "images": [
+    {
+      "file": "fogo-triangulo.svg",
+      "caption": "Triângulo do fogo: calor, combustível e oxigênio.",
+      "alt": "Triângulo com calor, combustível e oxigênio nos lados"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "usfs-fogueira",
+      "note": "Escolha do local, área limpa de cerca de 3 m (10 pés), supervisão e método água-mexer-sentir para apagar."
+    },
+    {
+      "ref": "lnt-principios",
+      "note": "Minimizar impactos do fogo; usar estruturas existentes e lenha caída."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Princípios da combustão e uso do fogo em sobrevivência."
+    }
+  ],
+  "related": [
+    "fogo-quando-nao-acender",
+    "nat-incendio-florestal-proximo",
+    "nat-sinalizacao-resgate"
+  ],
+  "updated_at": "2026-10-18"
+}

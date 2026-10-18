@@ -1,0 +1,84 @@
+{
+  "id": "nat-incendio-florestal-proximo",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Incêndio florestal próximo: como se proteger",
+  "summary": "O que fazer quando há fogo na vegetação perto de casa, da trilha ou da estrada, e quando evacuar.",
+  "category": "natureza",
+  "subcategory": "permanencia-segura",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "rural",
+    "urbano",
+    "domestico"
+  ],
+  "time_estimate": "Ação imediata",
+  "materials": [
+    "Mochila de emergência",
+    "Máscara (preferencialmente PFF2/N95)",
+    "Roupas de algodão ou lã cobrindo braços e pernas",
+    "Água"
+  ],
+  "objective": "Sair da área de perigo cedo e evitar ser alcançado pelo fogo e pela fumaça.",
+  "steps": [
+    {
+      "text": "Ao avistar fogo na vegetação, afaste-se e ligue 193 informando o local com o máximo de referências ou coordenadas."
+    },
+    {
+      "text": "Não tente combater fogo grande. A frente de fogo pode avançar mais rápido que uma pessoa correndo, principalmente morro acima e a favor do vento."
+    },
+    {
+      "text": "Se receber ordem de evacuação ou perceber o fogo se aproximando, saia cedo pela rota indicada, com a mochila de emergência."
+    },
+    {
+      "text": "Na trilha, desloque-se para áreas já queimadas e frias, estradas largas, cursos d'água amplos ou áreas sem vegetação, evitando subir encostas e entrar em vales estreitos."
+    },
+    {
+      "text": "Proteja-se da fumaça: máscara PFF2/N95 ou pano úmido sobre o nariz e a boca, roupas que cubram a pele."
+    },
+    {
+      "text": "De carro, mantenha janelas fechadas, faróis acesos e ventilação em recirculação; não dirija através de fumaça densa sem visibilidade."
+    },
+    {
+      "text": "Em casa, se houver tempo antes de sair: feche portas e janelas, retire materiais inflamáveis de perto da casa e deixe a casa visível e acessível aos bombeiros."
+    }
+  ],
+  "cautions": [
+    "Fumaça agrava problemas respiratórios e cardíacos: pessoas com asma, idosos, gestantes e crianças devem ser priorizadas na saída.",
+    "Não volte para buscar pertences."
+  ],
+  "alternatives": [
+    "Prevenção: manter aceiros e terreno limpo ao redor de casas rurais e nunca queimar lixo ou restos de vegetação."
+  ],
+  "tags": [
+    "incêndio florestal",
+    "queimada",
+    "fumaça",
+    "evacuação",
+    "Bombeiros"
+  ],
+  "keywords": [
+    "fogo no mato perto de casa",
+    "queimada perto",
+    "incêndio na serra"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-incendio-florestal",
+      "note": "Evacuação antecipada, proteção contra fumaça (N95) e preparo da casa."
+    },
+    {
+      "ref": "usfs-fogueira",
+      "note": "Prevenção de incêndios causados por fogueiras."
+    }
+  ],
+  "related": [
+    "fogo-quando-nao-acender",
+    "plan-plano-familiar-emergencia",
+    "urb-incendio-residencial"
+  ],
+  "updated_at": "2026-10-18"
+}

@@ -171,3 +171,10 @@ automática a partir do histórico é o próximo passo fora do escopo deste MVP.
 O app é um **copiloto, não um piloto automático**: nenhuma tela aciona
 recursos sozinha, toda recomendação mostra a régua de decisão, e o operador
 sempre pode aceitar, ajustar ou substituir — com justificativa registrada.
+
+---
+
+## Outros projetos neste repositório
+
+- [`sobreviva/`](./sobreviva/README.md) — **SOBREVIVA | Biblioteca de Campo**: app mobile offline (Flutter) de
+  sobrevivência e emergências, com painel editorial e serviço de atualização de conteúdo.

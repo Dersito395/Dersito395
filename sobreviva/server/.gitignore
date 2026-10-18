@@ -1,0 +1,5 @@
+node_modules/
+# Usuários do painel (hash de senhas): nunca versionar.
+data/
+# Pacotes publicados da versão atual (usados pelos testes do app e servidos pela API).
+!dist/

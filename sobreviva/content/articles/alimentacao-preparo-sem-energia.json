@@ -1,0 +1,83 @@
+{
+  "id": "alimentacao-preparo-sem-energia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como cozinhar sem energia elétrica com segurança",
+  "summary": "Opções para preparar refeições durante apagões e como evitar intoxicação por monóxido de carbono e incêndios.",
+  "category": "alimentacao",
+  "subcategory": "preparo-sem-energia",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Variável conforme a refeição",
+  "materials": [
+    "Fogão a gás em bom estado ou fogareiro de acampamento",
+    "Fósforos ou isqueiro",
+    "Panela com tampa",
+    "Extintor ou balde com areia",
+    "Alimentos que exigem pouco cozimento"
+  ],
+  "objective": "Preparar alimentos e ferver água sem gerar risco de incêndio ou intoxicação.",
+  "steps": [
+    {
+      "text": "Prefira alimentos que não precisam de cozimento ou que cozinham rápido, economizando combustível e água."
+    },
+    {
+      "text": "O fogão a gás de cozinha normalmente funciona sem energia elétrica; acenda com fósforo se o acendedor for elétrico. Mantenha a cozinha ventilada."
+    },
+    {
+      "text": "Fogareiros de acampamento, churrasqueiras a carvão e fogões a lenha só devem ser usados ao ar livre, longe de portas, janelas e entradas de ar."
+    },
+    {
+      "text": "Use panela tampada: o alimento cozinha mais rápido e consome menos combustível."
+    },
+    {
+      "text": "Nunca deixe chama acesa sem supervisão e mantenha crianças e animais afastados."
+    }
+  ],
+  "cautions": [
+    "Nunca use churrasqueira, fogareiro a carvão, gerador ou aquecedor a combustão dentro de casa, garagem, barraca ou varanda fechada: o monóxido de carbono é invisível, sem cheiro e pode matar.",
+    "Sintomas de intoxicação por monóxido de carbono: dor de cabeça, tontura, náusea, fraqueza e confusão. Saia imediatamente para o ar livre e ligue 192 ou 193.",
+    "Velas são causa frequente de incêndios em apagões; prefira lanternas."
+  ],
+  "alternatives": [
+    "Fogão solar em dias ensolarados.",
+    "Garrafa térmica para preservar água quente e reduzir consumo de gás."
+  ],
+  "tags": [
+    "cozinhar",
+    "apagão",
+    "fogareiro",
+    "monóxido de carbono"
+  ],
+  "keywords": [
+    "como cozinhar sem luz",
+    "fogão sem energia",
+    "churrasqueira dentro de casa"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "cdc-co",
+      "note": "Fontes e sintomas de intoxicação por monóxido de carbono; uso de equipamentos a combustão apenas ao ar livre."
+    },
+    {
+      "ref": "ready-co",
+      "note": "Prevenção de intoxicação por monóxido de carbono."
+    },
+    {
+      "ref": "ready-apagao",
+      "note": "Uso de lanternas em vez de velas e cuidados com geradores."
+    }
+  ],
+  "related": [
+    "urb-apagao",
+    "fogo-quando-nao-acender",
+    "alimentacao-geladeira-sem-energia"
+  ],
+  "updated_at": "2026-10-18"
+}

@@ -1,0 +1,106 @@
+{
+  "id": "abrigo-lona-improvisado",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como montar um abrigo improvisado com lona",
+  "summary": "Montagem de um abrigo em 'A' com lona e corda para proteção contra chuva e vento.",
+  "category": "abrigos",
+  "subcategory": "lonas",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "rural",
+    "montanha"
+  ],
+  "time_estimate": "20 a 40 minutos, conforme método e condições",
+  "materials": [
+    "Lona impermeável (cerca de 3 x 3 m)",
+    "Corda de 10 a 15 m para a cumeeira",
+    "4 a 6 cordeletes curtos (cerca de 2 m)",
+    "Estacas, pedras ou galhos firmes",
+    "Isolante para o chão (isolante térmico, mochila, folhas secas)"
+  ],
+  "objective": "Criar rapidamente uma proteção contra chuva, vento e perda de calor, usando materiais leves que cabem em uma mochila.",
+  "steps": [
+    {
+      "text": "Escolha o local antes de montar: terreno plano, levemente elevado e drenado, longe do leito de rios e sem galhos ou árvores mortas acima. Veja o artigo sobre escolha de terreno."
+    },
+    {
+      "text": "Identifique a direção do vento. A abertura do abrigo deve ficar de costas para o vento predominante."
+    },
+    {
+      "text": "Amarre a corda da cumeeira entre duas árvores firmes, a cerca de 1 metro do chão (mais baixa protege mais do vento e do frio). Use um nó ajustável para deixá-la bem esticada.",
+      "image": "abrigo-lona-a.svg"
+    },
+    {
+      "text": "Passe a lona sobre a corda, deixando os dois lados com o mesmo comprimento."
+    },
+    {
+      "text": "Prenda os cantos ao chão com cordeletes e estacas, puxando a lona para fora até ficar esticada. Em vento forte, baixe o lado exposto até encostar no solo."
+    },
+    {
+      "text": "Amarre um pequeno cordel pendurado na corda da cumeeira, logo antes da lona, nos dois lados: ele faz a água que escorre pela corda pingar fora do abrigo."
+    },
+    {
+      "text": "Cubra o chão com isolante, mochila, roupas ou camada espessa de folhas secas. O contato com o solo frio rouba calor do corpo mais rápido que o ar."
+    },
+    {
+      "text": "Teste o abrigo: puxe as cordas, verifique se a água escorre para fora e reforce os pontos frouxos antes de anoitecer."
+    }
+  ],
+  "cautions": [
+    "Não monte abrigo em leito seco de rio, fundo de vale estreito ou ao pé de encostas instáveis: risco de enxurrada, cabeça d'água e deslizamentos.",
+    "Galhos secos presos nas copas podem cair com vento. Olhe para cima antes de escolher o local.",
+    "Lonas são inflamáveis. Mantenha fogueiras afastadas e nunca use fogareiro, braseiro ou aquecedor a combustão sob a lona fechada (monóxido de carbono).",
+    "Em tempestade com raios, evite topos de morro, árvores isoladas e áreas abertas.",
+    "Não cave valas ao redor do abrigo em áreas naturais: a escolha de um local bem drenado evita a necessidade e reduz o impacto ambiental."
+  ],
+  "alternatives": [
+    "Abrigo em 'meia-água' (lona inclinada, um lado alto e outro no chão), mais rápido e bom para refletir o calor de uma fogueira segura.",
+    "Barraca de acampamento, se disponível.",
+    "Manta térmica aluminizada para reduzir a perda de calor, combinada a isolamento do solo."
+  ],
+  "tags": [
+    "abrigo",
+    "lona",
+    "tarp",
+    "acampamento",
+    "chuva",
+    "vento"
+  ],
+  "keywords": [
+    "como montar um abrigo na chuva",
+    "abrigo improvisado",
+    "proteção contra chuva",
+    "dormir no mato"
+  ],
+  "images": [
+    {
+      "file": "abrigo-lona-a.svg",
+      "caption": "Abrigo em 'A': corda da cumeeira esticada entre duas árvores, lona dividida ao meio e cantos estaqueados.",
+      "alt": "Diagrama de lona em formato de A presa a uma corda entre duas árvores"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Capítulo sobre abrigos: escolha de local, abrigos com lona/poncho, isolamento do solo."
+    },
+    {
+      "ref": "lnt-principios",
+      "note": "Acampar em superfícies duráveis e evitar alterações no terreno."
+    },
+    {
+      "ref": "cdc-co",
+      "note": "Risco de monóxido de carbono em espaços fechados."
+    }
+  ],
+  "related": [
+    "abrigo-terreno-isolamento",
+    "equip-nos-essenciais",
+    "ps-hipotermia",
+    "urb-vendaval-raios"
+  ],
+  "updated_at": "2026-10-18"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "alimentacao-geladeira-sem-energia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Alimentos na geladeira durante falta de energia",
+  "summary": "Por quanto tempo a geladeira e o freezer conservam os alimentos e o que descartar depois de um apagão.",
+  "category": "alimentacao",
+  "subcategory": "conservacao",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano"
+  ],
+  "time_estimate": "Decisão em poucos minutos",
+  "materials": [
+    "Termômetro de geladeira (recomendado)",
+    "Caixa térmica e gelo (se disponível)",
+    "Sacos para descarte"
+  ],
+  "objective": "Evitar intoxicação alimentar após quedas de energia.",
+  "steps": [
+    {
+      "text": "Mantenha as portas da geladeira e do freezer fechadas o máximo possível."
+    },
+    {
+      "text": "Referência do Departamento de Agricultura dos EUA: a geladeira fechada mantém os alimentos frios por cerca de 4 horas. Um freezer cheio mantém a temperatura por cerca de 48 horas; pela metade, cerca de 24 horas."
+    },
+    {
+      "text": "Se a falta de energia for durar mais, transfira os itens mais perecíveis para uma caixa térmica com gelo."
+    },
+    {
+      "text": "Quando a energia voltar, verifique a temperatura: alimentos perecíveis (carnes, aves, peixes, ovos, laticínios, sobras) que ficaram acima de 4 °C por mais de 2 horas devem ser descartados."
+    },
+    {
+      "text": "Alimentos do freezer que ainda tenham cristais de gelo ou estejam a 4 °C ou menos podem ser recongelados."
+    },
+    {
+      "text": "Na dúvida, jogue fora. Nunca prove o alimento para decidir."
+    }
+  ],
+  "cautions": [
+    "Cheiro e aparência não indicam se o alimento é seguro: bactérias perigosas não mudam necessariamente o aspecto.",
+    "Descarte alimentos que tiveram contato com água de enchente, inclusive embalagens não herméticas."
+  ],
+  "alternatives": [
+    "Planejar o consumo dos perecíveis primeiro e manter estoque de não perecíveis."
+  ],
+  "tags": [
+    "geladeira",
+    "freezer",
+    "apagão",
+    "segurança dos alimentos",
+    "intoxicação alimentar"
+  ],
+  "keywords": [
+    "acabou a luz geladeira",
+    "comida estragou",
+    "falta de energia comida"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "usda-alimentos-emergencia",
+      "note": "4 horas para geladeira; 48 h/24 h para freezer cheio/meio cheio; descarte acima de 4 °C (40 °F) por mais de 2 horas."
+    },
+    {
+      "ref": "ready-apagao",
+      "note": "Conduta com alimentos durante apagões."
+    }
+  ],
+  "related": [
+    "urb-apagao",
+    "alimentacao-estoque-emergencia",
+    "alimentacao-preparo-sem-energia"
+  ],
+  "updated_at": "2026-10-18"
+}

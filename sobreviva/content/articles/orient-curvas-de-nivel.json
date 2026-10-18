@@ -1,0 +1,72 @@
+{
+  "id": "orient-curvas-de-nivel",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Leitura de relevo: curvas de nível",
+  "summary": "Como interpretar curvas de nível em cartas topográficas para identificar morros, vales, cristas e encostas íngremes.",
+  "category": "orientacao",
+  "subcategory": "relevo",
+  "difficulty": "avancada",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural"
+  ],
+  "time_estimate": "20 minutos de estudo",
+  "materials": [
+    "Carta topográfica",
+    "Régua ou escalímetro"
+  ],
+  "objective": "Planejar rotas seguras e reconhecer o terreno a partir do mapa.",
+  "essential": false,
+  "steps": [
+    {
+      "text": "Curva de nível é uma linha que liga pontos de mesma altitude. A diferença de altitude entre duas curvas vizinhas é a equidistância, informada na legenda."
+    },
+    {
+      "text": "Curvas muito próximas indicam terreno íngreme; curvas espaçadas indicam terreno suave."
+    },
+    {
+      "text": "Curvas fechadas e concêntricas, com altitude aumentando para o centro, representam um morro ou elevação."
+    },
+    {
+      "text": "Curvas em forma de 'V' apontando para cima (para as altitudes maiores) indicam vales e cursos d'água; em 'V' ou 'U' apontando para baixo indicam espigões e cristas."
+    },
+    {
+      "text": "Uma área entre duas elevações, onde as curvas formam uma 'cintura', é uma sela ou colo: frequentemente a passagem mais fácil entre vales."
+    },
+    {
+      "text": "Use as curvas para escolher rotas que evitem subidas íngremes desnecessárias e áreas com risco de queda."
+    }
+  ],
+  "cautions": [
+    "Cartas antigas podem não mostrar estradas, desmatamentos ou erosões recentes.",
+    "Pequenos penhascos podem não aparecer se forem menores que a equidistância."
+  ],
+  "alternatives": [
+    "Modelos de elevação em aplicativos de mapa offline (relevo sombreado)."
+  ],
+  "tags": [
+    "curvas de nível",
+    "relevo",
+    "carta topográfica",
+    "cartografia"
+  ],
+  "keywords": [
+    "ler mapa topográfico",
+    "entender relevo"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ibge-cartografia",
+      "note": "Representação do relevo por curvas de nível e equidistância."
+    }
+  ],
+  "related": [
+    "orient-bussola-mapa",
+    "nat-planejamento-trilha"
+  ],
+  "updated_at": "2026-10-18"
+}

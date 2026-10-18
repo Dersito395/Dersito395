@@ -1,0 +1,99 @@
+{
+  "id": "ps-rcp-adulto",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "RCP: reanimação cardiopulmonar em adultos",
+  "summary": "O que fazer quando um adulto desmaia e não respira normalmente: acionar o 192, iniciar compressões e usar o DEA.",
+  "category": "primeiros-socorros",
+  "subcategory": "rcp",
+  "difficulty": "intermediaria",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Iniciar em menos de 1 minuto; manter até a chegada do socorro",
+  "materials": [
+    "Telefone (viva-voz)",
+    "DEA – desfibrilador externo automático, se houver",
+    "Máscara de bolso (opcional)"
+  ],
+  "objective": "Manter o sangue circulando para o cérebro e o coração até a chegada do socorro e do desfibrilador, aumentando a chance de sobrevivência.",
+  "steps": [
+    {
+      "text": "Verifique se o local é seguro para você."
+    },
+    {
+      "text": "Toque nos ombros e chame a pessoa em voz alta. Observe se ela respira normalmente. Respiração ausente ou apenas 'puxadas' (gasping) = trate como parada cardíaca."
+    },
+    {
+      "text": "Ligue 192 (SAMU) no viva-voz ou peça a alguém que ligue. Peça também que tragam um DEA, se houver."
+    },
+    {
+      "text": "Coloque a pessoa de barriga para cima em superfície firme. Ajoelhe-se ao lado do tórax."
+    },
+    {
+      "text": "Posicione a base de uma mão no centro do peito (metade inferior do osso esterno) e a outra mão por cima, braços esticados.",
+      "image": "rcp-maos.svg"
+    },
+    {
+      "text": "Comprima forte e rápido: cerca de 5 a 6 cm de profundidade, 100 a 120 compressões por minuto, deixando o peito voltar totalmente entre as compressões."
+    },
+    {
+      "text": "Se você não tem treinamento, faça apenas compressões contínuas. Se é treinado e se sente apto, faça 30 compressões e 2 ventilações."
+    },
+    {
+      "text": "Assim que o DEA chegar, ligue-o e siga as instruções de voz. Não toque na pessoa durante a análise e o choque."
+    },
+    {
+      "text": "Continue sem parar até a chegada do socorro, até a pessoa começar a respirar normalmente ou até não ter mais condições físicas. Se houver outra pessoa, revezem a cada 2 minutos."
+    }
+  ],
+  "cautions": [
+    "Este resumo não substitui um curso prático de RCP. Procure capacitação com instituições reconhecidas.",
+    "Crianças e bebês têm técnica diferente (profundidade e número de mãos). Ainda assim, iniciar compressões e ligar 192 é melhor que não fazer nada.",
+    "Interrupções longas nas compressões reduzem a chance de sobrevivência; minimize pausas.",
+    "Em afogamento, a ventilação tem papel mais importante; o atendente do 192 pode orientar."
+  ],
+  "alternatives": [
+    "O atendente do SAMU 192 pode orientar a RCP por telefone em tempo real."
+  ],
+  "tags": [
+    "RCP",
+    "parada cardíaca",
+    "massagem cardíaca",
+    "DEA",
+    "desfibrilador",
+    "reanimação"
+  ],
+  "keywords": [
+    "pessoa desmaiou e não respira",
+    "parada cardiorrespiratória",
+    "como fazer massagem cardíaca"
+  ],
+  "images": [
+    {
+      "file": "rcp-maos.svg",
+      "caption": "Mãos sobrepostas no centro do peito; 5–6 cm de profundidade; 100–120 por minuto.",
+      "alt": "Posição das mãos no centro do peito para compressões"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "aha-2025",
+      "note": "Frequência de 100–120/min, profundidade de 5–6 cm em adultos, RCP somente com as mãos para leigos, uso precoce do DEA."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Reconhecimento da parada e acionamento do serviço de emergência por leigos."
+    },
+    {
+      "ref": "ms-samu",
+      "note": "SAMU 192 e orientação por telefone."
+    }
+  ],
+  "related": [
+    "ps-engasgo",
+    "plan-plano-familiar-emergencia"
+  ],
+  "updated_at": "2026-10-18"
+}

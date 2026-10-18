@@ -1,0 +1,88 @@
+{
+  "id": "urb-apagao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Apagão: como agir durante a falta de energia",
+  "summary": "Segurança, iluminação, alimentos, medicamentos refrigerados, equipamentos médicos e uso correto de geradores.",
+  "category": "emergencias-urbanas",
+  "subcategory": "apagoes",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico"
+  ],
+  "time_estimate": "Ação imediata; preparação prévia de 1 hora",
+  "materials": [
+    "Lanternas e pilhas",
+    "Rádio a pilha",
+    "Bateria externa para celular",
+    "Caixa térmica",
+    "Água armazenada"
+  ],
+  "objective": "Atravessar uma falta de energia prolongada com segurança, sem incêndios, intoxicações ou perda de alimentos e medicamentos.",
+  "steps": [
+    {
+      "text": "Verifique se a falta é só na sua casa (disjuntores) ou na região. Informe a distribuidora de energia pelo telefone ou aplicativo."
+    },
+    {
+      "text": "Use lanternas, não velas. Se precisar usar velas, nunca as deixe sem supervisão e mantenha-as longe de cortinas e de crianças."
+    },
+    {
+      "text": "Desligue e desconecte eletrônicos e eletrodomésticos para evitar danos com o retorno da energia; deixe uma lâmpada ligada para saber quando a energia voltar."
+    },
+    {
+      "text": "Mantenha geladeira e freezer fechados (veja o artigo sobre alimentos sem energia)."
+    },
+    {
+      "text": "Quem depende de equipamento médico elétrico ou medicamentos refrigerados deve ter um plano prévio (bateria, local alternativo) e contato com a equipe de saúde."
+    },
+    {
+      "text": "Gerador: somente ao ar livre, a pelo menos cerca de 6 metros de portas e janelas. Nunca conecte gerador diretamente à instalação da casa sem chave de transferência instalada por profissional."
+    },
+    {
+      "text": "Economize a bateria do celular e acompanhe informações pelo rádio."
+    },
+    {
+      "text": "Em calor ou frio extremos, procure um local com energia (casa de familiares, abrigo público)."
+    }
+  ],
+  "cautions": [
+    "Nunca use churrasqueira, braseiro, fogareiro ou gerador em ambientes fechados: risco de morte por monóxido de carbono.",
+    "Fios caídos na rua podem estar energizados: mantenha distância e avise a distribuidora e o 193.",
+    "Semáforos apagados: trate os cruzamentos como parada obrigatória para todos."
+  ],
+  "alternatives": [
+    "Pequenos sistemas solares portáteis para carregar celular e lanternas."
+  ],
+  "tags": [
+    "apagão",
+    "falta de energia",
+    "gerador",
+    "blecaute",
+    "lanterna"
+  ],
+  "keywords": [
+    "acabou a luz",
+    "queda de energia",
+    "sem luz em casa"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-apagao",
+      "note": "Conduta em apagões; geradores ao ar livre a 20 pés (≈6 m) de janelas; desligar aparelhos."
+    },
+    {
+      "ref": "cdc-co",
+      "note": "Monóxido de carbono e equipamentos a combustão."
+    }
+  ],
+  "related": [
+    "alimentacao-geladeira-sem-energia",
+    "alimentacao-preparo-sem-energia",
+    "equip-kit-72h",
+    "fogo-quando-nao-acender"
+  ],
+  "updated_at": "2026-10-18"
+}

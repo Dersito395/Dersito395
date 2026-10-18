@@ -1,0 +1,105 @@
+{
+  "id": "orient-bussola-mapa",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Como utilizar uma bússola com mapa",
+  "summary": "Partes da bússola de placa, como orientar o mapa, medir um rumo e caminhar por ele, considerando a declinação magnética.",
+  "category": "orientacao",
+  "subcategory": "bussola",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural"
+  ],
+  "time_estimate": "15 minutos para aprender; prática recomendada antes da saída",
+  "materials": [
+    "Bússola de placa (com limbo giratório)",
+    "Mapa topográfico da área",
+    "Lápis"
+  ],
+  "objective": "Determinar e seguir uma direção confiável mesmo sem sinal de GPS ou celular.",
+  "steps": [
+    {
+      "text": "Conheça as partes: placa base com seta de direção de marcha; limbo giratório graduado de 0 a 360°; seta de orientação e linhas de orientação dentro do limbo; agulha magnética, com a ponta norte geralmente vermelha.",
+      "image": "bussola-partes.svg"
+    },
+    {
+      "text": "Segure a bússola na horizontal, na altura do peito, longe de objetos metálicos, ímãs, celulares e veículos, que desviam a agulha."
+    },
+    {
+      "text": "Para medir o rumo no mapa: coloque a borda da placa ligando sua posição (A) ao destino (B), com a seta de direção de marcha apontando para B.",
+      "image": "bussola-rumo.svg"
+    },
+    {
+      "text": "Gire o limbo até que as linhas de orientação fiquem paralelas às linhas norte-sul do mapa, com a seta de orientação apontando para o norte do mapa. Leia o rumo no índice."
+    },
+    {
+      "text": "Corrija a declinação magnética. No Brasil ela é, em geral, para oeste e pode passar de 20° em várias regiões. Com declinação oeste, some o valor ao rumo do mapa para obter o rumo magnético. Confira o valor atual na legenda do mapa (atualizado) ou na calculadora da NOAA."
+    },
+    {
+      "text": "Para caminhar: segure a bússola com a seta de direção à frente e gire o corpo até a agulha norte ficar exatamente sobre a seta de orientação. A seta de direção de marcha indica o caminho."
+    },
+    {
+      "text": "Escolha um ponto de referência visível nessa direção (árvore, rocha), caminhe até ele sem olhar a bússola o tempo todo e repita o procedimento."
+    },
+    {
+      "text": "Anote os rumos e o tempo de caminhada de cada trecho: isso permite voltar pelo rumo inverso (some ou subtraia 180°)."
+    }
+  ],
+  "cautions": [
+    "A declinação muda com o local e com o tempo; mapas antigos podem trazer valores desatualizados.",
+    "Obstáculos (rios, penhascos) exigem contornos: anote o desvio para retomar o rumo original.",
+    "Pratique em área conhecida antes de depender da bússola em situação real."
+  ],
+  "alternatives": [
+    "GPS ou aplicativo com mapas offline, sempre com bússola e mapa de reserva.",
+    "Orientação aproximada pelo sol: nasce a leste e se põe a oeste (aproximadamente, variando com a estação)."
+  ],
+  "tags": [
+    "bússola",
+    "rumo",
+    "azimute",
+    "declinação magnética",
+    "mapa",
+    "navegação"
+  ],
+  "keywords": [
+    "como utilizar uma bússola",
+    "achar o norte",
+    "navegação terrestre"
+  ],
+  "images": [
+    {
+      "file": "bussola-partes.svg",
+      "caption": "Partes da bússola de placa.",
+      "alt": "Bússola de placa com seta de direção, limbo e agulha identificados"
+    },
+    {
+      "file": "bussola-rumo.svg",
+      "caption": "Medindo o rumo: borda de A até B, linhas do limbo paralelas ao norte do mapa.",
+      "alt": "Bússola sobre mapa ligando os pontos A e B"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ibge-cartografia",
+      "note": "Orientação, norte geográfico e magnético, declinação e leitura de cartas."
+    },
+    {
+      "ref": "noaa-declinacao",
+      "note": "Cálculo da declinação magnética atual por coordenada."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Navegação com bússola em situação de sobrevivência."
+    }
+  ],
+  "related": [
+    "orient-perdido-na-mata",
+    "orient-gps-coordenadas-offline",
+    "orient-curvas-de-nivel"
+  ],
+  "updated_at": "2026-10-18"
+}

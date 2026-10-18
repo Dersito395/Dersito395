@@ -1,0 +1,92 @@
+{
+  "id": "abrigo-terreno-isolamento",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Escolha do local do abrigo e proteção térmica",
+  "summary": "Como escolher onde acampar ou improvisar abrigo e como reduzir a perda de calor pelo chão, pelo vento e pela umidade.",
+  "category": "abrigos",
+  "subcategory": "terreno",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural"
+  ],
+  "time_estimate": "10 a 20 minutos para avaliar o local",
+  "materials": [
+    "Isolante térmico ou material seco (folhas, capim, mochila)",
+    "Roupas secas extras",
+    "Gorro e meias secas"
+  ],
+  "objective": "Reduzir riscos externos (água, quedas de galhos, deslizamentos) e manter a temperatura corporal durante a noite.",
+  "steps": [
+    {
+      "text": "Comece a procurar o local com pelo menos uma hora de luz natural: montar abrigo no escuro aumenta o risco de erro e acidente."
+    },
+    {
+      "text": "Procure terreno plano, firme e levemente elevado, com boa drenagem.",
+      "image": "abrigo-terreno.svg"
+    },
+    {
+      "text": "Afaste-se das margens de rios e do leito de córregos secos; observe marcas de cheias anteriores (galhos e lixo presos em troncos)."
+    },
+    {
+      "text": "Olhe para cima: evite árvores mortas, galhos quebrados pendurados e paredões com pedras soltas."
+    },
+    {
+      "text": "Evite o pé de encostas íngremes, topos expostos e trilhas de animais ou formigueiros."
+    },
+    {
+      "text": "Aproveite barreiras naturais contra o vento (vegetação densa, rochas firmes), sem ficar dentro de cavidades instáveis."
+    },
+    {
+      "text": "Isole o corpo do chão com uma camada espessa e seca. A perda de calor por contato com solo frio e úmido é intensa."
+    },
+    {
+      "text": "Troque roupas molhadas por secas antes de dormir, cubra a cabeça e o pescoço e mantenha meias secas para a noite."
+    }
+  ],
+  "cautions": [
+    "Umidade e vento aceleram a hipotermia, mesmo em temperaturas que não parecem frias (acima de 10 °C).",
+    "Não durma encostado em rochas ou no chão sem isolamento."
+  ],
+  "alternatives": [
+    "Construções existentes e seguras (abrigos de montanha, galpões) costumam ser melhores que abrigos improvisados."
+  ],
+  "tags": [
+    "acampamento",
+    "terreno",
+    "isolamento térmico",
+    "frio",
+    "proteção térmica"
+  ],
+  "keywords": [
+    "onde montar barraca",
+    "onde acampar",
+    "dormir no frio"
+  ],
+  "images": [
+    {
+      "file": "abrigo-terreno.svg",
+      "caption": "Bom local: plano, elevado e drenado. Evitar: leito de rio, árvores mortas e pé de encostas.",
+      "alt": "Comparação entre locais adequados e inadequados para abrigo"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Critérios de escolha do local de abrigo e perda de calor por condução."
+    },
+    {
+      "ref": "wms-hipotermia",
+      "note": "Isolamento do solo e proteção contra vento e umidade na prevenção da hipotermia."
+    }
+  ],
+  "related": [
+    "abrigo-lona-improvisado",
+    "ps-hipotermia",
+    "nat-planejamento-trilha"
+  ],
+  "updated_at": "2026-10-18"
+}

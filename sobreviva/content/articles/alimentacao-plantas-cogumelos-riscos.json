@@ -1,0 +1,74 @@
+{
+  "id": "alimentacao-plantas-cogumelos-riscos",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Forrageamento: riscos de plantas e cogumelos silvestres",
+  "summary": "Por que não comer plantas, frutos ou cogumelos que você não identifica com certeza, e o que fazer em caso de suspeita de intoxicação.",
+  "category": "alimentacao",
+  "subcategory": "forrageamento",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "rural",
+    "montanha"
+  ],
+  "time_estimate": "Leitura de 3 minutos",
+  "materials": [],
+  "objective": "Prevenir intoxicações graves por ingestão de espécies silvestres.",
+  "steps": [
+    {
+      "text": "Lembre a prioridade: uma pessoa saudável suporta dias sem comida, mas pouco tempo sem água e abrigo. Em uma emergência curta, comer raramente é a prioridade."
+    },
+    {
+      "text": "Só consuma espécies que você identifica com absoluta certeza, de preferência com conhecimento local confirmado por especialista."
+    },
+    {
+      "text": "Não confie em 'testes de comestibilidade', no comportamento de animais ou em regras populares (cor, cheiro, sabor): muitas espécies tóxicas não dão sinais."
+    },
+    {
+      "text": "Nunca coma cogumelos silvestres sem identificação por especialista. Algumas espécies podem causar insuficiência do fígado, com sintomas que aparecem horas depois."
+    },
+    {
+      "text": "Em suspeita de intoxicação, ligue para o Disque-Intoxicação (0800 722 6001) ou para o SAMU (192). Guarde uma amostra ou foto da planta ou do cogumelo para os profissionais."
+    }
+  ],
+  "cautions": [
+    "Não provoque vômito sem orientação de um centro de toxicologia ou profissional de saúde.",
+    "Crianças pequenas devem ser levadas para avaliação mesmo sem sintomas.",
+    "Colher em áreas protegidas pode ser proibido; respeite as regras locais."
+  ],
+  "alternatives": [
+    "Levar alimentos compactos em qualquer saída para áreas remotas.",
+    "Racionar esforço físico para reduzir a necessidade de energia."
+  ],
+  "tags": [
+    "plantas tóxicas",
+    "cogumelos",
+    "intoxicação",
+    "forrageamento",
+    "CIATox"
+  ],
+  "keywords": [
+    "posso comer essa planta",
+    "cogumelo venenoso",
+    "fruta do mato"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Riscos de plantas e cogumelos silvestres; prioridade de água e abrigo sobre alimento."
+    },
+    {
+      "ref": "abracit",
+      "note": "CIATox e Disque-Intoxicação 0800 722 6001."
+    }
+  ],
+  "related": [
+    "alimentacao-estoque-emergencia",
+    "nat-planejamento-trilha",
+    "agua-encontrar-captar"
+  ],
+  "updated_at": "2026-10-18"
+}

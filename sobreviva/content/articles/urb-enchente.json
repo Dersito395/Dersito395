@@ -1,0 +1,106 @@
+{
+  "id": "urb-enchente",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Enchentes e alagamentos: antes, durante e depois",
+  "summary": "Como se preparar, quando sair de casa, por que não atravessar água em movimento e os cuidados de saúde após a enchente.",
+  "category": "emergencias-urbanas",
+  "subcategory": "enchentes",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Ação imediata ao receber alerta",
+  "materials": [
+    "Mochila de emergência",
+    "Documentos em saco impermeável",
+    "Lanterna",
+    "Botas e luvas de borracha",
+    "Água potável"
+  ],
+  "objective": "Proteger a vida durante enchentes e reduzir os riscos de doenças e acidentes na volta para casa.",
+  "steps": [
+    {
+      "text": "Antes: cadastre seu celular para alertas da Defesa Civil enviando o CEP por SMS para 40199. Conheça as rotas para áreas mais altas e os abrigos do município."
+    },
+    {
+      "text": "Ao receber alerta, siga as orientações da Defesa Civil. Se mandarem sair, saia imediatamente, levando a mochila de emergência."
+    },
+    {
+      "text": "Desligue a energia no quadro geral e feche o registro de gás, se puder fazê-lo com segurança e sem tocar na água."
+    },
+    {
+      "text": "Não atravesse água em movimento, a pé ou de carro. Cerca de 15 cm de água em movimento podem derrubar uma pessoa e cerca de 30 cm podem arrastar um carro.",
+      "image": "enchente.svg"
+    },
+    {
+      "text": "Se a água subir rapidamente e não for possível sair, vá para o ponto mais alto da construção (sem se trancar em sótão fechado) e sinalize; ligue 193."
+    },
+    {
+      "text": "Depois: só volte para casa quando as autoridades liberarem. Verifique rachaduras e riscos de desabamento antes de entrar."
+    },
+    {
+      "text": "Na limpeza, use botas e luvas de borracha. Descarte alimentos que tiveram contato com a água e trate a água antes de beber."
+    },
+    {
+      "text": "Febre, dor no corpo e dor na panturrilha até 30 dias após contato com água de enchente podem ser leptospirose: procure uma unidade de saúde e informe a exposição."
+    }
+  ],
+  "cautions": [
+    "A água de enchente pode conter esgoto, produtos químicos, objetos cortantes, fios energizados e animais peçonhentos.",
+    "Bueiros e valas ficam invisíveis sob a água. Evite caminhar em áreas alagadas.",
+    "Crianças não devem brincar na água de enchente."
+  ],
+  "alternatives": [
+    "Se não houver alerta oficial, observe sinais como subida rápida do rio e chuva intensa contínua, e saia preventivamente."
+  ],
+  "tags": [
+    "enchente",
+    "inundação",
+    "alagamento",
+    "leptospirose",
+    "Defesa Civil",
+    "evacuação"
+  ],
+  "keywords": [
+    "casa alagando",
+    "rua alagada",
+    "água subindo",
+    "cheia do rio"
+  ],
+  "images": [
+    {
+      "file": "enchente.svg",
+      "caption": "15 cm de correnteza derrubam uma pessoa; 30 cm arrastam um carro.",
+      "alt": "Pessoa e carro em água corrente com marcações de profundidade"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "ready-enchentes",
+      "note": "15 cm (6 polegadas) de água em movimento derrubam uma pessoa; 30 cm (1 pé) arrastam veículos; conduta na evacuação."
+    },
+    {
+      "ref": "defesa-civil-sms",
+      "note": "Cadastro de alertas por SMS enviando o CEP para 40199."
+    },
+    {
+      "ref": "ms-leptospirose",
+      "note": "Sintomas e período após exposição à água de enchente."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Orientações nacionais de proteção e defesa civil."
+    }
+  ],
+  "related": [
+    "urb-deslizamento",
+    "plan-plano-familiar-emergencia",
+    "agua-tornar-potavel",
+    "equip-kit-72h"
+  ],
+  "updated_at": "2026-10-18"
+}

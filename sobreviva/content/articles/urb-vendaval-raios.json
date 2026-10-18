@@ -1,0 +1,93 @@
+{
+  "id": "urb-vendaval-raios",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Vendavais, tempestades e raios",
+  "summary": "Onde se abrigar em tempestades, como se proteger de raios e o que evitar durante e depois de ventos fortes.",
+  "category": "emergencias-urbanas",
+  "subcategory": "vendavais",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural",
+    "mata",
+    "litoral"
+  ],
+  "time_estimate": "Ação imediata",
+  "materials": [
+    "Rádio a pilha",
+    "Lanterna",
+    "Celular carregado"
+  ],
+  "objective": "Reduzir o risco de ferimentos por objetos lançados pelo vento, quedas de árvores e descargas elétricas.",
+  "steps": [
+    {
+      "text": "Acompanhe alertas meteorológicos e da Defesa Civil. Ao receber alerta, recolha ou prenda objetos soltos em quintais e varandas."
+    },
+    {
+      "text": "Durante a tempestade, fique dentro de uma construção sólida, longe de janelas e portas de vidro."
+    },
+    {
+      "text": "Se ouvir trovões, você está ao alcance de raios: procure abrigo em construção fechada ou veículo com teto metálico e janelas fechadas."
+    },
+    {
+      "text": "Ao ar livre sem abrigo: saia de topos de morros, campos abertos, praias e da água; afaste-se de árvores isoladas, cercas, postes e torres."
+    },
+    {
+      "text": "Em grupo ao ar livre, espalhem-se para que um raio não atinja várias pessoas."
+    },
+    {
+      "text": "Espere cerca de 30 minutos após o último trovão para sair do abrigo."
+    },
+    {
+      "text": "Depois do vendaval: mantenha distância de fios caídos e árvores danificadas e avise a distribuidora de energia e o 193."
+    }
+  ],
+  "cautions": [
+    "Não se abrigue sob árvores durante tempestades.",
+    "Evite usar aparelhos ligados à tomada e chuveiro elétrico durante tempestade com raios.",
+    "Vítima de raio não fica 'eletrificada': pode e deve ser socorrida imediatamente. Ligue 192 e, se não respirar, inicie a RCP."
+  ],
+  "alternatives": [
+    "Se estiver em um carro, pare em local seguro longe de árvores e postes e permaneça dentro dele."
+  ],
+  "tags": [
+    "vendaval",
+    "tempestade",
+    "raios",
+    "ventania",
+    "granizo"
+  ],
+  "keywords": [
+    "tempestade com raios",
+    "ventania forte",
+    "onde se proteger de raio"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-tempestades",
+      "note": "Abrigo em construções, regra de esperar 30 minutos após o último trovão."
+    },
+    {
+      "ref": "nws-raios",
+      "note": "Proteção contra raios ao ar livre; vítimas podem ser tocadas e socorridas."
+    },
+    {
+      "ref": "inpe-elat",
+      "note": "Recomendações de proteção contra raios no Brasil."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Alertas e orientações para vendavais."
+    }
+  ],
+  "related": [
+    "urb-apagao",
+    "abrigo-lona-improvisado",
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

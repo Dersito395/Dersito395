@@ -1,0 +1,102 @@
+{
+  "id": "orient-perdido-na-mata",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Estou perdido na mata: o que fazer",
+  "summary": "Método PARE (Pare, Analise, Reconheça, Elabore um plano), quando ficar parado, como pedir ajuda e como ser encontrado.",
+  "category": "orientacao",
+  "subcategory": "desorientacao",
+  "difficulty": "basica",
+  "environments": [
+    "mata",
+    "montanha",
+    "rural"
+  ],
+  "time_estimate": "Primeiros 15 minutos são decisivos",
+  "materials": [
+    "Celular (bateria preservada)",
+    "Apito",
+    "Roupa ou objeto de cor viva",
+    "Água",
+    "Lanterna"
+  ],
+  "objective": "Evitar que a desorientação se agrave e aumentar as chances de ser localizado rapidamente.",
+  "steps": [
+    {
+      "text": "P – PARE. Assim que perceber que está perdido, pare de andar. Sente-se, beba água, coma algo e respire fundo. Andar sem rumo é a principal causa de agravamento.",
+      "image": "pare-perdido.svg"
+    },
+    {
+      "text": "A – ANALISE. Qual foi o último ponto que você reconheceu com certeza? Quanto tempo caminhou desde então? Alguém sabe seu roteiro e horário de retorno?"
+    },
+    {
+      "text": "R – RECONHEÇA o entorno: relevo, trilhas, sons de estrada ou rio, posição do sol, horas de luz restantes, clima e seus recursos (água, roupas, bateria)."
+    },
+    {
+      "text": "E – ELABORE um plano. Se alguém sabe onde você está, em geral é melhor ficar no lugar e facilitar a busca. Só se desloque se tiver certeza de como voltar a um ponto conhecido ou se o local for perigoso."
+    },
+    {
+      "text": "Tente contato: ligue 193 (Bombeiros) ou 190. Se a ligação não completar, envie SMS a um contato com sua localização; mensagens costumam passar com sinal fraco. Lugares mais altos e abertos têm melhor sinal."
+    },
+    {
+      "text": "Registre suas coordenadas (o GPS do celular funciona sem internet) e economize bateria: modo avião entre as tentativas, brilho mínimo, aplicativos fechados."
+    },
+    {
+      "text": "Fique visível e audível: escolha uma área aberta próxima, exponha uma roupa colorida e use apito em série de três sinais, repetida em intervalos."
+    },
+    {
+      "text": "Prepare-se para passar a noite antes de escurecer: abrigo, isolamento do chão e roupas secas."
+    }
+  ],
+  "cautions": [
+    "Não siga córregos morro abaixo sem conhecimento: eles podem levar a cachoeiras, cânions e áreas fechadas.",
+    "Não se esconda de helicópteros ou equipes de busca, mesmo constrangido: responda aos chamados.",
+    "Não se separe do grupo para buscar ajuda sozinho, salvo se for a única opção e houver plano claro."
+  ],
+  "alternatives": [
+    "Se tiver mapa e bússola e souber sua posição aproximada, siga um rumo até uma referência linear grande (estrada, rio grande, linha de transmissão)."
+  ],
+  "tags": [
+    "perdido",
+    "desorientação",
+    "PARE",
+    "STOP",
+    "busca e salvamento",
+    "resgate"
+  ],
+  "keywords": [
+    "estou perdido na mata",
+    "me perdi na trilha",
+    "perdido no mato",
+    "pessoa desaparecida"
+  ],
+  "images": [
+    {
+      "file": "pare-perdido.svg",
+      "caption": "Método PARE: Pare, Analise, Reconheça e Elabore um plano.",
+      "alt": "Quatro passos do método PARE"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "nps-seguranca-trilha",
+      "note": "Conduta ao se perder: parar, avaliar, ficar no local e sinalizar."
+    },
+    {
+      "ref": "usfs-antes-de-ir",
+      "note": "Planejamento, avisar alguém do roteiro e conduta em caso de desorientação (método STOP)."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Sinalização e permanência no local."
+    }
+  ],
+  "related": [
+    "nat-sinalizacao-resgate",
+    "orient-gps-coordenadas-offline",
+    "nat-planejamento-trilha",
+    "abrigo-lona-improvisado"
+  ],
+  "updated_at": "2026-10-18"
+}

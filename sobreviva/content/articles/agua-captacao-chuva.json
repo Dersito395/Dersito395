@@ -1,0 +1,82 @@
+{
+  "id": "agua-captacao-chuva",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Captação e uso de água da chuva em casa",
+  "summary": "Como montar uma coleta simples de água da chuva, descartar a primeira água e quando ela pode ser usada para beber.",
+  "category": "agua",
+  "subcategory": "chuva",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "rural",
+    "urbano"
+  ],
+  "time_estimate": "2 a 6 horas para instalar um sistema simples",
+  "materials": [
+    "Calhas limpas",
+    "Tubos e conexões",
+    "Reservatório com tampa e tela",
+    "Dispositivo de descarte da primeira água (desvio das primeiras chuvas)",
+    "Torneira no reservatório"
+  ],
+  "objective": "Aproveitar a chuva como fonte complementar de água, principalmente para usos não potáveis, e reduzir riscos de contaminação e de proliferação de mosquitos.",
+  "steps": [
+    {
+      "text": "Verifique o telhado: telhas cerâmicas ou metálicas são mais adequadas. Evite telhados com amianto deteriorado, pintura descascando ou acúmulo de folhas e fezes de animais."
+    },
+    {
+      "text": "Instale calhas e tubos que levem a água ao reservatório. Coloque uma tela na entrada para reter folhas e insetos."
+    },
+    {
+      "text": "Instale um desvio de primeira água: os primeiros milímetros de chuva lavam o telhado e devem ser descartados."
+    },
+    {
+      "text": "Use reservatório opaco, sempre tampado, com tela nas aberturas e torneira acima do fundo, para não puxar sedimentos."
+    },
+    {
+      "text": "Use a água da chuva prioritariamente para descarga, limpeza, irrigação e lavagem. Para beber ou cozinhar, ela precisa ser tratada (fervura ou cloro)."
+    },
+    {
+      "text": "Limpe calhas e reservatório periodicamente e antes da estação chuvosa."
+    }
+  ],
+  "cautions": [
+    "Reservatório destampado vira criadouro do mosquito Aedes aegypti (dengue, zika e chikungunya).",
+    "Em áreas urbanas com poluição intensa ou próximas a indústrias, a chuva pode carregar poluentes que a fervura e o cloro não removem.",
+    "Não interligue a água da chuva à rede da concessionária sem orientação técnica."
+  ],
+  "alternatives": [
+    "Coleta emergencial com lona e baldes limpos durante a chuva.",
+    "Cisternas comunitárias e programas públicos de cisternas no semiárido."
+  ],
+  "tags": [
+    "chuva",
+    "cisterna",
+    "calha",
+    "reaproveitamento"
+  ],
+  "keywords": [
+    "coletar água da chuva",
+    "aproveitar chuva",
+    "cisterna caseira"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "oms-wash-emergencias",
+      "note": "Coleta de água da chuva em emergências, descarte da primeira água e tratamento."
+    },
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Tratamento da água antes do consumo."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "agua-armazenamento-emergencia",
+    "auto-saneamento-emergencia"
+  ],
+  "updated_at": "2026-10-18"
+}

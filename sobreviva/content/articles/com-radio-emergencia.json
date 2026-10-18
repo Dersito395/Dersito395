@@ -1,0 +1,76 @@
+{
+  "id": "com-radio-emergencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Rádio e comunicação em emergências",
+  "summary": "Rádio receptor para alertas, rádios comunicadores, radioamadorismo e como transmitir uma mensagem de socorro clara.",
+  "category": "comunicacao",
+  "subcategory": "radios",
+  "difficulty": "intermediaria",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "30 minutos para preparar o equipamento",
+  "materials": [
+    "Rádio AM/FM a pilha ou à manivela",
+    "Pilhas extras",
+    "Rádios comunicadores homologados (opcional)",
+    "Papel com frequências e contatos"
+  ],
+  "objective": "Receber informações oficiais e manter comunicação quando celular e internet falham.",
+  "steps": [
+    {
+      "text": "Tenha um rádio AM/FM a pilha ou à manivela: emissoras locais transmitem orientações das autoridades durante desastres."
+    },
+    {
+      "text": "Rádios comunicadores de curto alcance ajudam a manter o grupo em contato. Use apenas equipamentos homologados pela Anatel e respeite as regras de uso."
+    },
+    {
+      "text": "Radioamadores frequentemente apoiam a Defesa Civil em desastres. Para transmitir nas faixas de radioamador é necessário certificado e licença da Anatel."
+    },
+    {
+      "text": "Ao pedir socorro por qualquer meio, fale devagar e na ordem: quem é você; onde está (coordenadas ou referências); o que aconteceu; quantas pessoas e qual o estado delas; do que precisa."
+    },
+    {
+      "text": "Repita a mensagem e confirme se foi entendida. Combine horários fixos de escuta para economizar bateria."
+    }
+  ],
+  "cautions": [
+    "Transmitir sem habilitação ou em frequências não autorizadas é infração e pode interferir em comunicações de emergência.",
+    "Pilhas descarregam com o tempo: revise a cada 6 meses."
+  ],
+  "alternatives": [
+    "Mensagens de texto, que exigem menos sinal que ligações.",
+    "Comunicadores satelitais para áreas sem cobertura."
+  ],
+  "tags": [
+    "rádio",
+    "radioamador",
+    "comunicação de emergência",
+    "Anatel",
+    "mensagem de socorro"
+  ],
+  "keywords": [
+    "rádio de emergência",
+    "walkie talkie",
+    "como pedir socorro pelo rádio"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "anatel",
+      "note": "Homologação de equipamentos e habilitação para radioamador."
+    },
+    {
+      "ref": "ready-kit",
+      "note": "Rádio a pilha ou à manivela como item do kit."
+    }
+  ],
+  "related": [
+    "com-plano-comunicacao-familiar",
+    "equip-kit-72h",
+    "nat-sinalizacao-resgate"
+  ],
+  "updated_at": "2026-10-18"
+}

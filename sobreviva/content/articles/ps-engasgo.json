@@ -1,0 +1,89 @@
+{
+  "id": "ps-engasgo",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Engasgo: como desobstruir as vias aéreas",
+  "summary": "Como reconhecer o engasgo grave e aplicar golpes nas costas e compressões abdominais em adultos e crianças, e o que muda para bebês.",
+  "category": "primeiros-socorros",
+  "subcategory": "engasgo",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Ação imediata (segundos)",
+  "materials": [
+    "Telefone para ligar 192"
+  ],
+  "objective": "Remover o objeto que bloqueia a passagem de ar antes que a pessoa perca a consciência.",
+  "steps": [
+    {
+      "text": "Pergunte: 'Você está engasgado?'. Se a pessoa consegue tossir com força, falar ou respirar, incentive-a a continuar tossindo e fique ao lado observando."
+    },
+    {
+      "text": "Engasgo grave: a pessoa não consegue falar, tossir ou respirar, pode levar as mãos ao pescoço e ficar com lábios arroxeados. Peça a alguém que ligue 192."
+    },
+    {
+      "text": "Adultos e crianças acima de 1 ano: incline a pessoa para frente e aplique 5 golpes firmes nas costas, entre as escápulas, com a base da mão.",
+      "image": "engasgo.svg"
+    },
+    {
+      "text": "Em seguida, aplique 5 compressões abdominais: posicione-se atrás, coloque o punho fechado acima do umbigo e abaixo do osso do peito, segure com a outra mão e puxe rápido para dentro e para cima."
+    },
+    {
+      "text": "Alterne 5 golpes nas costas e 5 compressões abdominais até o objeto sair ou a pessoa perder a consciência."
+    },
+    {
+      "text": "Gestantes em fase avançada ou pessoas que você não consegue abraçar: faça compressões no peito (no centro do tórax) no lugar das abdominais."
+    },
+    {
+      "text": "Bebês (menores de 1 ano): apoie o bebê de bruços sobre seu antebraço, com a cabeça mais baixa que o corpo, e dê 5 golpes nas costas; vire-o de barriga para cima e faça 5 compressões no centro do peito. Repita. Nunca faça compressões abdominais em bebês."
+    },
+    {
+      "text": "Se a pessoa perder a consciência: deite-a no chão, confirme que o 192 foi acionado e inicie a RCP. Antes de ventilar, olhe a boca e retire o objeto apenas se estiver visível."
+    }
+  ],
+  "cautions": [
+    "Não coloque o dedo às cegas na garganta: pode empurrar o objeto mais para dentro.",
+    "Não dê água à pessoa engasgada.",
+    "Quem recebeu compressões abdominais deve ser avaliado por um profissional de saúde, mesmo que pareça bem.",
+    "Procure treinamento prático: a técnica correta é aprendida com prática supervisionada."
+  ],
+  "alternatives": [
+    "Se estiver sozinho e engasgado: ligue 192 se puder, faça compressões abdominais em si mesmo com o punho ou pressione o abdome contra o encosto de uma cadeira firme."
+  ],
+  "tags": [
+    "engasgo",
+    "asfixia",
+    "Heimlich",
+    "obstrução das vias aéreas",
+    "bebê engasgado"
+  ],
+  "keywords": [
+    "pessoa engasgada",
+    "criança engasgou",
+    "manobra de heimlich",
+    "não consegue respirar"
+  ],
+  "images": [
+    {
+      "file": "engasgo.svg",
+      "caption": "Alternar 5 golpes nas costas e 5 compressões abdominais (adultos e crianças acima de 1 ano).",
+      "alt": "Sequência de golpes nas costas e compressões abdominais"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "aha-2025",
+      "note": "Diretriz 2025: ciclos de 5 golpes nas costas e 5 compressões abdominais em adultos e crianças; compressões torácicas em gestantes; sequência para bebês."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Golpes nas costas e compressões abdominais; avaliação médica após as compressões."
+    }
+  ],
+  "related": [
+    "ps-rcp-adulto"
+  ],
+  "updated_at": "2026-10-18"
+}

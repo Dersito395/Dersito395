@@ -1,0 +1,83 @@
+{
+  "id": "auto-saneamento-emergencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Saneamento e higiene em emergências",
+  "summary": "Banheiro de emergência em casa, destino seguro de fezes no campo e lavagem das mãos com pouca água.",
+  "category": "autossuficiencia",
+  "subcategory": "saneamento",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "mata",
+    "rural"
+  ],
+  "time_estimate": "15 a 30 minutos para montar",
+  "materials": [
+    "Balde com tampa",
+    "Sacos de lixo resistentes",
+    "Serragem, cal ou terra seca",
+    "Pá pequena",
+    "Sabão e água",
+    "Álcool em gel"
+  ],
+  "objective": "Evitar doenças transmitidas por fezes e água contaminada quando o sistema de esgoto ou a água não funcionam.",
+  "steps": [
+    {
+      "text": "Em casa sem água ou com esgoto comprometido, monte um banheiro de emergência: balde com saco plástico duplo e tampa."
+    },
+    {
+      "text": "Após cada uso, cubra com uma camada de serragem, terra seca ou cal para reduzir odor e moscas. Feche bem o saco quando estiver pela metade."
+    },
+    {
+      "text": "Guarde os sacos fechados em local separado, longe de crianças, alimentos e água, até a coleta ser possível. Siga orientações locais de descarte."
+    },
+    {
+      "text": "No campo, faça um buraco individual de 15 a 20 cm de profundidade, a pelo menos cerca de 60 metros (70 passos) de rios, nascentes, trilhas e acampamentos, e cubra depois do uso."
+    },
+    {
+      "text": "Lave as mãos com água e sabão após usar o banheiro e antes de manusear alimentos. Uma garrafa com pequeno furo na tampa economiza água."
+    },
+    {
+      "text": "Separe a água de beber da água de higiene e mantenha recipientes tampados."
+    }
+  ],
+  "cautions": [
+    "Fezes perto de fontes de água são causa importante de diarreias em desastres e acampamentos.",
+    "Em enchentes, não use o vaso sanitário se o esgoto estiver retornando."
+  ],
+  "alternatives": [
+    "Banheiros químicos ou estruturas montadas pela Defesa Civil em abrigos coletivos."
+  ],
+  "tags": [
+    "saneamento",
+    "banheiro de emergência",
+    "higiene",
+    "fezes",
+    "doenças diarreicas"
+  ],
+  "keywords": [
+    "sem água para descarga",
+    "banheiro improvisado",
+    "fazer necessidades no mato"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "oms-wash-emergencias",
+      "note": "Saneamento em emergências, distância de fontes de água e higiene das mãos."
+    },
+    {
+      "ref": "lnt-principios",
+      "note": "Buracos de 15–20 cm a 200 pés (≈60 m) da água, trilhas e acampamentos."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "agua-armazenamento-emergencia",
+    "urb-enchente"
+  ],
+  "updated_at": "2026-10-18"
+}
