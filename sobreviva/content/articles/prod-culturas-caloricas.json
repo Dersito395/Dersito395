@@ -1,0 +1,88 @@
+{
+  "id": "prod-culturas-caloricas",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Culturas de alta produção para tempos de crise",
+  "summary": "Mandioca, batata-doce, feijão, milho e abóbora: o que plantar para obter energia e proteína, com ciclos aproximados.",
+  "category": "producao",
+  "subcategory": "culturas-basicas",
+  "difficulty": "intermediaria",
+  "environments": [
+    "rural",
+    "domestico"
+  ],
+  "time_estimate": "Ciclos de 2 a 12 meses, conforme a cultura",
+  "materials": [
+    "Manivas (ramas) de mandioca mansa de procedência conhecida",
+    "Ramas de batata-doce",
+    "Sementes de feijão, milho e abóbora",
+    "Ferramentas de preparo do solo"
+  ],
+  "objective": "Produzir alimentos que fornecem muitas calorias por área e se conservam bem.",
+  "steps": [
+    {
+      "text": "Hortaliças folhosas dão vitaminas, mas poucas calorias. Para energia, priorize raízes, grãos e abóboras."
+    },
+    {
+      "text": "Batata-doce: plantio por ramas, colheita em cerca de 4 a 5 meses; as folhas novas também são comestíveis cozidas."
+    },
+    {
+      "text": "Feijão: ciclo curto (cerca de 2,5 a 3,5 meses); fornece proteína e os grãos secos se conservam bem."
+    },
+    {
+      "text": "Milho: cerca de 3 a 4 meses; pode ser consumido verde ou seco (fubá, canjica) e armazenado."
+    },
+    {
+      "text": "Abóbora: cerca de 3 a 4 meses; frutos maduros duram semanas em local seco e ventilado."
+    },
+    {
+      "text": "Mandioca: ciclo longo (a partir de cerca de 8 meses); plante apenas mandioca mansa (aipim, macaxeira) de procedência conhecida."
+    },
+    {
+      "text": "Faça plantios escalonados e combine culturas de ciclo curto e longo para ter colheita ao longo do ano."
+    },
+    {
+      "text": "Guarde parte da colheita como semente para o próximo plantio (veja o artigo sobre sementes)."
+    }
+  ],
+  "cautions": [
+    "Nunca coma mandioca crua. Descasque e cozinhe bem. Variedades bravas têm alto teor de ácido cianídrico e só podem ser consumidas após processamento adequado (como farinha).",
+    "O nome popular \"aipim\" não garante que a variedade seja mansa: obtenha manivas de fonte confiável.",
+    "Os ciclos são aproximados e variam com a variedade, a região e a época de plantio."
+  ],
+  "alternatives": [
+    "Banana e outras frutíferas perenes como complemento de longo prazo."
+  ],
+  "tags": [
+    "mandioca",
+    "batata-doce",
+    "feijão",
+    "milho",
+    "abóbora",
+    "calorias"
+  ],
+  "keywords": [
+    "o que plantar para sobreviver",
+    "plantar comida que dá energia",
+    "plantar mandioca"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "embrapa-mandioca",
+      "note": "Classificação de mandioca mansa e brava pelo teor de ácido cianídrico."
+    },
+    {
+      "ref": "embrapa-plantar-hortalicas",
+      "note": "Plantio e cuidados básicos."
+    }
+  ],
+  "related": [
+    "prod-horta-passo-a-passo",
+    "prod-sementes",
+    "alim-racionamento-nutricao"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

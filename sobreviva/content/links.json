@@ -1,0 +1,59 @@
+[
+  {
+    "id": "link-defesa-civil",
+    "title": "Defesa Civil Nacional",
+    "url": "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil",
+    "kind": "oficial",
+    "description": "Alertas, orientações de preparação e contatos da Proteção e Defesa Civil."
+  },
+  {
+    "id": "link-alerta-sms",
+    "title": "Alertas por SMS (40199)",
+    "url": "https://www.parana.pr.gov.br/servicos/Seguranca/Defesa-Civil/Receber-alertas-da-Defesa-Civil-por-SMS-ERrZ4PN6",
+    "kind": "oficial",
+    "description": "Envie o CEP por SMS para 40199 e receba alertas da Defesa Civil (serviço nacional; página explicativa da Defesa Civil do Paraná)."
+  },
+  {
+    "id": "link-cemaden",
+    "title": "CEMADEN – alertas de desastres",
+    "url": "https://www.gov.br/cemaden/pt-br",
+    "kind": "oficial",
+    "description": "Monitoramento de chuvas, deslizamentos e secas no Brasil."
+  },
+  {
+    "id": "link-mcf",
+    "title": "In case of crisis or war (MSB, Suécia)",
+    "url": "https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war",
+    "kind": "oficial",
+    "description": "Cartilha pública sueca de preparação para crise e guerra (em inglês)."
+  },
+  {
+    "id": "link-ready",
+    "title": "Ready.gov",
+    "url": "https://www.ready.gov/",
+    "kind": "oficial",
+    "description": "Guias da FEMA sobre kits, água, alimentos, apagões e evacuação (em inglês)."
+  },
+  {
+    "id": "link-embrapa",
+    "title": "Embrapa – Infoteca",
+    "url": "https://www.infoteca.cnptia.embrapa.br/",
+    "kind": "oficial",
+    "description": "Publicações gratuitas sobre horta, criação de animais, sementes e conservação de alimentos."
+  },
+  {
+    "id": "link-army-atp",
+    "title": "ATP 3-50.21 Survival (Exército dos EUA)",
+    "url": "https://irp.fas.org/doddir/army/atp3-50-21.pdf",
+    "kind": "oficial",
+    "description": "Manual de sobrevivência atual do Exército dos EUA (em inglês, PDF)."
+  },
+  {
+    "id": "link-sobrevivencialismo",
+    "title": "Sobrevivencialismo.com",
+    "url": "https://sobrevivencialismo.com/",
+    "kind": "comunidade",
+    "description": "Blog brasileiro com artigos, relatos e opiniões da comunidade de preparação.",
+    "note": "Conteúdo de terceiros, não revisado pelo SOBREVIVA. Use para trocar ideias; confira procedimentos técnicos nas fontes oficiais."
+  }
+]

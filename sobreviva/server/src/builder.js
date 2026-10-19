@@ -7,11 +7,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { normalizeArticle, validateArticle, validateEmergency } from './validate.js';
+import { normalizeArticle, validateArticle, validateEmergency, validateScenario, validateDocument, validateLink } from './validate.js';
 
 export const PACKAGE_FORMAT = 1;
 
-const MIME = { svg: 'image/svg+xml', webp: 'image/webp', avif: 'image/avif', png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg' };
+const MIME = { svg: 'image/svg+xml', webp: 'image/webp', avif: 'image/avif', png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', pdf: 'application/pdf' };
 
 function articleMedia(a) {
   return [...new Set([...a.images.map((i) => i.file), ...a.steps.map((s) => s.image).filter(Boolean)])];
@@ -64,7 +64,20 @@ export function collect(store, { strict = false } = {}) {
     for (const r of e.related || []) if (!articleIds.has(r)) report.warnings.push(`emergência ${e.id}: artigo relacionado inexistente ${r}`);
     for (const s of e.sources || []) if (!sourceIds.has(s)) report.errors.push(`emergência ${e.id}: fonte desconhecida ${s}`);
   }
-  return { articles, categories, sources, emergencies, report };
+  const scenarios = store.scenarios();
+  for (const sc of scenarios) {
+    validateScenario(sc).forEach((err) => report.errors.push(err));
+    for (const r of sc.related || []) if (!articleIds.has(r)) report.warnings.push(`cenário ${sc.id}: artigo relacionado inexistente ${r}`);
+    for (const s of sc.sources || []) if (!sourceIds.has(s)) report.errors.push(`cenário ${sc.id}: fonte desconhecida ${s}`);
+  }
+  const documents = store.documents();
+  for (const d of documents) {
+    validateDocument(d, { media, sources: sourceIds }).forEach((err) => report.errors.push(err));
+    for (const r of d.related || []) if (!articleIds.has(r)) report.warnings.push(`documento ${d.id}: artigo relacionado inexistente ${r}`);
+  }
+  const links = store.links();
+  links.forEach((l) => validateLink(l).forEach((err) => report.errors.push(err)));
+  return { articles, categories, sources, emergencies, scenarios, documents, links, report };
 }
 
 function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
@@ -72,8 +85,12 @@ function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
   const usedSources = new Set();
   articles.forEach((a) => a.sources.forEach((s) => usedSources.add(s.ref)));
   data.emergencies.forEach((e) => (e.sources || []).forEach((s) => usedSources.add(s)));
+  data.scenarios.forEach((sc) => (sc.sources || []).forEach((s) => usedSources.add(s)));
+  // Documentos de consulta (PDFs) são grandes: só entram nos pacotes marcados com "documents": true.
+  const documents = pkg.documents ? data.documents : [];
+  documents.forEach((d) => usedSources.add(d.source));
   const mediaMeta = store.mediaMeta();
-  const mediaFiles = [...new Set(articles.flatMap(articleMedia))].sort();
+  const mediaFiles = [...new Set([...articles.flatMap(articleMedia), ...documents.map((d) => d.file)])].sort();
   const media = mediaFiles.map((file) => {
     const buf = fs.readFileSync(store.mediaPath(file));
     const entry = {
@@ -95,6 +112,9 @@ function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
     synonyms: store.synonyms(),
     numbers: store.numbers(),
     emergencies: data.emergencies,
+    scenarios: data.scenarios,
+    ...(pkg.documents ? { documents } : {}), // ausente = o pacote não altera os documentos instalados
+    links: data.links,
     articles,
     media,
   };

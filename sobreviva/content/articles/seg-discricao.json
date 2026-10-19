@@ -1,0 +1,76 @@
+{
+  "id": "seg-discricao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Discrição: não transforme sua preparação em alvo",
+  "summary": "Como manter estoques e preparativos fora do conhecimento de quem não precisa saber.",
+  "category": "seguranca",
+  "subcategory": "discricao",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Hábitos contínuos",
+  "materials": [],
+  "objective": "Reduzir o risco de furto, saque ou pressão sobre a família em crises.",
+  "steps": [
+    {
+      "text": "Não publique fotos ou detalhes de estoques, equipamentos ou planos nas redes sociais."
+    },
+    {
+      "text": "Fale sobre sua preparação apenas com quem faz parte do seu plano (família e vizinhos de confiança)."
+    },
+    {
+      "text": "Faça compras graduais e descarregue suprimentos com discrição; descarte embalagens sem chamar atenção."
+    },
+    {
+      "text": "Guarde os estoques fora da vista de visitantes e de quem passa pela rua."
+    },
+    {
+      "text": "Em crise, mantenha uma aparência comum: luz, barulho e cheiro de comida podem revelar que você tem recursos quando outros não têm."
+    },
+    {
+      "text": "Distribua os recursos em mais de um local; assim um único furto não leva tudo."
+    }
+  ],
+  "cautions": [
+    "Discrição não significa isolamento: comunidade organizada é uma das melhores proteções.",
+    "Ajudar quem precisa, de forma organizada, reduz tensões e fortalece a segurança do grupo."
+  ],
+  "alternatives": [
+    "Estoques comunitários com regras claras de acesso."
+  ],
+  "tags": [
+    "discrição",
+    "segurança",
+    "opsec",
+    "proteção",
+    "saque"
+  ],
+  "keywords": [
+    "esconder estoque",
+    "não chamar atenção",
+    "segurança do estoque"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Responsabilidade individual, desinformação e resiliência comunitária."
+    },
+    {
+      "ref": "defesa-civil",
+      "note": "Organização comunitária em situações de crise."
+    }
+  ],
+  "related": [
+    "seg-protecao-mantimentos",
+    "seg-comunidade",
+    "seg-seguranca-residencial"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

@@ -10,7 +10,7 @@ Dois arquivos SQLite em `<Application Support>/sobreviva/`:
 Separar os arquivos garante, por construção, que **atualizações não apagam favoritos, anotações, listas ou
 preferências**. Todo artigo tem um identificador estável (`id`), usado como chave nas tabelas do usuário.
 
-## `library.db` (esquema v1 — `app/lib/data/library_db.dart`)
+## `library.db` (esquema v3 — `app/lib/data/library_db.dart`)
 
 | Entidade do projeto | Tabela | Observações |
 |---|---|---|
@@ -28,6 +28,8 @@ preferências**. Todo artigo tem um identificador estável (`id`), usado como ch
 | Pacote de conteúdo | `content_package`, `package_article` | versão, data de publicação e de instalação, tamanho, se é embarcado |
 | Versão editorial | `editorial_version` | histórico das versões de cada artigo instaladas no aparelho |
 | Guias de emergência | `emergency_guide` | seções em JSON (reconhecer, segurança, fazer, evitar, pedir socorro) |
+| Cenários de crise (v2) | `scenario` | roteiro por fases em JSON |
+| Consultas (v3) | `reference_item` | `kind` = `document` (PDF offline com destaques por página) ou `link` (endereço externo, oficial ou de comunidade); dados em JSON |
 | Números de emergência | `emergency_number` | número, nome, finalidade, prioridade |
 | Sinônimos | `synonym_term` | grupos de termos normalizados |
 | Índice de pesquisa | `article_fts` (FTS5) + `article_vocab` (fts5vocab) | colunas: título, etiquetas, resumo, corpo; `unicode61 remove_diacritics 2` |
@@ -67,3 +69,7 @@ A importação **mescla**: não apaga nada; notas diferentes para o mesmo artigo
 Cada banco guarda a versão do esquema em `PRAGMA user_version`. Uma nova versão do app adiciona um bloco
 `if (current < N) { … }` executado em transação. Pacotes de conteúdo têm um campo `format`; o app recusa formatos
 mais novos que conhece e orienta o usuário a atualizar o aplicativo.
+
+- v2: tabela `scenario` (roteiros de crise).
+- v3: tabela `reference_item` (aba Consultas). Bancos antigos recebem a tabela vazia; o conteúdo chega com o
+  pacote essencial embarcado na nova versão do app ou com a próxima atualização.

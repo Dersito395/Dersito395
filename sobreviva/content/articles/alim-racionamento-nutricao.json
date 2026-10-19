@@ -1,0 +1,89 @@
+{
+  "id": "alim-racionamento-nutricao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Racionamento e nutrição em escassez de alimentos",
+  "summary": "Como dividir o estoque, proteger os mais vulneráveis e evitar deficiências nutricionais ao longo de semanas.",
+  "category": "alimentacao",
+  "subcategory": "racionamento",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Planejamento semanal de 30 minutos",
+  "materials": [
+    "Inventário da despensa",
+    "Caderno ou checklist do aplicativo",
+    "Balança de cozinha (se houver)"
+  ],
+  "objective": "Fazer o alimento durar mais sem comprometer a saúde, especialmente de crianças, gestantes, idosos e doentes.",
+  "steps": [
+    {
+      "text": "Faça o inventário: o que existe, quanto, e validade. Divida pelo número de pessoas e pelo período que precisa cobrir."
+    },
+    {
+      "text": "Consuma primeiro os perecíveis e o que vence antes; deixe os itens de longa duração para depois."
+    },
+    {
+      "text": "Proteja os grupos vulneráveis: crianças, gestantes, lactantes, idosos e doentes não devem ter a alimentação reduzida como os adultos saudáveis."
+    },
+    {
+      "text": "Mantenha refeições regulares, mesmo menores. Reduza o esforço físico desnecessário para economizar energia."
+    },
+    {
+      "text": "Combine cereal com leguminosa (arroz com feijão, milho com feijão) para melhorar a qualidade da proteína."
+    },
+    {
+      "text": "Evite deficiências em períodos longos: inclua verduras, frutas, brotos ou alimentos produzidos em casa para obter vitaminas, especialmente vitamina C."
+    },
+    {
+      "text": "Beba água suficiente: o racionamento de comida não deve virar racionamento de água."
+    },
+    {
+      "text": "Combine trocas e refeições coletivas com vizinhos de confiança: reduz desperdício e aumenta a variedade."
+    }
+  ],
+  "cautions": [
+    "Perda de peso rápida, fraqueza, inchaço ou feridas que não cicatrizam indicam desnutrição: procure atendimento de saúde.",
+    "Caça de animais silvestres é crime no Brasil (Lei 9.605/1998), salvo autorizações específicas. Criação de pequenos animais e produção vegetal são alternativas legais.",
+    "Não coma plantas ou cogumelos que não identifica com certeza."
+  ],
+  "alternatives": [
+    "Programas públicos e cozinhas comunitárias.",
+    "Produção própria: hortaliças de ciclo curto e culturas calóricas."
+  ],
+  "tags": [
+    "racionamento",
+    "nutrição",
+    "fome",
+    "escassez de alimentos",
+    "desnutrição"
+  ],
+  "keywords": [
+    "acabando a comida",
+    "como racionar comida",
+    "falta de alimentos"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "sphere-2018",
+      "note": "Segurança alimentar e nutrição em emergências; proteção de grupos vulneráveis."
+    },
+    {
+      "ref": "lei-crimes-ambientais",
+      "note": "Caça de fauna silvestre como crime."
+    }
+  ],
+  "related": [
+    "alim-despensa-longo-prazo",
+    "prod-culturas-caloricas",
+    "prod-horta-passo-a-passo",
+    "alimentacao-plantas-cogumelos-riscos"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

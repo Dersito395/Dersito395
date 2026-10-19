@@ -38,6 +38,15 @@ android {
     }
 
     signingConfigs {
+        // Chave APENAS para APKs de teste (pública no repositório). Mantém a mesma assinatura
+        // entre builds, para que cada APK de teste instale por cima do anterior.
+        // Nunca publique nas lojas com ela: use key.properties (veja docs/PUBLICACAO.md).
+        create("teste") {
+            storeFile = file("chave-teste-apenas.p12")
+            storePassword = "sobreviva-teste"
+            keyAlias = "teste"
+            keyPassword = "sobreviva-teste"
+        }
         create("release") {
             if (keystoreProperties.isNotEmpty()) {
                 storeFile = file(keystoreProperties.getProperty("storeFile"))
@@ -50,8 +59,8 @@ android {
 
     buildTypes {
         release {
-            // Sem key.properties, usa a chave de depuração (apenas para testes locais).
-            signingConfig = if (keystoreProperties.isNotEmpty()) signingConfigs.getByName("release") else signingConfigs.getByName("debug")
+            // Sem key.properties, assina com a chave de teste (APKs de teste, nunca para as lojas).
+            signingConfig = if (keystoreProperties.isNotEmpty()) signingConfigs.getByName("release") else signingConfigs.getByName("teste")
         }
     }
 }

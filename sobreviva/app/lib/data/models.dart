@@ -200,6 +200,132 @@ class Article {
   }
 }
 
+/// Roteiro de ação para um cenário de crise prolongada, organizado por fases.
+class Scenario {
+  const Scenario({
+    required this.id,
+    required this.title,
+    required this.icon,
+    required this.summary,
+    required this.phases,
+    required this.relatedIds,
+    required this.sourceIds,
+  });
+  final String id;
+  final String title;
+  final String icon;
+  final String summary;
+  final List<ScenarioPhase> phases;
+  final List<String> relatedIds;
+  final List<String> sourceIds;
+
+  factory Scenario.fromJson(Map<String, dynamic> j) {
+    List<String> l(dynamic v) => (v as List? ?? const []).map((e) => e.toString()).toList();
+    return Scenario(
+      id: j['id'] as String,
+      title: j['title'] as String,
+      icon: (j['icon'] as String?) ?? 'crisis',
+      summary: (j['summary'] as String?) ?? '',
+      phases: [for (final p in (j['phases'] as List? ?? const [])) ScenarioPhase((p as Map)['title'].toString(), l(p['items']))],
+      relatedIds: l(j['related']),
+      sourceIds: l(j['sources']),
+    );
+  }
+
+  static Scenario decode(String data) => Scenario.fromJson(jsonDecode(data) as Map<String, dynamic>);
+}
+
+class ScenarioPhase {
+  const ScenarioPhase(this.title, this.items);
+  final String title;
+  final List<String> items;
+}
+
+/// Documento de consulta (PDF de distribuição livre) com destaques por página.
+class RefDocument {
+  const RefDocument({
+    required this.id,
+    required this.title,
+    required this.subtitle,
+    required this.file,
+    required this.lang,
+    required this.pages,
+    required this.license,
+    required this.sourceId,
+    required this.statusNote,
+    required this.summary,
+    required this.topics,
+    required this.highlights,
+    required this.relatedIds,
+  });
+  final String id;
+  final String title;
+  final String subtitle;
+  final String file;
+  final String lang;
+  final int pages;
+  final String license;
+  final String sourceId;
+  final String statusNote;
+  final String summary;
+  final List<String> topics;
+  final List<RefHighlight> highlights;
+  final List<String> relatedIds;
+
+  factory RefDocument.fromJson(Map<String, dynamic> j) {
+    List<String> l(dynamic v) => (v as List? ?? const []).map((e) => e.toString()).toList();
+    return RefDocument(
+      id: j['id'] as String,
+      title: j['title'] as String,
+      subtitle: (j['subtitle'] as String?) ?? '',
+      file: j['file'] as String,
+      lang: (j['lang'] as String?) ?? 'pt-BR',
+      pages: (j['pages'] as int?) ?? 0,
+      license: (j['license'] as String?) ?? '',
+      sourceId: (j['source'] as String?) ?? '',
+      statusNote: (j['status_note'] as String?) ?? '',
+      summary: (j['summary'] as String?) ?? '',
+      topics: l(j['topics']),
+      highlights: [
+        for (final h in (j['highlights'] as List? ?? const []))
+          RefHighlight(page: (h as Map)['page'] as int, title: h['title'].toString(), note: (h['note'] as String?) ?? ''),
+      ],
+      relatedIds: l(j['related']),
+    );
+  }
+
+  static RefDocument decode(String data) => RefDocument.fromJson(jsonDecode(data) as Map<String, dynamic>);
+}
+
+class RefHighlight {
+  const RefHighlight({required this.page, required this.title, required this.note});
+  final int page;
+  final String title;
+  final String note;
+}
+
+/// Link externo (exige internet). [community] marca conteúdo de terceiros não revisado.
+class RefLink {
+  const RefLink({required this.id, required this.title, required this.url, required this.description, required this.community, required this.note});
+  final String id;
+  final String title;
+  final String url;
+  final String description;
+  final bool community;
+  final String note;
+
+  factory RefLink.fromJson(Map<String, dynamic> j) => RefLink(
+        id: j['id'] as String,
+        title: j['title'] as String,
+        url: j['url'] as String,
+        description: (j['description'] as String?) ?? '',
+        community: j['kind'] == 'comunidade',
+        note: (j['note'] as String?) ?? '',
+      );
+
+  static RefLink decode(String data) => RefLink.fromJson(jsonDecode(data) as Map<String, dynamic>);
+}
+
 class EmergencyGuide {
   const EmergencyGuide({
     required this.id,

@@ -1,0 +1,82 @@
+{
+  "id": "seg-defesa-legal",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Defesa pessoal e a lei: o que é permitido",
+  "summary": "Legítima defesa, armas e prioridades de segurança pessoal segundo a lei brasileira, com foco em evitar o confronto.",
+  "category": "seguranca",
+  "subcategory": "defesa-legal",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Leitura de 5 minutos",
+  "materials": [],
+  "objective": "Conhecer os limites legais e as condutas que mais protegem a vida em situações de violência.",
+  "steps": [
+    {
+      "text": "Prioridade 1 é evitar: perceber o risco cedo, mudar de rota, não discutir, não exibir bens."
+    },
+    {
+      "text": "Prioridade 2 é sair: se puder fugir para um local seguro, fuja."
+    },
+    {
+      "text": "Prioridade 3 é acalmar: fale baixo, mãos visíveis, ofereça o que pedem. Bens se recuperam; vidas não."
+    },
+    {
+      "text": "Chame ajuda: 190 (Polícia Militar) assim que for seguro."
+    },
+    {
+      "text": "Legítima defesa (Código Penal, art. 25): é permitido repelir agressão injusta, atual ou iminente, usando moderadamente os meios necessários. Excessos são puníveis."
+    },
+    {
+      "text": "Armas de fogo: só podem ser adquiridas, registradas e mantidas conforme o Estatuto do Desarmamento. Fabricar, possuir ou portar arma sem autorização é crime."
+    },
+    {
+      "text": "Este aplicativo não ensina a fabricar armas: além de crime, armas improvisadas falham, ferem quem as usa e aumentam o risco de morte em confrontos."
+    },
+    {
+      "text": "Para se preparar de verdade, faça cursos de defesa pessoal com instrutores habilitados e de primeiros socorros (controle de hemorragias)."
+    }
+  ],
+  "cautions": [
+    "Em grupos, a força está na organização: vigilância compartilhada e comunicação reduzem a necessidade de confronto.",
+    "Ferramentas de trabalho (facão, machado) devem ser usadas e guardadas como ferramentas, com segurança."
+  ],
+  "alternatives": [
+    "Defesa Civil, Polícia e organização comunitária."
+  ],
+  "tags": [
+    "defesa pessoal",
+    "legítima defesa",
+    "armas",
+    "violência",
+    "lei"
+  ],
+  "keywords": [
+    "como fazer uma arma",
+    "fabricar arma",
+    "me defender",
+    "arma caseira",
+    "legítima defesa"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "codigo-penal",
+      "note": "Art. 25 – legítima defesa; art. 23 – excesso punível."
+    },
+    {
+      "ref": "estatuto-desarmamento",
+      "note": "Regras de aquisição, registro, posse e porte de armas de fogo; crimes correlatos."
+    }
+  ],
+  "related": [
+    "seg-protecao-mantimentos",
+    "seg-comunidade",
+    "ps-hemorragia-grave"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

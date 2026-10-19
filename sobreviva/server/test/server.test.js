@@ -52,6 +52,43 @@ async function login(username, password) {
   return { status: 200, body, call, cookie };
 }
 
+test('cenários: leitura e validação ao salvar', async () => {
+  const ad = await login('editora', 'senha-editora-1');
+  const list = (await ad.call('GET', '/api/admin/scenarios')).body;
+  assert.ok(list.length >= 6);
+  assert.equal((await ad.call('PUT', '/api/admin/scenarios', list)).status, 403); // editor não edita catálogo
+});
+
+test('consultas: documentos e links validados; PDF só nos pacotes marcados', async () => {
+  const ad = await login('admin', 'senha-admin-123');
+  const refs = (await ad.call('GET', '/api/admin/references')).body;
+  assert.ok(refs.documents.some((d) => d.file.endsWith('.pdf')));
+  assert.equal((await ad.call('PUT', '/api/admin/references', refs)).status, 200);
+  const semNota = structuredClone(refs);
+  semNota.links.find((l) => l.kind === 'comunidade').note = '';
+  assert.equal((await ad.call('PUT', '/api/admin/references', semNota)).status, 422);
+  const http = structuredClone(refs);
+  http.links[0].url = 'http://inseguro.example';
+  assert.equal((await ad.call('PUT', '/api/admin/references', http)).status, 422);
+  const pagina = structuredClone(refs);
+  pagina.documents[0].highlights[0].page = 9999;
+  assert.equal((await ad.call('PUT', '/api/admin/references', pagina)).status, 422);
+  // PDF: assinatura conferida no envio.
+  const fake = Buffer.from('<html>não é pdf</html>').toString('base64');
+  assert.equal((await ad.call('POST', '/api/admin/media', { file: 'falso.pdf', data: fake, credit: 'X', license: 'CC0' })).status, 400);
+  const pdf = Buffer.from('%PDF-1.4\n%%EOF\n').toString('base64');
+  assert.equal((await ad.call('POST', '/api/admin/media', { file: 'teste.pdf', data: pdf, credit: 'X', license: 'Domínio público' })).status, 201);
+  const manifest = JSON.parse(fs.readFileSync(path.join(distDir, 'manifest.json'), 'utf8'));
+  const load = (id) => JSON.parse(fs.readFileSync(path.join(distDir, manifest.packages.find((p) => p.id === id).url), 'utf8'));
+  const essencial = load('essencial');
+  assert.ok(essencial.documents.length > 0);
+  assert.ok(essencial.media.some((m) => m.file.endsWith('.pdf') && m.mime === 'application/pdf'));
+  const crise = load('crise-prolongada');
+  assert.equal(crise.documents, undefined); // não altera documentos instalados
+  assert.ok(!crise.media.some((m) => m.file.endsWith('.pdf')));
+  assert.ok(crise.links.length > 0);
+});
+
 test('senhas com scrypt', () => {
   const h = hashPassword('uma-senha-longa');
   assert.ok(h.startsWith('scrypt$'));
@@ -157,12 +194,14 @@ test('publicação de versão gera manifesto novo (modo estrito exclui saúde n�
   // O usuário "admin" ficou bloqueado no teste de tentativas; cria outro administrador.
   new UserStore(path.join(dataDir, 'users.json')).upsert({ username: 'admin2', role: 'admin', name: 'Admin 2', password: 'senha-admin-456' });
   const a = await login('admin2', 'senha-admin-456');
+  const before = JSON.parse(fs.readFileSync(path.join(contentDir, 'release.json'), 'utf8')).library_version;
+  const next = before + 1;
   const r = await a.call('POST', '/api/admin/release', { notes: 'teste', strict: true });
   assert.equal(r.status, 200);
-  assert.equal(r.body.release.library_version, 2);
+  assert.equal(r.body.release.library_version, next);
   assert.ok(r.body.report.excluded.some((x) => x.startsWith('ps-rcp-adulto')));
   assert.ok(!r.body.report.excluded.some((x) => x.startsWith('ps-engasgo')), 'engasgo foi revisado e deve entrar');
   const manifest = await (await fetch(`${base}/api/v1/manifest.json`)).json();
-  assert.equal(manifest.library_version, 2);
-  assert.ok(manifest.packages.every((p) => p.url.endsWith('-v2.json')));
+  assert.equal(manifest.library_version, next);
+  assert.ok(manifest.packages.every((p) => p.url.endsWith(`-v${next}.json`)));
 });

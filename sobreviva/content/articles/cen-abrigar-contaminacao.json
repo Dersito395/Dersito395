@@ -1,0 +1,85 @@
+{
+  "id": "cen-abrigar-contaminacao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Abrigar-se em casa contra contaminação química ou radiológica",
+  "summary": "O que fazer quando as autoridades mandam ficar dentro de casa por acidente químico, nuclear ou radiológico.",
+  "category": "cenarios",
+  "subcategory": "contaminacao",
+  "difficulty": "basica",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Ação imediata; permanência de pelo menos 24 horas ou conforme as autoridades",
+  "materials": [
+    "Rádio a pilha ou à manivela",
+    "Fita adesiva larga e plástico",
+    "Reserva de água e alimentos",
+    "Sacos plásticos para roupas contaminadas"
+  ],
+  "objective": "Colocar paredes e distância entre você e a contaminação até a orientação oficial.",
+  "steps": [
+    {
+      "text": "Entre, fique dentro e acompanhe as informações: vá para a construção mais próxima e sólida imediatamente."
+    },
+    {
+      "text": "Feche portas e janelas e desligue ventiladores, ar-condicionado e exaustores que puxam ar de fora."
+    },
+    {
+      "text": "Para emergência radiológica ou nuclear, vá para o subsolo ou para o centro do prédio, longe de paredes externas e do telhado."
+    },
+    {
+      "text": "Se esteve ao ar livre, retire a camada externa de roupa antes de entrar no cômodo protegido, coloque em saco fechado e lave pele e cabelos com água e sabão (sem condicionador)."
+    },
+    {
+      "text": "Leve animais domésticos para dentro."
+    },
+    {
+      "text": "Acompanhe pelo rádio. Permaneça abrigado por pelo menos 24 horas, a menos que as autoridades orientem outra coisa."
+    },
+    {
+      "text": "Só saia quando as autoridades liberarem ou mandarem evacuar."
+    }
+  ],
+  "cautions": [
+    "Não tome comprimidos de iodo por conta própria: só quando as autoridades de saúde orientarem.",
+    "Não coma alimentos nem beba água que ficaram expostos ao ar livre até que sejam liberados."
+  ],
+  "alternatives": [
+    "Evacuação, quando ordenada pelas autoridades, seguindo as rotas indicadas."
+  ],
+  "tags": [
+    "contaminação",
+    "radiação",
+    "acidente nuclear",
+    "vazamento químico",
+    "abrigar-se"
+  ],
+  "keywords": [
+    "acidente nuclear",
+    "nuvem tóxica",
+    "vazamento de gás químico",
+    "bomba nuclear"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-radiacao",
+      "note": "Entrar, permanecer e acompanhar; centro do edifício ou subsolo; permanência de cerca de 24 h; remoção de roupas."
+    },
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Alertas e abrigo em casa."
+    }
+  ],
+  "related": [
+    "cen-conflito-armado",
+    "com-radio-emergencia",
+    "agua-reserva-longo-prazo"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

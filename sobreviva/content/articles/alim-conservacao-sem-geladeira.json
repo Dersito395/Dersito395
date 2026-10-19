@@ -1,0 +1,84 @@
+{
+  "id": "alim-conservacao-sem-geladeira",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Conservar alimentos sem geladeira",
+  "summary": "Secagem, salga, fermentação e conservas: o que é seguro fazer em casa e o que exige equipamento.",
+  "category": "alimentacao",
+  "subcategory": "conservacao",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Variável (horas a dias)",
+  "materials": [
+    "Tela fina e bandejas para secagem",
+    "Sal",
+    "Vinagre",
+    "Potes de vidro com tampa",
+    "Panela de pressão própria para conservas (para alimentos de baixa acidez)"
+  ],
+  "objective": "Aproveitar colheitas e alimentos perecíveis quando não há refrigeração.",
+  "steps": [
+    {
+      "text": "Secagem: corte frutas e hortaliças em fatias finas e seque ao sol sob tela que impeça insetos, ou em secador solar. Guarde só quando estiverem bem secas, em recipiente hermético."
+    },
+    {
+      "text": "Fermentação de vegetais (como chucrute): vegetais com sal na proporção indicada por receita testada, mantidos submersos na salmoura. Siga receitas de fontes confiáveis."
+    },
+    {
+      "text": "Conservas ácidas (frutas, picles com vinagre) podem ser processadas em banho-maria seguindo receitas testadas."
+    },
+    {
+      "text": "Alimentos de baixa acidez (feijão, milho, carnes, a maioria dos legumes) só podem ser enlatados com panela de pressão própria para conservas: banho-maria não elimina os esporos do botulismo."
+    },
+    {
+      "text": "Carnes e peixes salgados exigem técnica e higiene rigorosas; sem experiência, prefira consumir fresco ou secar com orientação técnica."
+    },
+    {
+      "text": "Etiquete tudo com conteúdo e data e consuma primeiro o que foi feito antes."
+    }
+  ],
+  "cautions": [
+    "Botulismo pode matar e não muda necessariamente cheiro, cor ou sabor. Na dúvida, descarte.",
+    "Não guarde alho, ervas ou vegetais em óleo fora da geladeira: risco de botulismo.",
+    "Descarte conservas com tampa estufada, vazamento, espuma ou cheiro estranho, sem provar."
+  ],
+  "alternatives": [
+    "Consumir primeiro os perecíveis e manter estoque de não perecíveis.",
+    "Desidratador elétrico ou solar."
+  ],
+  "tags": [
+    "conservação",
+    "secagem",
+    "salga",
+    "fermentação",
+    "conservas",
+    "botulismo"
+  ],
+  "keywords": [
+    "como conservar comida sem geladeira",
+    "desidratar frutas",
+    "fazer conserva"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "nchfp",
+      "note": "Secagem, fermentação, conservas ácidas em banho-maria e enlatamento de baixa acidez somente em panela de pressão."
+    },
+    {
+      "ref": "usda-alimentos-emergencia",
+      "note": "Descarte de alimentos duvidosos."
+    }
+  ],
+  "related": [
+    "alim-despensa-longo-prazo",
+    "prod-horta-passo-a-passo",
+    "alimentacao-geladeira-sem-energia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

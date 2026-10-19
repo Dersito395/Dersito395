@@ -1,14 +1,558 @@
 [
-  {"id":"agua","name":"Água","icon":"water_drop","description":"Encontrar, captar, tratar e armazenar água com segurança.","subcategories":[["captacao","Localização e captação"],["chuva","Coleta de chuva"],["filtracao","Filtração"],["desinfeccao","Desinfecção"],["fervura","Fervura"],["armazenamento","Armazenamento"],["contaminantes-quimicos","Contaminantes químicos"],["riscos-microbiologicos","Riscos microbiológicos"]]},
-  {"id":"alimentacao","name":"Alimentação","icon":"restaurant","description":"Estoques, conservação, preparo sem energia e prevenção de intoxicações.","subcategories":[["conservacao","Conservação"],["longa-duracao","Alimentos de longa duração"],["armazenamento","Armazenamento"],["planejamento-estoque","Planejamento de estoques"],["preparo-sem-energia","Preparo sem energia elétrica"],["agricultura-basica","Agricultura básica"],["forrageamento","Forrageamento responsável"],["intoxicacoes","Prevenção de intoxicações"]]},
-  {"id":"abrigos","name":"Abrigos","icon":"cabin","description":"Proteção contra chuva, vento, frio e calor.","subcategories":[["improvisados","Abrigos improvisados"],["lonas","Uso de lonas"],["chuva-vento","Chuva e vento"],["isolamento-solo","Isolamento do solo"],["barracas","Barracas"],["terreno","Escolha de terreno"],["protecao-termica","Proteção térmica"]]},
-  {"id":"primeiros-socorros","name":"Primeiros socorros","icon":"medical_services","description":"Condutas iniciais enquanto o socorro profissional é acionado.","subcategories":[["rcp","RCP"],["engasgo","Engasgo"],["hemorragias","Hemorragias"],["queimaduras","Queimaduras"],["fraturas","Fraturas"],["hipotermia","Hipotermia"],["hipertermia","Hipertermia"],["desidratacao","Desidratação"],["ferimentos","Ferimentos"],["picadas-mordidas","Picadas e mordidas"]]},
-  {"id":"orientacao","name":"Orientação","icon":"explore","description":"Bússola, mapas, coordenadas e o que fazer quando perdido.","subcategories":[["bussola","Bússola"],["cartografia","Cartografia"],["navegacao","Navegação terrestre"],["relevo","Leitura de relevo"],["mapas-topograficos","Mapas topográficos"],["coordenadas","Coordenadas"],["gps-offline","GPS offline"],["sinalizacao","Sinalização"],["desorientacao","Desorientação"]]},
-  {"id":"fogo","name":"Fogo","icon":"local_fire_department","description":"Combustão, aquecimento e cocção seguros e prevenção de incêndios.","subcategories":[["combustao","Princípios da combustão"],["aquecimento-coccao","Aquecimento e cocção"],["prevencao-incendios","Prevenção de incêndios"],["controle-riscos","Controle de riscos"],["quando-nao-acender","Quando não acender fogo"]]},
-  {"id":"equipamentos","name":"Equipamentos","icon":"backpack","description":"Kits, ferramentas, iluminação, cordas e manutenção.","subcategories":[["mochilas","Mochilas de emergência"],["kits-24-72h","Kits de 24 e 72 horas"],["ferramentas","Ferramentas"],["lanternas-baterias","Lanternas e baterias"],["radios","Rádios"],["cordas-nos","Cordas e nós"],["roupas-tecnicas","Roupas técnicas"],["manutencao","Manutenção"]]},
-  {"id":"emergencias-urbanas","name":"Emergências urbanas","icon":"location_city","description":"Apagões, enchentes, deslizamentos, incêndios e evacuação.","subcategories":[["apagoes","Apagões"],["falta-agua","Interrupção de água"],["enchentes","Enchentes"],["vendavais","Vendavais e tempestades"],["deslizamentos","Deslizamentos"],["incendios-residenciais","Incêndios residenciais"],["evacuacao","Evacuação"],["contingencias-domesticas","Contingências domésticas"]]},
-  {"id":"natureza","name":"Sobrevivência na natureza","icon":"forest","description":"Planejamento, permanência segura e resgate em ambientes remotos.","subcategories":[["planejamento-expedicoes","Planejamento de expedições"],["conservacao-energia","Conservação de energia"],["sinalizacao-resgate","Sinalização para resgate"],["clima","Clima"],["terrenos","Terrenos"],["animais","Proteção contra animais"],["permanencia-segura","Permanência segura"]]},
-  {"id":"autossuficiencia","name":"Autossuficiência","icon":"eco","description":"Hortas, sementes, energia, saneamento e gestão de recursos.","subcategories":[["hortas","Hortas"],["sementes","Armazenamento de sementes"],["geracao-eletrica","Geração elétrica básica"],["energia-solar","Energia solar"],["saneamento","Soluções sanitárias"],["gestao-recursos","Gestão de recursos"],["preparacao-familiar","Preparação familiar"]]},
-  {"id":"comunicacao","name":"Comunicação","icon":"cell_tower","description":"Rádios, alertas, mensagens de socorro e contatos.","subcategories":[["radios","Rádios"],["comunicacao-emergencia","Comunicação de emergência"],["sinalizacao","Procedimentos de sinalização"],["mensagens-socorro","Mensagens de socorro"],["localizacao","Localização"],["contatos","Preparação de contatos"]]},
-  {"id":"planejamento","name":"Planejamento e segurança","icon":"fact_check","description":"Análise de riscos, plano familiar, rotas de fuga e checklists.","subcategories":[["analise-riscos","Análise de riscos"],["plano-familiar","Planejamento familiar"],["rotas-fuga","Rotas de fuga"],["checklists","Checklists"],["prevencao-acidentes","Prevenção de acidentes"],["seguranca-residencial","Segurança residencial"],["comportamento-crises","Comportamento em crises"]]}
+  {
+    "id": "cenarios",
+    "name": "Cenários de crise",
+    "icon": "crisis",
+    "description": "Guerra e conflito, pandemia, escassez de água e de alimentos, colapso prolongado de serviços.",
+    "subcategories": [
+      [
+        "conflito-armado",
+        "Guerra e conflito armado"
+      ],
+      [
+        "pandemia",
+        "Pandemia e quarentena"
+      ],
+      [
+        "escassez-hidrica",
+        "Escassez hídrica"
+      ],
+      [
+        "escassez-alimentos",
+        "Escassez de alimentos"
+      ],
+      [
+        "colapso-servicos",
+        "Colapso de serviços"
+      ],
+      [
+        "contaminacao",
+        "Contaminação química e radiológica"
+      ]
+    ]
+  },
+  {
+    "id": "agua",
+    "name": "Água",
+    "icon": "water_drop",
+    "description": "Encontrar, captar, tratar e armazenar água com segurança.",
+    "subcategories": [
+      [
+        "captacao",
+        "Localização e captação"
+      ],
+      [
+        "chuva",
+        "Coleta de chuva"
+      ],
+      [
+        "filtracao",
+        "Filtração"
+      ],
+      [
+        "desinfeccao",
+        "Desinfecção"
+      ],
+      [
+        "fervura",
+        "Fervura"
+      ],
+      [
+        "armazenamento",
+        "Armazenamento"
+      ],
+      [
+        "contaminantes-quimicos",
+        "Contaminantes químicos"
+      ],
+      [
+        "riscos-microbiologicos",
+        "Riscos microbiológicos"
+      ],
+      [
+        "escassez",
+        "Escassez e racionamento"
+      ]
+    ]
+  },
+  {
+    "id": "alimentacao",
+    "name": "Alimentação",
+    "icon": "restaurant",
+    "description": "Estoques, conservação, preparo sem energia e prevenção de intoxicações.",
+    "subcategories": [
+      [
+        "conservacao",
+        "Conservação"
+      ],
+      [
+        "longa-duracao",
+        "Alimentos de longa duração"
+      ],
+      [
+        "armazenamento",
+        "Armazenamento"
+      ],
+      [
+        "planejamento-estoque",
+        "Planejamento de estoques"
+      ],
+      [
+        "preparo-sem-energia",
+        "Preparo sem energia elétrica"
+      ],
+      [
+        "agricultura-basica",
+        "Agricultura básica"
+      ],
+      [
+        "forrageamento",
+        "Forrageamento responsável"
+      ],
+      [
+        "intoxicacoes",
+        "Prevenção de intoxicações"
+      ],
+      [
+        "racionamento",
+        "Racionamento e nutrição"
+      ]
+    ]
+  },
+  {
+    "id": "producao",
+    "name": "Produção de alimentos",
+    "icon": "agriculture",
+    "description": "Horta passo a passo, culturas de alta produção, compostagem, sementes e pequenos animais.",
+    "subcategories": [
+      [
+        "horta",
+        "Horta"
+      ],
+      [
+        "culturas-basicas",
+        "Culturas básicas"
+      ],
+      [
+        "solo-compostagem",
+        "Solo e compostagem"
+      ],
+      [
+        "sementes",
+        "Sementes"
+      ],
+      [
+        "animais",
+        "Pequenos animais"
+      ]
+    ]
+  },
+  {
+    "id": "seguranca",
+    "name": "Segurança e proteção",
+    "icon": "shield",
+    "description": "Discrição, proteção de mantimentos, segurança da casa, defesa legal e organização comunitária.",
+    "subcategories": [
+      [
+        "discricao",
+        "Discrição"
+      ],
+      [
+        "protecao-recursos",
+        "Proteção de recursos"
+      ],
+      [
+        "seguranca-residencial",
+        "Segurança residencial"
+      ],
+      [
+        "defesa-legal",
+        "Defesa pessoal e lei"
+      ],
+      [
+        "comunidade",
+        "Comunidade e ajuda mútua"
+      ],
+      [
+        "saude-mental",
+        "Saúde mental em crises"
+      ]
+    ]
+  },
+  {
+    "id": "abrigos",
+    "name": "Abrigos",
+    "icon": "cabin",
+    "description": "Proteção contra chuva, vento, frio e calor.",
+    "subcategories": [
+      [
+        "improvisados",
+        "Abrigos improvisados"
+      ],
+      [
+        "lonas",
+        "Uso de lonas"
+      ],
+      [
+        "chuva-vento",
+        "Chuva e vento"
+      ],
+      [
+        "isolamento-solo",
+        "Isolamento do solo"
+      ],
+      [
+        "barracas",
+        "Barracas"
+      ],
+      [
+        "terreno",
+        "Escolha de terreno"
+      ],
+      [
+        "protecao-termica",
+        "Proteção térmica"
+      ]
+    ]
+  },
+  {
+    "id": "primeiros-socorros",
+    "name": "Primeiros socorros",
+    "icon": "medical_services",
+    "description": "Condutas iniciais enquanto o socorro profissional é acionado.",
+    "subcategories": [
+      [
+        "rcp",
+        "RCP"
+      ],
+      [
+        "engasgo",
+        "Engasgo"
+      ],
+      [
+        "hemorragias",
+        "Hemorragias"
+      ],
+      [
+        "queimaduras",
+        "Queimaduras"
+      ],
+      [
+        "fraturas",
+        "Fraturas"
+      ],
+      [
+        "hipotermia",
+        "Hipotermia"
+      ],
+      [
+        "hipertermia",
+        "Hipertermia"
+      ],
+      [
+        "desidratacao",
+        "Desidratação"
+      ],
+      [
+        "ferimentos",
+        "Ferimentos"
+      ],
+      [
+        "picadas-mordidas",
+        "Picadas e mordidas"
+      ]
+    ]
+  },
+  {
+    "id": "fogo",
+    "name": "Fogo",
+    "icon": "local_fire_department",
+    "description": "Combustão, aquecimento e cocção seguros e prevenção de incêndios.",
+    "subcategories": [
+      [
+        "combustao",
+        "Princípios da combustão"
+      ],
+      [
+        "aquecimento-coccao",
+        "Aquecimento e cocção"
+      ],
+      [
+        "prevencao-incendios",
+        "Prevenção de incêndios"
+      ],
+      [
+        "controle-riscos",
+        "Controle de riscos"
+      ],
+      [
+        "quando-nao-acender",
+        "Quando não acender fogo"
+      ]
+    ]
+  },
+  {
+    "id": "autossuficiencia",
+    "name": "Autossuficiência",
+    "icon": "eco",
+    "description": "Hortas, sementes, energia, saneamento e gestão de recursos.",
+    "subcategories": [
+      [
+        "hortas",
+        "Hortas"
+      ],
+      [
+        "sementes",
+        "Armazenamento de sementes"
+      ],
+      [
+        "geracao-eletrica",
+        "Geração elétrica básica"
+      ],
+      [
+        "energia-solar",
+        "Energia solar"
+      ],
+      [
+        "saneamento",
+        "Soluções sanitárias"
+      ],
+      [
+        "gestao-recursos",
+        "Gestão de recursos"
+      ],
+      [
+        "preparacao-familiar",
+        "Preparação familiar"
+      ]
+    ]
+  },
+  {
+    "id": "equipamentos",
+    "name": "Equipamentos",
+    "icon": "backpack",
+    "description": "Kits, ferramentas, iluminação, cordas e manutenção.",
+    "subcategories": [
+      [
+        "mochilas",
+        "Mochilas de emergência"
+      ],
+      [
+        "kits-24-72h",
+        "Kits de 24 e 72 horas"
+      ],
+      [
+        "ferramentas",
+        "Ferramentas"
+      ],
+      [
+        "lanternas-baterias",
+        "Lanternas e baterias"
+      ],
+      [
+        "radios",
+        "Rádios"
+      ],
+      [
+        "cordas-nos",
+        "Cordas e nós"
+      ],
+      [
+        "roupas-tecnicas",
+        "Roupas técnicas"
+      ],
+      [
+        "manutencao",
+        "Manutenção"
+      ]
+    ]
+  },
+  {
+    "id": "orientacao",
+    "name": "Orientação",
+    "icon": "explore",
+    "description": "Bússola, mapas, coordenadas e o que fazer quando perdido.",
+    "subcategories": [
+      [
+        "bussola",
+        "Bússola"
+      ],
+      [
+        "cartografia",
+        "Cartografia"
+      ],
+      [
+        "navegacao",
+        "Navegação terrestre"
+      ],
+      [
+        "relevo",
+        "Leitura de relevo"
+      ],
+      [
+        "mapas-topograficos",
+        "Mapas topográficos"
+      ],
+      [
+        "coordenadas",
+        "Coordenadas"
+      ],
+      [
+        "gps-offline",
+        "GPS offline"
+      ],
+      [
+        "sinalizacao",
+        "Sinalização"
+      ],
+      [
+        "desorientacao",
+        "Desorientação"
+      ]
+    ]
+  },
+  {
+    "id": "natureza",
+    "name": "Sobrevivência na natureza",
+    "icon": "forest",
+    "description": "Planejamento, permanência segura e resgate em ambientes remotos.",
+    "subcategories": [
+      [
+        "planejamento-expedicoes",
+        "Planejamento de expedições"
+      ],
+      [
+        "conservacao-energia",
+        "Conservação de energia"
+      ],
+      [
+        "sinalizacao-resgate",
+        "Sinalização para resgate"
+      ],
+      [
+        "clima",
+        "Clima"
+      ],
+      [
+        "terrenos",
+        "Terrenos"
+      ],
+      [
+        "animais",
+        "Proteção contra animais"
+      ],
+      [
+        "permanencia-segura",
+        "Permanência segura"
+      ]
+    ]
+  },
+  {
+    "id": "comunicacao",
+    "name": "Comunicação",
+    "icon": "cell_tower",
+    "description": "Rádios, alertas, mensagens de socorro e contatos.",
+    "subcategories": [
+      [
+        "radios",
+        "Rádios"
+      ],
+      [
+        "comunicacao-emergencia",
+        "Comunicação de emergência"
+      ],
+      [
+        "sinalizacao",
+        "Procedimentos de sinalização"
+      ],
+      [
+        "mensagens-socorro",
+        "Mensagens de socorro"
+      ],
+      [
+        "localizacao",
+        "Localização"
+      ],
+      [
+        "contatos",
+        "Preparação de contatos"
+      ]
+    ]
+  },
+  {
+    "id": "emergencias-urbanas",
+    "name": "Emergências urbanas",
+    "icon": "location_city",
+    "description": "Apagões, enchentes, deslizamentos, incêndios e evacuação.",
+    "subcategories": [
+      [
+        "apagoes",
+        "Apagões"
+      ],
+      [
+        "falta-agua",
+        "Interrupção de água"
+      ],
+      [
+        "enchentes",
+        "Enchentes"
+      ],
+      [
+        "vendavais",
+        "Vendavais e tempestades"
+      ],
+      [
+        "deslizamentos",
+        "Deslizamentos"
+      ],
+      [
+        "incendios-residenciais",
+        "Incêndios residenciais"
+      ],
+      [
+        "evacuacao",
+        "Evacuação"
+      ],
+      [
+        "contingencias-domesticas",
+        "Contingências domésticas"
+      ]
+    ]
+  },
+  {
+    "id": "planejamento",
+    "name": "Planejamento e segurança",
+    "icon": "fact_check",
+    "description": "Análise de riscos, plano familiar, rotas de fuga e checklists.",
+    "subcategories": [
+      [
+        "analise-riscos",
+        "Análise de riscos"
+      ],
+      [
+        "plano-familiar",
+        "Planejamento familiar"
+      ],
+      [
+        "rotas-fuga",
+        "Rotas de fuga"
+      ],
+      [
+        "checklists",
+        "Checklists"
+      ],
+      [
+        "prevencao-acidentes",
+        "Prevenção de acidentes"
+      ],
+      [
+        "seguranca-residencial",
+        "Segurança residencial"
+      ],
+      [
+        "comportamento-crises",
+        "Comportamento em crises"
+      ]
+    ]
+  }
 ]

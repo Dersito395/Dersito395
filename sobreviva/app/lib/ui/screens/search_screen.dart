@@ -7,6 +7,7 @@ import '../../data/models.dart';
 import '../../search/search_engine.dart';
 import '../../state/app_state.dart';
 import '../widgets/common.dart';
+import 'reference_screens.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key, this.initialQuery});
@@ -249,6 +250,17 @@ class _SearchScreenState extends State<SearchScreen> {
               message: 'Tente outras palavras, remova filtros ou baixe a biblioteca completa em Ajustes. Em uma emergência, ligue 192, 193 ou 190.',
             ),
           for (final r in outcome.results) ArticleTile(r.article),
+          for (final d in _state.library.documentsFor(outcome.query, [for (final r in outcome.results.take(5)) r.article.id]))
+            Card(
+              margin: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+              child: ListTile(
+                leading: const Icon(Icons.picture_as_pdf_outlined),
+                title: Text(d.title),
+                subtitle: Text('Documento de consulta · ${d.pages} páginas'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => DocumentScreen(documentId: d.id))),
+              ),
+            ),
         ],
       ],
     );

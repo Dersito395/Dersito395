@@ -12,15 +12,15 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
-import { ContentStore } from './content-store.js';
+import { ContentStore, MAX_PDF_BYTES } from './content-store.js';
 import { build } from './builder.js';
-import { normalizeArticle, validateArticle, validateEmergency, DIFFICULTIES, ENVIRONMENTS, STATUSES } from './validate.js';
+import { normalizeArticle, validateArticle, validateEmergency, validateScenario, validateDocument, validateLink, DIFFICULTIES, ENVIRONMENTS, STATUSES } from './validate.js';
 import { UserStore, Sessions, can, parseCookies, verifyPassword, ROLES } from './auth.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..', '..');
 
-const STATIC_TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.json': 'application/json' };
+const STATIC_TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.pdf': 'application/pdf', '.json': 'application/json' };
 
 class HttpError extends Error {
   constructor(status, message) {
@@ -334,9 +334,45 @@ export function createServer(options = {}) {
       }
     }
 
+    if (resource === 'scenarios') {
+      if (m === 'GET') {
+        requireSession(req);
+        return send(res, 200, store.scenarios());
+      }
+      if (m === 'PUT') {
+        requireSession(req, 'catalog:edit');
+        const list = await readJson(req);
+        if (!Array.isArray(list)) throw new HttpError(400, 'esperado um array de cenários');
+        const errors = list.flatMap(validateScenario);
+        if (errors.length) throw new HttpError(422, errors.join('; '));
+        store.saveScenarios(list);
+        return send(res, 200, { ok: true });
+      }
+    }
+
+    if (resource === 'references') {
+      if (m === 'GET') {
+        requireSession(req);
+        return send(res, 200, { documents: store.documents(), links: store.links() });
+      }
+      if (m === 'PUT') {
+        requireSession(req, 'catalog:edit');
+        const body = await readJson(req);
+        if (!body || !Array.isArray(body.documents) || !Array.isArray(body.links)) {
+          throw new HttpError(400, 'esperado { documents: [...], links: [...] }');
+        }
+        const ctx = { media: new Set(store.mediaFiles()), sources: new Set(store.sources().map((s) => s.id)) };
+        const errors = [...body.documents.flatMap((d) => validateDocument(d, ctx)), ...body.links.flatMap(validateLink)];
+        if (errors.length) throw new HttpError(422, errors.join('; '));
+        store.saveReferences(body);
+        return send(res, 200, { ok: true });
+      }
+    }
+
     if (resource === 'media' && m === 'POST') {
       requireSession(req, 'media:upload');
-      const body = await readJson(req, 4 * 1024 * 1024);
+      // PDFs de consulta chegam em base64 (≈ 4/3 do tamanho original).
+      const body = await readJson(req, Math.ceil((MAX_PDF_BYTES * 4) / 3) + 64 * 1024);
       if (typeof body.data !== 'string') throw new HttpError(400, 'arquivo ausente');
       store.saveMedia(String(body.file || ''), Buffer.from(body.data, 'base64'), body);
       return send(res, 201, { ok: true, file: body.file });

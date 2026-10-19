@@ -1,0 +1,80 @@
+{
+  "id": "pw-ferver-com-pedras",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Ferver água sem panela, com pedras quentes",
+  "summary": "Como aquecer e ferver água em recipiente que não vai ao fogo, usando pedras aquecidas na fogueira.",
+  "category": "agua",
+  "subcategory": "fervura",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "rural"
+  ],
+  "time_estimate": "Cerca de 1 hora (aquecimento das pedras)",
+  "materials": [
+    "Recipiente que retenha água (casca, madeira escavada, recipiente plástico resistente ao calor não serve)",
+    "Pedras do tamanho de um ovo, secas",
+    "Duas varetas para servir de pinça",
+    "Fogueira de lenha"
+  ],
+  "objective": "Ferver água para torná-la segura quando não há panela de metal.",
+  "steps": [
+    {
+      "text": "Escolha pedras secas, de preferência de áreas longe da água. Pedras de rio ou de beira de lago podem ter água dentro e explodir quando aquecidas; evite também pedras porosas ou com rachaduras."
+    },
+    {
+      "text": "Coloque as pedras na fogueira, espaçadas, e espere cerca de 45 minutos até ficarem muito quentes."
+    },
+    {
+      "text": "Encha o recipiente até a metade com água pré-filtrada (pano)."
+    },
+    {
+      "text": "Retire uma pedra com as varetas, sopre ou bata para tirar as cinzas e coloque com cuidado na água. Vá trocando as pedras até a água ferver vigorosamente."
+    },
+    {
+      "text": "Mantenha a fervura vigorosa por 1 minuto (3 minutos acima de cerca de 2.000 m), trocando pedras para manter."
+    },
+    {
+      "text": "Deixe a água esfriar e decantar as cinzas antes de beber."
+    }
+  ],
+  "cautions": [
+    "Pedras podem estourar com força suficiente para ferir: mantenha distância e proteja os olhos.",
+    "Não use pedras de rio ou molhadas.",
+    "A fervura não remove contaminantes químicos."
+  ],
+  "alternatives": [
+    "Panela de metal, lata limpa ou garrafa de metal sobre a brasa.",
+    "Desinfecção com hipoclorito ou SODIS."
+  ],
+  "tags": [
+    "ferver água",
+    "pedras quentes",
+    "sem panela",
+    "purificar água"
+  ],
+  "keywords": [
+    "ferver água sem panela",
+    "água sem recipiente de metal"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "pewtherer-2010",
+      "note": "Técnica de ferver com pedras e risco de pedras que explodem – ideias reescritas."
+    },
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Tempo de fervura e limites do método."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "agua-encontrar-captar",
+    "fogo-seguranca-fogueira"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

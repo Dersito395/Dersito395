@@ -1,0 +1,89 @@
+{
+  "id": "pw-pesca-subsistencia",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Pesca para subsistência: o básico e a lei",
+  "summary": "Linha e anzol improvisados, iscas, limpeza e cozimento do peixe, respeitando a legislação de pesca.",
+  "category": "alimentacao",
+  "subcategory": "forrageamento",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "rural",
+    "litoral"
+  ],
+  "time_estimate": "Variável",
+  "materials": [
+    "Linha de pesca e anzóis (leve no kit)",
+    "Iscas (minhocas, insetos, restos de peixe)",
+    "Faca",
+    "Recipiente com água para manter o peixe"
+  ],
+  "objective": "Obter proteína de forma legal e segura em situações prolongadas.",
+  "steps": [
+    {
+      "text": "Conheça a lei: a pesca amadora exige licença, e há períodos de defeso, tamanhos mínimos e locais proibidos. Pescar com veneno, explosivo ou substâncias tóxicas é crime."
+    },
+    {
+      "text": "Leve linha e anzóis no kit: ocupam pouco espaço e são muito mais eficientes que versões improvisadas."
+    },
+    {
+      "text": "Procure peixes em remansos, sombras de margens, junto a troncos submersos e na entrada e saída de lagos, especialmente ao amanhecer e ao entardecer."
+    },
+    {
+      "text": "Use iscas locais: minhocas cavadas em solo úmido, insetos e pequenos pedaços de peixe já capturado."
+    },
+    {
+      "text": "Linhas fixas presas a galhos na margem trabalham sozinhas enquanto você faz outras tarefas; verifique-as com frequência."
+    },
+    {
+      "text": "Limpe o peixe logo após a captura, longe da fonte de água que você usa para beber, e enterre as vísceras."
+    },
+    {
+      "text": "Cozinhe bem o peixe de água doce: parasitas são comuns."
+    }
+  ],
+  "cautions": [
+    "Não entre em rios com correnteza para pescar.",
+    "Em áreas protegidas a pesca pode ser proibida.",
+    "Peixes de águas contaminadas (esgoto, garimpo, indústria) podem acumular metais e toxinas."
+  ],
+  "alternatives": [
+    "Criação de pequenos animais e produção vegetal como fontes de alimento mais previsíveis."
+  ],
+  "tags": [
+    "pesca",
+    "peixe",
+    "anzol",
+    "isca",
+    "subsistência"
+  ],
+  "keywords": [
+    "como pescar para comer",
+    "pescar sem vara",
+    "pesca de sobrevivência"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "pewtherer-2010",
+      "note": "Métodos de pesca, locais e iscas – ideias reescritas (técnicas de pesca com veneno excluídas por serem crime)."
+    },
+    {
+      "ref": "lei-pesca",
+      "note": "Regras da pesca no Brasil e licenciamento."
+    },
+    {
+      "ref": "lei-crimes-ambientais",
+      "note": "Pesca com explosivos ou substâncias tóxicas como crime (art. 35)."
+    }
+  ],
+  "related": [
+    "alim-racionamento-nutricao",
+    "prod-galinhas-caipiras",
+    "fogo-seguranca-fogueira"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

@@ -6,7 +6,7 @@
 /// com a fonte e a recomendação de ajuste.
 library;
 
-enum KitDuration { h24, h72, d7 }
+enum KitDuration { h24, h72, d7, d30, d90 }
 
 enum KitEnvironment { urbano, mata, frio, calor, enchente }
 
@@ -14,6 +14,8 @@ const Map<KitDuration, String> kitDurationLabels = {
   KitDuration.h24: '24 horas (mochila de evacuação)',
   KitDuration.h72: '72 horas',
   KitDuration.d7: '7 dias (permanência em casa)',
+  KitDuration.d30: '30 dias (crise prolongada)',
+  KitDuration.d90: '90 dias (crise prolongada)',
 };
 
 const Map<KitEnvironment, String> kitEnvironmentLabels = {
@@ -53,6 +55,8 @@ class KitPlanInput {
     KitDuration.h24 => 1,
     KitDuration.h72 => 3,
     KitDuration.d7 => 7,
+    KitDuration.d30 => 30,
+    KitDuration.d90 => 90,
   };
 
   Map<String, Object?> toJson() => {
@@ -96,7 +100,16 @@ List<KitItem> buildKitPlan(KitPlanInput input) {
     );
   }
   add(water, 'Meio de tratar água (hipoclorito 2,5% ou pastilhas) e recipiente limpo');
-  add(water, 'Alimentos prontos para consumo para $d dia(s), que a família já costuma comer, sem necessidade de refrigeração');
+  final longTerm = d >= 30;
+  if (longTerm) {
+    add(
+      water,
+      'Mínimo humanitário para beber, cozinhar e higiene: cerca de 15 L por pessoa/dia (Sphere). Planeje captação de chuva e meios de tratar água nova',
+    );
+    add(water, 'Despensa de longo prazo: grãos, leguminosas, farinhas, óleo, sal e açúcar em recipientes herméticos, com rotação e inventário');
+  } else {
+    add(water, 'Alimentos prontos para consumo para $d dia(s), que a família já costuma comer, sem necessidade de refrigeração');
+  }
   add(water, 'Abridor de latas manual, talheres e copo');
   if (input.infants > 0) add(water, 'Fórmula infantil ou alimentação do bebê, mamadeira e água adequada para preparo');
   if (input.pets > 0) add(water, 'Água e ração para ${input.pets} animal(is) por $d dia(s), com tigelas');
@@ -160,6 +173,17 @@ List<KitItem> buildKitPlan(KitPlanInput input) {
   add(docs, 'Cópias de documentos pessoais em saco impermeável');
   add(docs, 'Dinheiro em espécie (notas pequenas)');
   if (input.pets > 0) add(docs, 'Carteira de vacinação, coleira, guia e foto dos animais');
+
+  if (longTerm) {
+    const prod = 'Autonomia de longo prazo';
+    add(prod, 'Sementes de polinização aberta, ferramentas de horta e composto para produzir alimento');
+    add(prod, 'Recipientes e calhas para captação de água da chuva');
+    add(prod, 'Banheiro de emergência: balde com tampa, sacos resistentes e serragem');
+    add(prod, 'Kit solar pequeno ou lanternas e rádio à manivela');
+    add(prod, 'Estoque de higiene, medicamentos de uso contínuo e primeiros socorros para o período');
+    add(prod, 'Estoque guardado dividido, fechado e discreto; inventário atualizado');
+    add(prod, 'Rede de vizinhos de confiança com contatos e acordos de ajuda mútua');
+  }
 
   // Necessidades específicas
   const special = 'Necessidades específicas';

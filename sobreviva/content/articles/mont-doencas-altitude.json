@@ -1,0 +1,99 @@
+{
+  "id": "mont-doencas-altitude",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Doenças da altitude: prevenção e resposta",
+  "summary": "Mal agudo da montanha, edema pulmonar e edema cerebral de altitude: como reconhecer, como subir com segurança e quando descer imediatamente.",
+  "category": "natureza",
+  "subcategory": "terrenos",
+  "difficulty": "intermediaria",
+  "environments": [
+    "montanha"
+  ],
+  "time_estimate": "Planejamento antes da viagem; reação imediata aos sintomas",
+  "materials": [
+    "Roteiro de subida com altitudes de pernoite",
+    "Água e alimentos ricos em carboidratos",
+    "Meio de comunicação para pedir resgate"
+  ],
+  "objective": "Evitar e reconhecer cedo as doenças causadas pela falta de oxigênio em grandes altitudes (como nos Andes).",
+  "steps": [
+    {
+      "text": "Saiba onde o risco começa: acima de cerca de 2.400 m, o mal da altitude se torna comum; entre 1.500 e 2.400 m podem ocorrer sintomas leves e passageiros."
+    },
+    {
+      "text": "Suba devagar. Uma regra usada por manuais militares: depois de duas noites por volta de 2.700 m, aumente a altitude onde você dorme em no máximo 300 m por dia. O que conta é a altitude de pernoite."
+    },
+    {
+      "text": "Outra forma é a subida em estágios: ficar 3 dias ou mais numa altitude intermediária antes de subir mais."
+    },
+    {
+      "text": "Nos primeiros dias, reduza o esforço, faça pausas longas e prefira alimentos ricos em carboidratos (grãos, feijão, batata, frutas, mel). Beba água tratada em quantidade."
+    },
+    {
+      "text": "Mal agudo da montanha: dor de cabeça, cansaço, náusea, vômitos, tontura, insônia e falta de apetite. Pare de subir e descanse; costuma melhorar em 3 a 7 dias se você não continuar subindo."
+    },
+    {
+      "text": "Se os sintomas não melhoram com repouso, desça pelo menos 150 a 300 m. Só volte a subir quando estiver sem sintomas."
+    },
+    {
+      "text": "Edema pulmonar de altitude: tosse, chiado ou \"borbulhar\" no peito, falta de ar em repouso, às vezes escarro rosado. É emergência: desça imediatamente e peça resgate."
+    },
+    {
+      "text": "Edema cerebral de altitude: dor de cabeça forte, vômitos, andar cambaleante, confusão, sonolência ou alucinações. É a forma mais grave: descida imediata, de preferência com evacuação, e atendimento médico."
+    },
+    {
+      "text": "Use o sistema de duplas: euforia e erros de julgamento nas primeiras horas são comuns, e o companheiro percebe antes."
+    }
+  ],
+  "cautions": [
+    "Pessoas em ótima forma física também adoecem: condicionamento não protege contra subir rápido demais.",
+    "Medicamentos preventivos (como acetazolamida) só com prescrição médica.",
+    "Altitude, frio e alimentação ruim juntos são muito mais perigosos do que cada um isolado.",
+    "Fogareiros e aquecedores em barracas fechadas causam intoxicação por monóxido de carbono, mais comum em altitude."
+  ],
+  "alternatives": [
+    "Contratar guias locais e agências que respeitem cronogramas de aclimatação."
+  ],
+  "tags": [
+    "altitude",
+    "mal da montanha",
+    "soroche",
+    "edema pulmonar",
+    "edema cerebral",
+    "aclimatação",
+    "Andes"
+  ],
+  "keywords": [
+    "mal da altitude",
+    "soroche",
+    "dor de cabeça na montanha",
+    "falta de ar na altitude"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "army-fm-3-97-6",
+      "note": "Faixas de altitude, sintomas de MAM/EPAA/ECAA, subida em estágios e gradual (300 m/dia de pernoite), descida de 150–300 m (cap. 1 e apêndice A)."
+    },
+    {
+      "ref": "wms-hipotermia",
+      "note": "Interação entre frio e outras condições ambientais."
+    }
+  ],
+  "related": [
+    "mont-tempo-montanha",
+    "mont-lesoes-frio",
+    "nat-planejamento-trilha",
+    "ps-hipotermia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19",
+  "review": {
+    "technical_required": true,
+    "technical_status": "pendente",
+    "reviewer": null,
+    "reviewed_at": null
+  }
+}

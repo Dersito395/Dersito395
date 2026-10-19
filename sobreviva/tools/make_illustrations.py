@@ -250,6 +250,67 @@ svgs['sinais-resgate.svg'] = frame('Sinais de socorro', (
     + f"<circle cx='300' cy='150' r='20' fill='{OR}'/><rect x='250' y='190' width='34' height='24' fill='#C0C4C8' stroke='{GR}' stroke-width='2'/><path d='M267 190 L300 150' stroke='{OR}' stroke-width='2' stroke-dasharray='4 4'/><path d='M267 202 L370 90' stroke='{OR}' stroke-width='3'/>"
     + t(300, 240, 'espelho: mire com os dedos em V', 11, GR, '700', 'middle')))
 
+svgs['agua-reserva-tambores.svg'] = frame('Reserva de água de longo prazo', (
+    f"<rect x='20' y='206' width='360' height='14' rx='3' fill='#8A6A4A'/>"
+    + ''.join(f"<rect x='{x}' y='{206 - h}' width='{w}' height='{h}' rx='10' fill='{BL}' stroke='{DK}' stroke-width='3'/><rect x='{x + 8}' y='{216 - h}' width='{w - 16}' height='22' rx='4' fill='{WH}'/>" + t(x + w / 2, 232 - h, d, 11, DK, '700', 'middle') for x, w, h, d in [(30, 90, 140, '03/2026'), (135, 90, 140, '05/2026'), (240, 60, 90, '06/2026'), (310, 60, 90, '08/2026')])
+    + f"<rect x='112' y='180' width='14' height='8' fill='{GR}'/>"
+    + t(20, 246, 'Opacos, tampados, etiquetados, sobre estrado • troca a cada 6 meses', 11, GR, '700')
+    + badge(232, 44, '2,5–3 L/pessoa/dia: beber', 160) + badge(232, 76, '15 L/pessoa/dia: + higiene', 160)))
+
+svgs['despensa-rotacao.svg'] = frame('Rotação da despensa', (
+    ''.join(f"<rect x='40' y='{y}' width='320' height='8' fill='#8A6A4A'/>" for y in (110, 180))
+    + ''.join(f"<rect x='{60 + 52 * i}' y='{y - 46}' width='40' height='46' rx='6' fill='{G if i < 3 else OR}' opacity='{0.55 + 0.1 * i}'/>" for i in range(6) for y in (110, 180))
+    + f"<path d='M372 70 h-30' stroke='{GR}' stroke-width='4' marker-end='url(#r1)'/><path d='M60 228 h-40' stroke='{RD}' stroke-width='4' marker-end='url(#r1)'/>"
+    + f"<defs><marker id='r1' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto'><path d='M0 0 L8 4 L0 8 z' fill='{GR}'/></marker></defs>"
+    + t(200, 58, 'novo entra atrás', 12, GR, '700') + t(70, 244, 'mais antigo sai primeiro', 12, RD, '700')))
+
+svgs['horta-canteiro.svg'] = frame('Canteiro elevado', (
+    f"<rect x='0' y='196' width='400' height='64' fill='#7A5A30'/>"
+    f"<path d='M70 196 L90 150 L310 150 L330 196 Z' fill='#5C4022'/>"
+    f"<rect x='90' y='142' width='220' height='10' fill='#D9C27A'/>"
+    + ''.join(f"<path d='M{x} 142 q-10 -26 0 -40 q10 14 0 40 M{x} 142 q-18 -18 -22 -30 M{x} 142 q18 -18 22 -30' stroke='{G}' stroke-width='5' fill='none'/>" for x in (125, 175, 225, 275))
+    + f"<path d='M90 214 h220' stroke='{OR}' stroke-width='3' marker-start='url(#c1)' marker-end='url(#c1)'/><defs><marker id='c1' markerWidth='8' markerHeight='8' refX='4' refY='4' orient='auto-start-reverse'><path d='M0 0 L8 4 L0 8 z' fill='{OR}'/></marker></defs>"
+    + t(200, 236, '≈ 1 m de largura', 13, WH, '700', 'middle') + t(16, 64, 'Terra afofada + composto', 12, GR, '700')
+    + t(16, 82, 'Elevado 15–20 cm', 12, GR, '700') + t(250, 64, 'Palha cobre o solo', 12, GR, '700') + t(250, 82, 'Caminho ao lado', 12, GR, '700')))
+
+svgs['compostagem.svg'] = frame('Compostagem em camadas', (
+    f"<rect x='60' y='60' width='160' height='180' rx='6' fill='none' stroke='{GR}' stroke-width='4'/>"
+    + ''.join(f"<rect x='64' y='{236 - 30 * (i + 1)}' width='152' height='30' fill='{'#C9A86A' if i % 2 == 0 else '#6B8E4E'}'/>" for i in range(5))
+    + t(240, 100, 'Seco: folhas, palha,', 12, '#8A6A2A', '700') + t(240, 116, 'serragem (mais)', 12, '#8A6A2A', '700')
+    + t(240, 150, 'Verde: cascas, borra', 12, '#3E6B2E', '700') + t(240, 166, 'de café, verduras', 12, '#3E6B2E', '700')
+    + t(240, 206, 'Umidade de esponja', 12, GR, '700') + t(240, 222, 'Revirar a cada 1–2 sem.', 12, GR, '700')))
+
+svgs['abrigo-duas-paredes.svg'] = frame('Regra das duas paredes', (
+    f"<rect x='40' y='50' width='320' height='190' fill='none' stroke='{GR}' stroke-width='6'/>"
+    f"<line x1='160' y1='50' x2='160' y2='240' stroke='{GR}' stroke-width='4'/><line x1='240' y1='50' x2='240' y2='240' stroke='{GR}' stroke-width='4'/>"
+    f"<line x1='160' y1='145' x2='240' y2='145' stroke='{GR}' stroke-width='4'/>"
+    + ''.join(f"<rect x='{x}' y='{y}' width='{w}' height='{h}' fill='{BL}' opacity='0.6'/>" for x, y, w, h in [(70, 46, 50, 8), (280, 46, 50, 8), (70, 236, 50, 8), (280, 236, 50, 8)])
+    + f"<rect x='164' y='149' width='72' height='87' fill='{OR}' opacity='0.85'/>" + person(200, 228, 0.9, DK)
+    + t(100, 150, 'janelas', 12, BL, '700', 'middle') + t(300, 150, 'janelas', 12, BL, '700', 'middle')
+    + t(200, 100, 'corredor', 12, GR, '400', 'middle')))
+
+svgs['quarentena-quarto.svg'] = frame('Isolamento de doente em casa', (
+    f"<rect x='30' y='50' width='200' height='180' fill='none' stroke='{GR}' stroke-width='5'/>"
+    f"<rect x='30' y='90' width='8' height='60' fill='{BL}'/>" + ''.join(f"<path d='M{x} 120 q-12 -6 -24 0' stroke='{BL}' stroke-width='3' fill='none'/>" for x in (20, 8))
+    + f"<rect x='120' y='150' width='96' height='50' rx='6' fill='{G}'/><circle cx='140' cy='160' r='12' fill='#E8D7C3'/>"
+    + f"<rect x='226' y='120' width='8' height='60' fill='{WH}' stroke='{GR}' stroke-width='2'/>"
+    + person(300, 214, 1.0) + f"<rect x='290' y='150' width='20' height='10' rx='3' fill='{WH}' stroke='{GR}' stroke-width='1.5'/>"
+    + t(40, 72, 'janela aberta', 11, BL, '700') + t(250, 76, '1 cuidador', 12, GR, '700') + t(250, 92, 'de máscara', 12, GR, '700')
+    + t(30, 250, 'Sinais de gravidade (falta de ar, lábios roxos, confusão): 192', 11, RD, '700')))
+
+svgs['fogo-arco-broca.svg'] = frame('Arco e broca: as peças', (
+    f"<rect x='0' y='214' width='400' height='46' fill='#7A5A30'/>"
+    f"<rect x='60' y='196' width='220' height='18' rx='3' fill='#C9A86A' stroke='{GR}' stroke-width='2'/>"
+    f"<path d='M150 196 l12 0 l-4 18 l-4 0 z' fill='{DK}'/><ellipse cx='156' cy='222' rx='16' ry='5' fill='#3B2A18'/>"
+    f"<rect x='150' y='92' width='12' height='104' rx='4' fill='#B08850' stroke='{GR}' stroke-width='2'/>"
+    f"<rect x='130' y='72' width='52' height='20' rx='6' fill='#8A6A3A' stroke='{GR}' stroke-width='2'/>"
+    f"<path d='M40 150 Q156 110 290 150' stroke='#6B4A22' stroke-width='6' fill='none'/>"
+    f"<path d='M40 150 L156 140 L290 150' stroke='{GR}' stroke-width='2' fill='none'/>"
+    + t(190, 86, 'apoio de mão (madeira dura/pedra)', 11, GR, '700') + t(298, 140, 'arco + cordão', 11, GR, '700')
+    + t(170, 120, 'broca reta e seca', 11, GR, '700') + t(290, 206, 'base (madeira seca)', 11, GR, '700')
+    + t(176, 236, 'entalhe em V + folha para a brasa', 11, WH, '700')
+    + t(16, 60, 'Madeira macia e totalmente seca', 12, OR, '700')))
+
 os.makedirs(OUT, exist_ok=True)
 for name, svg in svgs.items():
     with open(os.path.join(OUT, name), 'w', encoding='utf-8') as fh:

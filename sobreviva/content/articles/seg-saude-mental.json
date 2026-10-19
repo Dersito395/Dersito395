@@ -1,0 +1,73 @@
+{
+  "id": "seg-saude-mental",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Saúde mental e decisões em crises longas",
+  "summary": "Como lidar com medo, estresse e luto, apoiar outras pessoas e manter a capacidade de decidir.",
+  "category": "seguranca",
+  "subcategory": "saude-mental",
+  "difficulty": "basica",
+  "environments": [
+    "qualquer"
+  ],
+  "time_estimate": "Prática diária",
+  "materials": [],
+  "objective": "Preservar o bem-estar emocional e a qualidade das decisões da família ao longo de uma crise.",
+  "steps": [
+    {
+      "text": "Mantenha rotina: horários para dormir, comer, trabalhar e descansar dão sensação de controle."
+    },
+    {
+      "text": "Durma o possível, beba água e alimente-se: cansaço e fome pioram o julgamento."
+    },
+    {
+      "text": "Limite a exposição a notícias a horários definidos e use fontes oficiais."
+    },
+    {
+      "text": "Ao apoiar alguém em sofrimento: observe se está em segurança, escute sem pressionar e ajude a conectar a pessoa a necessidades básicas, informações e apoio (princípios dos primeiros cuidados psicológicos)."
+    },
+    {
+      "text": "Com crianças: explique o que está acontecendo com palavras simples, mantenha a rotina e permita que expressem sentimentos (desenhos, brincadeiras)."
+    },
+    {
+      "text": "Antes de decisões importantes, pare, respire e avalie as opções com outra pessoa."
+    },
+    {
+      "text": "Procure ajuda profissional se houver desesperança, pensamentos de morte, uso de álcool ou drogas para aguentar, ou incapacidade de cuidar de si. CVV: 188 (24 horas)."
+    }
+  ],
+  "cautions": [
+    "Pensamentos de suicídio são emergência: ligue 188 (CVV) ou 192.",
+    "Não force ninguém a contar o que viveu."
+  ],
+  "alternatives": [
+    "Grupos de apoio e serviços de saúde mental do SUS (CAPS)."
+  ],
+  "tags": [
+    "saúde mental",
+    "estresse",
+    "ansiedade",
+    "primeiros cuidados psicológicos",
+    "crianças"
+  ],
+  "keywords": [
+    "ansiedade na crise",
+    "medo",
+    "como ajudar alguém em choque",
+    "desespero"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "oms-pfa",
+      "note": "Princípios de observar, escutar e conectar dos primeiros cuidados psicológicos."
+    }
+  ],
+  "related": [
+    "seg-comunidade",
+    "cen-colapso-servicos"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

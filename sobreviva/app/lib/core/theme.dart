@@ -214,6 +214,12 @@ class _NoTransitionBuilder extends PageTransitionsBuilder {
 
 /// Ícones das categorias e guias (nomes definidos no conteúdo editorial).
 const Map<String, IconData> contentIcons = {
+  'crisis': Icons.crisis_alert,
+  'coronavirus': Icons.coronavirus_outlined,
+  'no_food': Icons.no_food_outlined,
+  'power_off': Icons.power_off_outlined,
+  'shield': Icons.shield_outlined,
+  'agriculture': Icons.agriculture_outlined,
   'water_drop': Icons.water_drop_outlined,
   'restaurant': Icons.restaurant_outlined,
   'cabin': Icons.cabin_outlined,

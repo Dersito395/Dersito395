@@ -36,6 +36,16 @@ void main() {
     test('O que fazer após uma picada de cobra?', () => expect(top('O que fazer após uma picada de cobra?').first, 'ps-animais-peconhentos'));
   });
 
+  group('crise prolongada', () {
+    test('guerra', () => expect(top('o que fazer numa guerra'), contains('cen-conflito-armado')));
+    test('pandemia', () => expect(top('pandemia').first, 'cen-pandemia-quarentena'));
+    test('plantar meu alimento', () => expect(top('preciso plantar meu alimento'), contains('prod-horta-passo-a-passo')));
+    test('roubo de mantimentos', () => expect(top('proteger meus mantimentos de roubo').first, 'seg-protecao-mantimentos'));
+    test('arma leva ao artigo de defesa legal', () => expect(top('como fazer uma arma').first, 'seg-defesa-legal'));
+    test('estocar comida por meses', () => expect(top('estocar comida por meses').first, 'alim-despensa-longo-prazo'));
+    test('escassez de água', () => expect(top('escassez de água'), contains('agua-escassez-racionamento')));
+  });
+
   group('sinônimos', () {
     test('purificar água encontra tratamento/desinfecção', () => expect(top('purificar água').first, 'agua-tornar-potavel'));
     test('blecaute encontra apagão', () => expect(top('blecaute'), contains('urb-apagao')));

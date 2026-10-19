@@ -12,6 +12,9 @@ import '../../services/storage_info.dart';
 import '../../state/app_state.dart';
 import '../widgets/common.dart';
 
+/// Versão exibida no app (definida no build: --dart-define=APP_VERSION=...).
+const String appVersion = String.fromEnvironment('APP_VERSION', defaultValue: '1.1.0-dev');
+
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
@@ -105,7 +108,7 @@ class SettingsScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.shield_outlined),
             title: const Text('Sobre o SOBREVIVA'),
-            subtitle: const Text('Aviso importante, licenças e créditos'),
+            subtitle: const Text('Versão do app $appVersion • aviso importante, licenças e créditos'),
             onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const AboutScreen())),
           ),
         ],

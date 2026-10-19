@@ -1,59 +1,558 @@
 {
   "_comment": "Grupos de termos equivalentes usados na expansão de consultas. Termos com espaço são expressões. A normalização (minúsculas, sem acentos) é feita pelo app e pelo construtor de pacotes.",
   "groups": [
-    ["purificar água", "tratar água", "tratamento de água", "desinfecção de água", "desinfetar água", "água potável", "potabilizar", "água segura", "água contaminada", "beber água", "não tenho água potável"],
-    ["purificar", "tratar", "desinfetar", "potabilizar", "esterilizar"],
-    ["ferver", "fervura", "fervida", "ebulição"],
-    ["cloro", "hipoclorito", "água sanitária", "alvejante", "sanitária"],
-    ["água", "agua", "hidratação", "líquido"],
-    ["chuva", "pluvial", "cisterna", "captação"],
-    ["filtro", "filtrar", "filtração", "filtragem"],
-    ["armazenar", "armazenamento", "estocar", "guardar", "reserva", "estoque"],
-    ["comida", "alimento", "alimentos", "alimentação", "mantimentos", "víveres"],
-    ["geladeira", "refrigerador", "freezer", "congelador"],
-    ["cogumelo", "fungo", "fungos", "cogumelos"],
-    ["planta", "plantas", "erva", "frutos silvestres", "forrageamento", "forragear"],
-    ["intoxicação", "envenenamento", "intoxicado", "envenenado", "veneno"],
-    ["abrigo", "refúgio", "cabana", "barraca", "tenda", "acampamento"],
-    ["lona", "encerado", "tarp", "plástico"],
-    ["frio", "hipotermia", "congelando", "tremendo", "gelado"],
-    ["calor", "insolação", "intermação", "hipertermia", "golpe de calor", "exaustão pelo calor"],
-    ["desidratação", "desidratado", "sede", "soro", "reidratação"],
-    ["rcp", "reanimação", "ressuscitação", "massagem cardíaca", "compressões", "parada cardíaca", "parada cardiorrespiratória", "não respira", "desmaiou e não respira"],
-    ["engasgo", "engasgado", "engasgou", "asfixia", "sufocando", "heimlich", "obstrução"],
-    ["sangramento", "hemorragia", "sangrando", "sangue", "corte profundo", "torniquete", "garrote"],
-    ["queimadura", "queimado", "queimou", "escaldadura"],
-    ["fratura", "osso quebrado", "quebrou", "entorse", "torção", "luxação", "tala", "imobilizar"],
-    ["picada", "mordida", "mordeu", "picou", "ferroada"],
-    ["cobra", "serpente", "cascavel", "jararaca", "surucucu", "coral", "ofídico", "ofidismo"],
-    ["escorpião", "aranha", "lagarta", "taturana", "peçonhento", "peçonhentos", "venenoso"],
-    ["perdido", "perdida", "desorientado", "desorientação", "me perdi", "estou perdido", "perdi o caminho", "sem rumo"],
-    ["bússola", "agulha magnética", "rumo", "azimute", "norte magnético"],
-    ["mapa", "carta topográfica", "cartografia", "topográfico", "curvas de nível"],
-    ["gps", "coordenadas", "latitude", "longitude", "localização", "posição"],
-    ["fogo", "fogueira", "chama", "lenha", "acender fogo"],
-    ["incêndio", "fogo em casa", "pegando fogo", "fumaça", "queimada"],
-    ["incêndio florestal", "queimada", "fogo no mato", "fogo na mata", "fogo na vegetação"],
-    ["monóxido de carbono", "gás tóxico", "fumaça tóxica", "gerador", "braseiro"],
-    ["kit", "mochila", "bolsa de emergência", "kit de emergência", "mochila de fuga", "bug out", "72 horas", "72h"],
-    ["nó", "nós", "amarração", "corda", "cordas", "laçada"],
-    ["lanterna", "iluminação", "luz", "pilhas", "baterias"],
-    ["apagão", "blecaute", "falta de luz", "falta de energia", "queda de energia", "sem energia"],
-    ["enchente", "inundação", "alagamento", "cheia", "enxurrada"],
-    ["deslizamento", "desmoronamento", "escorregamento", "barreira", "queda de barreira", "encosta"],
-    ["vendaval", "ventania", "tempestade", "temporal", "ciclone", "granizo"],
-    ["raio", "raios", "relâmpago", "descarga elétrica", "trovoada"],
-    ["evacuar", "evacuação", "fugir", "sair de casa", "rota de fuga", "abandonar"],
-    ["resgate", "socorro", "salvamento", "busca", "ser encontrado"],
-    ["sinal", "sinalizar", "sinalização", "sos", "apito", "espelho"],
-    ["rádio", "radioamador", "walkie talkie", "ht", "faixa do cidadão", "px"],
-    ["comunicação", "contato", "mensagem", "avisar", "celular", "sms"],
-    ["trilha", "caminhada", "expedição", "trekking", "passeio na mata"],
-    ["mata", "floresta", "selva", "mato", "natureza", "bosque"],
-    ["horta", "plantio", "cultivo", "hortaliças", "plantar"],
-    ["banheiro", "saneamento", "fezes", "esgoto", "latrina", "higiene"],
-    ["plano", "planejamento", "preparação", "preparar", "se preparar"],
-    ["família", "familiar", "crianças", "idosos", "casa"],
-    ["emergência", "urgência", "perigo", "desastre", "crise", "socorro"]
+    [
+      "purificar água",
+      "tratar água",
+      "tratamento de água",
+      "desinfecção de água",
+      "desinfetar água",
+      "água potável",
+      "potabilizar",
+      "água segura",
+      "água contaminada",
+      "beber água",
+      "não tenho água potável"
+    ],
+    [
+      "purificar",
+      "tratar",
+      "desinfetar",
+      "potabilizar",
+      "esterilizar"
+    ],
+    [
+      "ferver",
+      "fervura",
+      "fervida",
+      "ebulição"
+    ],
+    [
+      "cloro",
+      "hipoclorito",
+      "água sanitária",
+      "alvejante",
+      "sanitária"
+    ],
+    [
+      "água",
+      "agua",
+      "hidratação",
+      "líquido"
+    ],
+    [
+      "chuva",
+      "pluvial",
+      "cisterna",
+      "captação"
+    ],
+    [
+      "filtro",
+      "filtrar",
+      "filtração",
+      "filtragem"
+    ],
+    [
+      "armazenar",
+      "armazenamento",
+      "estocar",
+      "guardar",
+      "reserva",
+      "estoque"
+    ],
+    [
+      "comida",
+      "alimento",
+      "alimentos",
+      "alimentação",
+      "mantimentos",
+      "víveres"
+    ],
+    [
+      "geladeira",
+      "refrigerador",
+      "freezer",
+      "congelador"
+    ],
+    [
+      "cogumelo",
+      "fungo",
+      "fungos",
+      "cogumelos"
+    ],
+    [
+      "planta",
+      "plantas",
+      "erva",
+      "frutos silvestres",
+      "forrageamento",
+      "forragear"
+    ],
+    [
+      "intoxicação",
+      "envenenamento",
+      "intoxicado",
+      "envenenado",
+      "veneno"
+    ],
+    [
+      "abrigo",
+      "refúgio",
+      "cabana",
+      "barraca",
+      "tenda",
+      "acampamento"
+    ],
+    [
+      "lona",
+      "encerado",
+      "tarp",
+      "plástico"
+    ],
+    [
+      "frio",
+      "hipotermia",
+      "congelando",
+      "tremendo",
+      "gelado"
+    ],
+    [
+      "calor",
+      "insolação",
+      "intermação",
+      "hipertermia",
+      "golpe de calor",
+      "exaustão pelo calor"
+    ],
+    [
+      "desidratação",
+      "desidratado",
+      "sede",
+      "soro",
+      "reidratação"
+    ],
+    [
+      "rcp",
+      "reanimação",
+      "ressuscitação",
+      "massagem cardíaca",
+      "compressões",
+      "parada cardíaca",
+      "parada cardiorrespiratória",
+      "não respira",
+      "desmaiou e não respira"
+    ],
+    [
+      "engasgo",
+      "engasgado",
+      "engasgou",
+      "asfixia",
+      "sufocando",
+      "heimlich",
+      "obstrução"
+    ],
+    [
+      "sangramento",
+      "hemorragia",
+      "sangrando",
+      "sangue",
+      "corte profundo",
+      "torniquete",
+      "garrote"
+    ],
+    [
+      "queimadura",
+      "queimado",
+      "queimou",
+      "escaldadura"
+    ],
+    [
+      "fratura",
+      "osso quebrado",
+      "quebrou",
+      "entorse",
+      "torção",
+      "luxação",
+      "tala",
+      "imobilizar"
+    ],
+    [
+      "picada",
+      "mordida",
+      "mordeu",
+      "picou",
+      "ferroada"
+    ],
+    [
+      "cobra",
+      "serpente",
+      "cascavel",
+      "jararaca",
+      "surucucu",
+      "coral",
+      "ofídico",
+      "ofidismo"
+    ],
+    [
+      "escorpião",
+      "aranha",
+      "lagarta",
+      "taturana",
+      "peçonhento",
+      "peçonhentos",
+      "venenoso"
+    ],
+    [
+      "perdido",
+      "perdida",
+      "desorientado",
+      "desorientação",
+      "me perdi",
+      "estou perdido",
+      "perdi o caminho",
+      "sem rumo"
+    ],
+    [
+      "bússola",
+      "agulha magnética",
+      "rumo",
+      "azimute",
+      "norte magnético"
+    ],
+    [
+      "mapa",
+      "carta topográfica",
+      "cartografia",
+      "topográfico",
+      "curvas de nível"
+    ],
+    [
+      "gps",
+      "coordenadas",
+      "latitude",
+      "longitude",
+      "localização",
+      "posição"
+    ],
+    [
+      "fogo",
+      "fogueira",
+      "chama",
+      "lenha",
+      "acender fogo"
+    ],
+    [
+      "incêndio",
+      "fogo em casa",
+      "pegando fogo",
+      "fumaça",
+      "queimada"
+    ],
+    [
+      "incêndio florestal",
+      "queimada",
+      "fogo no mato",
+      "fogo na mata",
+      "fogo na vegetação"
+    ],
+    [
+      "monóxido de carbono",
+      "gás tóxico",
+      "fumaça tóxica",
+      "gerador",
+      "braseiro"
+    ],
+    [
+      "kit",
+      "mochila",
+      "bolsa de emergência",
+      "kit de emergência",
+      "mochila de fuga",
+      "bug out",
+      "72 horas",
+      "72h"
+    ],
+    [
+      "nó",
+      "nós",
+      "amarração",
+      "corda",
+      "cordas",
+      "laçada"
+    ],
+    [
+      "lanterna",
+      "iluminação",
+      "luz",
+      "pilhas",
+      "baterias"
+    ],
+    [
+      "apagão",
+      "blecaute",
+      "falta de luz",
+      "falta de energia",
+      "queda de energia",
+      "sem energia"
+    ],
+    [
+      "enchente",
+      "inundação",
+      "alagamento",
+      "cheia",
+      "enxurrada"
+    ],
+    [
+      "deslizamento",
+      "desmoronamento",
+      "escorregamento",
+      "barreira",
+      "queda de barreira",
+      "encosta"
+    ],
+    [
+      "vendaval",
+      "ventania",
+      "tempestade",
+      "temporal",
+      "ciclone",
+      "granizo"
+    ],
+    [
+      "raio",
+      "raios",
+      "relâmpago",
+      "descarga elétrica",
+      "trovoada"
+    ],
+    [
+      "evacuar",
+      "evacuação",
+      "fugir",
+      "sair de casa",
+      "rota de fuga",
+      "abandonar"
+    ],
+    [
+      "resgate",
+      "socorro",
+      "salvamento",
+      "busca",
+      "ser encontrado"
+    ],
+    [
+      "sinal",
+      "sinalizar",
+      "sinalização",
+      "sos",
+      "apito",
+      "espelho"
+    ],
+    [
+      "rádio",
+      "radioamador",
+      "walkie talkie",
+      "ht",
+      "faixa do cidadão",
+      "px"
+    ],
+    [
+      "comunicação",
+      "contato",
+      "mensagem",
+      "avisar",
+      "celular",
+      "sms"
+    ],
+    [
+      "trilha",
+      "caminhada",
+      "expedição",
+      "trekking",
+      "passeio na mata"
+    ],
+    [
+      "mata",
+      "floresta",
+      "selva",
+      "mato",
+      "natureza",
+      "bosque"
+    ],
+    [
+      "horta",
+      "plantio",
+      "cultivo",
+      "hortaliças",
+      "plantar"
+    ],
+    [
+      "banheiro",
+      "saneamento",
+      "fezes",
+      "esgoto",
+      "latrina",
+      "higiene"
+    ],
+    [
+      "plano",
+      "planejamento",
+      "preparação",
+      "preparar",
+      "se preparar"
+    ],
+    [
+      "família",
+      "familiar",
+      "crianças",
+      "idosos",
+      "casa"
+    ],
+    [
+      "emergência",
+      "urgência",
+      "perigo",
+      "desastre",
+      "crise",
+      "socorro"
+    ],
+    [
+      "guerra",
+      "conflito armado",
+      "bombardeio",
+      "ataque aéreo",
+      "invasão militar",
+      "míssil"
+    ],
+    [
+      "pandemia",
+      "epidemia",
+      "quarentena",
+      "isolamento",
+      "doença contagiosa",
+      "vírus",
+      "contágio"
+    ],
+    [
+      "escassez",
+      "falta",
+      "desabastecimento",
+      "racionamento",
+      "crise"
+    ],
+    [
+      "seca",
+      "escassez hídrica",
+      "crise hídrica",
+      "estiagem",
+      "falta de água"
+    ],
+    [
+      "fome",
+      "escassez de alimentos",
+      "falta de comida",
+      "acabando a comida",
+      "desabastecimento"
+    ],
+    [
+      "saque",
+      "roubo",
+      "furto",
+      "assalto",
+      "roubarem",
+      "saqueadores"
+    ],
+    [
+      "arma",
+      "armas",
+      "arma caseira",
+      "fabricar arma",
+      "defesa pessoal",
+      "legítima defesa",
+      "me defender",
+      "autodefesa"
+    ],
+    [
+      "horta",
+      "plantar",
+      "cultivar",
+      "plantio",
+      "canteiro",
+      "plantar meu alimento"
+    ],
+    [
+      "compostagem",
+      "composto",
+      "adubo",
+      "composteira",
+      "adubo orgânico"
+    ],
+    [
+      "semente",
+      "sementes",
+      "sementes crioulas",
+      "guardar sementes"
+    ],
+    [
+      "galinha",
+      "galinhas",
+      "ovos",
+      "galinheiro",
+      "aves"
+    ],
+    [
+      "mandioca",
+      "aipim",
+      "macaxeira"
+    ],
+    [
+      "despensa",
+      "estoque",
+      "mantimentos",
+      "estoque de alimentos",
+      "estocar comida"
+    ],
+    [
+      "discrição",
+      "esconder",
+      "não chamar atenção",
+      "segredo"
+    ],
+    [
+      "comunidade",
+      "vizinhos",
+      "vizinhança",
+      "ajuda mútua",
+      "grupo"
+    ],
+    [
+      "radiação",
+      "nuclear",
+      "radioativo",
+      "bomba nuclear",
+      "contaminação"
+    ],
+    [
+      "colapso",
+      "fim do mundo",
+      "catástrofe",
+      "cenário catastrófico",
+      "apocalipse",
+      "caos"
+    ],
+    [
+      "energia solar",
+      "painel solar",
+      "fotovoltaico",
+      "bateria solar"
+    ],
+    [
+      "ansiedade",
+      "medo",
+      "estresse",
+      "pânico",
+      "desespero",
+      "saúde mental"
+    ]
   ]
 }

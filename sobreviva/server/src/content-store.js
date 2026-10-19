@@ -5,14 +5,16 @@
 //   drafts/<id>.json          versão de trabalho em edição/revisão
 //   history/<id>/v<N>.json    versões publicadas anteriores
 //   media/                    repositório de mídia + media.json (créditos e licenças)
-//   categories.json sources.json synonyms.json packages.json numbers.json emergencies.json release.json
+//   categories.json sources.json synonyms.json packages.json numbers.json emergencies.json scenarios.json
+//   documents.json (documentos de consulta, ex.: PDFs de domínio público) links.json (links externos) release.json
 
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
 const ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const MEDIA_RE = /^[a-z0-9][a-z0-9-]*\.(svg|webp|avif|png|jpg|jpeg)$/;
+export const MAX_PDF_BYTES = 15 * 1024 * 1024;
+const MEDIA_RE = /^[a-z0-9][a-z0-9-]*\.(svg|webp|avif|png|jpg|jpeg|pdf)$/;
 
 export class ContentStore {
   constructor(root) {
@@ -51,11 +53,19 @@ export class ContentStore {
   packages() { return this.readJson('packages.json'); }
   numbers() { return this.readJson('numbers.json'); }
   emergencies() { return this.readJson('emergencies.json'); }
+  scenarios() { return this.readJson('scenarios.json', []); }
+  documents() { return this.readJson('documents.json', []); }
+  links() { return this.readJson('links.json', []); }
   release() { return this.readJson('release.json'); }
   mediaMeta() { return this.readJson('media.json', {}); }
 
   saveSources(list) { this.writeJson('sources.json', list); }
   saveEmergencies(list) { this.writeJson('emergencies.json', list); }
+  saveScenarios(list) { this.writeJson('scenarios.json', list); }
+  saveReferences({ documents, links }) {
+    this.writeJson('documents.json', documents);
+    this.writeJson('links.json', links);
+  }
   saveRelease(r) { this.writeJson('release.json', r); }
 
   listDir(rel) {
@@ -146,8 +156,13 @@ export class ContentStore {
     if (!meta || !meta.credit || !meta.license) {
       throw Object.assign(new Error('crédito e licença são obrigatórios para qualquer imagem'), { status: 400 });
     }
-    if (buffer.length > 2 * 1024 * 1024) throw Object.assign(new Error('arquivo maior que 2 MB'), { status: 400 });
-    if (file.endsWith('.svg')) {
+    const limit = file.endsWith('.pdf') ? MAX_PDF_BYTES : 2 * 1024 * 1024;
+    if (buffer.length > limit) throw Object.assign(new Error(`arquivo maior que ${limit / 1024 / 1024} MB`), { status: 400 });
+    if (file.endsWith('.pdf')) {
+      if (buffer.subarray(0, 5).toString('latin1') !== '%PDF-') {
+        throw Object.assign(new Error('conteúdo do arquivo não é um PDF'), { status: 400 });
+      }
+    } else if (file.endsWith('.svg')) {
       const text = buffer.toString('utf8');
       if (!text.includes('<svg') || /<script|\son[a-z]+\s*=|javascript:/i.test(text)) {
         throw Object.assign(new Error('SVG inválido ou com conteúdo ativo'), { status: 400 });

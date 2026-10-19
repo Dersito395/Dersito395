@@ -1,0 +1,101 @@
+{
+  "id": "cen-colapso-servicos",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Colapso prolongado de serviços: semanas sem luz, água e comunicação",
+  "summary": "Como organizar a casa para funcionar por semanas sem energia, água encanada, internet e comércio regular.",
+  "category": "cenarios",
+  "subcategory": "colapso-servicos",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Preparação gradual; rotina diária durante a crise",
+  "materials": [
+    "Reserva de água e alimentos",
+    "Rádio a pilha ou à manivela",
+    "Lanternas, pilhas e/ou kit solar pequeno",
+    "Fogareiro e combustível (uso ao ar livre)",
+    "Dinheiro em espécie",
+    "Banheiro de emergência",
+    "Roupas e cobertores"
+  ],
+  "objective": "Manter saúde, segurança e rotina da família quando os sistemas básicos param.",
+  "steps": [
+    {
+      "text": "Água: reserva para beber e cozinhar, meios de tratar e coletar água nova, e prioridade clara de uso."
+    },
+    {
+      "text": "Alimentação: estoque que dispense geladeira e cozimento longo; consuma primeiro os perecíveis."
+    },
+    {
+      "text": "Saneamento: banheiro de emergência com balde, sacos e serragem; lixo bem fechado e afastado da casa."
+    },
+    {
+      "text": "Energia e luz: lanternas e pilhas; um kit solar pequeno pode carregar celulares, rádio e iluminação."
+    },
+    {
+      "text": "Calor e frio: roupas em camadas e cobertores; nunca aqueça a casa com braseiro, fogareiro ou gerador em ambiente fechado."
+    },
+    {
+      "text": "Informação: rádio para ouvir as autoridades; combine horários fixos para economizar pilhas."
+    },
+    {
+      "text": "Dinheiro: pagamentos eletrônicos podem parar; tenha notas pequenas."
+    },
+    {
+      "text": "Rotina: horários para dormir, comer, trabalhar e cuidar uns dos outros reduzem o estresse."
+    },
+    {
+      "text": "Comunidade: organize com vizinhos de confiança a troca de informações, recursos e cuidados com idosos e doentes."
+    }
+  ],
+  "cautions": [
+    "Monóxido de carbono é a principal causa de mortes evitáveis em apagões prolongados.",
+    "Pessoas que dependem de aparelhos elétricos de saúde precisam de plano específico com antecedência."
+  ],
+  "alternatives": [
+    "Pontos de apoio e abrigos públicos montados pela Defesa Civil."
+  ],
+  "tags": [
+    "colapso",
+    "apagão prolongado",
+    "sem serviços",
+    "crise prolongada",
+    "autossuficiência"
+  ],
+  "keywords": [
+    "semanas sem luz",
+    "sem água e sem luz",
+    "colapso da sociedade",
+    "cenário catastrófico"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Preparação para viver em casa por pelo menos uma semana sem serviços: água, alimento, calor, informação."
+    },
+    {
+      "ref": "ready-apagao",
+      "note": "Apagões prolongados e uso seguro de geradores."
+    },
+    {
+      "ref": "cdc-co",
+      "note": "Prevenção de intoxicação por monóxido de carbono."
+    }
+  ],
+  "related": [
+    "agua-reserva-longo-prazo",
+    "alim-despensa-longo-prazo",
+    "auto-saneamento-emergencia",
+    "auto-energia-solar-basica",
+    "com-radio-emergencia",
+    "seg-comunidade"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

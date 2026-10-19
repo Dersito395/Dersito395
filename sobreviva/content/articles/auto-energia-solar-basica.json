@@ -1,0 +1,79 @@
+{
+  "id": "auto-energia-solar-basica",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Energia solar básica para emergências",
+  "summary": "Como funciona um pequeno sistema solar isolado (painel, controlador, bateria) e como dimensionar para luz, rádio e celulares.",
+  "category": "autossuficiencia",
+  "subcategory": "energia-solar",
+  "difficulty": "avancada",
+  "environments": [
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Instalação de um kit pequeno em algumas horas",
+  "materials": [
+    "Painel fotovoltaico",
+    "Controlador de carga",
+    "Bateria adequada para uso solar",
+    "Inversor (só se precisar de tomada 127/220 V)",
+    "Cabos, fusíveis e disjuntor"
+  ],
+  "objective": "Manter iluminação, comunicação e pequenos aparelhos funcionando sem a rede elétrica.",
+  "steps": [
+    {
+      "text": "Liste o que precisa alimentar e o consumo diário: potência (W) × horas de uso = watt-hora por dia (Wh/dia)."
+    },
+    {
+      "text": "Priorize cargas pequenas: lâmpadas LED, rádio, carregadores de celular. Geladeiras e chuveiros exigem sistemas muito maiores."
+    },
+    {
+      "text": "O painel gera energia, o controlador de carga protege a bateria, a bateria guarda a energia para a noite e o inversor converte para tomada comum."
+    },
+    {
+      "text": "Dimensione a bateria para pelo menos o consumo de um dia, lembrando que não se deve descarregá-la totalmente."
+    },
+    {
+      "text": "Instale o painel voltado para o norte (no Brasil), sem sombra, com inclinação próxima à latitude local."
+    },
+    {
+      "text": "Use fusíveis e disjuntor entre bateria e controlador, cabos com bitola adequada e respeite a polaridade."
+    }
+  ],
+  "cautions": [
+    "Baterias de chumbo-ácido liberam gás inflamável ao carregar: mantenha em local ventilado, longe de chamas.",
+    "Nunca conecte um sistema isolado à rede elétrica da casa sem projeto e dispositivo de transferência feitos por profissional.",
+    "Sistemas acima de pequenos kits devem ser projetados por eletricista ou engenheiro habilitado."
+  ],
+  "alternatives": [
+    "Kits solares portáteis prontos (lanternas e carregadores solares).",
+    "Rádio e lanterna à manivela."
+  ],
+  "tags": [
+    "energia solar",
+    "painel solar",
+    "bateria",
+    "fotovoltaico",
+    "off-grid"
+  ],
+  "keywords": [
+    "energia sem rede elétrica",
+    "montar energia solar",
+    "carregar celular sem luz"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "cresesb-fotovoltaico",
+      "note": "Componentes e dimensionamento de sistemas fotovoltaicos isolados; orientação do painel."
+    }
+  ],
+  "related": [
+    "cen-colapso-servicos",
+    "urb-apagao",
+    "com-radio-emergencia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

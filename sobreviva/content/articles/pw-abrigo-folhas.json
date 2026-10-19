@@ -1,0 +1,89 @@
+{
+  "id": "pw-abrigo-folhas",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Abrigo de folhas e galhos (sem equipamento)",
+  "summary": "Como construir um abrigo isolante só com galhos e folhas secas quando não há lona, barraca ou saco de dormir.",
+  "category": "abrigos",
+  "subcategory": "improvisados",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "rural",
+    "montanha"
+  ],
+  "time_estimate": "2 a 4 horas (a coleta de folhas é a parte mais demorada)",
+  "materials": [
+    "Um galho longo e forte (cumeeira)",
+    "Muitos galhos finos (costelas)",
+    "Galharia fina para trama",
+    "Grande quantidade de folhas secas, capim seco ou palha"
+  ],
+  "objective": "Manter-se aquecido à noite usando o isolamento das folhas, como um \"ninho\".",
+  "steps": [
+    {
+      "text": "Escolha um local seguro e seco (veja escolha do local do abrigo) e comece cedo: o trabalho é maior do que parece."
+    },
+    {
+      "text": "Encontre uma cumeeira: um galho forte, um pouco mais comprido que sua altura. Apoie uma ponta numa forquilha, tronco ou pedra à altura da cintura e a outra no chão. Verifique se o apoio está firme."
+    },
+    {
+      "text": "O abrigo é pequeno de propósito: deitado de costas, deve sobrar pouco espaço acima dos pés e do peito. Quanto menor, mais quente."
+    },
+    {
+      "text": "Encoste galhos dos dois lados da cumeeira formando um \"A\". Eles não devem passar muito do topo, para a água não escorrer para dentro."
+    },
+    {
+      "text": "Cubra a estrutura com galharia fina em trama, para segurar as folhas."
+    },
+    {
+      "text": "Junte folhas secas em grande quantidade e cubra tudo, compactando de cima para baixo no sentido dos galhos, até formar uma camada muito espessa (bem mais grossa que um braço em noites frias)."
+    },
+    {
+      "text": "Coloque galhos ou cascas soltas por cima para o vento não levar as folhas."
+    },
+    {
+      "text": "Encha o interior com folhas secas e entre devagar, compactando com o corpo. Feche a entrada com um monte de folhas puxado para dentro."
+    }
+  ],
+  "cautions": [
+    "Verifique se não há formigueiros, cupins ou insetos nas folhas e no galho principal.",
+    "Treine em dia ameno e com um saco de dormir de reserva antes de depender desse abrigo no frio.",
+    "Folhas úmidas isolam muito menos: priorize material seco.",
+    "Nunca acenda fogo dentro ou junto da entrada: o abrigo é muito inflamável."
+  ],
+  "alternatives": [
+    "Abrigo com lona e corda, muito mais rápido quando há equipamento."
+  ],
+  "tags": [
+    "abrigo",
+    "abrigo de folhas",
+    "abrigo primitivo",
+    "sem equipamento",
+    "isolamento"
+  ],
+  "keywords": [
+    "abrigo sem lona",
+    "dormir no mato sem barraca",
+    "abrigo natural"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "pewtherer-2010",
+      "note": "Técnica do abrigo de detritos (estrutura em A, camada espessa de folhas, porta de folhas) – ideias reescritas."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Princípios de isolamento e abrigos improvisados."
+    }
+  ],
+  "related": [
+    "abrigo-lona-improvisado",
+    "abrigo-terreno-isolamento",
+    "ps-hipotermia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

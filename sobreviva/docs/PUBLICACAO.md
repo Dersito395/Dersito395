@@ -14,6 +14,10 @@ cd server && npm run build:release   # exclui saúde sem revisão aprovada e atu
 
 ## Android
 
+> APKs de teste (GitHub Actions) são assinados com `android/app/chave-teste-apenas.p12`, uma chave **pública e só
+> para testes**, mantida fixa para que cada APK de teste instale por cima do anterior. Builds de loja exigem a sua
+> chave privada em `key.properties` (abaixo); quando ela existe, a chave de teste não é usada.
+
 1. Gerar a chave de assinatura (uma vez; guarde-a em local seguro — perder a chave impede atualizações):
    ```bash
    keytool -genkey -v -keystore ~/sobreviva-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
@@ -71,4 +75,6 @@ publicado em uma CDN estática.
   (exigência comum das lojas para apps de informação médica).
 - Não prometer resultados ("salva vidas") nem sugerir que o app substitui o 192/193/190.
 - O app usa a rede apenas para baixar conteúdo; declare isso na revisão.
+- O leitor de PDF (pdfrx/PDFium) adiciona bibliotecas nativas por arquitetura: prefira `--split-per-abi` ou o
+  `.aab` para manter o download pequeno.
 - Permissões Android: apenas `INTERNET` e `ACCESS_NETWORK_STATE`. iOS: nenhuma permissão sensível.

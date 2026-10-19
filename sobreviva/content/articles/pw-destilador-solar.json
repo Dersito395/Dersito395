@@ -1,0 +1,85 @@
+{
+  "id": "pw-destilador-solar",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Destilador solar: como montar e quando não vale a pena",
+  "summary": "Montagem do destilador solar no solo e por que, na prática, ele produz pouca água.",
+  "category": "agua",
+  "subcategory": "captacao",
+  "difficulty": "intermediaria",
+  "environments": [
+    "mata",
+    "rural",
+    "litoral"
+  ],
+  "time_estimate": "1 a 2 horas para montar; produção ao longo do dia",
+  "materials": [
+    "Plástico transparente (cerca de 2 x 2 m)",
+    "Recipiente coletor",
+    "Pedra pequena",
+    "Pá ou ferramenta para cavar",
+    "Mangueira fina (opcional)"
+  ],
+  "objective": "Obter alguma água por evaporação e condensação quando não há outra fonte.",
+  "steps": [
+    {
+      "text": "Saiba antes: o destilador solar rende pouco, em geral menos água do que o suor gasto para cavá-lo em locais quentes. Use-o como complemento, não como solução."
+    },
+    {
+      "text": "Cave um buraco de cerca de 1 m de largura e 60 cm de profundidade em local ensolarado e com solo úmido."
+    },
+    {
+      "text": "Coloque o recipiente no centro do fundo. Plantas verdes não tóxicas ou água salobra ao redor aumentam a evaporação."
+    },
+    {
+      "text": "Cubra o buraco com o plástico, prendendo as bordas com terra para vedar."
+    },
+    {
+      "text": "Coloque uma pedra pequena no centro do plástico, logo acima do recipiente, formando um cone para o vapor condensado escorrer e pingar dentro."
+    },
+    {
+      "text": "Se tiver mangueira, deixe uma ponta no recipiente e a outra para fora, para beber sem desmontar."
+    },
+    {
+      "text": "Cave nas horas mais frescas e descanse à sombra para não perder mais água do que vai ganhar."
+    }
+  ],
+  "cautions": [
+    "Não gaste energia e suor com o destilador se houver alternativas: coleta de chuva e de orvalho costumam render mais.",
+    "Não use plantas desconhecidas que possam ser tóxicas, nem urina ou água com combustível (o vapor pode arrastar contaminantes voláteis)."
+  ],
+  "alternatives": [
+    "Coleta de chuva com lona.",
+    "Coleta de orvalho com pano.",
+    "Retornar à última fonte de água conhecida."
+  ],
+  "tags": [
+    "destilador solar",
+    "água",
+    "condensação",
+    "captação"
+  ],
+  "keywords": [
+    "destilador solar",
+    "tirar água do solo"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "pewtherer-2010",
+      "note": "Montagem e avaliação crítica do rendimento do destilador solar – ideias reescritas."
+    },
+    {
+      "ref": "army-atp-3-50-21",
+      "note": "Captação de água em sobrevivência."
+    }
+  ],
+  "related": [
+    "agua-encontrar-captar",
+    "agua-tornar-potavel",
+    "agua-captacao-chuva"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

@@ -111,3 +111,36 @@ export function validateEmergency(e) {
   if (!e.call || !Array.isArray(e.call.numbers) || e.call.numbers.length === 0) errors.push(`${e.id}: números de socorro obrigatórios`);
   return errors;
 }
+
+export function validateScenario(sc) {
+  const errors = [];
+  for (const k of ['id', 'title', 'summary']) if (!isNonEmptyString(sc[k])) errors.push(`cenário: ${k} obrigatório`);
+  if (!Array.isArray(sc.phases) || sc.phases.length === 0) errors.push(`${sc.id}: pelo menos uma fase é obrigatória`);
+  for (const ph of sc.phases || []) {
+    if (!isNonEmptyString(ph.title) || !Array.isArray(ph.items) || ph.items.length === 0) errors.push(`${sc.id}: fase sem título ou sem ações`);
+  }
+  return errors;
+}
+
+export function validateDocument(d, ctx = {}) {
+  const errors = [];
+  for (const k of ['id', 'title', 'summary', 'file', 'license', 'source']) if (!isNonEmptyString(d[k])) errors.push(`documento ${d.id || '?'}: ${k} obrigatório`);
+  if (isNonEmptyString(d.file) && !d.file.endsWith('.pdf')) errors.push(`documento ${d.id}: apenas PDF é suportado`);
+  if (ctx.media && isNonEmptyString(d.file) && !ctx.media.has(d.file)) errors.push(`documento ${d.id}: arquivo inexistente ${d.file}`);
+  if (ctx.sources && isNonEmptyString(d.source) && !ctx.sources.has(d.source)) errors.push(`documento ${d.id}: fonte desconhecida ${d.source}`);
+  for (const h of d.highlights || []) {
+    if (!isNonEmptyString(h.title) || !Number.isInteger(h.page) || h.page < 1 || (d.pages && h.page > d.pages)) {
+      errors.push(`documento ${d.id}: destaque com título ou página inválidos`);
+    }
+  }
+  return errors;
+}
+
+export function validateLink(l) {
+  const errors = [];
+  for (const k of ['id', 'title', 'url', 'description']) if (!isNonEmptyString(l[k])) errors.push(`link ${l.id || '?'}: ${k} obrigatório`);
+  if (isNonEmptyString(l.url) && !/^https:\/\//.test(l.url)) errors.push(`link ${l.id}: use https://`);
+  if (!['oficial', 'comunidade'].includes(l.kind)) errors.push(`link ${l.id}: kind deve ser oficial ou comunidade`);
+  if (l.kind === 'comunidade' && !isNonEmptyString(l.note)) errors.push(`link ${l.id}: links de comunidade exigem nota de aviso`);
+  return errors;
+}

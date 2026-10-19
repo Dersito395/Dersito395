@@ -1,0 +1,88 @@
+{
+  "id": "mont-lesoes-frio",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Congelamento, pé de imersão e cegueira da neve",
+  "summary": "Lesões por frio além da hipotermia: como prevenir, reconhecer e dar os primeiros cuidados.",
+  "category": "primeiros-socorros",
+  "subcategory": "hipotermia",
+  "difficulty": "intermediaria",
+  "environments": [
+    "montanha",
+    "qualquer"
+  ],
+  "time_estimate": "Prevenção contínua; primeiros cuidados em minutos",
+  "materials": [
+    "Meias secas de reserva",
+    "Luvas e gorro",
+    "Óculos de sol com proteção UV",
+    "Saco plástico ou bolsa estanque para roupas secas"
+  ],
+  "objective": "Evitar lesões que podem levar à perda de dedos e à incapacidade de caminhar.",
+  "steps": [
+    {
+      "text": "Previna: roupas em camadas, mãos, pés, orelhas e rosto protegidos, meias sempre secas e nada apertado que corte a circulação."
+    },
+    {
+      "text": "Congelamento: pele dormente, branca ou acinzentada, endurecida. Leve a pessoa para local abrigado e aqueça a área com calor do próprio corpo (mão na axila, por exemplo)."
+    },
+    {
+      "text": "Reaqueça uma área congelada com água morna (em torno de 37 a 39 °C) apenas se não houver risco de ela congelar de novo; congelar, descongelar e congelar outra vez piora muito a lesão."
+    },
+    {
+      "text": "Não esfregue a pele, não use neve, nem aproxime de fogo ou aquecedor (a pele dormente queima sem a pessoa sentir)."
+    },
+    {
+      "text": "Não estoure bolhas; cubra com curativo seco e folgado, separando os dedos com gaze."
+    },
+    {
+      "text": "Pé de imersão (pé de trincheira): pés frios, inchados, pálidos ou avermelhados após horas molhados. Seque, aqueça devagar, eleve e mantenha os pés secos; troque as meias pelo menos uma vez por dia em ambiente úmido."
+    },
+    {
+      "text": "Cegueira da neve: dor, sensação de areia nos olhos e lacrimejamento após exposição ao sol refletido na neve. Previna com óculos escuros com proteção lateral; trate com repouso em local escuro e compressas frias."
+    },
+    {
+      "text": "Procure atendimento médico para qualquer congelamento: o tratamento hospitalar precoce pode salvar tecidos."
+    }
+  ],
+  "cautions": [
+    "Hipotermia tem prioridade: aqueça o corpo inteiro antes de se preocupar com dedos.",
+    "Não deixe uma pessoa com pés descongelados caminhar sobre eles, se puder evitar.",
+    "Álcool e cigarro pioram a circulação e o risco de lesões por frio."
+  ],
+  "alternatives": [
+    "Evacuação precoce para local aquecido."
+  ],
+  "tags": [
+    "congelamento",
+    "frio",
+    "pé de trincheira",
+    "pé de imersão",
+    "cegueira da neve",
+    "neve"
+  ],
+  "keywords": [
+    "dedos congelados",
+    "pé molhado frio",
+    "olhos ardendo na neve"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "wms-congelamento",
+      "note": "Prevenção, reaquecimento em água morna, risco de recongelamento e cuidados com bolhas."
+    },
+    {
+      "ref": "army-fm-3-97-6",
+      "note": "Lesões por frio mais comuns em montanha: congelamento, pé de imersão e cegueira da neve."
+    }
+  ],
+  "related": [
+    "ps-hipotermia",
+    "mont-doencas-altitude",
+    "abrigo-terreno-isolamento"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

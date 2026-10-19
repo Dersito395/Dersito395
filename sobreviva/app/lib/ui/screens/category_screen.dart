@@ -5,9 +5,11 @@ import '../../core/theme.dart';
 import '../../data/models.dart';
 import '../../state/app_state.dart';
 import '../widgets/common.dart';
+import 'reference_screens.dart';
+import 'scenario_screen.dart';
 import 'search_screen.dart';
 
-/// Aba "Explorar": todas as categorias da biblioteca.
+/// Aba "Explorar": biblioteca (cenários e categorias) e consultas (documentos e links).
 class ExploreScreen extends StatelessWidget {
   const ExploreScreen({super.key});
 
@@ -16,43 +18,70 @@ class ExploreScreen extends StatelessWidget {
     final state = context.watch<AppState>();
     final theme = Theme.of(context);
     final categories = state.library.categories();
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Explorar'),
-        actions: [
-          IconButton(
-            tooltip: 'Pesquisar',
-            icon: const Icon(Icons.search),
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SearchScreen())),
-          ),
-        ],
-      ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-        children: [
-          Text('${state.library.articleCount} artigos em ${categories.length} categorias, disponíveis sem internet.', style: theme.textTheme.bodyMedium),
-          const SizedBox(height: 12),
-          for (final c in categories)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Card(
-                child: ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  leading: Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(color: theme.colorScheme.primary, borderRadius: BorderRadius.circular(12)),
-                    child: Icon(iconFor(c.icon), color: theme.colorScheme.onPrimary),
-                  ),
-                  title: Text(c.name, style: theme.textTheme.titleMedium),
-                  subtitle: Text('${c.description}\n${c.articleCount} artigo(s)', maxLines: 3),
-                  isThreeLine: true,
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => CategoryScreen(categoryId: c.id))),
-                ),
-              ),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Explorar'),
+          actions: [
+            IconButton(
+              tooltip: 'Pesquisar',
+              icon: const Icon(Icons.search),
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SearchScreen())),
             ),
-        ],
+          ],
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: 'Biblioteca'),
+              Tab(text: 'Consultas'),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            ListView(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+              children: [
+                Text('${state.library.articleCount} artigos em ${categories.length} categorias, disponíveis sem internet.', style: theme.textTheme.bodyMedium),
+                const SizedBox(height: 12),
+                Text('Roteiros por cenário de crise', style: theme.textTheme.titleMedium),
+                const SizedBox(height: 8),
+                for (final sc in state.library.scenarios())
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: SizedBox(
+                      height: 108 * MediaQuery.textScalerOf(context).scale(1).clamp(1.0, 1.6),
+                      child: ScenarioCard(scenario: sc),
+                    ),
+                  ),
+                const SizedBox(height: 12),
+                Text('Categorias', style: theme.textTheme.titleMedium),
+                const SizedBox(height: 8),
+                for (final c in categories)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        leading: Container(
+                          width: 48,
+                          height: 48,
+                          decoration: BoxDecoration(color: theme.colorScheme.primary, borderRadius: BorderRadius.circular(12)),
+                          child: Icon(iconFor(c.icon), color: theme.colorScheme.onPrimary),
+                        ),
+                        title: Text(c.name, style: theme.textTheme.titleMedium),
+                        subtitle: Text('${c.description}\n${c.articleCount} artigo(s)', maxLines: 3),
+                        isThreeLine: true,
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => CategoryScreen(categoryId: c.id))),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+            const ReferencesView(),
+          ],
+        ),
       ),
     );
   }

@@ -21,7 +21,8 @@ void main() {
     await pumpApp(tester);
     expect(find.text('O que você precisa saber?'), findsOneWidget);
     expect(find.text('Offline • biblioteca disponível'), findsOneWidget);
-    expect(find.text('O que fazer agora?'), findsOneWidget);
+    expect(find.text('Cenários de crise'), findsWidgets);
+    expect(find.text('Escassez de alimentos'), findsOneWidget);
     for (final label in ['Início', 'Explorar', 'Emergências', 'Salvos', 'Ajustes']) {
       expect(find.text(label), findsWidgets);
     }
@@ -83,5 +84,38 @@ void main() {
     await tester.pumpAndSettle();
     expect(state.outdoorMode, isTrue);
     expect(state.user.pref('outdoor'), '1');
+  });
+
+  testWidgets('cenário abre roteiro por fases e gera plano', (tester) async {
+    final state = await pumpApp(tester);
+    await tester.tap(find.text('Escassez de alimentos'));
+    await tester.pumpAndSettle();
+    expect(find.text('Preparação'), findsOneWidget);
+    await tester.tap(find.text('Criar meu plano'));
+    await tester.pumpAndSettle();
+    final plan = state.user.checklists().single;
+    expect(plan.title, contains('Escassez de alimentos'));
+    expect(plan.total, greaterThan(10));
+  });
+
+  testWidgets('aba Consultas lista o documento e abre a ficha com páginas', (tester) async {
+    await pumpApp(tester);
+    await tester.tap(find.text('Explorar').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Consultas'));
+    await tester.pumpAndSettle();
+    expect(find.text('FM 3-97.6 – Mountain Operations'), findsOneWidget);
+    await tester.drag(find.byType(ListView).last, const Offset(0, -2000));
+    await tester.pumpAndSettle();
+    expect(find.text('Sobrevivencialismo.com'), findsOneWidget);
+    expect(find.textContaining('não revisado'), findsOneWidget);
+    await tester.drag(find.byType(ListView).last, const Offset(0, 3000));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('FM 3-97.6 – Mountain Operations'));
+    await tester.pumpAndSettle();
+    expect(find.text('Abrir documento'), findsOneWidget);
+    expect(find.textContaining('ATP 3-90.97'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('Onde está cada assunto'), 300, scrollable: find.byType(Scrollable).last);
+    expect(find.text('O ambiente de montanha'), findsOneWidget);
   });
 }
