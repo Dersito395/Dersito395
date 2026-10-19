@@ -1,0 +1,83 @@
+{
+  "id": "alim-pragas-umidade",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Proteger o estoque de pragas, umidade e roedores",
+  "summary": "Prevenção e controle de carunchos, traças, mofo e roedores na despensa.",
+  "category": "alimentacao",
+  "subcategory": "armazenamento",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "1 a 2 horas por mês",
+  "materials": [
+    "Recipientes herméticos",
+    "Freezer (se disponível)",
+    "Estrados ou prateleiras",
+    "Lanterna para inspeção"
+  ],
+  "objective": "Evitar perder meses de alimento para insetos, fungos e ratos.",
+  "steps": [
+    {
+      "text": "Inspecione os alimentos ao comprar: grãos com furos, pó fino ou teias já estão infestados."
+    },
+    {
+      "text": "Congele grãos e farinhas por 3 a 4 dias antes de guardar, para matar ovos e larvas."
+    },
+    {
+      "text": "Guarde tudo em recipientes rígidos e bem fechados: carunchos e traças atravessam sacos plásticos finos e papel."
+    },
+    {
+      "text": "Mantenha os recipientes afastados das paredes e do chão, com espaço para inspeção e limpeza."
+    },
+    {
+      "text": "Controle a umidade: local ventilado, sem goteiras; sinais de mofo exigem descarte do alimento afetado."
+    },
+    {
+      "text": "Contra roedores: elimine frestas, guarde lixo tampado, não deixe restos de comida expostos e mantenha o entorno limpo."
+    },
+    {
+      "text": "Separe imediatamente um recipiente infestado para não contaminar os demais."
+    }
+  ],
+  "cautions": [
+    "Alimentos com mofo visível devem ser descartados: algumas toxinas de fungos não são destruídas pelo cozimento.",
+    "Venenos para ratos são perigosos para crianças e animais domésticos; siga rigorosamente o rótulo ou prefira barreiras físicas."
+  ],
+  "alternatives": [
+    "Silos e tambores metálicos fechados para grandes quantidades de grãos em área rural."
+  ],
+  "tags": [
+    "pragas",
+    "caruncho",
+    "gorgulho",
+    "roedores",
+    "mofo",
+    "armazenamento"
+  ],
+  "keywords": [
+    "bicho no arroz",
+    "caruncho no feijão",
+    "rato na despensa"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "usu-armazenamento",
+      "note": "Congelamento para eliminar insetos e embalagens herméticas."
+    },
+    {
+      "ref": "byu-oxigenio",
+      "note": "Limites dos absorvedores de oxigênio para desinfestação de grãos."
+    }
+  ],
+  "related": [
+    "alim-despensa-longo-prazo",
+    "alimentacao-estoque-emergencia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

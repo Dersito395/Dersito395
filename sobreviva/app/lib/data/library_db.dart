@@ -37,7 +37,7 @@ class LibraryDatabase {
   factory LibraryDatabase.inMemory() => LibraryDatabase._(sqlite3.openInMemory());
 
   final Database db;
-  static const int schemaVersion = 1;
+  static const int schemaVersion = 2;
 
   void close() => db.close();
 
@@ -84,6 +84,10 @@ class LibraryDatabase {
           CREATE VIRTUAL TABLE article_vocab USING fts5vocab(article_fts, 'row');
         ''');
       }
+      if (current < 2) {
+        // v2: roteiros de cenários de crise prolongada.
+        db.execute('CREATE TABLE scenario (id TEXT PRIMARY KEY, title TEXT NOT NULL, icon TEXT, position INTEGER, data TEXT NOT NULL)');
+      }
       db.userVersion = schemaVersion;
       db.execute('COMMIT');
     } catch (_) {
@@ -122,6 +126,7 @@ class LibraryDatabase {
       if (pkg['synonyms'] is List) _importSynonyms((pkg['synonyms'] as List).cast<List<dynamic>>());
       if (pkg['numbers'] is List) _importNumbers((pkg['numbers'] as List).cast<Map<String, dynamic>>());
       if (pkg['emergencies'] is List) _importEmergencies((pkg['emergencies'] as List).cast<Map<String, dynamic>>());
+      if (pkg['scenarios'] is List) _importScenarios((pkg['scenarios'] as List).cast<Map<String, dynamic>>());
       for (final m in (pkg['media'] as List? ?? const []).cast<Map<String, dynamic>>()) {
         db.execute(
           'INSERT INTO image (file, mime, sha256, size, credit, license, location) VALUES (?,?,?,?,?,?,?) '
@@ -230,6 +235,20 @@ class LibraryDatabase {
         n['purpose'],
         n['priority'] ?? 9,
         n['sms'] == true ? 1 : 0,
+      ]);
+    }
+  }
+
+  void _importScenarios(List<Map<String, dynamic>> list) {
+    db.execute('DELETE FROM scenario');
+    for (var i = 0; i < list.length; i++) {
+      final sc = list[i];
+      db.execute('INSERT INTO scenario (id, title, icon, position, data) VALUES (?,?,?,?,?)', [
+        sc['id'],
+        sc['title'],
+        sc['icon'],
+        sc['order'] ?? i,
+        jsonEncode(sc),
       ]);
     }
   }
@@ -541,6 +560,13 @@ class LibraryDatabase {
     if (ids.isEmpty) return const [];
     final placeholders = List.filled(ids.length, '?').join(',');
     return db.select('SELECT * FROM source WHERE id IN ($placeholders)', ids).map(_sourceFromRow).toList();
+  }
+
+  List<Scenario> scenarios() => db.select('SELECT data FROM scenario ORDER BY position').map((r) => Scenario.decode(r['data'] as String)).toList();
+
+  Scenario? scenario(String id) {
+    final r = db.select('SELECT data FROM scenario WHERE id = ?', [id]);
+    return r.isEmpty ? null : Scenario.decode(r.first['data'] as String);
   }
 
   List<EmergencyGuide> emergencies() =>

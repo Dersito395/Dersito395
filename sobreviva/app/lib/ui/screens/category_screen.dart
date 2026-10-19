@@ -5,6 +5,7 @@ import '../../core/theme.dart';
 import '../../data/models.dart';
 import '../../state/app_state.dart';
 import '../widgets/common.dart';
+import 'scenario_screen.dart';
 import 'search_screen.dart';
 
 /// Aba "Explorar": todas as categorias da biblioteca.
@@ -32,6 +33,19 @@ class ExploreScreen extends StatelessWidget {
         children: [
           Text('${state.library.articleCount} artigos em ${categories.length} categorias, disponíveis sem internet.', style: theme.textTheme.bodyMedium),
           const SizedBox(height: 12),
+          Text('Roteiros por cenário de crise', style: theme.textTheme.titleMedium),
+          const SizedBox(height: 8),
+          for (final sc in state.library.scenarios())
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: SizedBox(
+                height: 108 * MediaQuery.textScalerOf(context).scale(1).clamp(1.0, 1.6),
+                child: ScenarioCard(scenario: sc),
+              ),
+            ),
+          const SizedBox(height: 12),
+          Text('Categorias', style: theme.textTheme.titleMedium),
+          const SizedBox(height: 8),
           for (final c in categories)
             Padding(
               padding: const EdgeInsets.only(bottom: 8),

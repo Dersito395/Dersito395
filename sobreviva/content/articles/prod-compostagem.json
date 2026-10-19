@@ -1,0 +1,87 @@
+{
+  "id": "prod-compostagem",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Compostagem caseira",
+  "summary": "Transformar restos de cozinha e folhas em adubo para a horta, sem cheiro e sem bichos.",
+  "category": "producao",
+  "subcategory": "solo-compostagem",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "rural",
+    "urbano"
+  ],
+  "time_estimate": "Montagem em 1 hora; composto pronto em cerca de 2 a 4 meses",
+  "materials": [
+    "Caixa, balde furado ou espaço no quintal",
+    "Restos vegetais de cozinha (verdes)",
+    "Folhas secas, palha ou serragem (secos)",
+    "Pá ou garfo para revirar"
+  ],
+  "objective": "Produzir adubo de graça e reduzir o lixo orgânico.",
+  "steps": [
+    {
+      "text": "Monte camadas alternadas: uma de material seco (folhas, palha, serragem) e uma de restos verdes (cascas, borra de café, sobras de verduras). Use mais seco do que verde.",
+      "image": "compostagem.svg"
+    },
+    {
+      "text": "Sempre cubra os restos de comida com material seco: evita mau cheiro e moscas."
+    },
+    {
+      "text": "Mantenha a umidade de uma esponja espremida: se secar, molhe; se encharcar e cheirar mal, acrescente material seco."
+    },
+    {
+      "text": "Revire a pilha a cada 1 ou 2 semanas para entrar ar."
+    },
+    {
+      "text": "O composto está pronto quando estiver escuro, solto, com cheiro de terra e sem restos reconhecíveis."
+    },
+    {
+      "text": "Misture o composto à terra dos canteiros antes de plantar ou use como cobertura."
+    }
+  ],
+  "cautions": [
+    "Não coloque carne, ossos, laticínios, óleo, fezes de animais domésticos ou plantas doentes: atraem bichos e podem transmitir doenças.",
+    "Mantenha a composteira tampada ou bem coberta para evitar roedores."
+  ],
+  "alternatives": [
+    "Minhocário (vermicompostagem) para apartamentos."
+  ],
+  "tags": [
+    "compostagem",
+    "adubo",
+    "composto",
+    "solo",
+    "lixo orgânico"
+  ],
+  "keywords": [
+    "como fazer adubo",
+    "composteira caseira",
+    "adubo orgânico"
+  ],
+  "images": [
+    {
+      "file": "compostagem.svg",
+      "caption": "Camadas alternadas de material seco e verde; umidade de esponja espremida.",
+      "alt": "Composteira com camadas alternadas"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "embrapa-composteira",
+      "note": "Montagem de composteira caseira."
+    },
+    {
+      "ref": "embrapa-plantar-hortalicas",
+      "note": "Uso de composto na adubação."
+    }
+  ],
+  "related": [
+    "prod-horta-passo-a-passo",
+    "auto-horta-pequenos-espacos"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

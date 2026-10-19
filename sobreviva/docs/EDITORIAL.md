@@ -85,6 +85,15 @@ Regras:
 - "Gerar e publicar nova versão" incrementa `library_version`, valida todo o conteúdo e gera os pacotes. Em
   **modo estrito**, artigos de saúde sem revisão técnica aprovada ficam de fora.
 
+## Limites de conteúdo
+
+O SOBREVIVA trata segurança como **prevenção, discrição, proteção de recursos, organização comunitária e defesa
+dentro da lei**. Não publica instruções de fabricação de armas, explosivos, armadilhas para ferir pessoas ou
+técnicas de ataque: são crimes no Brasil (Estatuto do Desarmamento; Código Penal), colocam inocentes em risco e
+violam as políticas das lojas de aplicativos. Pesquisas como "como fazer uma arma" levam ao artigo
+*Defesa pessoal e a lei*. Caça de fauna silvestre é crime (Lei 9.605/1998); o manual orienta produção de alimentos
+e criação de pequenos animais como alternativas legais.
+
 ## Linha editorial
 
 - Frases curtas, voz ativa, instruções numeradas, uma ação por passo.

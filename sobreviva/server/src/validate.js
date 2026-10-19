@@ -111,3 +111,13 @@ export function validateEmergency(e) {
   if (!e.call || !Array.isArray(e.call.numbers) || e.call.numbers.length === 0) errors.push(`${e.id}: números de socorro obrigatórios`);
   return errors;
 }
+
+export function validateScenario(sc) {
+  const errors = [];
+  for (const k of ['id', 'title', 'summary']) if (!isNonEmptyString(sc[k])) errors.push(`cenário: ${k} obrigatório`);
+  if (!Array.isArray(sc.phases) || sc.phases.length === 0) errors.push(`${sc.id}: pelo menos uma fase é obrigatória`);
+  for (const ph of sc.phases || []) {
+    if (!isNonEmptyString(ph.title) || !Array.isArray(ph.items) || ph.items.length === 0) errors.push(`${sc.id}: fase sem título ou sem ações`);
+  }
+  return errors;
+}

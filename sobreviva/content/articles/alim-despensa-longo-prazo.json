@@ -1,0 +1,104 @@
+{
+  "id": "alim-despensa-longo-prazo",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Despensa de longo prazo (3 a 12 meses)",
+  "summary": "Como escolher, embalar, organizar e renovar alimentos secos e não perecíveis para meses de autonomia.",
+  "category": "alimentacao",
+  "subcategory": "longa-duracao",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Montagem gradual ao longo de semanas",
+  "materials": [
+    "Baldes próprios para alimentos com tampa vedada",
+    "Garrafas PET limpas e secas",
+    "Absorvedores de oxigênio (opcional, só para alimentos secos)",
+    "Etiquetas, caneta e caderno de inventário"
+  ],
+  "objective": "Garantir alimentação básica por meses com alimentos que a família já sabe preparar.",
+  "steps": [
+    {
+      "text": "Monte a base com alimentos secos e de longa duração que a família consome: arroz, feijão e outras leguminosas, milho e fubá, aveia, farinha de mandioca, macarrão, açúcar, sal, óleo, leite em pó, enlatados."
+    },
+    {
+      "text": "Equilibre: cereais + leguminosas fornecem energia e proteína; inclua fontes de vitaminas (enlatados de vegetais e frutas, frutas secas, e planeje produzir folhas e frutas)."
+    },
+    {
+      "text": "Adote o sistema \"primeiro que vence, primeiro que sai\": compre o novo, guarde atrás, consuma o mais antigo. Uma despensa que gira não estraga.",
+      "image": "despensa-rotacao.svg"
+    },
+    {
+      "text": "Reembale grãos em recipientes herméticos: baldes próprios para alimentos ou garrafas PET bem secas. Embalagens de papel e plástico fino não protegem contra umidade e insetos."
+    },
+    {
+      "text": "Absorvedores de oxigênio só devem ser usados com alimentos bem secos (umidade baixa, como grãos e leguminosas). Nunca com alimentos úmidos: o ambiente sem oxigênio favorece o botulismo."
+    },
+    {
+      "text": "Antes de guardar grãos, congele-os por 3 a 4 dias (freezer a cerca de −18 °C) para eliminar ovos e larvas de insetos."
+    },
+    {
+      "text": "Guarde em local fresco, seco e escuro, sobre estrados. Calor e umidade reduzem muito a vida útil."
+    },
+    {
+      "text": "Mantenha um inventário (o checklist do aplicativo serve) com quantidades e datas; revise a cada 3 meses."
+    },
+    {
+      "text": "Aumente aos poucos: primeiro 2 semanas, depois 1 mês, depois 3 meses. Compras graduais evitam desperdício e não chamam atenção."
+    }
+  ],
+  "cautions": [
+    "Óleos e alimentos integrais rançam mais rápido: gire com mais frequência.",
+    "Descarte latas estufadas, enferrujadas ou vazando.",
+    "Não existe quantidade universal: ajuste ao número de pessoas, idades, saúde e hábitos."
+  ],
+  "alternatives": [
+    "Estoques comunitários e compras coletivas com vizinhos.",
+    "Produção própria de alimentos para complementar."
+  ],
+  "tags": [
+    "despensa",
+    "estoque de alimentos",
+    "longo prazo",
+    "grãos",
+    "rotação"
+  ],
+  "keywords": [
+    "estocar comida por meses",
+    "como guardar arroz e feijão",
+    "estoque para crise"
+  ],
+  "images": [
+    {
+      "file": "despensa-rotacao.svg",
+      "caption": "Rotação: o mais novo entra atrás, o mais antigo sai pela frente.",
+      "alt": "Prateleira com setas de entrada atrás e saída à frente"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "usu-armazenamento",
+      "note": "Umidade baixa para uso de absorvedores; congelamento por 3–4 dias contra insetos; locais escuros e embalagens herméticas."
+    },
+    {
+      "ref": "byu-oxigenio",
+      "note": "Alimentos secos em garrafas PET com absorvedores mantêm baixo oxigênio por pelo menos 1 ano."
+    },
+    {
+      "ref": "ready-alimentos",
+      "note": "Escolha de alimentos e rotação."
+    }
+  ],
+  "related": [
+    "alim-pragas-umidade",
+    "alim-racionamento-nutricao",
+    "alimentacao-estoque-emergencia",
+    "seg-protecao-mantimentos"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

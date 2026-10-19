@@ -52,6 +52,13 @@ async function login(username, password) {
   return { status: 200, body, call, cookie };
 }
 
+test('cenários: leitura e validação ao salvar', async () => {
+  const ad = await login('editora', 'senha-editora-1');
+  const list = (await ad.call('GET', '/api/admin/scenarios')).body;
+  assert.ok(list.length >= 6);
+  assert.equal((await ad.call('PUT', '/api/admin/scenarios', list)).status, 403); // editor não edita catálogo
+});
+
 test('senhas com scrypt', () => {
   const h = hashPassword('uma-senha-longa');
   assert.ok(h.startsWith('scrypt$'));
@@ -157,12 +164,14 @@ test('publicação de versão gera manifesto novo (modo estrito exclui saúde n�
   // O usuário "admin" ficou bloqueado no teste de tentativas; cria outro administrador.
   new UserStore(path.join(dataDir, 'users.json')).upsert({ username: 'admin2', role: 'admin', name: 'Admin 2', password: 'senha-admin-456' });
   const a = await login('admin2', 'senha-admin-456');
+  const before = JSON.parse(fs.readFileSync(path.join(contentDir, 'release.json'), 'utf8')).library_version;
+  const next = before + 1;
   const r = await a.call('POST', '/api/admin/release', { notes: 'teste', strict: true });
   assert.equal(r.status, 200);
-  assert.equal(r.body.release.library_version, 2);
+  assert.equal(r.body.release.library_version, next);
   assert.ok(r.body.report.excluded.some((x) => x.startsWith('ps-rcp-adulto')));
   assert.ok(!r.body.report.excluded.some((x) => x.startsWith('ps-engasgo')), 'engasgo foi revisado e deve entrar');
   const manifest = await (await fetch(`${base}/api/v1/manifest.json`)).json();
-  assert.equal(manifest.library_version, 2);
-  assert.ok(manifest.packages.every((p) => p.url.endsWith('-v2.json')));
+  assert.equal(manifest.library_version, next);
+  assert.ok(manifest.packages.every((p) => p.url.endsWith(`-v${next}.json`)));
 });

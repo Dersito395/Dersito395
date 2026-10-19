@@ -1,0 +1,105 @@
+{
+  "id": "agua-reserva-longo-prazo",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Reserva de água para semanas ou meses",
+  "summary": "Como calcular, armazenar, renovar e proteger uma reserva de água para crises prolongadas.",
+  "category": "agua",
+  "subcategory": "armazenamento",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "1 dia para montar; revisão mensal",
+  "materials": [
+    "Bombonas ou tambores próprios para alimentos (com tampa)",
+    "Torneira ou bomba manual para tambores",
+    "Hipoclorito de sódio 2,5%",
+    "Etiquetas e caneta",
+    "Local fresco, escuro e protegido"
+  ],
+  "objective": "Manter água potável suficiente quando o abastecimento falhar por semanas, sem contaminação nem perdas.",
+  "steps": [
+    {
+      "text": "Calcule duas metas. Sobrevivência: cerca de 2,5 a 3 litros por pessoa por dia só para beber e para o alimento (mais em calor e esforço). Mínimo humanitário: cerca de 15 litros por pessoa por dia para beber, cozinhar e higiene básica."
+    },
+    {
+      "text": "Multiplique pelo número de pessoas e de dias. Exemplo: 4 pessoas × 30 dias × 3 L = 360 L apenas para beber e cozinhar; a higiene exige bem mais."
+    },
+    {
+      "text": "Use apenas recipientes próprios para alimentos, opacos e com tampa. Tambores grandes precisam de torneira ou bomba manual acima do fundo, para não puxar sedimentos."
+    },
+    {
+      "text": "Lave os recipientes, higienize com solução de hipoclorito, encha com água tratada da rede e feche. Etiquete com a data.",
+      "image": "agua-reserva-tambores.svg"
+    },
+    {
+      "text": "Guarde em local fresco, escuro, longe do sol, de combustíveis e produtos químicos, sobre estrado (nunca direto no chão úmido)."
+    },
+    {
+      "text": "Renove a água armazenada em casa a cada 6 meses, usando a antiga para limpeza ou descarga. Água mineral lacrada segue a validade da embalagem."
+    },
+    {
+      "text": "Divida a reserva em vários pontos da casa: se um recipiente vazar ou contaminar, você não perde tudo."
+    },
+    {
+      "text": "Antes de beber água armazenada há muito tempo, ou se houver dúvida, trate novamente (fervura ou cloro)."
+    },
+    {
+      "text": "Tenha também meios de obter e tratar água nova: coleta de chuva, filtro e desinfecção."
+    }
+  ],
+  "cautions": [
+    "Recipientes que já contiveram produtos químicos, combustível ou leite não servem.",
+    "Água parada e destampada vira criadouro do Aedes aegypti.",
+    "Em crises, reservas visíveis atraem atenção: seja discreto (veja o artigo sobre discrição)."
+  ],
+  "alternatives": [
+    "Cisterna de captação de chuva para usos não potáveis.",
+    "Água mineral em galões, com rodízio pelo consumo diário."
+  ],
+  "tags": [
+    "reserva de água",
+    "armazenamento",
+    "tambor",
+    "bombona",
+    "crise prolongada"
+  ],
+  "keywords": [
+    "quanta água estocar",
+    "estocar água por meses",
+    "água para 30 dias"
+  ],
+  "images": [
+    {
+      "file": "agua-reserva-tambores.svg",
+      "caption": "Reserva distribuída, recipientes opacos e etiquetados, longe do chão e do sol.",
+      "alt": "Tambores e bombonas de água etiquetados sobre estrado"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "sphere-2018",
+      "note": "Referências de 2,5–3 L/dia para sobrevivência e 15 L/pessoa/dia como mínimo para beber, cozinhar e higiene."
+    },
+    {
+      "ref": "ready-agua",
+      "note": "Recipientes, rotação a cada 6 meses e armazenamento."
+    },
+    {
+      "ref": "cdc-agua-emergencia",
+      "note": "Higienização de recipientes e retratamento."
+    }
+  ],
+  "related": [
+    "agua-tornar-potavel",
+    "agua-escassez-racionamento",
+    "agua-captacao-chuva",
+    "seg-discricao"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

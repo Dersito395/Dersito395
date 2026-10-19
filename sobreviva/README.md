@@ -1,11 +1,12 @@
 # SOBREVIVA | Biblioteca de Campo
 
-Biblioteca virtual de sobrevivencialismo, preparação para emergências, primeiros socorros e autossuficiência,
-**feita para funcionar sem internet**. MVP executável para Android e iOS (Flutter), com biblioteca local SQLite + FTS5,
+Manual de sobrevivência para **crises prolongadas** — guerra, pandemia, escassez de água e de alimentos, colapso de
+serviços e instabilidade social — com preparação, produção de alimentos, segurança e primeiros socorros,
+**feito para funcionar sem internet**. MVP executável para Android e iOS (Flutter), com biblioteca local SQLite + FTS5,
 pesquisa em linguagem natural offline, central de emergências, pacotes de conteúdo versionados e painel editorial.
 
 > ⚠️ O aplicativo é informativo e **não substitui** os serviços de emergência (192, 193, 190) nem atendimento profissional.
-> Os 8 artigos de primeiros socorros estão marcados como **revisão técnica pendente** até a validação por profissional
+> Os 8 artigos de primeiros socorros (e o de quarentena domiciliar) estão marcados como **revisão técnica pendente** até a validação por profissional
 > habilitado (veja [docs/EDITORIAL.md](docs/EDITORIAL.md)).
 
 ## Estrutura
@@ -37,7 +38,7 @@ sobreviva/
 ```bash
 cd app
 flutter pub get
-flutter test                 # 43 testes: dados, pesquisa, atualizações, planejador e interface
+flutter test                 # 53 testes: dados, pesquisa, atualizações, planejador e interface
 flutter run                  # em um aparelho ou emulador
 flutter build apk --release  # APK de instalação (veja docs/PUBLICACAO.md para assinatura)
 ```
@@ -47,7 +48,7 @@ flutter build apk --release  # APK de instalação (veja docs/PUBLICACAO.md para
 ```bash
 cd server
 npm run build:content        # valida o conteúdo e gera pacotes + biblioteca embarcada no app
-npm test                     # 10 testes: autenticação, CSRF, fluxo editorial, publicação, integridade
+npm test                     # 11 testes: autenticação, CSRF, fluxo editorial, publicação, integridade
 node scripts/create-user.js admin admin "Seu Nome"   # cria o primeiro administrador
 npm start                    # painel em http://127.0.0.1:8787/admin/  ·  API em /api/v1/
 ```
@@ -60,12 +61,15 @@ Em produção use HTTPS: o app recusa HTTP fora da rede local.
 
 | Requisito | Onde |
 |---|---|
-| Biblioteca inicial com **37 artigos essenciais + 2 complementares**, 12 categorias, fontes reais | `content/articles`, `content/sources.json` |
+| **59 artigos essenciais + 2 complementares**, 15 categorias, 67 fontes reais | `content/articles`, `content/sources.json` |
+| **6 roteiros de cenário de crise** (guerra, pandemia, escassez de água, escassez de alimentos, colapso de serviços, instabilidade/saques) com ações por fase e "Criar meu plano" | `content/scenarios.json`, `app/lib/ui/screens/scenario_screen.dart` |
+| Produção de alimentos (horta passo a passo, culturas calóricas, compostagem, sementes, galinhas), despensa de 3–12 meses, conservação sem geladeira, racionamento | `content/articles/prod-*`, `alim-*` |
+| Segurança e proteção: discrição, proteção de mantimentos, segurança da casa, defesa pessoal dentro da lei, comunidade, saúde mental | `content/articles/seg-*` |
 | **Funciona em modo avião desde o primeiro acesso** (biblioteca embarcada, sem login) | `app/lib/services/bundled_content.dart` |
 | SQLite + **FTS5** (SQLite 3.54 embarcado pelo pacote `sqlite3`, igual em Android e iOS) | `app/lib/data/library_db.dart` |
 | Pesquisa: texto integral, autocompletar, correção de digitação, sinônimos, filtros (categoria, dificuldade, ambiente), relevância, histórico, relacionados | `app/lib/search/search_engine.dart` |
 | Central de emergências: 11 guias (reconhecer, segurança, fazer, evitar, pedir socorro) + 190/192/193/199 com finalidade | `content/emergencies.json`, `app/lib/ui/screens/emergency_screens.dart` |
-| 23 ilustrações originais (SVG, CC BY 4.0) disponíveis offline | `content/media`, `tools/make_illustrations.py` |
+| 29 ilustrações originais (SVG, CC BY 4.0) disponíveis offline | `content/media`, `tools/make_illustrations.py` |
 | Favoritos, anotações privadas, checklists, listas de equipamentos, planejador de mochila, histórico pesquisável, exportação/importação | `app/lib/data/user_db.dart`, telas em `app/lib/ui/screens` |
 | Tamanho de fonte, modo claro/escuro, **modo ambiente externo** (alto contraste), **economia de bateria** | `app/lib/core/theme.dart`, Ajustes |
 | Pacotes versionados com tamanho, data, espaço livre, SHA-256, cancelamento e **instalação atômica** (falhas não apagam nada) | `app/lib/services/package_service.dart`, `server/src/builder.js` |

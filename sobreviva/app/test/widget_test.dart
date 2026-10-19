@@ -21,7 +21,8 @@ void main() {
     await pumpApp(tester);
     expect(find.text('O que você precisa saber?'), findsOneWidget);
     expect(find.text('Offline • biblioteca disponível'), findsOneWidget);
-    expect(find.text('O que fazer agora?'), findsOneWidget);
+    expect(find.text('Cenários de crise'), findsWidgets);
+    expect(find.text('Escassez de alimentos'), findsOneWidget);
     for (final label in ['Início', 'Explorar', 'Emergências', 'Salvos', 'Ajustes']) {
       expect(find.text(label), findsWidgets);
     }
@@ -83,5 +84,17 @@ void main() {
     await tester.pumpAndSettle();
     expect(state.outdoorMode, isTrue);
     expect(state.user.pref('outdoor'), '1');
+  });
+
+  testWidgets('cenário abre roteiro por fases e gera plano', (tester) async {
+    final state = await pumpApp(tester);
+    await tester.tap(find.text('Escassez de alimentos'));
+    await tester.pumpAndSettle();
+    expect(find.text('Preparação'), findsOneWidget);
+    await tester.tap(find.text('Criar meu plano'));
+    await tester.pumpAndSettle();
+    final plan = state.user.checklists().single;
+    expect(plan.title, contains('Escassez de alimentos'));
+    expect(plan.total, greaterThan(10));
   });
 }

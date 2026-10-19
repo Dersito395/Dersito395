@@ -1,0 +1,87 @@
+{
+  "id": "agua-escassez-racionamento",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Escassez de água: racionamento e reúso",
+  "summary": "Como priorizar o uso da água, reduzir o consumo e reaproveitar água cinza com segurança durante secas e cortes prolongados.",
+  "category": "agua",
+  "subcategory": "escassez",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "Implantação em 1 dia",
+  "materials": [
+    "Baldes e bacias",
+    "Garrafa com furo na tampa para lavar as mãos",
+    "Recipientes separados e identificados (potável / reúso)"
+  ],
+  "objective": "Fazer a água disponível durar mais sem comprometer a saúde.",
+  "steps": [
+    {
+      "text": "Defina a ordem de prioridade: 1) beber; 2) preparar alimentos; 3) higiene das mãos e pessoal; 4) limpeza; 5) descarga e plantas."
+    },
+    {
+      "text": "Nunca racione a água de beber abaixo do necessário: desidratação compromete o raciocínio e a saúde. Reduza esforço físico e evite o calor nas horas mais quentes."
+    },
+    {
+      "text": "Separe e identifique recipientes: água potável nunca deve ser misturada com água de reúso."
+    },
+    {
+      "text": "Reaproveite água cinza (enxágue de louça, banho, lavagem de roupa sem muito sabão) para descarga e limpeza de pisos."
+    },
+    {
+      "text": "Lave as mãos com pouca água usando uma garrafa com pequeno furo na tampa. Higiene das mãos continua essencial para evitar diarreias."
+    },
+    {
+      "text": "Prefira alimentos que exigem pouca água para cozinhar e use panela tampada."
+    },
+    {
+      "text": "Use cobertura morta (palha, folhas) na horta para reduzir a evaporação e regue no início da manhã ou fim da tarde."
+    }
+  ],
+  "cautions": [
+    "Não use água cinza para beber, cozinhar ou irrigar verduras consumidas cruas.",
+    "Água de reúso armazenada por dias fica com mau cheiro e microrganismos: use no mesmo dia.",
+    "Siga os avisos da companhia de saneamento e da Defesa Civil sobre rodízio e qualidade da água."
+  ],
+  "alternatives": [
+    "Banheiro seco ou balde com serragem quando não houver água para descarga.",
+    "Captação de chuva e cisternas comunitárias."
+  ],
+  "tags": [
+    "escassez hídrica",
+    "racionamento",
+    "seca",
+    "água cinza",
+    "reúso"
+  ],
+  "keywords": [
+    "falta de água por semanas",
+    "economizar água",
+    "seca",
+    "crise hídrica"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "sphere-2018",
+      "note": "Prioridades de uso e quantidades mínimas por pessoa."
+    },
+    {
+      "ref": "oms-wash-emergencias",
+      "note": "Higiene das mãos e prevenção de doenças com pouca água."
+    }
+  ],
+  "related": [
+    "agua-reserva-longo-prazo",
+    "auto-saneamento-emergencia",
+    "agua-captacao-chuva",
+    "agua-tornar-potavel"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

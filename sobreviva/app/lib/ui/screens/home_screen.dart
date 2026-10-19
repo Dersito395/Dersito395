@@ -7,6 +7,7 @@ import '../../state/app_state.dart';
 import '../widgets/common.dart';
 import 'category_screen.dart';
 import 'emergency_screens.dart';
+import 'scenario_screen.dart';
 import 'search_screen.dart';
 import 'settings_screens.dart';
 
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
     final lib = state.library;
     final categories = lib.categories();
     final emergencies = lib.emergencies();
+    final scenarios = lib.scenarios();
     final recent = lib.summaries(state.user.history(limit: 5).map((h) => h.articleId).toList());
     final favorites = lib.summaries(state.user.favoriteIds().take(5).toList());
     final featured = lib.featured();
@@ -49,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               Text('SOBREVIVA', style: theme.textTheme.titleLarge?.copyWith(letterSpacing: 2, fontWeight: FontWeight.w900)),
                               Text(
-                                'Biblioteca de Campo',
+                                'Manual de sobrevivência offline',
                                 style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.onSurfaceVariant, letterSpacing: 1),
                               ),
                             ],
@@ -79,34 +81,23 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SliverToBoxAdapter(
-              child: SectionHeader('O que fazer agora?', icon: Icons.emergency_outlined, action: 'Ver todas', onAction: () => onOpenTab(2)),
+              child: SectionHeader('Cenários de crise', icon: Icons.crisis_alert, action: 'Explorar', onAction: () => onOpenTab(1)),
             ),
             SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              sliver: SliverToBoxAdapter(child: const EmergencyNumbersCard(compact: true)),
-            ),
-            SliverPadding(
-              padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               sliver: SliverGrid.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: textScale > 1.05 ? 1 : 2,
-                  mainAxisExtent: 24 + 40 * textScale,
+                  mainAxisExtent: 52 + 62 * textScale,
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 8,
                 ),
-                itemCount: emergencies.length.clamp(0, 6),
-                itemBuilder: (context, i) {
-                  final e = emergencies[i];
-                  return _EmergencyButton(
-                    title: e.title,
-                    icon: iconFor(e.icon),
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => EmergencyGuideScreen(guideId: e.id))),
-                  );
-                },
+                itemCount: scenarios.length,
+                itemBuilder: (context, i) => ScenarioCard(scenario: scenarios[i]),
               ),
             ),
             SliverToBoxAdapter(
-              child: SectionHeader('Categorias', icon: Icons.grid_view, action: 'Biblioteca', onAction: () => onOpenTab(1)),
+              child: SectionHeader('Pilares do manual', icon: Icons.grid_view, action: 'Biblioteca', onAction: () => onOpenTab(1)),
             ),
             SliverToBoxAdapter(
               child: SizedBox(
@@ -146,6 +137,33 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: SectionHeader('Emergência agora?', icon: Icons.emergency_outlined, action: 'Todas', onAction: () => onOpenTab(2)),
+            ),
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              sliver: SliverToBoxAdapter(child: const EmergencyNumbersCard(compact: true)),
+            ),
+            SliverPadding(
+              padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+              sliver: SliverGrid.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: textScale > 1.05 ? 1 : 2,
+                  mainAxisExtent: 24 + 40 * textScale,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
+                ),
+                itemCount: emergencies.length.clamp(0, 4),
+                itemBuilder: (context, i) {
+                  final e = emergencies[i];
+                  return _EmergencyButton(
+                    title: e.title,
+                    icon: iconFor(e.icon),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => EmergencyGuideScreen(guideId: e.id))),
+                  );
+                },
               ),
             ),
             if (recent.isNotEmpty) ...[

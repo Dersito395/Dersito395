@@ -1,0 +1,102 @@
+{
+  "id": "cen-pandemia-quarentena",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Pandemia: quarentena e cuidado de doente em casa",
+  "summary": "Preparação da casa, isolamento de uma pessoa doente, proteção de quem cuida e sinais de gravidade.",
+  "category": "cenarios",
+  "subcategory": "pandemia",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "urbano"
+  ],
+  "time_estimate": "Preparação em 1 dia; isolamento por todo o período indicado pelas autoridades",
+  "materials": [
+    "Máscaras (cirúrgicas e PFF2/N95)",
+    "Sabão e álcool em gel 70%",
+    "Água sanitária para limpeza",
+    "Termômetro",
+    "Luvas descartáveis",
+    "Sacos de lixo",
+    "Estoque de alimentos e medicamentos de uso contínuo"
+  ],
+  "objective": "Reduzir a transmissão dentro de casa e reconhecer quando a pessoa doente precisa de atendimento.",
+  "steps": [
+    {
+      "text": "Siga as orientações oficiais de saúde e de vacinação. Elas mudam conforme a doença."
+    },
+    {
+      "text": "Prepare estoque para 2 a 4 semanas de alimentos, água, itens de higiene e medicamentos de uso contínuo, para reduzir saídas."
+    },
+    {
+      "text": "Se alguém adoecer: separe um quarto bem ventilado (janela aberta), de preferência com banheiro só para essa pessoa, e limite a circulação dela pela casa.",
+      "image": "quarentena-quarto.svg"
+    },
+    {
+      "text": "Defina uma única pessoa saudável para cuidar do doente; pessoas de grupos de risco não devem cuidar."
+    },
+    {
+      "text": "Quem cuida usa máscara bem ajustada no mesmo ambiente, lava as mãos antes e depois do contato e evita tocar o rosto."
+    },
+    {
+      "text": "Separe pratos, copos, toalhas e roupa de cama do doente; lave com água e sabão."
+    },
+    {
+      "text": "Limpe diariamente superfícies muito tocadas (maçanetas, interruptores, banheiro) com produto desinfetante usado conforme o rótulo."
+    },
+    {
+      "text": "Mantenha um canal de contato com o serviço de saúde. Sinais de gravidade (falta de ar, lábios arroxeados, confusão, dor no peito, sonolência excessiva) = ligue 192."
+    }
+  ],
+  "cautions": [
+    "Não use antibióticos por conta própria: não tratam vírus e criam resistência.",
+    "Máscara sozinha não basta: combine com ventilação, higiene das mãos e distanciamento.",
+    "Isolamento prolongado afeta a saúde mental: mantenha rotina e contato à distância."
+  ],
+  "alternatives": [
+    "Atendimento de saúde por telefone ou teleconsulta, quando disponível."
+  ],
+  "tags": [
+    "pandemia",
+    "quarentena",
+    "isolamento",
+    "máscara",
+    "doença contagiosa",
+    "epidemia"
+  ],
+  "keywords": [
+    "pandemia o que fazer",
+    "como cuidar de doente em casa",
+    "isolamento domiciliar"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "oms-cuidado-domiciliar",
+      "note": "Quarto ventilado, cuidador único, máscara, higiene das mãos e contato com serviço de saúde."
+    },
+    {
+      "ref": "ms-samu",
+      "note": "Acionamento do SAMU 192 em sinais de gravidade."
+    },
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Preparação doméstica para crises prolongadas."
+    }
+  ],
+  "related": [
+    "alim-despensa-longo-prazo",
+    "seg-saude-mental",
+    "auto-saneamento-emergencia"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19",
+  "review": {
+    "technical_required": true,
+    "technical_status": "pendente",
+    "reviewer": null,
+    "reviewed_at": null
+  }
+}

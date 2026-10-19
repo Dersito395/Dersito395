@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sobreviva/data/library_db.dart';
 import 'package:sobreviva/data/user_db.dart';
@@ -8,7 +10,9 @@ void main() {
   test('pacote essencial instala artigos, emergências, números e fontes', () {
     final lib = libraryWithBundle();
     expect(lib.articleCount, greaterThanOrEqualTo(30));
-    expect(lib.categories().length, 12);
+    expect(lib.categories().length, 15);
+    expect(lib.scenarios().length, 6);
+    expect(lib.scenario('cen-escassez-alimentos')!.phases.length, 4);
     expect(lib.emergencies().length, 11);
     expect(lib.numbers().map((n) => n.number), containsAll(['190', '192', '193']));
     final a = lib.article('abrigo-lona-improvisado')!;
@@ -44,16 +48,16 @@ void main() {
     user.createChecklist('Minha lista', 'personalizada', [('Lanterna', null)]);
 
     final pkg = clone(loadBundle());
-    pkg['package']['version'] = 2;
+    pkg['package']['version'] = 50;
     final articles = pkg['articles'] as List;
     final eng = articles.firstWhere((a) => a['id'] == 'ps-engasgo') as Map<String, dynamic>;
-    eng['version'] = 2;
+    eng['version'] = 50;
     eng['title'] = 'Engasgo: desobstrução das vias aéreas (rev. 2)';
     final r = lib.importPackage(pkg, mediaInFiles: true);
 
     expect(r.updated, 1);
     expect(lib.article('ps-engasgo')!.title, contains('rev. 2'));
-    expect(lib.libraryVersion, 2);
+    expect(lib.libraryVersion, 50);
     expect(user.isFavorite('ps-engasgo'), isTrue);
     expect(user.note('ps-engasgo'), contains('março'));
     expect(user.checklists().single.title, 'Minha lista');
@@ -75,17 +79,19 @@ void main() {
   test('falha no meio da importação desfaz tudo (transação)', () {
     final lib = libraryWithBundle();
     final before = lib.article('urb-enchente')!.title;
+    final versionBefore = lib.libraryVersion;
+    final packageVersionBefore = lib.packages().single.version;
     final pkg = clone(loadBundle());
-    pkg['package']['version'] = 9;
+    pkg['package']['version'] = 99;
     final articles = pkg['articles'] as List;
     final i = articles.indexWhere((a) => a['id'] == 'urb-enchente');
-    articles[i]['version'] = 9;
+    articles[i]['version'] = 99;
     articles[i]['title'] = 'Título que não deve ficar';
-    articles.add({'id': 'quebrado', 'version': 9}); // sem título: inválido
+    articles.add({'id': 'quebrado', 'version': 99}); // sem título: inválido
     expect(() => lib.importPackage(pkg, mediaInFiles: true), throwsA(isA<PackageFormatException>()));
     expect(lib.article('urb-enchente')!.title, before);
-    expect(lib.libraryVersion, 1);
-    expect(lib.packages().single.version, 1);
+    expect(lib.libraryVersion, versionBefore);
+    expect(lib.packages().single.version, packageVersionBefore);
   });
 
   test('formato futuro é recusado', () {
@@ -93,5 +99,22 @@ void main() {
     final pkg = clone(loadBundle());
     pkg['format'] = 99;
     expect(() => lib.importPackage(pkg, mediaInFiles: true), throwsA(isA<PackageFormatException>()));
+  });
+
+  test('migração v1 → v2 cria a tabela de cenários sem perder conteúdo', () {
+    final dir = Directory.systemTemp.createTempSync('sv-mig');
+    final path = '${dir.path}/library.db';
+    final lib = LibraryDatabase.open(path);
+    lib.importPackage(loadBundle(), mediaInFiles: false);
+    final count = lib.articleCount;
+    lib.db.execute('DROP TABLE scenario');
+    lib.db.userVersion = 1;
+    lib.close();
+    final reopened = LibraryDatabase.open(path);
+    expect(reopened.db.userVersion, LibraryDatabase.schemaVersion);
+    expect(reopened.articleCount, count);
+    expect(reopened.scenarios(), isEmpty); // reimportado na próxima atualização do pacote
+    reopened.close();
+    dir.deleteSync(recursive: true);
   });
 }

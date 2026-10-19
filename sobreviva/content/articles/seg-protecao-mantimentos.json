@@ -1,0 +1,82 @@
+{
+  "id": "seg-protecao-mantimentos",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Proteger mantimentos contra furto e saque",
+  "summary": "Distribuição, armazenamento seguro, inventário e conduta diante de tentativas de roubo.",
+  "category": "seguranca",
+  "subcategory": "protecao-recursos",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "1 dia para organizar",
+  "materials": [
+    "Armários ou caixas com tranca",
+    "Inventário (checklist do aplicativo)",
+    "Recipientes discretos"
+  ],
+  "objective": "Diminuir a chance de perder recursos essenciais sem colocar vidas em risco.",
+  "steps": [
+    {
+      "text": "Divida o estoque em pelo menos três partes, em locais diferentes da casa (e, se possível, com familiares de confiança)."
+    },
+    {
+      "text": "Mantenha uma pequena parte de uso diário acessível e o restante guardado e fechado."
+    },
+    {
+      "text": "Use armários ou cômodos com tranca para itens críticos (água, alimentos, medicamentos, combustível)."
+    },
+    {
+      "text": "Faça inventário com quantidades e locais; revise com frequência para perceber faltas."
+    },
+    {
+      "text": "Combine com vizinhos de confiança um sistema de alerta e apoio mútuo."
+    },
+    {
+      "text": "Se houver ameaça ou assalto: não reaja. Sua vida vale mais que qualquer recurso. Obedeça, memorize detalhes e acione o 190 assim que for seguro."
+    }
+  ],
+  "cautions": [
+    "Armadilhas, cercas eletrificadas improvisadas e dispositivos para ferir invasores são ilegais e podem matar inocentes, inclusive crianças e socorristas.",
+    "Não guarde combustíveis em grande quantidade dentro de casa: risco de incêndio."
+  ],
+  "alternatives": [
+    "Estoques comunitários com vigilância compartilhada."
+  ],
+  "tags": [
+    "proteção",
+    "furto",
+    "saque",
+    "roubo",
+    "mantimentos",
+    "estoque"
+  ],
+  "keywords": [
+    "proteger comida de roubo",
+    "evitar saque",
+    "roubarem meu estoque"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "codigo-penal",
+      "note": "Limites da legítima defesa e responsabilidade por excessos."
+    },
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Preparação doméstica e resiliência."
+    }
+  ],
+  "related": [
+    "seg-discricao",
+    "seg-defesa-legal",
+    "seg-seguranca-residencial",
+    "alim-despensa-longo-prazo"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

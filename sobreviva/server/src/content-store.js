@@ -5,7 +5,7 @@
 //   drafts/<id>.json          versão de trabalho em edição/revisão
 //   history/<id>/v<N>.json    versões publicadas anteriores
 //   media/                    repositório de mídia + media.json (créditos e licenças)
-//   categories.json sources.json synonyms.json packages.json numbers.json emergencies.json release.json
+//   categories.json sources.json synonyms.json packages.json numbers.json emergencies.json scenarios.json release.json
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -51,11 +51,13 @@ export class ContentStore {
   packages() { return this.readJson('packages.json'); }
   numbers() { return this.readJson('numbers.json'); }
   emergencies() { return this.readJson('emergencies.json'); }
+  scenarios() { return this.readJson('scenarios.json', []); }
   release() { return this.readJson('release.json'); }
   mediaMeta() { return this.readJson('media.json', {}); }
 
   saveSources(list) { this.writeJson('sources.json', list); }
   saveEmergencies(list) { this.writeJson('emergencies.json', list); }
+  saveScenarios(list) { this.writeJson('scenarios.json', list); }
   saveRelease(r) { this.writeJson('release.json', r); }
 
   listDir(rel) {

@@ -1,0 +1,79 @@
+{
+  "id": "prod-galinhas-caipiras",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Criação de galinhas em pequena escala",
+  "summary": "Abrigo, água, alimentação, sanidade e proteção para produzir ovos e carne no quintal ou sítio.",
+  "category": "producao",
+  "subcategory": "animais",
+  "difficulty": "intermediaria",
+  "environments": [
+    "rural",
+    "domestico"
+  ],
+  "time_estimate": "Instalação em alguns dias; cuidados diários de 20 a 30 minutos",
+  "materials": [
+    "Galinheiro coberto, ventilado e fechado à noite",
+    "Bebedouros e comedouros",
+    "Ninhos",
+    "Ração ou alimentos complementares",
+    "Cama de maravalha ou palha"
+  ],
+  "objective": "Obter ovos e carne de forma contínua com poucos recursos.",
+  "steps": [
+    {
+      "text": "Verifique se a criação é permitida no seu município (áreas urbanas costumam ter regras)."
+    },
+    {
+      "text": "Construa um abrigo seco, ventilado, protegido de chuva e vento, que possa ser fechado à noite contra predadores."
+    },
+    {
+      "text": "Ofereça água limpa sempre; troque diariamente e lave os bebedouros."
+    },
+    {
+      "text": "Alimente com ração balanceada ou combine milho, restos de horta e área de pastejo; galinhas soltas comem insetos e plantas, mas precisam de complemento."
+    },
+    {
+      "text": "Coloque ninhos em local escuro e calmo, e recolha os ovos diariamente."
+    },
+    {
+      "text": "Mantenha a cama seca e limpa; a cama usada vira adubo após compostagem."
+    },
+    {
+      "text": "Separe aves doentes; cuidado especial com sinais respiratórios e mortes repentinas, que devem ser comunicados ao serviço veterinário oficial."
+    }
+  ],
+  "cautions": [
+    "Lave as mãos após lidar com as aves e os ovos: podem transmitir Salmonella.",
+    "Não deixe crianças pequenas manusearem aves sem supervisão.",
+    "Cozinhe bem ovos e carne."
+  ],
+  "alternatives": [
+    "Codornas e coelhos ocupam menos espaço (verifique as regras locais)."
+  ],
+  "tags": [
+    "galinhas",
+    "ovos",
+    "galinha caipira",
+    "criação de animais"
+  ],
+  "keywords": [
+    "criar galinha",
+    "ter ovos em casa",
+    "galinheiro"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "embrapa-galinhas",
+      "note": "Instalações, alimentação, manejo e sanidade de galinhas caipiras."
+    }
+  ],
+  "related": [
+    "prod-compostagem",
+    "alim-racionamento-nutricao"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

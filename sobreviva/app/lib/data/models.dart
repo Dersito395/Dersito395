@@ -200,6 +200,47 @@ class Article {
   }
 }
 
+/// Roteiro de ação para um cenário de crise prolongada, organizado por fases.
+class Scenario {
+  const Scenario({
+    required this.id,
+    required this.title,
+    required this.icon,
+    required this.summary,
+    required this.phases,
+    required this.relatedIds,
+    required this.sourceIds,
+  });
+  final String id;
+  final String title;
+  final String icon;
+  final String summary;
+  final List<ScenarioPhase> phases;
+  final List<String> relatedIds;
+  final List<String> sourceIds;
+
+  factory Scenario.fromJson(Map<String, dynamic> j) {
+    List<String> l(dynamic v) => (v as List? ?? const []).map((e) => e.toString()).toList();
+    return Scenario(
+      id: j['id'] as String,
+      title: j['title'] as String,
+      icon: (j['icon'] as String?) ?? 'crisis',
+      summary: (j['summary'] as String?) ?? '',
+      phases: [for (final p in (j['phases'] as List? ?? const [])) ScenarioPhase((p as Map)['title'].toString(), l(p['items']))],
+      relatedIds: l(j['related']),
+      sourceIds: l(j['sources']),
+    );
+  }
+
+  static Scenario decode(String data) => Scenario.fromJson(jsonDecode(data) as Map<String, dynamic>);
+}
+
+class ScenarioPhase {
+  const ScenarioPhase(this.title, this.items);
+  final String title;
+  final List<String> items;
+}
+
 class EmergencyGuide {
   const EmergencyGuide({
     required this.id,

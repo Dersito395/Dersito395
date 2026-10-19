@@ -55,4 +55,12 @@ void main() {
     final evac = buildKitPlan(const KitPlanInput(duration: KitDuration.h24));
     expect(evac.map((e) => e.text).join(), isNot(contains(' L (')));
   });
+
+  test('planejador para 90 dias inclui autonomia de longo prazo', () {
+    final plan = buildKitPlan(const KitPlanInput(duration: KitDuration.d90, adults: 2));
+    final texts = plan.map((e) => e.text).join('\n');
+    expect(texts, contains('15 L'));
+    expect(texts, contains('Sementes'));
+    expect(plan.any((i) => i.section == 'Autonomia de longo prazo'), isTrue);
+  });
 }

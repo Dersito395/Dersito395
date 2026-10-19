@@ -537,5 +537,203 @@
     "url": "https://irp.fas.org/doddir/army/tc3-97-61.pdf",
     "license": "Aprovado para divulgação pública; distribuição ilimitada",
     "language": "en"
+  },
+  {
+    "id": "mcf-crise-guerra",
+    "institution": "Agência Sueca de Defesa Civil e Resiliência (MCF, antiga MSB)",
+    "author": "Swedish Civil Defence and Resilience Agency",
+    "title": "In case of crisis or war (Om krisen eller kriget kommer)",
+    "publisher": "MCF/MSB, Suécia",
+    "year": "2024",
+    "url": "https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war",
+    "license": "Publicação pública – uso como referência; texto do app é original",
+    "language": "en"
+  },
+  {
+    "id": "sphere-2018",
+    "institution": "Sphere Association",
+    "author": "Sphere Association",
+    "title": "The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response (4ª ed.)",
+    "publisher": "Sphere Association, Genebra",
+    "year": "2018",
+    "url": "https://spherestandards.org/handbook/",
+    "license": "Uso como referência; texto do app é original",
+    "language": "en"
+  },
+  {
+    "id": "usu-armazenamento",
+    "institution": "Utah State University Extension",
+    "author": "USU Extension – Family and Consumer Sciences",
+    "title": "7 Factors That Prolong Your Food Storage Supply / Home food storage",
+    "publisher": "Utah State University",
+    "year": "2020",
+    "url": "https://extension.usu.edu/preserve-the-harvest/",
+    "license": "Uso como referência; texto do app é original",
+    "language": "en"
+  },
+  {
+    "id": "byu-oxigenio",
+    "institution": "Brigham Young University",
+    "author": "Sedgwick B, Pike OA, et al. (BYU Food Science)",
+    "title": "Pesquisas sobre armazenamento de alimentos secos com absorvedores de oxigênio (garrafas PET e baldes)",
+    "publisher": "BYU ScholarsArchive",
+    "year": "2010",
+    "url": "https://scholarsarchive.byu.edu/facpub/90",
+    "license": "Artigo científico – usado como referência",
+    "language": "en"
+  },
+  {
+    "id": "nchfp",
+    "institution": "National Center for Home Food Preservation (Univ. da Geórgia/USDA)",
+    "author": "NCHFP",
+    "title": "Guias de secagem, salga e conservas caseiras; enlatamento de alimentos de baixa acidez apenas em panela de pressão",
+    "publisher": "University of Georgia",
+    "year": "2024",
+    "url": "https://nchfp.uga.edu/",
+    "license": "Uso como referência; texto do app é original",
+    "language": "en"
+  },
+  {
+    "id": "oms-pfa",
+    "institution": "Organização Mundial da Saúde (OMS)",
+    "author": "WHO, War Trauma Foundation, World Vision International",
+    "title": "Psychological first aid: Guide for field workers",
+    "publisher": "WHO, Genebra",
+    "year": "2011",
+    "url": "https://www.who.int/publications/i/item/9789241548205",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "language": "en"
+  },
+  {
+    "id": "ready-radiacao",
+    "institution": "FEMA – Ready.gov",
+    "author": "Federal Emergency Management Agency",
+    "title": "Radiation Emergencies (Get inside, stay inside, stay tuned)",
+    "publisher": "Ready.gov, Estados Unidos",
+    "year": "2024",
+    "url": "https://www.ready.gov/radiation",
+    "license": "Domínio público (obra do governo dos EUA)",
+    "language": "en"
+  },
+  {
+    "id": "cicv-contaminacao",
+    "institution": "Comitê Internacional da Cruz Vermelha (CICV/ICRC)",
+    "author": "ICRC",
+    "title": "Weapon contamination: reducing risk for communities (artefatos não explodidos)",
+    "publisher": "ICRC, Genebra",
+    "year": "2024",
+    "url": "https://www.icrc.org/en/what-we-do/weapon-contamination",
+    "license": "Uso como referência; texto do app é original",
+    "language": "en"
+  },
+  {
+    "id": "oms-cuidado-domiciliar",
+    "institution": "Organização Mundial da Saúde (OMS)",
+    "author": "WHO",
+    "title": "Home care for patients with suspected novel coronavirus infection presenting with mild symptoms and management of contacts (orientação interina)",
+    "publisher": "WHO, Genebra",
+    "year": "2020",
+    "url": "https://extranet.who.int/sph/sites/default/files/document-library/document/20200120-ncov-home-care-infected-patients.pdf",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "language": "en"
+  },
+  {
+    "id": "embrapa-plantar-hortalicas",
+    "institution": "Embrapa Informação Tecnológica",
+    "author": "Embrapa",
+    "title": "Como plantar hortaliças (ABC da Agricultura Familiar, 3)",
+    "publisher": "Embrapa, Brasília",
+    "year": "2006",
+    "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/100094",
+    "license": "Acesso aberto – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "embrapa-composteira",
+    "institution": "Embrapa Amapá",
+    "author": "Embrapa",
+    "title": "Como montar uma composteira caseira",
+    "publisher": "Embrapa, Macapá",
+    "year": "2014",
+    "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/1033373",
+    "license": "Acesso aberto – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "embrapa-galinhas",
+    "institution": "Embrapa Meio-Norte / Embrapa Informação Tecnológica",
+    "author": "Sagrilo E, Vieira FJ, Araújo Neto RB, Sobreira RS",
+    "title": "Criação de galinhas caipiras (ABC da Agricultura Familiar, 20)",
+    "publisher": "Embrapa, Brasília",
+    "year": "2007",
+    "url": "https://www.infoteca.cnptia.embrapa.br/handle/doc/126298",
+    "license": "Acesso aberto – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "embrapa-mandioca",
+    "institution": "Embrapa Mandioca e Fruticultura",
+    "author": "Embrapa",
+    "title": "Mandioca: classificação em mansa e brava pelo teor de ácido cianídrico",
+    "publisher": "Embrapa, Cruz das Almas",
+    "year": "2005",
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/673682/1/ComTec17.pdf",
+    "license": "Acesso aberto – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "embrapa-sementes-pet",
+    "institution": "Embrapa Tabuleiros Costeiros",
+    "author": "Embrapa",
+    "title": "Sanidade e germinação de sementes crioulas de milho armazenadas em garrafas PET",
+    "publisher": "Embrapa",
+    "year": "2013",
+    "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/978166/1/SanidadeAmaury.pdf",
+    "license": "Acesso aberto – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "cresesb-fotovoltaico",
+    "institution": "CEPEL – CRESESB",
+    "author": "Pinho JT, Galdino MA (orgs.)",
+    "title": "Manual de engenharia para sistemas fotovoltaicos",
+    "publisher": "CRESESB, Rio de Janeiro",
+    "year": "2014",
+    "url": "https://cresesb.cepel.br/",
+    "license": "Publicação pública – uso como referência",
+    "language": "pt-BR"
+  },
+  {
+    "id": "codigo-penal",
+    "institution": "Presidência da República",
+    "author": "Brasil",
+    "title": "Decreto-Lei nº 2.848/1940 – Código Penal (art. 23 a 25: legítima defesa e estado de necessidade)",
+    "publisher": "Planalto",
+    "year": "1940",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+    "license": "Legislação – domínio público",
+    "language": "pt-BR"
+  },
+  {
+    "id": "estatuto-desarmamento",
+    "institution": "Presidência da República",
+    "author": "Brasil",
+    "title": "Lei nº 10.826/2003 – Estatuto do Desarmamento",
+    "publisher": "Planalto",
+    "year": "2003",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm",
+    "license": "Legislação – domínio público",
+    "language": "pt-BR"
+  },
+  {
+    "id": "lei-crimes-ambientais",
+    "institution": "Presidência da República",
+    "author": "Brasil",
+    "title": "Lei nº 9.605/1998 – Lei de Crimes Ambientais (caça de fauna silvestre)",
+    "publisher": "Planalto",
+    "year": "1998",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+    "license": "Legislação – domínio público",
+    "language": "pt-BR"
   }
 ]

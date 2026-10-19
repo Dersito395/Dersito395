@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 import { ContentStore } from './content-store.js';
 import { build } from './builder.js';
-import { normalizeArticle, validateArticle, validateEmergency, DIFFICULTIES, ENVIRONMENTS, STATUSES } from './validate.js';
+import { normalizeArticle, validateArticle, validateEmergency, validateScenario, DIFFICULTIES, ENVIRONMENTS, STATUSES } from './validate.js';
 import { UserStore, Sessions, can, parseCookies, verifyPassword, ROLES } from './auth.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -330,6 +330,22 @@ export function createServer(options = {}) {
         const errors = list.flatMap(validateEmergency);
         if (errors.length) throw new HttpError(422, errors.join('; '));
         store.saveEmergencies(list);
+        return send(res, 200, { ok: true });
+      }
+    }
+
+    if (resource === 'scenarios') {
+      if (m === 'GET') {
+        requireSession(req);
+        return send(res, 200, store.scenarios());
+      }
+      if (m === 'PUT') {
+        requireSession(req, 'catalog:edit');
+        const list = await readJson(req);
+        if (!Array.isArray(list)) throw new HttpError(400, 'esperado um array de cenários');
+        const errors = list.flatMap(validateScenario);
+        if (errors.length) throw new HttpError(422, errors.join('; '));
+        store.saveScenarios(list);
         return send(res, 200, { ok: true });
       }
     }

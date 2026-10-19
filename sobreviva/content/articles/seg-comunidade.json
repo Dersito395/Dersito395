@@ -1,0 +1,84 @@
+{
+  "id": "seg-comunidade",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Organização comunitária e ajuda mútua",
+  "summary": "Como formar uma rede de vizinhos para dividir tarefas, informações, recursos e vigilância em crises longas.",
+  "category": "seguranca",
+  "subcategory": "comunidade",
+  "difficulty": "intermediaria",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Primeira reunião de 1 a 2 horas",
+  "materials": [
+    "Lista de contatos",
+    "Mapa simples da rua ou bairro",
+    "Caderno de habilidades e recursos"
+  ],
+  "objective": "Aumentar a segurança e a capacidade de sobrevivência de todos por meio da cooperação.",
+  "steps": [
+    {
+      "text": "Comece com poucas famílias de confiança e um objetivo simples (avisos, vigilância, troca de informações)."
+    },
+    {
+      "text": "Faça um levantamento de habilidades: saúde, elétrica, hidráulica, cozinha, horta, mecânica, cuidado de crianças e idosos."
+    },
+    {
+      "text": "Identifique pessoas vulneráveis no grupo (idosos sozinhos, acamados, pessoas com deficiência) e quem cuidará delas."
+    },
+    {
+      "text": "Defina meios de comunicação (grupo de mensagens, rádios homologados, sinais combinados) e pontos de encontro."
+    },
+    {
+      "text": "Organize rodízios: atenção à rua, busca de água, cozinha coletiva, cuidado da horta comunitária."
+    },
+    {
+      "text": "Combine regras claras de troca e partilha de recursos e uma forma de resolver conflitos."
+    },
+    {
+      "text": "Mantenha contato com a Defesa Civil: o município pode ter um Núcleo Comunitário de Proteção e Defesa Civil (NUPDEC)."
+    }
+  ],
+  "cautions": [
+    "Grupos que fazem \"justiça com as próprias mãos\" cometem crimes e aumentam a violência.",
+    "Proteja dados pessoais dos membros do grupo."
+  ],
+  "alternatives": [
+    "Associações de moradores e grupos religiosos e comunitários existentes."
+  ],
+  "tags": [
+    "comunidade",
+    "ajuda mútua",
+    "vizinhança",
+    "organização",
+    "NUPDEC"
+  ],
+  "keywords": [
+    "organizar vizinhos",
+    "grupo de sobrevivência",
+    "ajuda mútua"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "defesa-civil",
+      "note": "Núcleos comunitários de proteção e defesa civil."
+    },
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Resiliência comunitária e ajuda entre vizinhos."
+    }
+  ],
+  "related": [
+    "seg-discricao",
+    "seg-seguranca-residencial",
+    "plan-plano-familiar-emergencia",
+    "com-plano-comunicacao-familiar"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

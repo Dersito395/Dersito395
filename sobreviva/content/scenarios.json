@@ -1,0 +1,62 @@
+[
+  {"id":"cen-guerra","title":"Guerra e conflito armado","icon":"crisis","order":1,
+   "summary":"Hostilidades na região: ataques, cortes de serviços, deslocamentos e escassez.",
+   "phases":[
+     {"title":"Preparação","items":["Monte a mochila de evacuação e o kit doméstico para pelo menos 1 semana","Tenha cópias de documentos, dinheiro em espécie e contatos impressos","Identifique abrigos públicos e o cômodo mais protegido da casa (regra das duas paredes)","Combine ponto de encontro e um contato fora da região","Tenha rádio a pilha ou à manivela"]},
+     {"title":"Primeiras 72 horas","items":["Acompanhe somente fontes oficiais","Ao alerta, vá ao abrigo ou ao cômodo interno, longe de janelas","Não toque em artefatos não explodidos; afaste-se e avise","Economize água, alimentos e bateria desde o início","Mantenha a família junta e informada"]},
+     {"title":"Primeiras semanas","items":["Organize-se com vizinhos de confiança (informações, água, cuidado com vulneráveis)","Avalie com calma se ficar ou evacuar, seguindo corredores e orientações oficiais","Mantenha rotina e cuide da saúde mental, especialmente das crianças","Proteja documentos e recursos; seja discreto"]},
+     {"title":"Longo prazo","items":["Garanta fontes de água e alimento (coleta de chuva, horta, trocas comunitárias)","Procure a Cruz Vermelha para localizar familiares","Registre perdas e necessidades junto às autoridades e organizações humanitárias"]}
+   ],
+   "related":["cen-conflito-armado","cen-abrigar-contaminacao","cen-colapso-servicos","equip-kit-72h","seg-comunidade","seg-saude-mental"],
+   "sources":["mcf-crise-guerra","cicv-contaminacao"]},
+  {"id":"cen-pandemia","title":"Pandemia","icon":"coronavirus","order":2,
+   "summary":"Doença contagiosa em larga escala: isolamento, sobrecarga de saúde e desabastecimento.",
+   "phases":[
+     {"title":"Preparação","items":["Estoque de 2 a 4 semanas de alimentos, água, higiene e medicamentos contínuos","Máscaras, álcool 70%, sabão, termômetro e luvas","Defina um quarto de isolamento e quem cuidaria de um doente","Mantenha vacinas em dia"]},
+     {"title":"Primeiras 72 horas","items":["Siga as orientações das autoridades de saúde","Reduza saídas e contatos; higiene das mãos e ventilação","Se alguém adoecer, isole no quarto ventilado com cuidador único"]},
+     {"title":"Primeiras semanas","items":["Monitore sinais de gravidade (falta de ar, lábios roxos, confusão) e ligue 192 se surgirem","Organize compras e entregas com vizinhos para reduzir exposição","Mantenha rotina e contato à distância com familiares"]},
+     {"title":"Longo prazo","items":["Reponha estoques de forma gradual, sem compras de pânico","Cuide da saúde mental e de doenças crônicas","Mantenha medidas recomendadas até a liberação oficial"]}
+   ],
+   "related":["cen-pandemia-quarentena","alim-despensa-longo-prazo","seg-saude-mental","auto-saneamento-emergencia"],
+   "sources":["oms-cuidado-domiciliar","mcf-crise-guerra"]},
+  {"id":"cen-escassez-agua","title":"Escassez de água","icon":"water_drop","order":3,
+   "summary":"Seca prolongada, rodízio ou interrupção do abastecimento por semanas.",
+   "phases":[
+     {"title":"Preparação","items":["Monte reserva de água potável em recipientes próprios (meta mínima: 2,5–3 L/pessoa/dia para beber)","Instale captação de chuva e reservatório tampado","Tenha meios de tratar água: fervura, hipoclorito 2,5%, filtro"]},
+     {"title":"Primeiras 72 horas","items":["Defina prioridades: beber > cozinhar > higiene > limpeza > descarga","Separe recipientes de água potável e de reúso","Reduza esforço físico nas horas quentes"]},
+     {"title":"Primeiras semanas","items":["Reaproveite água cinza para descarga e limpeza","Use banheiro seco se faltar água para descarga","Mantenha a higiene das mãos para evitar diarreias","Trate qualquer água de origem duvidosa antes de beber"]},
+     {"title":"Longo prazo","items":["Amplie a captação de chuva e o armazenamento","Cobertura morta e irrigação no início da manhã na horta","Organize cisternas e pontos de abastecimento comunitários"]}
+   ],
+   "related":["agua-reserva-longo-prazo","agua-escassez-racionamento","agua-tornar-potavel","agua-captacao-chuva","auto-saneamento-emergencia"],
+   "sources":["sphere-2018","ready-agua"]},
+  {"id":"cen-escassez-alimentos","title":"Escassez de alimentos","icon":"no_food","order":4,
+   "summary":"Desabastecimento, preços proibitivos ou cadeias de suprimento interrompidas por meses.",
+   "phases":[
+     {"title":"Preparação","items":["Construa uma despensa de longo prazo, aos poucos, com o que a família come","Proteja o estoque de umidade, pragas e roedores","Comece uma horta e guarde sementes antes da crise","Aprenda a conservar alimentos sem geladeira"]},
+     {"title":"Primeiras 72 horas","items":["Faça inventário e plano de consumo","Consuma primeiro os perecíveis","Evite compras de pânico e não divulgue o que tem"]},
+     {"title":"Primeiras semanas","items":["Racione protegendo crianças, gestantes, idosos e doentes","Combine cereais com leguminosas para proteína","Organize trocas e refeições coletivas com vizinhos de confiança","Proteja o estoque: dividido, fechado e discreto"]},
+     {"title":"Longo prazo","items":["Plante culturas calóricas (batata-doce, feijão, milho, abóbora, mandioca mansa)","Compostagem para manter o solo produtivo","Pequenos animais (galinhas) para ovos e proteína","Inclua verduras e frutas para evitar deficiências de vitaminas"]}
+   ],
+   "related":["alim-despensa-longo-prazo","alim-racionamento-nutricao","alim-pragas-umidade","alim-conservacao-sem-geladeira","prod-horta-passo-a-passo","prod-culturas-caloricas","prod-galinhas-caipiras","seg-protecao-mantimentos"],
+   "sources":["sphere-2018","usu-armazenamento","embrapa-plantar-hortalicas"]},
+  {"id":"cen-colapso","title":"Colapso prolongado de serviços","icon":"power_off","order":5,
+   "summary":"Semanas sem energia, água encanada, internet, comércio e transporte regulares.",
+   "phases":[
+     {"title":"Preparação","items":["Reserva de água e alimentos para pelo menos 2 semanas","Lanternas, pilhas, rádio e, se possível, kit solar pequeno","Banheiro de emergência (balde, sacos, serragem)","Dinheiro em espécie e documentos"]},
+     {"title":"Primeiras 72 horas","items":["Desconecte aparelhos e preserve alimentos da geladeira","Cozinhe e aqueça somente com equipamentos seguros e ao ar livre","Defina horários para ouvir o rádio e economizar energia"]},
+     {"title":"Primeiras semanas","items":["Rotina diária e divisão de tarefas na família","Saneamento: lixo fechado e afastado, higiene das mãos","Organize com vizinhos água, informação e cuidado com vulneráveis"]},
+     {"title":"Longo prazo","items":["Produção de alimentos e captação de água","Energia solar para luz e comunicação","Segurança da casa e proteção discreta dos recursos"]}
+   ],
+   "related":["cen-colapso-servicos","urb-apagao","auto-energia-solar-basica","auto-saneamento-emergencia","seg-seguranca-residencial","seg-comunidade"],
+   "sources":["mcf-crise-guerra","ready-apagao"]},
+  {"id":"cen-instabilidade","title":"Instabilidade social e saques","icon":"shield","order":6,
+   "summary":"Desordem, furtos e saques durante crises: como proteger a família e os recursos sem confronto.",
+   "phases":[
+     {"title":"Preparação","items":["Discrição sobre estoques e preparativos","Reforce portas, iluminação e defina um cômodo de refúgio","Divida e tranque os recursos essenciais","Forme uma rede de vizinhos de confiança"]},
+     {"title":"Primeiras 72 horas","items":["Evite aglomerações, protestos e áreas de saque","Fique em casa se for seguro; mantenha contato com a rede de vizinhos","Mantenha celular carregado e contatos de emergência à mão"]},
+     {"title":"Primeiras semanas","items":["Rodízio de atenção à rua com vizinhos, sem confronto","Em ameaça ou assalto: não reaja; acione o 190 quando for seguro","Mantenha aparência comum e rotinas discretas"]},
+     {"title":"Longo prazo","items":["Fortaleça a organização comunitária e a ajuda mútua","Cuide da saúde mental da família","Conheça a lei: legítima defesa tem limites e armas exigem autorização"]}
+   ],
+   "related":["seg-discricao","seg-protecao-mantimentos","seg-seguranca-residencial","seg-defesa-legal","seg-comunidade","seg-saude-mental"],
+   "sources":["codigo-penal","estatuto-desarmamento","mcf-crise-guerra"]}
+]

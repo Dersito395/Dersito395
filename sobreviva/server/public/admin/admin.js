@@ -101,6 +101,7 @@ async function route() {
     if (view === 'artigo' && id) await viewArticle(decodeURIComponent(id));
     else if (view === 'fontes') await viewSources();
     else if (view === 'emergencias') await viewEmergencies();
+    else if (view === 'cenarios') await viewScenarios();
     else if (view === 'midia') await viewMedia();
     else if (view === 'publicacao') await viewRelease();
     else if (view === 'usuarios') await viewUsers();
@@ -352,6 +353,22 @@ async function viewEmergencies() {
       let parsed;
       try { parsed = JSON.parse(ta.value); } catch { return toast('JSON inválido', true); }
       try { await api('PUT', '/api/admin/emergencies', parsed); toast('Guias salvos'); } catch (e) { toast(e.message, true); }
+    } }, 'Validar e salvar')),
+  );
+}
+
+// Cenários de crise --------------------------------------------------------------------
+async function viewScenarios() {
+  const list = await api('GET', '/api/admin/scenarios');
+  const ta = el('textarea', { class: 'code', value: JSON.stringify(list, null, 2), readonly: !can('catalog:edit') });
+  render(
+    el('h1', {}, `Cenários de crise (${list.length})`),
+    el('p', { class: 'muted' }, 'Cada cenário tem: id, title, icon, summary, phases (title + items por fase: preparação, primeiras 72 horas, semanas, longo prazo), related (ids de artigos) e sources (ids de fontes).'),
+    ta,
+    can('catalog:edit') && el('div', { class: 'row sticky-actions' }, el('button', { onclick: async () => {
+      let parsed;
+      try { parsed = JSON.parse(ta.value); } catch { return toast('JSON inválido', true); }
+      try { await api('PUT', '/api/admin/scenarios', parsed); toast('Cenários salvos'); } catch (e) { toast(e.message, true); }
     } }, 'Validar e salvar')),
   );
 }

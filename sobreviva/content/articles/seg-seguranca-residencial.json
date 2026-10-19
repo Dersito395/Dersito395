@@ -1,0 +1,81 @@
+{
+  "id": "seg-seguranca-residencial",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Segurança da casa em períodos de instabilidade",
+  "summary": "Barreiras físicas, iluminação, visibilidade, rotinas e sala segura, sem bloquear rotas de fuga.",
+  "category": "seguranca",
+  "subcategory": "seguranca-residencial",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "urbano",
+    "rural"
+  ],
+  "time_estimate": "1 a 3 dias para melhorias básicas",
+  "materials": [
+    "Fechaduras e trincos reforçados",
+    "Iluminação externa",
+    "Corrente de porta ou olho mágico",
+    "Lanterna e celular carregado na sala segura"
+  ],
+  "objective": "Dificultar invasões e ganhar tempo para pedir ajuda, mantendo a casa segura em caso de incêndio.",
+  "steps": [
+    {
+      "text": "Reforce portas externas: fechaduras de qualidade, trincos e batentes firmes. Uma porta resistente vale mais que muitos equipamentos."
+    },
+    {
+      "text": "Ilumine entradas e pátio; mantenha a vegetação baixa perto de janelas para não criar esconderijos."
+    },
+    {
+      "text": "Nunca abra a porta para desconhecidos; confirme identidades por olho mágico ou interfone."
+    },
+    {
+      "text": "Defina um cômodo de refúgio com porta resistente, celular, lanterna e lista de contatos, para se trancar e chamar ajuda (190)."
+    },
+    {
+      "text": "Organize uma rede com vizinhos (grupo de mensagens, sinais combinados, rodízio de atenção à rua)."
+    },
+    {
+      "text": "Varie horários e trajetos em períodos de maior risco e evite andar sozinho à noite."
+    }
+  ],
+  "cautions": [
+    "Grades e trancas não podem impedir a saída em incêndio: mantenha chaves acessíveis em local combinado e pelo menos duas rotas de fuga.",
+    "Dispositivos para ferir invasores (armadilhas) são ilegais e perigosos."
+  ],
+  "alternatives": [
+    "Programas de vizinhança solidária com a Polícia Militar local."
+  ],
+  "tags": [
+    "segurança residencial",
+    "invasão",
+    "fechadura",
+    "sala segura",
+    "vizinhança"
+  ],
+  "keywords": [
+    "proteger minha casa",
+    "evitar invasão",
+    "segurança em casa"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "ready-incendio-casa",
+      "note": "Rotas de fuga que não podem ser bloqueadas."
+    },
+    {
+      "ref": "codigo-penal",
+      "note": "Limites legais da defesa."
+    }
+  ],
+  "related": [
+    "seg-protecao-mantimentos",
+    "seg-comunidade",
+    "urb-incendio-residencial"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

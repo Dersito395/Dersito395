@@ -1,0 +1,111 @@
+{
+  "id": "cen-conflito-armado",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Conflito armado: como civis podem se proteger",
+  "summary": "Preparação, abrigo durante ataques, artefatos não explodidos, documentos e evacuação em cenários de guerra.",
+  "category": "cenarios",
+  "subcategory": "conflito-armado",
+  "difficulty": "intermediaria",
+  "environments": [
+    "urbano",
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Preparação prévia; ação imediata em alerta",
+  "materials": [
+    "Mochila de emergência",
+    "Cópias de documentos em saco impermeável",
+    "Dinheiro em espécie",
+    "Rádio a pilha ou à manivela",
+    "Reserva de água e alimentos",
+    "Lanterna"
+  ],
+  "objective": "Reduzir o risco para a família durante hostilidades e saber quando e como sair.",
+  "steps": [
+    {
+      "text": "Acompanhe apenas fontes oficiais (rádio, alertas das autoridades). Boatos causam deslocamentos perigosos."
+    },
+    {
+      "text": "Tenha a mochila pronta, documentos de todos, contatos impressos, medicamentos e dinheiro em espécie."
+    },
+    {
+      "text": "Ao alerta de ataque, vá ao abrigo indicado pelas autoridades. Sem abrigo, use o subsolo ou um cômodo interno."
+    },
+    {
+      "text": "Regra das duas paredes: fique com pelo menos duas paredes entre você e o exterior, longe de janelas e vidros (corredores e banheiros internos costumam servir).",
+      "image": "abrigo-duas-paredes.svg"
+    },
+    {
+      "text": "Se for surpreendido ao ar livre, deite-se no chão (de preferência em uma depressão do terreno), cubra a cabeça e afaste-se de vidros e fachadas."
+    },
+    {
+      "text": "Após explosões, não vá olhar: pode haver novos ataques. Espere a liberação das autoridades."
+    },
+    {
+      "text": "Artefatos não explodidos: NÃO toque, não mova, não chute. Afaste-se pelo mesmo caminho, marque o local de longe e avise as autoridades. Ensine isso às crianças."
+    },
+    {
+      "text": "Em evacuação, siga as rotas e corredores oficiais, leve documentos e mantenha a família junta; combine um ponto de encontro e um contato fora da região."
+    },
+    {
+      "text": "Em postos de controle, mantenha a calma, mãos visíveis, documentos à mão e siga as instruções."
+    },
+    {
+      "text": "Se perder contato com familiares, procure a Cruz Vermelha (serviço de Restabelecimento de Laços Familiares)."
+    }
+  ],
+  "cautions": [
+    "Não filme ou fotografe tropas, posições ou instalações: isso pode colocar você em risco.",
+    "Não recolha armas, munições ou fragmentos como \"lembrança\".",
+    "Prepare-se também para cortes longos de energia, água e comunicações (veja colapso de serviços)."
+  ],
+  "alternatives": [
+    "Deslocar-se preventivamente para áreas mais seguras antes da escalada, se houver possibilidade."
+  ],
+  "tags": [
+    "guerra",
+    "conflito armado",
+    "bombardeio",
+    "abrigo",
+    "artefatos não explodidos",
+    "evacuação"
+  ],
+  "keywords": [
+    "o que fazer em uma guerra",
+    "bombardeio",
+    "cenário de guerra",
+    "ataque aéreo"
+  ],
+  "images": [
+    {
+      "file": "abrigo-duas-paredes.svg",
+      "caption": "Regra das duas paredes: cômodo interno, longe de janelas.",
+      "alt": "Planta de casa com cômodo interno destacado entre duas paredes"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "mcf-crise-guerra",
+      "note": "Preparação doméstica, alertas, abrigos e conduta de civis em crise ou guerra."
+    },
+    {
+      "ref": "cicv-contaminacao",
+      "note": "Conduta segura diante de artefatos não explodidos."
+    },
+    {
+      "ref": "ifrc-2020",
+      "note": "Primeiros socorros em contextos de violência."
+    }
+  ],
+  "related": [
+    "cen-colapso-servicos",
+    "cen-abrigar-contaminacao",
+    "equip-kit-72h",
+    "com-plano-comunicacao-familiar",
+    "seg-comunidade"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { normalizeArticle, validateArticle, validateEmergency } from './validate.js';
+import { normalizeArticle, validateArticle, validateEmergency, validateScenario } from './validate.js';
 
 export const PACKAGE_FORMAT = 1;
 
@@ -64,7 +64,13 @@ export function collect(store, { strict = false } = {}) {
     for (const r of e.related || []) if (!articleIds.has(r)) report.warnings.push(`emergência ${e.id}: artigo relacionado inexistente ${r}`);
     for (const s of e.sources || []) if (!sourceIds.has(s)) report.errors.push(`emergência ${e.id}: fonte desconhecida ${s}`);
   }
-  return { articles, categories, sources, emergencies, report };
+  const scenarios = store.scenarios();
+  for (const sc of scenarios) {
+    validateScenario(sc).forEach((err) => report.errors.push(err));
+    for (const r of sc.related || []) if (!articleIds.has(r)) report.warnings.push(`cenário ${sc.id}: artigo relacionado inexistente ${r}`);
+    for (const s of sc.sources || []) if (!sourceIds.has(s)) report.errors.push(`cenário ${sc.id}: fonte desconhecida ${s}`);
+  }
+  return { articles, categories, sources, emergencies, scenarios, report };
 }
 
 function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
@@ -72,6 +78,7 @@ function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
   const usedSources = new Set();
   articles.forEach((a) => a.sources.forEach((s) => usedSources.add(s.ref)));
   data.emergencies.forEach((e) => (e.sources || []).forEach((s) => usedSources.add(s)));
+  data.scenarios.forEach((sc) => (sc.sources || []).forEach((s) => usedSources.add(s)));
   const mediaMeta = store.mediaMeta();
   const mediaFiles = [...new Set(articles.flatMap(articleMedia))].sort();
   const media = mediaFiles.map((file) => {
@@ -95,6 +102,7 @@ function packagePayload(store, pkg, data, { version, releasedAt, embedMedia }) {
     synonyms: store.synonyms(),
     numbers: store.numbers(),
     emergencies: data.emergencies,
+    scenarios: data.scenarios,
     articles,
     media,
   };

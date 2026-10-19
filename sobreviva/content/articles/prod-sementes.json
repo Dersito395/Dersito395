@@ -1,0 +1,78 @@
+{
+  "id": "prod-sementes",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Guardar e produzir as próprias sementes",
+  "summary": "Como escolher, secar, armazenar e testar sementes para garantir os próximos plantios.",
+  "category": "producao",
+  "subcategory": "sementes",
+  "difficulty": "intermediaria",
+  "environments": [
+    "domestico",
+    "rural"
+  ],
+  "time_estimate": "Algumas horas por safra",
+  "materials": [
+    "Garrafas PET transparentes ou potes de vidro bem secos",
+    "Etiquetas",
+    "Papel-toalha para teste de germinação",
+    "Local fresco e seco ou freezer"
+  ],
+  "objective": "Não depender da compra de sementes a cada plantio.",
+  "steps": [
+    {
+      "text": "Prefira variedades de polinização aberta ou crioulas: sementes de híbridos (F1) geralmente não reproduzem a mesma planta."
+    },
+    {
+      "text": "Escolha as plantas mais sadias e produtivas para fornecer sementes; deixe os frutos ou vagens amadurecerem bem na planta."
+    },
+    {
+      "text": "Retire e limpe as sementes; seque à sombra, em local ventilado, até ficarem bem duras."
+    },
+    {
+      "text": "Guarde em garrafas PET transparentes ou potes bem secos e fechados, etiquetados com variedade e data."
+    },
+    {
+      "text": "Mantenha em local fresco, seco e escuro. Para sementes bem secas, o freezer prolonga a viabilidade."
+    },
+    {
+      "text": "Antes de plantar, teste: coloque 10 sementes em papel úmido por alguns dias e conte quantas germinaram para ajustar a quantidade a semear."
+    }
+  ],
+  "cautions": [
+    "A viabilidade varia muito entre espécies: renove o estoque a cada safra.",
+    "Sementes úmidas mofam e perdem a germinação.",
+    "Sementes tratadas compradas (coloridas) contêm produtos químicos: nunca use como alimento."
+  ],
+  "alternatives": [
+    "Casas e bancos comunitários de sementes crioulas."
+  ],
+  "tags": [
+    "sementes",
+    "sementes crioulas",
+    "armazenamento",
+    "germinação"
+  ],
+  "keywords": [
+    "como guardar sementes",
+    "tirar semente para plantar"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "embrapa-sementes-pet",
+      "note": "Armazenamento de sementes crioulas em garrafas PET, umidade e germinação."
+    },
+    {
+      "ref": "embrapa-plantar-hortalicas",
+      "note": "Plantio a partir de sementes."
+    }
+  ],
+  "related": [
+    "prod-horta-passo-a-passo",
+    "prod-culturas-caloricas"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "prod-horta-passo-a-passo",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Horta do zero: passo a passo",
+  "summary": "Da escolha do local à colheita: canteiros, solo, semeadura, mudas, rega e cuidados para produzir alimento em casa.",
+  "category": "producao",
+  "subcategory": "horta",
+  "difficulty": "basica",
+  "environments": [
+    "domestico",
+    "rural",
+    "urbano"
+  ],
+  "time_estimate": "Preparação em 1 a 2 fins de semana; primeiras colheitas em 30 a 60 dias",
+  "materials": [
+    "Enxada, pá ou enxadão",
+    "Ancinho",
+    "Composto orgânico ou esterco curtido",
+    "Sementes ou mudas",
+    "Regador ou mangueira",
+    "Palha ou folhas secas para cobertura"
+  ],
+  "objective": "Produzir hortaliças frescas de forma contínua, com poucos recursos.",
+  "steps": [
+    {
+      "text": "Escolha um local com várias horas de sol direto por dia (de preferência pela manhã), perto de uma fonte de água e protegido de animais."
+    },
+    {
+      "text": "Marque canteiros de cerca de 1 metro de largura (para alcançar o meio sem pisar) e caminhos entre eles. O comprimento é livre.",
+      "image": "horta-canteiro.svg"
+    },
+    {
+      "text": "Afofe a terra com enxada ou pá a uns 20 a 30 cm de profundidade, retire pedras e raízes e eleve o canteiro uns 15 a 20 cm para a água escorrer."
+    },
+    {
+      "text": "Misture composto orgânico ou esterco bem curtido à terra. Esterco fresco queima as plantas e pode trazer contaminação."
+    },
+    {
+      "text": "Semeadura direta no canteiro para plantas que não gostam de transplante (cenoura, rabanete, beterraba). Para alface, couve e tomate, faça mudas em copinhos ou sementeira e transplante quando tiverem 4 a 6 folhas."
+    },
+    {
+      "text": "Siga a profundidade indicada no pacote: regra prática, enterre a semente a duas ou três vezes o seu tamanho."
+    },
+    {
+      "text": "Regue no início da manhã ou no fim da tarde, mantendo a terra úmida, não encharcada. Mudas recém-plantadas precisam de rega diária."
+    },
+    {
+      "text": "Cubra o solo entre as plantas com palha ou folhas secas: segura a umidade, protege o solo e reduz o mato."
+    },
+    {
+      "text": "Arranque o mato quando pequeno e retire à mão lagartas e insetos visíveis. Plantas bem nutridas resistem melhor."
+    },
+    {
+      "text": "Plante um pouco a cada 2 a 3 semanas (escalonamento) para colher sempre, e alterne as famílias de plantas no mesmo canteiro (rotação)."
+    }
+  ],
+  "cautions": [
+    "Consulte o calendário de plantio da sua região: a época certa muda conforme clima e altitude.",
+    "Não use agrotóxicos sem receituário agronômico; em horta caseira, prefira manejo manual.",
+    "Lave bem as verduras antes de comer, principalmente se usou esterco."
+  ],
+  "alternatives": [
+    "Horta em vasos e jardineiras em apartamentos.",
+    "Hortas comunitárias e quintais compartilhados."
+  ],
+  "tags": [
+    "horta",
+    "plantar",
+    "canteiro",
+    "hortaliças",
+    "semeadura",
+    "mudas"
+  ],
+  "keywords": [
+    "como fazer uma horta",
+    "plantar meu alimento",
+    "horta passo a passo",
+    "como plantar verduras"
+  ],
+  "images": [
+    {
+      "file": "horta-canteiro.svg",
+      "caption": "Canteiros de ~1 m de largura, elevados, com caminhos e cobertura de palha.",
+      "alt": "Corte de canteiro elevado com plantas, palha e caminho"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "embrapa-plantar-hortalicas",
+      "note": "Preparo de canteiros, adubação, plantio e cuidados com a horta."
+    },
+    {
+      "ref": "embrapa-horta",
+      "note": "Água, solo, luz e plantas em pequenos espaços."
+    }
+  ],
+  "related": [
+    "prod-compostagem",
+    "prod-culturas-caloricas",
+    "prod-sementes",
+    "auto-horta-pequenos-espacos"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}
