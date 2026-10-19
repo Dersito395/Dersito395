@@ -1,5 +1,6 @@
 # Gera o APK de teste do SOBREVIVA (Android) e o disponibiliza para download
-# em Actions › execução › Artifacts. Assinado com chave de depuração: só para testes.
+# em Actions › execução › Artifacts. Assinado com a chave de TESTE do repositório (fixa entre
+# builds, para instalar por cima); nunca usar esse APK nas lojas.
 name: SOBREVIVA – APK de teste
 
 on:
@@ -39,8 +40,13 @@ jobs:
       - name: Testes
         run: flutter test
 
+      # A versão sobe a cada execução, para o Android aceitar a atualização por cima.
       - name: Build do APK
-        run: flutter build apk --release
+        run: >
+          flutter build apk --release
+          --build-name=1.1.${{ github.run_number }}
+          --build-number=${{ github.run_number }}
+          --dart-define=APP_VERSION=1.1.${{ github.run_number }}
 
       - name: Publicar APK
         uses: actions/upload-artifact@v4
