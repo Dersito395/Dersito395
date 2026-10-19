@@ -8,7 +8,7 @@
   nota do que a fonte fundamenta. Suposições não são apresentadas como procedimento comprovado.
 - **Saúde e procedimentos críticos exigem revisão técnica** por profissional habilitado antes de serem publicados
   em versão de loja.
-- **Imagens só com crédito e licença conhecidos.** As 23 ilustrações atuais são desenhos originais do projeto
+- **Imagens só com crédito e licença conhecidos.** As 30 ilustrações atuais são desenhos originais do projeto
   (`tools/make_illustrations.py`), licenciados CC BY 4.0.
 
 ## Fontes usadas na biblioteca inicial
@@ -26,6 +26,29 @@ Lista completa com links e licenças: `content/sources.json` (também visível n
 engasgo da AHA 2025, condutas em acidentes ofídicos, SMS 40199, Disque-Intoxicação 0800 722 6001, DOI das diretrizes
 da WMS) foram conferidos por pesquisa em 18/10/2026. Antes de cada publicação, o revisor deve abrir as fontes,
 confirmar se continuam vigentes e registrar a revisão no painel.
+
+## Documentos de consulta (aba Consultas) e PDFs de referência
+
+- O app **só distribui PDFs de livre distribuição**: documentos do governo dos EUA marcados *Approved for public
+  release; distribution is unlimited*, publicações sob licença aberta ou com autorização por escrito. Cada documento
+  em `content/documents.json` traz licença, fonte, resumo em português, destaques por página e, quando for o caso,
+  aviso de que foi substituído por edição mais nova.
+- **Livros comerciais e documentos de distribuição restrita** (ex.: *Distribution Restriction B*) **não entram no
+  app**: suas ideias podem ser usadas como fonte, sempre reescritas e citadas.
+- Partes sobre armamento, explosivos, demolição, sabotagem ou ação militar ofensiva não são aproveitadas, mesmo
+  quando o documento é público (veja *Limites de conteúdo*).
+- Links externos (`content/links.json`) são `oficial` ou `comunidade`. Links de comunidade (blogs, fóruns) exigem
+  nota avisando que o conteúdo não é revisado e **não servem como fonte** de artigos.
+
+### Material de referência recebido em 19/10/2026
+
+| Documento | Situação | Uso |
+|---|---|---|
+| FM 3-97.6 Mountain Operations (2000) | domínio público, distribuição ilimitada; substituído pelo ATP 3-90.97 | PDF na aba Consultas + artigos `mont-*` |
+| Pewtherer, *Wilderness Survival Handbook* (McGraw-Hill, 2010) | protegido por direitos autorais | só ideias, reescritas e citadas: artigos `pw-*` |
+| FM 4-02.283 Treatment of Nuclear and Radiological Casualties (2001) | distribuição restrita (B) | não usado |
+| JP 3-50.21 Combat Search and Rescue (1998) | doutrina militar de resgate em combate | não usado |
+| ST 31-180 Special Forces Handbook (1965) | demolição, explosivos e sabotagem | não usado |
 
 ## Pendências conhecidas
 

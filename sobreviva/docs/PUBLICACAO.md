@@ -75,4 +75,6 @@ publicado em uma CDN estática.
   (exigência comum das lojas para apps de informação médica).
 - Não prometer resultados ("salva vidas") nem sugerir que o app substitui o 192/193/190.
 - O app usa a rede apenas para baixar conteúdo; declare isso na revisão.
+- O leitor de PDF (pdfrx/PDFium) adiciona bibliotecas nativas por arquitetura: prefira `--split-per-abi` ou o
+  `.aab` para manter o download pequeno.
 - Permissões Android: apenas `INTERNET` e `ACCESS_NETWORK_STATE`. iOS: nenhuma permissão sensível.

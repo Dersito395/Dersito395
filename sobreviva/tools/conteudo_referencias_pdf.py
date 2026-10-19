@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""Artigos derivados dos PDFs de referência enviados pelo usuário (texto original, com citação).
+
+FM 3-97.6 (Exército dos EUA, domínio público) e Pewtherer (2010, direitos reservados: só as ideias).
+Temas de caça, armadilhas e armas do livro foram deliberadamente excluídos.
+"""
+import importlib.util
+import os
+
+spec = importlib.util.spec_from_file_location('base', os.path.join(os.path.dirname(__file__), 'conteudo_crise_prolongada.py'))
+
+# Reaproveita a função A() sem regerar os artigos do outro módulo.
+src = open(spec.origin, encoding='utf-8').read().split('# ---------------------------------------------------------------- ÁGUA')[0]
+ns = {'__file__': spec.origin}
+exec(compile(src, spec.origin, 'exec'), ns)
+A = ns['A']
+
+A('mont-doencas-altitude', 'Doenças da altitude: prevenção e resposta',
+  'Mal agudo da montanha, edema pulmonar e edema cerebral de altitude: como reconhecer, como subir com segurança e quando descer imediatamente.',
+  'natureza', 'terrenos', 'intermediaria', ['montanha'],
+  'Planejamento antes da viagem; reação imediata aos sintomas',
+  ['Roteiro de subida com altitudes de pernoite', 'Água e alimentos ricos em carboidratos', 'Meio de comunicação para pedir resgate'],
+  'Evitar e reconhecer cedo as doenças causadas pela falta de oxigênio em grandes altitudes (como nos Andes).',
+  ['Saiba onde o risco começa: acima de cerca de 2.400 m, o mal da altitude se torna comum; entre 1.500 e 2.400 m podem ocorrer sintomas leves e passageiros.',
+   'Suba devagar. Uma regra usada por manuais militares: depois de duas noites por volta de 2.700 m, aumente a altitude onde você dorme em no máximo 300 m por dia. O que conta é a altitude de pernoite.',
+   'Outra forma é a subida em estágios: ficar 3 dias ou mais numa altitude intermediária antes de subir mais.',
+   'Nos primeiros dias, reduza o esforço, faça pausas longas e prefira alimentos ricos em carboidratos (grãos, feijão, batata, frutas, mel). Beba água tratada em quantidade.',
+   'Mal agudo da montanha: dor de cabeça, cansaço, náusea, vômitos, tontura, insônia e falta de apetite. Pare de subir e descanse; costuma melhorar em 3 a 7 dias se você não continuar subindo.',
+   'Se os sintomas não melhoram com repouso, desça pelo menos 150 a 300 m. Só volte a subir quando estiver sem sintomas.',
+   'Edema pulmonar de altitude: tosse, chiado ou "borbulhar" no peito, falta de ar em repouso, às vezes escarro rosado. É emergência: desça imediatamente e peça resgate.',
+   'Edema cerebral de altitude: dor de cabeça forte, vômitos, andar cambaleante, confusão, sonolência ou alucinações. É a forma mais grave: descida imediata, de preferência com evacuação, e atendimento médico.',
+   'Use o sistema de duplas: euforia e erros de julgamento nas primeiras horas são comuns, e o companheiro percebe antes.'],
+  ['Pessoas em ótima forma física também adoecem: condicionamento não protege contra subir rápido demais.',
+   'Medicamentos preventivos (como acetazolamida) só com prescrição médica.',
+   'Altitude, frio e alimentação ruim juntos são muito mais perigosos do que cada um isolado.',
+   'Fogareiros e aquecedores em barracas fechadas causam intoxicação por monóxido de carbono, mais comum em altitude.'],
+  ['Contratar guias locais e agências que respeitem cronogramas de aclimatação.'],
+  ['altitude', 'mal da montanha', 'soroche', 'edema pulmonar', 'edema cerebral', 'aclimatação', 'Andes'],
+  ['mal da altitude', 'soroche', 'dor de cabeça na montanha', 'falta de ar na altitude'],
+  [('army-fm-3-97-6', 'Faixas de altitude, sintomas de MAM/EPAA/ECAA, subida em estágios e gradual (300 m/dia de pernoite), descida de 150–300 m (cap. 1 e apêndice A).'),
+   ('wms-hipotermia', 'Interação entre frio e outras condições ambientais.')],
+  ['mont-tempo-montanha', 'mont-lesoes-frio', 'nat-planejamento-trilha', 'ps-hipotermia'])
+
+A('mont-tempo-montanha', 'Leitura do tempo e tempestades na montanha',
+  'Como nuvens, vento e pressão anunciam mau tempo nas serras e o que fazer quando uma tempestade se aproxima.',
+  'natureza', 'clima', 'intermediaria', ['montanha', 'mata'],
+  'Observação contínua durante a trilha',
+  ['Previsão do tempo consultada antes da saída', 'Relógio com altímetro/barômetro (opcional)', 'Roupa impermeável e camadas'],
+  'Antecipar mudanças de tempo para decidir cedo: continuar, abrigar-se ou voltar.',
+  ['Consulte a previsão antes de sair, mas confie também no que você observa: o tempo na montanha muda rápido e varia de um vale para outro.',
+   'Nuvens de grande desenvolvimento vertical (cúmulos em torre), que crescem ao longo da tarde e formam topo em "bigorna", indicam tempestade com raios, rajadas, chuva forte e às vezes granizo.',
+   'Uma linha de nuvens altas e escuras se aproximando costuma indicar a chegada de uma frente fria com tempestades.',
+   'Nuvens em forma de lente ou "disco" sobre os picos (lenticulares) indicam ventos muito fortes em altitude. Se o "chapéu" de nuvem sobre o pico cresce e desce, espere mau tempo.',
+   'Queda rápida da pressão no barômetro ou subida da altitude mostrada no altímetro sem você se mover indicam piora do tempo.',
+   'Com sinais de tempestade, saia de cumes, cristas e áreas expostas antes que ela chegue; afaste-se da água e de objetos metálicos.',
+   'Em tempestades longas e generalizadas, as mais severas na montanha, procure abrigo cedo e evite deslocamentos em terreno exposto.'],
+  ['Cristas e cumes atraem raios; o risco é maior no verão.',
+   'Após chuvas fortes nas cabeceiras, rios podem subir de repente (cabeça d\'água) mesmo sem chuva no local.'],
+  ['Planejar a parte mais exposta da trilha para a manhã, antes das tempestades de fim de tarde.'],
+  ['tempo', 'clima', 'tempestade', 'nuvens', 'raios', 'montanha', 'previsão'],
+  ['vai chover na trilha', 'tempestade na montanha', 'como prever o tempo'],
+  [('army-fm-3-97-6', 'Nuvens indicadoras de mau tempo, cúmulos em torre, lenticulares, tempestades e raios em cristas (cap. 1 e apêndice B).'),
+   ('nws-raios', 'Proteção contra raios ao ar livre.')],
+  ['urb-vendaval-raios', 'mont-doencas-altitude', 'nat-planejamento-trilha'])
+
+A('mont-lesoes-frio', 'Congelamento, pé de imersão e cegueira da neve',
+  'Lesões por frio além da hipotermia: como prevenir, reconhecer e dar os primeiros cuidados.',
+  'primeiros-socorros', 'hipotermia', 'intermediaria', ['montanha', 'qualquer'],
+  'Prevenção contínua; primeiros cuidados em minutos',
+  ['Meias secas de reserva', 'Luvas e gorro', 'Óculos de sol com proteção UV', 'Saco plástico ou bolsa estanque para roupas secas'],
+  'Evitar lesões que podem levar à perda de dedos e à incapacidade de caminhar.',
+  ['Previna: roupas em camadas, mãos, pés, orelhas e rosto protegidos, meias sempre secas e nada apertado que corte a circulação.',
+   'Congelamento: pele dormente, branca ou acinzentada, endurecida. Leve a pessoa para local abrigado e aqueça a área com calor do próprio corpo (mão na axila, por exemplo).',
+   'Reaqueça uma área congelada com água morna (em torno de 37 a 39 °C) apenas se não houver risco de ela congelar de novo; congelar, descongelar e congelar outra vez piora muito a lesão.',
+   'Não esfregue a pele, não use neve, nem aproxime de fogo ou aquecedor (a pele dormente queima sem a pessoa sentir).',
+   'Não estoure bolhas; cubra com curativo seco e folgado, separando os dedos com gaze.',
+   'Pé de imersão (pé de trincheira): pés frios, inchados, pálidos ou avermelhados após horas molhados. Seque, aqueça devagar, eleve e mantenha os pés secos; troque as meias pelo menos uma vez por dia em ambiente úmido.',
+   'Cegueira da neve: dor, sensação de areia nos olhos e lacrimejamento após exposição ao sol refletido na neve. Previna com óculos escuros com proteção lateral; trate com repouso em local escuro e compressas frias.',
+   'Procure atendimento médico para qualquer congelamento: o tratamento hospitalar precoce pode salvar tecidos.'],
+  ['Hipotermia tem prioridade: aqueça o corpo inteiro antes de se preocupar com dedos.',
+   'Não deixe uma pessoa com pés descongelados caminhar sobre eles, se puder evitar.',
+   'Álcool e cigarro pioram a circulação e o risco de lesões por frio.'],
+  ['Evacuação precoce para local aquecido.'],
+  ['congelamento', 'frio', 'pé de trincheira', 'pé de imersão', 'cegueira da neve', 'neve'],
+  ['dedos congelados', 'pé molhado frio', 'olhos ardendo na neve'],
+  [('wms-congelamento', 'Prevenção, reaquecimento em água morna, risco de recongelamento e cuidados com bolhas.'),
+   ('army-fm-3-97-6', 'Lesões por frio mais comuns em montanha: congelamento, pé de imersão e cegueira da neve.')],
+  ['ps-hipotermia', 'mont-doencas-altitude', 'abrigo-terreno-isolamento'])
+
+A('pw-abrigo-folhas', 'Abrigo de folhas e galhos (sem equipamento)',
+  'Como construir um abrigo isolante só com galhos e folhas secas quando não há lona, barraca ou saco de dormir.',
+  'abrigos', 'improvisados', 'intermediaria', ['mata', 'rural', 'montanha'],
+  '2 a 4 horas (a coleta de folhas é a parte mais demorada)',
+  ['Um galho longo e forte (cumeeira)', 'Muitos galhos finos (costelas)', 'Galharia fina para trama', 'Grande quantidade de folhas secas, capim seco ou palha'],
+  'Manter-se aquecido à noite usando o isolamento das folhas, como um "ninho".',
+  ['Escolha um local seguro e seco (veja escolha do local do abrigo) e comece cedo: o trabalho é maior do que parece.',
+   'Encontre uma cumeeira: um galho forte, um pouco mais comprido que sua altura. Apoie uma ponta numa forquilha, tronco ou pedra à altura da cintura e a outra no chão. Verifique se o apoio está firme.',
+   'O abrigo é pequeno de propósito: deitado de costas, deve sobrar pouco espaço acima dos pés e do peito. Quanto menor, mais quente.',
+   'Encoste galhos dos dois lados da cumeeira formando um "A". Eles não devem passar muito do topo, para a água não escorrer para dentro.',
+   'Cubra a estrutura com galharia fina em trama, para segurar as folhas.',
+   'Junte folhas secas em grande quantidade e cubra tudo, compactando de cima para baixo no sentido dos galhos, até formar uma camada muito espessa (bem mais grossa que um braço em noites frias).',
+   'Coloque galhos ou cascas soltas por cima para o vento não levar as folhas.',
+   'Encha o interior com folhas secas e entre devagar, compactando com o corpo. Feche a entrada com um monte de folhas puxado para dentro.'],
+  ['Verifique se não há formigueiros, cupins ou insetos nas folhas e no galho principal.',
+   'Treine em dia ameno e com um saco de dormir de reserva antes de depender desse abrigo no frio.',
+   'Folhas úmidas isolam muito menos: priorize material seco.',
+   'Nunca acenda fogo dentro ou junto da entrada: o abrigo é muito inflamável.'],
+  ['Abrigo com lona e corda, muito mais rápido quando há equipamento.'],
+  ['abrigo', 'abrigo de folhas', 'abrigo primitivo', 'sem equipamento', 'isolamento'],
+  ['abrigo sem lona', 'dormir no mato sem barraca', 'abrigo natural'],
+  [('pewtherer-2010', 'Técnica do abrigo de detritos (estrutura em A, camada espessa de folhas, porta de folhas) – ideias reescritas.'),
+   ('army-atp-3-50-21', 'Princípios de isolamento e abrigos improvisados.')],
+  ['abrigo-lona-improvisado', 'abrigo-terreno-isolamento', 'ps-hipotermia'])
+
+A('pw-fogo-friccao', 'Fogo por fricção: arco e broca',
+  'Como fazer fogo sem fósforo ou isqueiro usando um arco, uma broca de madeira e uma tábua.',
+  'fogo', 'combustao', 'avancada', ['mata', 'rural'],
+  'Preparação de 30 a 60 minutos; exige muito treino prévio',
+  ['Madeira seca e leve, não resinosa (tábua e broca)', 'Galho levemente curvo para o arco', 'Cordão resistente', 'Peça de apoio para a mão (madeira dura, pedra ou osso com cavidade)', 'Faca', 'Ninho de material seco e fino (capim, fibras, casca desfiada)'],
+  'Ter um método de fazer fogo quando todos os outros meios falharem.',
+  ['Escolha madeira morta e seca, de preferência galhos ainda presos na árvore (os caídos no chão costumam estar úmidos por dentro). Madeiras leves e não resinosas funcionam melhor; experimente as disponíveis.',
+   'Broca: um bastão reto de uns 20 cm, da grossura de um polegar, com as pontas arredondadas.',
+   'Tábua: madeira da mesma dureza da broca, com cerca de 2 a 3 cm de espessura e largura suficiente para apoiar o pé.',
+   'Arco: galho leve com comprimento aproximado do seu braço, com o cordão amarrado sem ficar esticado demais.',
+   {'text': 'Faça uma pequena cavidade na tábua, perto da borda, girando a broca. Depois, corte um entalhe em "V" da borda até o centro dessa cavidade: é ali que o pó quente vai se acumular.', 'image': 'fogo-arco-broca.svg'},
+   'Enrole o cordão uma vez na broca, coloque a ponta na cavidade da tábua, firme a tábua com o pé e segure a peça de apoio por cima, com o punho apoiado na canela.',
+   'Movimente o arco para frente e para trás em movimentos longos e constantes, aumentando a pressão aos poucos. Quando sair bastante fumaça e o pó escuro preencher o entalhe, continue mais alguns segundos.',
+   'Com cuidado, transfira a brasa do entalhe para o ninho de material seco e assopre suavemente até surgir a chama.'],
+  ['Pratique muitas vezes em condições boas: em uma emergência, com frio e cansaço, a técnica fica muito mais difícil.',
+   'Respeite as proibições de fogo e as regras de fogueira segura; tenha água para apagar.',
+   'Mantenha os dedos longe da broca em rotação para evitar queimaduras.'],
+  ['Fósforos à prova d\'água, isqueiro e pederneira no kit: muito mais confiáveis.'],
+  ['fogo', 'fricção', 'arco e broca', 'fogo primitivo', 'sem fósforo'],
+  ['fazer fogo sem isqueiro', 'fogo com madeira', 'fogo primitivo'],
+  [('pewtherer-2010', 'Componentes do arco e broca, escolha da madeira e técnica de execução – ideias reescritas.'),
+   ('usfs-fogueira', 'Segurança da fogueira e proibições.')],
+  ['fogo-seguranca-fogueira', 'fogo-quando-nao-acender'],
+  images=[{'file': 'fogo-arco-broca.svg', 'caption': 'Arco e broca: cordão enrolado na broca, tábua firmada com o pé, entalhe em V para acumular a brasa.', 'alt': 'Diagrama do conjunto de arco, broca, tábua e apoio de mão'}])
+
+A('pw-ferver-com-pedras', 'Ferver água sem panela, com pedras quentes',
+  'Como aquecer e ferver água em recipiente que não vai ao fogo, usando pedras aquecidas na fogueira.',
+  'agua', 'fervura', 'intermediaria', ['mata', 'rural'],
+  'Cerca de 1 hora (aquecimento das pedras)',
+  ['Recipiente que retenha água (casca, madeira escavada, recipiente plástico resistente ao calor não serve)', 'Pedras do tamanho de um ovo, secas', 'Duas varetas para servir de pinça', 'Fogueira de lenha'],
+  'Ferver água para torná-la segura quando não há panela de metal.',
+  ['Escolha pedras secas, de preferência de áreas longe da água. Pedras de rio ou de beira de lago podem ter água dentro e explodir quando aquecidas; evite também pedras porosas ou com rachaduras.',
+   'Coloque as pedras na fogueira, espaçadas, e espere cerca de 45 minutos até ficarem muito quentes.',
+   'Encha o recipiente até a metade com água pré-filtrada (pano).',
+   'Retire uma pedra com as varetas, sopre ou bata para tirar as cinzas e coloque com cuidado na água. Vá trocando as pedras até a água ferver vigorosamente.',
+   'Mantenha a fervura vigorosa por 1 minuto (3 minutos acima de cerca de 2.000 m), trocando pedras para manter.',
+   'Deixe a água esfriar e decantar as cinzas antes de beber.'],
+  ['Pedras podem estourar com força suficiente para ferir: mantenha distância e proteja os olhos.',
+   'Não use pedras de rio ou molhadas.',
+   'A fervura não remove contaminantes químicos.'],
+  ['Panela de metal, lata limpa ou garrafa de metal sobre a brasa.', 'Desinfecção com hipoclorito ou SODIS.'],
+  ['ferver água', 'pedras quentes', 'sem panela', 'purificar água'],
+  ['ferver água sem panela', 'água sem recipiente de metal'],
+  [('pewtherer-2010', 'Técnica de ferver com pedras e risco de pedras que explodem – ideias reescritas.'),
+   ('cdc-agua-emergencia', 'Tempo de fervura e limites do método.')],
+  ['agua-tornar-potavel', 'agua-encontrar-captar', 'fogo-seguranca-fogueira'])
+
+A('pw-destilador-solar', 'Destilador solar: como montar e quando não vale a pena',
+  'Montagem do destilador solar no solo e por que, na prática, ele produz pouca água.',
+  'agua', 'captacao', 'intermediaria', ['mata', 'rural', 'litoral'],
+  '1 a 2 horas para montar; produção ao longo do dia',
+  ['Plástico transparente (cerca de 2 x 2 m)', 'Recipiente coletor', 'Pedra pequena', 'Pá ou ferramenta para cavar', 'Mangueira fina (opcional)'],
+  'Obter alguma água por evaporação e condensação quando não há outra fonte.',
+  ['Saiba antes: o destilador solar rende pouco, em geral menos água do que o suor gasto para cavá-lo em locais quentes. Use-o como complemento, não como solução.',
+   'Cave um buraco de cerca de 1 m de largura e 60 cm de profundidade em local ensolarado e com solo úmido.',
+   'Coloque o recipiente no centro do fundo. Plantas verdes não tóxicas ou água salobra ao redor aumentam a evaporação.',
+   'Cubra o buraco com o plástico, prendendo as bordas com terra para vedar.',
+   'Coloque uma pedra pequena no centro do plástico, logo acima do recipiente, formando um cone para o vapor condensado escorrer e pingar dentro.',
+   'Se tiver mangueira, deixe uma ponta no recipiente e a outra para fora, para beber sem desmontar.',
+   'Cave nas horas mais frescas e descanse à sombra para não perder mais água do que vai ganhar.'],
+  ['Não gaste energia e suor com o destilador se houver alternativas: coleta de chuva e de orvalho costumam render mais.',
+   'Não use plantas desconhecidas que possam ser tóxicas, nem urina ou água com combustível (o vapor pode arrastar contaminantes voláteis).'],
+  ['Coleta de chuva com lona.', 'Coleta de orvalho com pano.', 'Retornar à última fonte de água conhecida.'],
+  ['destilador solar', 'água', 'condensação', 'captação'],
+  ['destilador solar', 'tirar água do solo'],
+  [('pewtherer-2010', 'Montagem e avaliação crítica do rendimento do destilador solar – ideias reescritas.'),
+   ('army-atp-3-50-21', 'Captação de água em sobrevivência.')],
+  ['agua-encontrar-captar', 'agua-tornar-potavel', 'agua-captacao-chuva'])
+
+A('pw-pesca-subsistencia', 'Pesca para subsistência: o básico e a lei',
+  'Linha e anzol improvisados, iscas, limpeza e cozimento do peixe, respeitando a legislação de pesca.',
+  'alimentacao', 'forrageamento', 'intermediaria', ['mata', 'rural', 'litoral'],
+  'Variável',
+  ['Linha de pesca e anzóis (leve no kit)', 'Iscas (minhocas, insetos, restos de peixe)', 'Faca', 'Recipiente com água para manter o peixe'],
+  'Obter proteína de forma legal e segura em situações prolongadas.',
+  ['Conheça a lei: a pesca amadora exige licença, e há períodos de defeso, tamanhos mínimos e locais proibidos. Pescar com veneno, explosivo ou substâncias tóxicas é crime.',
+   'Leve linha e anzóis no kit: ocupam pouco espaço e são muito mais eficientes que versões improvisadas.',
+   'Procure peixes em remansos, sombras de margens, junto a troncos submersos e na entrada e saída de lagos, especialmente ao amanhecer e ao entardecer.',
+   'Use iscas locais: minhocas cavadas em solo úmido, insetos e pequenos pedaços de peixe já capturado.',
+   'Linhas fixas presas a galhos na margem trabalham sozinhas enquanto você faz outras tarefas; verifique-as com frequência.',
+   'Limpe o peixe logo após a captura, longe da fonte de água que você usa para beber, e enterre as vísceras.',
+   'Cozinhe bem o peixe de água doce: parasitas são comuns.'],
+  ['Não entre em rios com correnteza para pescar.',
+   'Em áreas protegidas a pesca pode ser proibida.',
+   'Peixes de águas contaminadas (esgoto, garimpo, indústria) podem acumular metais e toxinas.'],
+  ['Criação de pequenos animais e produção vegetal como fontes de alimento mais previsíveis.'],
+  ['pesca', 'peixe', 'anzol', 'isca', 'subsistência'],
+  ['como pescar para comer', 'pescar sem vara', 'pesca de sobrevivência'],
+  [('pewtherer-2010', 'Métodos de pesca, locais e iscas – ideias reescritas (técnicas de pesca com veneno excluídas por serem crime).'),
+   ('lei-pesca', 'Regras da pesca no Brasil e licenciamento.'),
+   ('lei-crimes-ambientais', 'Pesca com explosivos ou substâncias tóxicas como crime (art. 35).')],
+  ['alim-racionamento-nutricao', 'prod-galinhas-caipiras', 'fogo-seguranca-fogueira'])
+
+# Revisão técnica para conteúdos de saúde fora da categoria primeiros-socorros.
+import json
+_p = os.path.join(ns['OUT'], 'mont-doencas-altitude.json')
+_a = json.load(open(_p, encoding='utf-8'))
+_a['review'] = {'technical_required': True, 'technical_status': 'pendente', 'reviewer': None, 'reviewed_at': None}
+with open(_p, 'w', encoding='utf-8') as fh:
+    json.dump(_a, fh, ensure_ascii=False, indent=2)
+    fh.write('\n')
+print('artigos de referência gerados')

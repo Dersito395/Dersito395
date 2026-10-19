@@ -101,20 +101,46 @@ void main() {
     expect(() => lib.importPackage(pkg, mediaInFiles: true), throwsA(isA<PackageFormatException>()));
   });
 
-  test('migração v1 → v2 cria a tabela de cenários sem perder conteúdo', () {
+  test('migração v1 → atual cria as tabelas de cenários e consultas sem perder conteúdo', () {
     final dir = Directory.systemTemp.createTempSync('sv-mig');
     final path = '${dir.path}/library.db';
     final lib = LibraryDatabase.open(path);
     lib.importPackage(loadBundle(), mediaInFiles: false);
     final count = lib.articleCount;
     lib.db.execute('DROP TABLE scenario');
+    lib.db.execute('DROP TABLE reference_item');
     lib.db.userVersion = 1;
     lib.close();
     final reopened = LibraryDatabase.open(path);
     expect(reopened.db.userVersion, LibraryDatabase.schemaVersion);
     expect(reopened.articleCount, count);
     expect(reopened.scenarios(), isEmpty); // reimportado na próxima atualização do pacote
+    expect(reopened.documents(), isEmpty);
     reopened.close();
     dir.deleteSync(recursive: true);
+  });
+
+  test('consultas: documento PDF com destaques e links oficiais e de comunidade', () {
+    final lib = libraryWithBundle();
+    final docs = lib.documents();
+    expect(docs.map((d) => d.id), contains('doc-fm-3-97-6'));
+    final fm = lib.document('doc-fm-3-97-6')!;
+    expect(fm.file, endsWith('.pdf'));
+    expect(fm.highlights.every((h) => h.page >= 1 && h.page <= fm.pages), isTrue);
+    expect(lib.imageLocation(fm.file), 'asset');
+    expect(File('assets/media/${fm.file}').existsSync(), isTrue);
+    final links = lib.links();
+    expect(links.where((l) => l.community).every((l) => l.note.isNotEmpty), isTrue);
+    expect(links.every((l) => l.url.startsWith('https://')), isTrue);
+    expect(links.any((l) => l.url.contains('sobrevivencialismo.com') && l.community), isTrue);
+    // A pesquisa sugere o documento pelos artigos relacionados ou pelos temas.
+    expect(lib.documentsFor('xyz', ['mont-doencas-altitude']).map((d) => d.id), ['doc-fm-3-97-6']);
+    expect(lib.documentsFor('aclimatacao', const []).map((d) => d.id), ['doc-fm-3-97-6']);
+    // Pacote sem a chave "documents" não apaga os documentos instalados.
+    final partial = clone(loadBundle())..remove('documents');
+    (partial['package'] as Map)['id'] = 'parcial';
+    lib.importPackage(partial, mediaInFiles: true);
+    expect(lib.documents(), isNotEmpty);
+    lib.close();
   });
 }

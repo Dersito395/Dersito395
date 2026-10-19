@@ -190,7 +190,7 @@ class PackageService {
         final m = (raw as Map).cast<String, dynamic>();
         final file = m['file'];
         final b64 = m['data'];
-        if (file is! String || !RegExp(r'^[a-z0-9][a-z0-9-]*\.(svg|webp|avif|png|jpe?g)$').hasMatch(file)) {
+        if (file is! String || !RegExp(r'^[a-z0-9][a-z0-9-]*\.(svg|webp|avif|png|jpe?g|pdf)$').hasMatch(file)) {
           throw PackageInstallException('Nome de imagem inválido no pacote.');
         }
         if (b64 is! String) continue;

@@ -14,7 +14,10 @@ Definidos em `content/packages.json` por regras de seleção:
 | Guias ilustrados | artigos com imagens | download |
 | Biblioteca completa | todos os publicados | download |
 
-Todos os pacotes levam também categorias, fontes usadas, sinônimos, números e guias de emergência (pequenos).
+Todos os pacotes levam também categorias, fontes usadas, sinônimos, números, guias de emergência, cenários e links
+externos (pequenos). **Documentos de consulta** (PDFs) só entram nos pacotes marcados com `"documents": true`
+(essencial e biblioteca completa); nos demais a chave `documents` fica ausente e o app mantém os documentos
+já instalados.
 
 ## Formato
 
@@ -27,9 +30,9 @@ Todos os pacotes levam também categorias, fontes usadas, sinônimos, números e
                  "size_bytes": 219844, "sha256": "…", "article_count": 39, "media_count": 23, "format": 1 }] }
 ```
 
-Pacote: `{ format, package{id,title,version,…}, categories, sources, synonyms, numbers, emergencies, articles,
-media[{file, mime, sha256, size, credit, license, data(base64)}] }`. A versão embarcada no app não traz `data`
-(as imagens vão como assets).
+Pacote: `{ format, package{id,title,version,…}, categories, sources, synonyms, numbers, emergencies, scenarios,
+documents?, links, articles, media[{file, mime, sha256, size, credit, license, data(base64)}] }`. A versão embarcada no app não traz `data`
+(as imagens e PDFs vão como assets). Mídia aceita: SVG, WebP, AVIF, PNG, JPEG e PDF (até 15 MB, assinatura `%PDF-` conferida no envio).
 
 ## Garantias do cliente (`app/lib/services/package_service.dart`)
 

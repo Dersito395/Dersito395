@@ -37,7 +37,7 @@ class LibraryDatabase {
   factory LibraryDatabase.inMemory() => LibraryDatabase._(sqlite3.openInMemory());
 
   final Database db;
-  static const int schemaVersion = 2;
+  static const int schemaVersion = 3;
 
   void close() => db.close();
 
@@ -88,6 +88,10 @@ class LibraryDatabase {
         // v2: roteiros de cenários de crise prolongada.
         db.execute('CREATE TABLE scenario (id TEXT PRIMARY KEY, title TEXT NOT NULL, icon TEXT, position INTEGER, data TEXT NOT NULL)');
       }
+      if (current < 3) {
+        // v3: aba Consultas (documentos em PDF e links externos).
+        db.execute('CREATE TABLE reference_item (id TEXT PRIMARY KEY, kind TEXT NOT NULL, title TEXT NOT NULL, position INTEGER, data TEXT NOT NULL)');
+      }
       db.userVersion = schemaVersion;
       db.execute('COMMIT');
     } catch (_) {
@@ -127,6 +131,8 @@ class LibraryDatabase {
       if (pkg['numbers'] is List) _importNumbers((pkg['numbers'] as List).cast<Map<String, dynamic>>());
       if (pkg['emergencies'] is List) _importEmergencies((pkg['emergencies'] as List).cast<Map<String, dynamic>>());
       if (pkg['scenarios'] is List) _importScenarios((pkg['scenarios'] as List).cast<Map<String, dynamic>>());
+      if (pkg['documents'] is List) _importReferences('document', (pkg['documents'] as List).cast<Map<String, dynamic>>());
+      if (pkg['links'] is List) _importReferences('link', (pkg['links'] as List).cast<Map<String, dynamic>>());
       for (final m in (pkg['media'] as List? ?? const []).cast<Map<String, dynamic>>()) {
         db.execute(
           'INSERT INTO image (file, mime, sha256, size, credit, license, location) VALUES (?,?,?,?,?,?,?) '
@@ -250,6 +256,14 @@ class LibraryDatabase {
         sc['order'] ?? i,
         jsonEncode(sc),
       ]);
+    }
+  }
+
+  void _importReferences(String kind, List<Map<String, dynamic>> list) {
+    db.execute('DELETE FROM reference_item WHERE kind = ?', [kind]);
+    for (var i = 0; i < list.length; i++) {
+      final r = list[i];
+      db.execute('INSERT OR REPLACE INTO reference_item (id, kind, title, position, data) VALUES (?,?,?,?,?)', [r['id'], kind, r['title'], i, jsonEncode(r)]);
     }
   }
 
@@ -568,6 +582,26 @@ class LibraryDatabase {
     final r = db.select('SELECT data FROM scenario WHERE id = ?', [id]);
     return r.isEmpty ? null : Scenario.decode(r.first['data'] as String);
   }
+
+  List<RefDocument> documents() =>
+      db.select("SELECT data FROM reference_item WHERE kind = 'document' ORDER BY position").map((r) => RefDocument.decode(r['data'] as String)).toList();
+
+  RefDocument? document(String id) {
+    final r = db.select("SELECT data FROM reference_item WHERE kind = 'document' AND id = ?", [id]);
+    return r.isEmpty ? null : RefDocument.decode(r.first['data'] as String);
+  }
+
+  /// Documentos ligados aos primeiros resultados de uma pesquisa ou cujo título/temas contêm a consulta.
+  List<RefDocument> documentsFor(String query, List<String> topArticleIds) {
+    final q = normalize(query);
+    return [
+      for (final d in documents())
+        if (d.relatedIds.any(topArticleIds.contains) || (q.length >= 3 && normalize([d.title, d.subtitle, ...d.topics].join(' ')).contains(q))) d,
+    ];
+  }
+
+  List<RefLink> links() =>
+      db.select("SELECT data FROM reference_item WHERE kind = 'link' ORDER BY position").map((r) => RefLink.decode(r['data'] as String)).toList();
 
   List<EmergencyGuide> emergencies() =>
       db.select('SELECT data FROM emergency_guide ORDER BY position').map((r) => EmergencyGuide.decode(r['data'] as String)).toList();

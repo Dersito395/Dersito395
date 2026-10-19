@@ -106,10 +106,18 @@ void main() {
     await _shot(tester, '10-cenario');
     Navigator.of(tester.element(find.text('Preparação'))).pop();
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(find.text('Produção de alimentos'), 300, scrollable: find.byType(Scrollable).first);
+    await tester.scrollUntilVisible(find.text('Produção de alimentos'), 300, scrollable: find.descendant(of: find.byType(ListView).first, matching: find.byType(Scrollable)).first);
     await tester.tap(find.text('Produção de alimentos'));
     await _shot(tester, '10b-categoria');
     Navigator.of(tester.element(find.text('Todos (5)'))).pop();
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Consultas'));
+    await _shot(tester, '10c-consultas');
+    await tester.tap(find.text('FM 3-97.6 – Mountain Operations'));
+    await _shot(tester, '10d-documento');
+    Navigator.of(tester.element(find.text('Abrir documento'))).pop();
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Biblioteca'));
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Salvos').last);

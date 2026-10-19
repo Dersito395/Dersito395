@@ -6,7 +6,8 @@
     "bundled": true,
     "select": {
       "essential": true
-    }
+    },
+    "documents": true
   },
   {
     "id": "crise-prolongada",
@@ -97,6 +98,7 @@
     "bundled": false,
     "select": {
       "all": true
-    }
+    },
+    "documents": true
   }
 ]

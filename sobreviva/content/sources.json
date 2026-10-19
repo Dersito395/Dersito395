@@ -735,5 +735,49 @@
     "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
     "license": "Legislação – domínio público",
     "language": "pt-BR"
+  },
+  {
+    "id": "army-fm-3-97-6",
+    "institution": "Departamento do Exército dos EUA",
+    "author": "Headquarters, Department of the Army",
+    "title": "FM 3-97.6 Mountain Operations",
+    "publisher": "US Army",
+    "year": "2000",
+    "url": "https://irp.fas.org/doddir/army/fm3-97-6.pdf",
+    "license": "Aprovado para divulgação pública; distribuição ilimitada (domínio público). Disponível na aba Consultas do app.",
+    "language": "en"
+  },
+  {
+    "id": "pewtherer-2010",
+    "institution": "McGraw-Hill",
+    "author": "Pewtherer M.",
+    "title": "Wilderness Survival Handbook: Primitive Skills for Short-Term Survival and Long-Term Comfort",
+    "publisher": "McGraw-Hill, Nova York",
+    "year": "2010",
+    "url": "https://www.mheducation.com/",
+    "license": "Todos os direitos reservados – usado somente como referência; texto do app é original e o livro não é distribuído",
+    "language": "en"
+  },
+  {
+    "id": "wms-congelamento",
+    "institution": "Wilderness Medical Society",
+    "author": "McIntosh SE, Freer L, Grissom CK, et al.",
+    "title": "Wilderness Medical Society Clinical Practice Guidelines for the Prevention and Treatment of Frostbite: 2019 Update. Wilderness Environ Med. 30(4S):S19–S32",
+    "publisher": "Wilderness & Environmental Medicine",
+    "year": "2019",
+    "url": "https://doi.org/10.1016/j.wem.2019.05.002",
+    "license": "Artigo científico – usado como referência",
+    "language": "en"
+  },
+  {
+    "id": "lei-pesca",
+    "institution": "Presidência da República",
+    "author": "Brasil",
+    "title": "Lei nº 11.959/2009 – Política Nacional de Desenvolvimento Sustentável da Aquicultura e da Pesca",
+    "publisher": "Planalto",
+    "year": "2009",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11959.htm",
+    "license": "Legislação – domínio público",
+    "language": "pt-BR"
   }
 ]

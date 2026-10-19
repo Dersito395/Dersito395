@@ -1,0 +1,80 @@
+[
+  {
+    "id": "doc-fm-3-97-6",
+    "title": "FM 3-97.6 – Mountain Operations",
+    "subtitle": "Operações em montanha · Exército dos EUA, 2000",
+    "kind": "pdf",
+    "file": "fm-3-97-6-mountain-operations.pdf",
+    "lang": "en",
+    "pages": 140,
+    "year": "2000",
+    "publisher": "Headquarters, Department of the Army (EUA)",
+    "license": "Approved for public release; distribution is unlimited (domínio público do governo dos EUA).",
+    "source": "army-fm-3-97-6",
+    "status_note": "Documento histórico, em inglês. Foi substituído pelo ATP 3-90.97 (Mountain Warfare and Cold Weather Operations, 2016). Os trechos sobre altitude, frio e clima continuam úteis como consulta; condutas de saúde devem seguir as fontes atuais citadas nos artigos.",
+    "summary": "Manual militar sobre como o ambiente de montanha afeta pessoas, equipamentos e deslocamentos. Para quem se prepara para crises, os capítulos mais úteis são os efeitos da altitude e do frio no corpo, a aclimatação, a hidratação no frio, a leitura do tempo na montanha e as tabelas de doenças e lesões do Apêndice A. As partes táticas (combate, armamento) não fazem parte dos artigos do SOBREVIVA.",
+    "topics": [
+      "altitude",
+      "frio",
+      "hipotermia",
+      "congelamento",
+      "aclimatação",
+      "clima de montanha",
+      "raios",
+      "hidratação"
+    ],
+    "highlights": [
+      {
+        "page": 8,
+        "title": "O ambiente de montanha",
+        "note": "Terreno, altitude, temperatura e vento: por que tudo muda acima de 2.500 m."
+      },
+      {
+        "page": 16,
+        "title": "Tempestades e raios",
+        "note": "Como se formam as tempestades de verão na montanha e por que exigem cautela à tarde."
+      },
+      {
+        "page": 18,
+        "title": "Água e desidratação no frio",
+        "note": "O suor não aparece no frio, mas a perda de líquido continua; beber antes da sede."
+      },
+      {
+        "page": 19,
+        "title": "Efeitos da altitude no corpo",
+        "note": "Visão, sono, raciocínio e as doenças da hipóxia (mal agudo de montanha, edemas)."
+      },
+      {
+        "page": 20,
+        "title": "Aclimatação",
+        "note": "Subida escalonada e paradas de adaptação; quanto tempo o corpo precisa."
+      },
+      {
+        "page": 21,
+        "title": "Lesões pelo frio",
+        "note": "Hipotermia, congelamento e pé de imersão: reconhecer e prevenir."
+      },
+      {
+        "page": 112,
+        "title": "Apêndice A – tabelas de doenças e lesões",
+        "note": "Fadiga, desidratação, hipotermia, congelamento, mal agudo de montanha: causas, sinais, prevenção e conduta."
+      },
+      {
+        "page": 116,
+        "title": "Apêndice B – previsão do tempo na montanha",
+        "note": "Nuvens, vento e pressão como sinais de mudança de tempo."
+      },
+      {
+        "page": 122,
+        "title": "Glossário",
+        "note": "Termos técnicos em inglês usados no manual."
+      }
+    ],
+    "related": [
+      "mont-doencas-altitude",
+      "mont-lesoes-frio",
+      "mont-tempo-montanha",
+      "ps-hipotermia"
+    ]
+  }
+]

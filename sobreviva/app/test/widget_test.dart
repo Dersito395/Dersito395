@@ -97,4 +97,25 @@ void main() {
     expect(plan.title, contains('Escassez de alimentos'));
     expect(plan.total, greaterThan(10));
   });
+
+  testWidgets('aba Consultas lista o documento e abre a ficha com páginas', (tester) async {
+    await pumpApp(tester);
+    await tester.tap(find.text('Explorar').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Consultas'));
+    await tester.pumpAndSettle();
+    expect(find.text('FM 3-97.6 – Mountain Operations'), findsOneWidget);
+    await tester.drag(find.byType(ListView).last, const Offset(0, -2000));
+    await tester.pumpAndSettle();
+    expect(find.text('Sobrevivencialismo.com'), findsOneWidget);
+    expect(find.textContaining('não revisado'), findsOneWidget);
+    await tester.drag(find.byType(ListView).last, const Offset(0, 3000));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('FM 3-97.6 – Mountain Operations'));
+    await tester.pumpAndSettle();
+    expect(find.text('Abrir documento'), findsOneWidget);
+    expect(find.textContaining('ATP 3-90.97'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('Onde está cada assunto'), 300, scrollable: find.byType(Scrollable).last);
+    expect(find.text('O ambiente de montanha'), findsOneWidget);
+  });
 }

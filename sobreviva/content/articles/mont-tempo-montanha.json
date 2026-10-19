@@ -1,0 +1,84 @@
+{
+  "id": "mont-tempo-montanha",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Leitura do tempo e tempestades na montanha",
+  "summary": "Como nuvens, vento e pressão anunciam mau tempo nas serras e o que fazer quando uma tempestade se aproxima.",
+  "category": "natureza",
+  "subcategory": "clima",
+  "difficulty": "intermediaria",
+  "environments": [
+    "montanha",
+    "mata"
+  ],
+  "time_estimate": "Observação contínua durante a trilha",
+  "materials": [
+    "Previsão do tempo consultada antes da saída",
+    "Relógio com altímetro/barômetro (opcional)",
+    "Roupa impermeável e camadas"
+  ],
+  "objective": "Antecipar mudanças de tempo para decidir cedo: continuar, abrigar-se ou voltar.",
+  "steps": [
+    {
+      "text": "Consulte a previsão antes de sair, mas confie também no que você observa: o tempo na montanha muda rápido e varia de um vale para outro."
+    },
+    {
+      "text": "Nuvens de grande desenvolvimento vertical (cúmulos em torre), que crescem ao longo da tarde e formam topo em \"bigorna\", indicam tempestade com raios, rajadas, chuva forte e às vezes granizo."
+    },
+    {
+      "text": "Uma linha de nuvens altas e escuras se aproximando costuma indicar a chegada de uma frente fria com tempestades."
+    },
+    {
+      "text": "Nuvens em forma de lente ou \"disco\" sobre os picos (lenticulares) indicam ventos muito fortes em altitude. Se o \"chapéu\" de nuvem sobre o pico cresce e desce, espere mau tempo."
+    },
+    {
+      "text": "Queda rápida da pressão no barômetro ou subida da altitude mostrada no altímetro sem você se mover indicam piora do tempo."
+    },
+    {
+      "text": "Com sinais de tempestade, saia de cumes, cristas e áreas expostas antes que ela chegue; afaste-se da água e de objetos metálicos."
+    },
+    {
+      "text": "Em tempestades longas e generalizadas, as mais severas na montanha, procure abrigo cedo e evite deslocamentos em terreno exposto."
+    }
+  ],
+  "cautions": [
+    "Cristas e cumes atraem raios; o risco é maior no verão.",
+    "Após chuvas fortes nas cabeceiras, rios podem subir de repente (cabeça d'água) mesmo sem chuva no local."
+  ],
+  "alternatives": [
+    "Planejar a parte mais exposta da trilha para a manhã, antes das tempestades de fim de tarde."
+  ],
+  "tags": [
+    "tempo",
+    "clima",
+    "tempestade",
+    "nuvens",
+    "raios",
+    "montanha",
+    "previsão"
+  ],
+  "keywords": [
+    "vai chover na trilha",
+    "tempestade na montanha",
+    "como prever o tempo"
+  ],
+  "images": [],
+  "sources": [
+    {
+      "ref": "army-fm-3-97-6",
+      "note": "Nuvens indicadoras de mau tempo, cúmulos em torre, lenticulares, tempestades e raios em cristas (cap. 1 e apêndice B)."
+    },
+    {
+      "ref": "nws-raios",
+      "note": "Proteção contra raios ao ar livre."
+    }
+  ],
+  "related": [
+    "urb-vendaval-raios",
+    "mont-doencas-altitude",
+    "nat-planejamento-trilha"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

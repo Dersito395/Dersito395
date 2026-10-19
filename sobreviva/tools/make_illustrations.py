@@ -298,6 +298,19 @@ svgs['quarentena-quarto.svg'] = frame('Isolamento de doente em casa', (
     + t(40, 72, 'janela aberta', 11, BL, '700') + t(250, 76, '1 cuidador', 12, GR, '700') + t(250, 92, 'de máscara', 12, GR, '700')
     + t(30, 250, 'Sinais de gravidade (falta de ar, lábios roxos, confusão): 192', 11, RD, '700')))
 
+svgs['fogo-arco-broca.svg'] = frame('Arco e broca: as peças', (
+    f"<rect x='0' y='214' width='400' height='46' fill='#7A5A30'/>"
+    f"<rect x='60' y='196' width='220' height='18' rx='3' fill='#C9A86A' stroke='{GR}' stroke-width='2'/>"
+    f"<path d='M150 196 l12 0 l-4 18 l-4 0 z' fill='{DK}'/><ellipse cx='156' cy='222' rx='16' ry='5' fill='#3B2A18'/>"
+    f"<rect x='150' y='92' width='12' height='104' rx='4' fill='#B08850' stroke='{GR}' stroke-width='2'/>"
+    f"<rect x='130' y='72' width='52' height='20' rx='6' fill='#8A6A3A' stroke='{GR}' stroke-width='2'/>"
+    f"<path d='M40 150 Q156 110 290 150' stroke='#6B4A22' stroke-width='6' fill='none'/>"
+    f"<path d='M40 150 L156 140 L290 150' stroke='{GR}' stroke-width='2' fill='none'/>"
+    + t(190, 86, 'apoio de mão (madeira dura/pedra)', 11, GR, '700') + t(298, 140, 'arco + cordão', 11, GR, '700')
+    + t(170, 120, 'broca reta e seca', 11, GR, '700') + t(290, 206, 'base (madeira seca)', 11, GR, '700')
+    + t(176, 236, 'entalhe em V + folha para a brasa', 11, WH, '700')
+    + t(16, 60, 'Madeira macia e totalmente seca', 12, OR, '700')))
+
 os.makedirs(OUT, exist_ok=True)
 for name, svg in svgs.items():
     with open(os.path.join(OUT, name), 'w', encoding='utf-8') as fh:

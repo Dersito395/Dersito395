@@ -38,7 +38,7 @@ sobreviva/
 ```bash
 cd app
 flutter pub get
-flutter test                 # 53 testes: dados, pesquisa, atualizações, planejador e interface
+flutter test                 # 55 testes: dados, pesquisa, atualizações, planejador e interface
 flutter run                  # em um aparelho ou emulador
 flutter build apk --release  # APK de instalação (veja docs/PUBLICACAO.md para assinatura)
 ```
@@ -48,7 +48,7 @@ flutter build apk --release  # APK de instalação (veja docs/PUBLICACAO.md para
 ```bash
 cd server
 npm run build:content        # valida o conteúdo e gera pacotes + biblioteca embarcada no app
-npm test                     # 11 testes: autenticação, CSRF, fluxo editorial, publicação, integridade
+npm test                     # 12 testes: autenticação, CSRF, fluxo editorial, publicação, integridade
 node scripts/create-user.js admin admin "Seu Nome"   # cria o primeiro administrador
 npm start                    # painel em http://127.0.0.1:8787/admin/  ·  API em /api/v1/
 ```
@@ -61,7 +61,7 @@ Em produção use HTTPS: o app recusa HTTP fora da rede local.
 
 | Requisito | Onde |
 |---|---|
-| **59 artigos essenciais + 2 complementares**, 15 categorias, 67 fontes reais | `content/articles`, `content/sources.json` |
+| **67 artigos essenciais + 2 complementares**, 15 categorias, 71 fontes reais | `content/articles`, `content/sources.json` |
 | **6 roteiros de cenário de crise** (guerra, pandemia, escassez de água, escassez de alimentos, colapso de serviços, instabilidade/saques) com ações por fase e "Criar meu plano" | `content/scenarios.json`, `app/lib/ui/screens/scenario_screen.dart` |
 | Produção de alimentos (horta passo a passo, culturas calóricas, compostagem, sementes, galinhas), despensa de 3–12 meses, conservação sem geladeira, racionamento | `content/articles/prod-*`, `alim-*` |
 | Segurança e proteção: discrição, proteção de mantimentos, segurança da casa, defesa pessoal dentro da lei, comunidade, saúde mental | `content/articles/seg-*` |
@@ -69,7 +69,8 @@ Em produção use HTTPS: o app recusa HTTP fora da rede local.
 | SQLite + **FTS5** (SQLite 3.54 embarcado pelo pacote `sqlite3`, igual em Android e iOS) | `app/lib/data/library_db.dart` |
 | Pesquisa: texto integral, autocompletar, correção de digitação, sinônimos, filtros (categoria, dificuldade, ambiente), relevância, histórico, relacionados | `app/lib/search/search_engine.dart` |
 | Central de emergências: 11 guias (reconhecer, segurança, fazer, evitar, pedir socorro) + 190/192/193/199 com finalidade | `content/emergencies.json`, `app/lib/ui/screens/emergency_screens.dart` |
-| 29 ilustrações originais (SVG, CC BY 4.0) disponíveis offline | `content/media`, `tools/make_illustrations.py` |
+| 30 ilustrações originais (SVG, CC BY 4.0) disponíveis offline |
+| **Aba Consultas** (Explorar › Consultas): manual FM 3-97.6 em PDF, de domínio público, com leitor offline, resumo em português e atalhos por página; links oficiais e de comunidade (exigem internet) | `content/documents.json`, `content/links.json`, `app/lib/ui/screens/reference_screens.dart` | `content/media`, `tools/make_illustrations.py` |
 | Favoritos, anotações privadas, checklists, listas de equipamentos, planejador de mochila, histórico pesquisável, exportação/importação | `app/lib/data/user_db.dart`, telas em `app/lib/ui/screens` |
 | Tamanho de fonte, modo claro/escuro, **modo ambiente externo** (alto contraste), **economia de bateria** | `app/lib/core/theme.dart`, Ajustes |
 | Pacotes versionados com tamanho, data, espaço livre, SHA-256, cancelamento e **instalação atômica** (falhas não apagam nada) | `app/lib/services/package_service.dart`, `server/src/builder.js` |

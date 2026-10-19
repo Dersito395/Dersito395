@@ -1,0 +1,95 @@
+{
+  "id": "pw-fogo-friccao",
+  "version": 1,
+  "lang": "pt-BR",
+  "status": "publicado",
+  "title": "Fogo por fricção: arco e broca",
+  "summary": "Como fazer fogo sem fósforo ou isqueiro usando um arco, uma broca de madeira e uma tábua.",
+  "category": "fogo",
+  "subcategory": "combustao",
+  "difficulty": "avancada",
+  "environments": [
+    "mata",
+    "rural"
+  ],
+  "time_estimate": "Preparação de 30 a 60 minutos; exige muito treino prévio",
+  "materials": [
+    "Madeira seca e leve, não resinosa (tábua e broca)",
+    "Galho levemente curvo para o arco",
+    "Cordão resistente",
+    "Peça de apoio para a mão (madeira dura, pedra ou osso com cavidade)",
+    "Faca",
+    "Ninho de material seco e fino (capim, fibras, casca desfiada)"
+  ],
+  "objective": "Ter um método de fazer fogo quando todos os outros meios falharem.",
+  "steps": [
+    {
+      "text": "Escolha madeira morta e seca, de preferência galhos ainda presos na árvore (os caídos no chão costumam estar úmidos por dentro). Madeiras leves e não resinosas funcionam melhor; experimente as disponíveis."
+    },
+    {
+      "text": "Broca: um bastão reto de uns 20 cm, da grossura de um polegar, com as pontas arredondadas."
+    },
+    {
+      "text": "Tábua: madeira da mesma dureza da broca, com cerca de 2 a 3 cm de espessura e largura suficiente para apoiar o pé."
+    },
+    {
+      "text": "Arco: galho leve com comprimento aproximado do seu braço, com o cordão amarrado sem ficar esticado demais."
+    },
+    {
+      "text": "Faça uma pequena cavidade na tábua, perto da borda, girando a broca. Depois, corte um entalhe em \"V\" da borda até o centro dessa cavidade: é ali que o pó quente vai se acumular.",
+      "image": "fogo-arco-broca.svg"
+    },
+    {
+      "text": "Enrole o cordão uma vez na broca, coloque a ponta na cavidade da tábua, firme a tábua com o pé e segure a peça de apoio por cima, com o punho apoiado na canela."
+    },
+    {
+      "text": "Movimente o arco para frente e para trás em movimentos longos e constantes, aumentando a pressão aos poucos. Quando sair bastante fumaça e o pó escuro preencher o entalhe, continue mais alguns segundos."
+    },
+    {
+      "text": "Com cuidado, transfira a brasa do entalhe para o ninho de material seco e assopre suavemente até surgir a chama."
+    }
+  ],
+  "cautions": [
+    "Pratique muitas vezes em condições boas: em uma emergência, com frio e cansaço, a técnica fica muito mais difícil.",
+    "Respeite as proibições de fogo e as regras de fogueira segura; tenha água para apagar.",
+    "Mantenha os dedos longe da broca em rotação para evitar queimaduras."
+  ],
+  "alternatives": [
+    "Fósforos à prova d'água, isqueiro e pederneira no kit: muito mais confiáveis."
+  ],
+  "tags": [
+    "fogo",
+    "fricção",
+    "arco e broca",
+    "fogo primitivo",
+    "sem fósforo"
+  ],
+  "keywords": [
+    "fazer fogo sem isqueiro",
+    "fogo com madeira",
+    "fogo primitivo"
+  ],
+  "images": [
+    {
+      "file": "fogo-arco-broca.svg",
+      "caption": "Arco e broca: cordão enrolado na broca, tábua firmada com o pé, entalhe em V para acumular a brasa.",
+      "alt": "Diagrama do conjunto de arco, broca, tábua e apoio de mão"
+    }
+  ],
+  "sources": [
+    {
+      "ref": "pewtherer-2010",
+      "note": "Componentes do arco e broca, escolha da madeira e técnica de execução – ideias reescritas."
+    },
+    {
+      "ref": "usfs-fogueira",
+      "note": "Segurança da fogueira e proibições."
+    }
+  ],
+  "related": [
+    "fogo-seguranca-fogueira",
+    "fogo-quando-nao-acender"
+  ],
+  "essential": true,
+  "updated_at": "2026-10-19"
+}

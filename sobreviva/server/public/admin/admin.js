@@ -102,6 +102,7 @@ async function route() {
     else if (view === 'fontes') await viewSources();
     else if (view === 'emergencias') await viewEmergencies();
     else if (view === 'cenarios') await viewScenarios();
+    else if (view === 'consultas') await viewReferences();
     else if (view === 'midia') await viewMedia();
     else if (view === 'publicacao') await viewRelease();
     else if (view === 'usuarios') await viewUsers();
@@ -373,10 +374,28 @@ async function viewScenarios() {
   );
 }
 
+// Consultas (documentos e links externos) --------------------------------------------
+async function viewReferences() {
+  const data = await api('GET', '/api/admin/references');
+  const ta = el('textarea', { class: 'code', value: JSON.stringify(data, null, 2), readonly: !can('catalog:edit') });
+  render(
+    el('h1', {}, `Consultas (${data.documents.length} documentos, ${data.links.length} links)`),
+    el('p', { class: 'muted' }, 'documents: PDFs de distribuição livre (envie o arquivo em Mídia, com licença) com id, title, summary, file, pages, license, source, status_note, highlights (page + title + note) e related. ' +
+      'links: id, title, url (https), description, kind (oficial | comunidade); links de comunidade exigem note avisando que o conteúdo não é revisado. ' +
+      'Nunca publique PDFs protegidos por direitos autorais ou de distribuição restrita.'),
+    ta,
+    can('catalog:edit') && el('div', { class: 'row sticky-actions' }, el('button', { onclick: async () => {
+      let parsed;
+      try { parsed = JSON.parse(ta.value); } catch { return toast('JSON inválido', true); }
+      try { await api('PUT', '/api/admin/references', parsed); toast('Consultas salvas'); } catch (e) { toast(e.message, true); }
+    } }, 'Validar e salvar')),
+  );
+}
+
 // Mídia -------------------------------------------------------------------------------
 async function viewMedia() {
   state.meta = await api('GET', '/api/admin/meta');
-  const file = el('input', { type: 'file', accept: '.svg,.webp,.avif,.png,.jpg,.jpeg' });
+  const file = el('input', { type: 'file', accept: '.svg,.webp,.avif,.png,.jpg,.jpeg,.pdf' });
   const name = el('input', { placeholder: 'nome-do-arquivo.webp (minúsculas e hífens)' });
   const credit = el('input', { placeholder: 'Autor / instituição' });
   const license = el('input', { placeholder: 'Ex.: CC BY 4.0, domínio público' });
@@ -385,8 +404,8 @@ async function viewMedia() {
   render(
     el('h1', {}, `Repositório de mídia (${state.meta.media.length})`),
     el('p', { class: 'muted' }, 'Prefira WebP/AVIF para fotos e SVG para diagramas. Nunca envie imagens com direitos autorais desconhecidos: crédito e licença são obrigatórios.'),
-    can('media:upload') && el('div', { class: 'card' }, el('h2', {}, 'Enviar imagem'),
-      el('div', { class: 'grid2' }, el('div', {}, el('label', {}, 'Arquivo (até 2 MB)'), file), el('div', {}, el('label', {}, 'Nome no repositório'), name),
+    can('media:upload') && el('div', { class: 'card' }, el('h2', {}, 'Enviar imagem ou PDF'),
+      el('div', { class: 'grid2' }, el('div', {}, el('label', {}, 'Arquivo (imagem até 2 MB; PDF de consulta até 15 MB)'), file), el('div', {}, el('label', {}, 'Nome no repositório'), name),
         el('div', {}, el('label', {}, 'Crédito'), credit), el('div', {}, el('label', {}, 'Licença'), license), el('div', {}, el('label', {}, 'Origem'), source)),
       el('div', { class: 'row' }, el('button', { onclick: async () => {
         const fl = file.files[0];
@@ -394,9 +413,11 @@ async function viewMedia() {
         const buf = new Uint8Array(await fl.arrayBuffer());
         let bin = '';
         for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode(...buf.subarray(i, i + 0x8000));
-        try { await api('POST', '/api/admin/media', { file: name.value.trim(), data: btoa(bin), credit: credit.value.trim(), license: license.value.trim(), source_url: source.value.trim() }); toast('Imagem enviada'); route(); } catch (e) { toast(e.message, true); }
+        try { await api('POST', '/api/admin/media', { file: name.value.trim(), data: btoa(bin), credit: credit.value.trim(), license: license.value.trim(), source_url: source.value.trim() }); toast('Arquivo enviado'); route(); } catch (e) { toast(e.message, true); }
       } }, 'Enviar'))),
-    el('div', { class: 'media-grid' }, ...state.meta.media.map((m) => el('figure', {}, el('img', { src: `/media/${encodeURIComponent(m.file)}`, alt: m.file, loading: 'lazy' }), el('figcaption', {}, el('strong', {}, m.file), el('div', {}, m.credit || 'sem crédito'), el('div', { class: 'muted' }, m.license || 'sem licença'))))),
+    el('div', { class: 'media-grid' }, ...state.meta.media.map((m) => el('figure', {}, m.file.endsWith('.pdf')
+      ? el('a', { class: 'pdf-thumb', href: `/media/${encodeURIComponent(m.file)}`, target: '_blank', rel: 'noopener' }, 'PDF')
+      : el('img', { src: `/media/${encodeURIComponent(m.file)}`, alt: m.file, loading: 'lazy' }), el('figcaption', {}, el('strong', {}, m.file), el('div', {}, m.credit || 'sem crédito'), el('div', { class: 'muted' }, m.license || 'sem licença'))))),
   );
 }
 

@@ -191,6 +191,20 @@ Future<void> callNumber(BuildContext context, String number, {bool sms = false})
   }
 }
 
+/// Abre um link externo no navegador (exige internet).
+Future<void> openExternalLink(BuildContext context, String url) async {
+  final uri = Uri.tryParse(url);
+  var ok = false;
+  try {
+    ok = uri != null && await launchUrl(uri, mode: LaunchMode.externalApplication);
+  } catch (_) {
+    ok = false;
+  }
+  if (!ok && context.mounted) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Não foi possível abrir o navegador. Endereço: $url')));
+  }
+}
+
 /// Botões grandes para 192, 193 e 190, com a finalidade de cada um.
 class EmergencyNumbersCard extends StatelessWidget {
   const EmergencyNumbersCard({super.key, this.compact = false});
